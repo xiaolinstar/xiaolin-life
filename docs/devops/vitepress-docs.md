@@ -14,8 +14,8 @@
 
 - Node.js 18及以上版本
 - Docker:
-    - Mac、Windows: [Docker Desktop](https://www.docker.com/)
-    - Linux: [Ubuntu、Debain等](https://docs.docker.com/desktop/install/linux/)
+  - Mac、Windows: [Docker Desktop](https://www.docker.com/)
+  - Linux: [Ubuntu、Debain等](https://docs.docker.com/desktop/install/linux/)
 - 命令行终端（Windows Powershell、MacOS终端）
 - 开发集成环境（IDE）: VSCode、Webstorm
 
@@ -268,7 +268,7 @@ docker-compose down
 项目托管建议参考GitHub官方文档[Get started](https://docs.github.com/zh/get-started/start-your-journey/about-github-and-git)
 
 1. 注册并登录：[https://github.com/](https://github.com/)
-2. 设置github-ssh密钥，将公钥添加到GitHub设置中密钥中
+2. 设置github-ssh密钥，将公钥添加到GitHub设置的密钥中
 3. 创建项目仓库： `docker-vitepress`
 4. 本地git仓库与GitHub仓库关联，推送本地项目
 
@@ -287,7 +287,6 @@ node_modules
 # Jetbrains软件配置文件
 .idea
 ```
-
 
 ### GitHub Actions-Workflow配置文件
 
@@ -380,13 +379,12 @@ export default defineConfig({
 本项目使用`markdown`语法来编写文档。用户的创作行为都应在IDE集成工具（如WebStorm）中完成：
 
 - 新建文章：
-    1. 在`docs`目录下新建`md`格式的文本，如`hello.md`，进行内容创作
-    2. 在`docs/.vitepress/config.mts`中创建项目配置
+  1. 在`docs`目录下新建`md`格式的文本，如`hello.md`，进行内容创作
+  2. 在`docs/.vitepress/config.mts`中创建项目配置
 - 修改文章：直接修改原文档即可
 - 删除文章：
-    1. 删除`docs`目录下的指定文档
-    2. 修改`docs/.vitepress/config.mts`中的文章配置，避免出现404
-
+  1. 删除`docs`目录下的指定文档
+  2. 修改`docs/.vitepress/config.mts`中的文章配置，避免出现404
 
 ### 网站更新
 
@@ -419,4 +417,3 @@ pnpm run docs:dev
 如果您有需要技术咨询，或者有想法使本文档变得更好。
 
 联系作者：xing.xiaolin@foxmail.com
-

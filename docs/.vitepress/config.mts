@@ -33,7 +33,6 @@ export default withMermaid({
             { text: 'VitePress快速搭建个人网站', link: `/devops/vitepress-docs`},
             { text: 'CI/CD初体验', link: `/devops/cicd-taste`},
             { text: 'OOM｜Java服务端开发中的内存泄露', link: `/devops/java-leak`},
-            { text: '内存泄露', link: `/devops/memory-leak`},
             { text: '小步快跑，餐饮中的「持续集成」', link: `/devops/catering-ops`},
           ]
         }
@@ -74,8 +73,8 @@ export default withMermaid({
     ],
     // 页脚
     footer: {
-      message: '欢迎关注微信公众号：持续运维',
-      copyright: 'Copyright © 2024  XingXiaolin'
+      message: '微信公众号：持续运维，掘金：老实巴交的麻匪',
+      copyright: 'Copyright © 2025  XingXiaolin'
     },
     // 支持模糊搜索
     search: {

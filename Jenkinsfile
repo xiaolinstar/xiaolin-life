@@ -24,12 +24,8 @@ pipeline {
         stage('Cleanup') {
             steps {
                 script {
-                    // 停止容器
-                    sh "docker stop ${CONTAINER_NAME} || true"
-                    // 删除容器
-                    sh "docker rm ${CONTAINER_NAME} || true"
-                    // 删除docker镜像
-                    sh "docker rmi ${DOCKER_REGISTRY}:${VERSION} || true"
+                    // 容器卸载
+                    sh "docker compose down || true"
                 }
             }
         }
@@ -59,7 +55,7 @@ pipeline {
             }
             steps {
                 // 部署到服务器
-                sh "docker run -d --name ${CONTAINER_NAME} -p 80:8080 ${DOCKER_REGISTRY}:${VERSION}"
+                sh "docker compose up -d"
             }
         }
     }

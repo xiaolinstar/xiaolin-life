@@ -1,4 +1,4 @@
-FROM node:22-alpine3.20 as build-stage
+FROM node:22-alpine3.20 AS build-stage
 # 作者信息
 LABEL authors="xing.xiaolin@foxmail.com"
 
@@ -34,7 +34,7 @@ RUN pnpm run docs:build
 
 FROM nginx:alpine3.20-perl
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY volumes/website/nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=build-stage /app/docs/.vitepress/dist /usr/share/nginx/html
 

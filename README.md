@@ -4,13 +4,15 @@
 
 ## 代办TODO
 
-* [X]  大家Jenkins docker in docker平台
+* [X]  搭建 Jenkins docker in docker 平台
 * [X]  Jenkins持续集成、持续部署
-* [X]  支持SSL，使用https访问，将端口号改为443
-* [X]  变更时区为Asia/Shanghai，自适应黑白主题
+* [X]  使用https访问，端口号443
+* [X]  变更时区为 Asia/Shanghai，自适应黑白主题
 * [X]  docker compose启动容器
 * [ ]  完善项目README
-* [ ]  GitHub Pages文件标签显示
+* [ ]  GitHub Pages 文件标签显示
+* [ ]  增加 Prometheus 监控，监控 Linux 宿主机和 Nginx
+* [ ]  增加 Loki 日志系统
 
 
 ## 问题记录
