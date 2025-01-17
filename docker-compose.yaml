@@ -28,7 +28,7 @@ services:
     image: grafana/grafana:11.3.2-ubuntu
     container_name: grafana-website
     ports:
-      - "3000:3000"
+      - "9000:3000"
     networks:
       - tiny-sparrow-network
     environment:

@@ -38,9 +38,5 @@ COPY volumes/website/nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=build-stage /app/docs/.vitepress/dist /usr/share/nginx/html
 
-
-# 暴露端口
-EXPOSE 8080
-
 # 启动Nginx服务
 CMD ["nginx", "-g", "daemon off;"]

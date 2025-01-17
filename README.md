@@ -8,7 +8,7 @@
 * [X]  Jenkins持续集成、持续部署
 * [X]  使用https访问，端口号443
 * [X]  变更时区为 Asia/Shanghai，自适应黑白主题
-* [X]  docker compose启动容器
+* [ ]  在 Jenkins 容器中使用 docker compose 启动
 * [ ]  完善项目README
 * [ ]  GitHub Pages 文件标签显示
 * [ ]  增加 Prometheus 监控，监控 Linux 宿主机和 Nginx
