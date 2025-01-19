@@ -30,6 +30,8 @@ services:
     container_name: grafana-website
     networks:
       - tiny-sparrow-network
+    ports:
+      - "9000:3000"
     volumes:
       - ./volumes/grafana/grafana.ini:/etc/grafana/grafana.ini:ro
       - ./volumes/grafana/provisioning/etc/datasources:/etc/grafana/provisioning/datasources:ro
