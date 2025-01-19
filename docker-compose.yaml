@@ -24,13 +24,17 @@ services:
       TZ: Asia/Shanghai
 
   # Grafana
+  # 默认端口3000
   grafana-website:
     image: grafana/grafana:11.3.2-ubuntu
     container_name: grafana-website
-    ports:
-      - "9000:3000"
     networks:
       - tiny-sparrow-network
+    volumes:
+      - ./volumes/grafana/grafana.ini:/etc/grafana/grafana.ini:ro
+      - ./volumes/grafana/provisioning/etc/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./volumes/grafana/provisioning/etc/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./volumes/grafana/provisioning/var/dashboards:/var/lib/grafana/dashboards:ro
     environment:
       # 中国时区、匿名登陆
       TZ: Asia/Shanghai
@@ -47,8 +51,6 @@ services:
       - ./volumes/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     environment:
       TZ: Asia/Shanghai
-    ports:
-      - "9090:9090"
     networks:
       - tiny-sparrow-network
     command:
