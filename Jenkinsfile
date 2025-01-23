@@ -25,9 +25,7 @@ pipeline {
             steps {
                 script {
                     // 容器卸载
-                    // sh "docker compose down || true"
-                    sh "cleanup"
-                    // 容器卸载
+                    sh "docker compose down || true"
                 }
             }
         }
@@ -57,8 +55,7 @@ pipeline {
             }
             steps {
                 // 部署到服务器
-                // docker compose up -d
-                echo "Jenkins 容器内不支持 docker compose，TODO"
+                sh "docker compose up -d"
             }
         }
     }
@@ -66,7 +63,7 @@ pipeline {
     post {
         success {
             // 构建成功
-            echo 'Build succeeded but not deployed'
+            echo 'Build and deployment succeeded'
         }
         failure {
             // 构建失败
