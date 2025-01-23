@@ -3,7 +3,7 @@ networks:
     external: false
 services:
   nginx-gateway:
-    image: nginx:1.23.4-alpine
+    image: nginx:alpine3.20-perl
     container_name: nginx-gateway
     ports:
       - "80:80"
