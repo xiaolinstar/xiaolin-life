@@ -77,3 +77,15 @@ services:
       - '/:/host:ro,rslave'
     command:
       - '--path.rootfs=/host'
+
+  # nginx-prometheus-exporter
+  nginx-exporter-website:
+    image: nginx/nginx-prometheus-exporter:1.4
+    container_name: nginx-exporter-website
+    # 默认端口：9113
+    environment:
+      TZ: Asia/Shanghai
+    networks:
+      - tiny-sparrow-network
+    # 需要与抓取的 Nginx 服务在同一网络，且信息一致
+    command: "--nginx.scrape-uri=http://vitepress-website:8081/stub_status" # 配置 Prometheus 抓取 Nginx 状态的 URI

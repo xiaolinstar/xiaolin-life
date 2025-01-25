@@ -3,3 +3,5 @@ docs/.vitepress/cache
 /node_modules/
 /docs/.vitepress/dist/
 .idea
+
+volumes/website/logs/
