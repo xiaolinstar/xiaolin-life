@@ -5,15 +5,15 @@
 ## 代办TODO
 
 * [X]  搭建 Jenkins docker in docker 平台
-* [X]  Jenkins持续集成、持续部署
-* [X]  使用https访问，端口号443
+* [X]  Jenkins 持续集成、持续部署
+* [X]  使用 https 访问，端口号443
 * [X]  变更时区为 Asia/Shanghai，自适应黑白主题
 * [X]  在 Jenkins 容器中使用 docker compose 启动
-* [ ]  完善项目README
+* [ ]  完善项目 README
 * [ ]  GitHub Pages 文件标签显示
 * [X]  Nginx 支持 stub-status 模块
 * [X]  增加 Prometheus 监控，监控 Linux 宿主机和 Nginx
-* [ ]  增加 Loki 日志系统
+* [X]  增加 Loki 日志系统
 * [ ]  nginx.conf URL 匹配，域名访问 grafana
 * [ ]  Markdown 语法支持脚注
 * [ ]  Jenkinsfile 只将 main 分支执行流水线 

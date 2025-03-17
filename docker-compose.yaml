@@ -2,6 +2,7 @@ networks:
   tiny-sparrow-network:
     external: false
 services:
+  # 软负载
   nginx-gateway:
     image: nginx:alpine3.20-perl
     container_name: nginx-gateway
@@ -18,11 +19,14 @@ services:
     image: xxl1997/xiaolin-docs:0.0.1
     build: ./
     container_name: vitepress-website
+    volumes:
+      - ./volumes/website/logs:/var/log/nginx
     networks:
       - tiny-sparrow-network
     environment:
       # 设置中国时区
       TZ: Asia/Shanghai
+
 
   # Grafana
   # 默认端口3000
@@ -89,3 +93,35 @@ services:
       - tiny-sparrow-network
     # 需要与抓取的 Nginx 服务在同一网络，且信息一致
     command: "--nginx.scrape-uri=http://vitepress-website:8081/stub_status" # 配置 Prometheus 抓取 Nginx 状态的 URI
+
+  promtail-website:
+    image: grafana/promtail:3.4
+    container_name: promtail-website
+    volumes:
+      # 设置目录挂载
+      - ./volumes/promtail/promtail.yaml:/etc/promtail/promtail.yaml:ro
+      - ./volumes/website/logs:/var/log
+    environment:
+      TZ: Asia/Shanghai
+    networks:
+      - tiny-sparrow-network
+    command:
+      - "--config.file=/etc/promtail/promtail.yaml" # promtail配置文件
+    depends_on:
+      - loki-website
+
+  # Loki
+  # 默认端口3100
+  loki-website:
+    image: grafana/loki:3.4
+    container_name: loki-website
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./volumes/loki/loki-local-config.yaml:/etc/loki/local-config.yaml:ro
+    environment:
+      TZ: Asia/Shanghai
+    networks:
+      - tiny-sparrow-network
+    command:
+      - "--config.file=/etc/loki/local-config.yaml"

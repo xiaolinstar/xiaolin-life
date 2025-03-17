@@ -17,23 +17,44 @@ export default withMermaid({
     logo: '/sparrow.svg',
     nav: [
       { text: '首页', link: `/` },
-      { text: '开发运维', link: `/devops/` },
+      { text: '运维', link: `/sre/` },
+      { text: '开发', link: `/software-development/`},
+      { text: '大模型', link: `/big-model/`},
       { text: '轻松办公', link: `/easy-office/` },
       { text: '南京生活', link: `/life-nanjing/` },
-      { text: '前沿科技', link: `/latest-tech/` }
     ],
 
     sidebar: {
-      '/devops/': [
+      '/sre/': [
         {
-          text: '开发运维', link: `/devops/`,
+          text: '运维', link: `/sre/`,
           items: [
-            { text: '你好Jenkins', link: `/devops/hello-jenkins` },
-            { text: 'Zookeeper宕机恢复', link: `/devops/zookeeper-restore` },
-            { text: 'VitePress快速搭建个人网站', link: `/devops/vitepress-docs`},
-            { text: 'CI/CD初体验', link: `/devops/cicd-taste`},
-            { text: 'OOM｜Java服务端开发中的内存泄露', link: `/devops/java-leak`},
-            { text: '小步快跑，餐饮中的「持续集成」', link: `/devops/catering-ops`},
+            {
+              text: 'Jenkins',
+              link: `/sre/jenkins`,
+              items: [
+                { text: '你好 Jenkins', link: `/sre/jenkins/hello-jenkins` },
+                { text: 'CI/CD 初体验', link: `/sre/jenkins/cicd-taste`},
+                { text: 'VitePress 快速搭建个人网站', link: `/sre/jenkins/vitepress-docs`},
+              ],
+            },
+          ]
+        }
+      ],
+      '/software-development/': [
+        {
+          text: '开发', link: `/software-development/`,
+          items: [
+          ]
+        }
+      ],
+
+      '/big-model/': [
+        {
+          text: '大模型', link: `/big-model/`,
+          items: [
+            { text: 'LLM', link: `/big-model/llm` },
+            { text: 'LangChain', link: `/big-model/langchain` },
           ]
         }
       ],
@@ -42,17 +63,8 @@ export default withMermaid({
         {
           text: '轻松办公', link: `/easy-office/`,
           items: [
-            { text: 'Thunderbird解放收件箱', link: `/easy-office/email-thunderbird` },
-            { text: '易读易写Markdown', link: `/easy-office/markdown` },
-            { text: '协同办公', link: `/easy-office/wework` },
-          ]
-        }
-      ],
-
-      '/latest-tech/': [
-        {
-          text: '前沿科技', link: `/latest-tech/`,
-          items: [
+            { text: 'Thunderbird 解放收件箱', link: `/easy-office/email-thunderbird` },
+            { text: '易读易写 Markdown', link: `/easy-office/markdown` },
           ]
         }
       ],
@@ -61,9 +73,15 @@ export default withMermaid({
         {
           text: '南京生活', link: `/life-nanjing/`,
           items: [
-            { text: '南京大学', link: `/life-nanjing/university/nju` },
-            { text: '南京师范大学', link: `/life-nanjing/university/nnu` },
-          ]
+            {
+              text: '南京高校',
+              link: `/life-nanjing/university`,
+              items: [
+                { text: '南京大学', link: `/life-nanjing/university/nju`},
+                { text: '南京师范大学', link: `/life-nanjing/university/nnu`}
+              ]
+            },
+          ],
         }
       ]
     },

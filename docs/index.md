@@ -4,15 +4,15 @@ layout: home
 
 hero:
   name: "持续运维"
-  text: "安全 稳定 高效 敏捷"
-  tagline: 开发运维团队长期实践经验交流与分享
+  text: "不积跬步无以至千里"
+  tagline: SRE 开发运维团队长期实践经验交流与分享
   image:
     src: /sparrow.svg
     alt: VitePress
   actions:
     - theme: brand
-      text: 开发运维
-      link: /devops/index
+      text: 运维
+      link: /sre/index
     - theme: alt
       text: 轻松办公
       link: /easy-office/index
@@ -23,7 +23,7 @@ hero:
 features:
   - title: 南京生活
     details: 水韵南京，文明南京
-  - title: 前沿科技
-    details: 前沿科技速看
+  - title: 大语言模型
+    details: 大语言模型理论与实践
 ---
 

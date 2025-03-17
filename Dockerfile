@@ -30,7 +30,8 @@ RUN pnpm run docs:build
 
 FROM nginx:alpine3.20-perl
 
-COPY volumes/website/nginx.conf /etc/nginx/conf.d/default.conf
+COPY volumes/website/nginx.conf /etc/nginx/nginx.conf
+COPY volumes/website/default.conf /etc/nginx/conf.d/default.conf
 COPY volumes/website/nginx-stub-status.conf /etc/nginx/conf.d/nginx-stub-status.conf
 
 COPY --from=build-stage /app/docs/.vitepress/dist /usr/share/nginx/html
