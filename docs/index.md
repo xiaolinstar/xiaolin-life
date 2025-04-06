@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "持续运维"
-  text: "不积跬步无以至千里"
+  text: "不积跬步，无以至千里"
   tagline: SRE 开发运维团队长期实践经验交流与分享
   image:
     src: /sparrow.svg
