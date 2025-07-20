@@ -38,6 +38,20 @@ export default withMermaid({
                 { text: 'VitePress 快速搭建个人网站', link: `/sre/jenkins/vitepress-docs`},
               ],
             },
+            {
+              text: '可观测性',
+              link: `/sre/observability`,
+              items: [
+                { text: '什么是可观测性？', link: `/sre/observability/what-is-observability` },
+                // { text: 'Prometheus', link: `/sre/observability/prometheus` },
+                // { text: 'Grafana', link: `/sre/observability/grafana` },
+                // { text: 'Kibana', link: `/sre/observability/kibana` },
+                // { text: 'ELK', link: `/sre/observability/elk` },
+                // { text: 'Jaeger', link: `/sre/observability/jaeger` },
+                // { text: 'Zipkin', link: `/sre/observability/zipkin` },
+                // { text: 'OpenTelemetry', link: `/sre/observability/opentelemetry` },
+              ]
+            }
           ]
         }
       ],
@@ -45,6 +59,15 @@ export default withMermaid({
         {
           text: '开发', link: `/software-development/`,
           items: [
+            {
+              text: '系统架构设计师',
+              link: `/software-development/system-architecture-designer`,
+              items: [
+                {
+                  text: '软考高级：系统架构设计师', link: `software-development/system-architecture-designer/ruankao-advanced`
+                }
+              ]
+            }
           ]
         }
       ],
