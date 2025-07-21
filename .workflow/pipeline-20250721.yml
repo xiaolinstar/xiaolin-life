@@ -1,0 +1,31 @@
+version: '1.0'
+name: pipeline-20250721
+displayName: pipeline-20250721
+triggers:
+  trigger: auto
+  push:
+    branches:
+      precise:
+        - main
+stages:
+  - name: stage-60f6e1cb
+    displayName: docker编辑
+    strategy: naturally
+    trigger: auto
+    executor:
+      - xingxiaolin
+    steps:
+      - step: build@docker
+        name: build_docker
+        displayName: 镜像构建
+        type: cert
+        certificate: ded75a00-4814-013e-d466-3a3fa8dddae4
+        tag: ${GITEE_REPO}:v0.${GITEE_PIPELINE_BUILD_NUMBER}
+        dockerfile: ./Dockerfile
+        context: ''
+        artifacts: []
+        isCache: false
+        parameter: {}
+        notify: []
+        strategy:
+          retry: '0'
