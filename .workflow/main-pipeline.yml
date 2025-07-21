@@ -1,6 +1,6 @@
 version: '1.0'
-name: pipeline-20250721
-displayName: pipeline-20250721
+name: main-pipeline
+displayName: main-pipeline
 triggers:
   trigger: auto
   push:
@@ -19,7 +19,7 @@ stages:
         name: build_docker
         displayName: 镜像构建
         type: cert
-        certificate: ded75a00-4814-013e-d466-3a3fa8dddae4
+        certificate: 63ef6240-4843-013e-a97a-362c63ba4791
         tag: ${GITEE_REPO}:v0.${GITEE_PIPELINE_BUILD_NUMBER}
         dockerfile: ./Dockerfile
         context: ''
