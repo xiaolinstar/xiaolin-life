@@ -8,8 +8,8 @@ triggers:
       precise:
         - main
 stages:
-  - name: stage-60f6e1cb
-    displayName: docker编辑
+  - name: stage_docker_build
+    displayName: 镜像构建
     strategy: naturally
     trigger: auto
     executor:
