@@ -30,6 +30,14 @@ export default withMermaid({
           text: '运维', link: `/sre/`,
           items: [
             {
+              text: 'CI/CD 与 DevOps',
+              link: `/sre/devops`,
+              items: [
+                { text: '起步', link: `/sre/devops/start`},
+                { text: '容器化', link: `/sre/devops/docker` },
+              ]
+            },
+            {
               text: 'Jenkins',
               link: `/sre/jenkins`,
               items: [

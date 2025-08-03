@@ -1,4 +1,4 @@
-FROM docker.m.daocloud.io/library/node:22-alpine3.20 AS build-stage
+FROM node:22-alpine3.20 AS build-stage
 # 作者信息
 LABEL authors="xing.xiaolin@foxmail.com"
 
@@ -28,7 +28,7 @@ RUN pnpm run docs:build
 
 
 
-FROM docker.m.daocloud.io/library/nginx:alpine3.20-perl
+FROM nginx:alpine3.20-perl
 
 COPY volumes/website/nginx.conf /etc/nginx/nginx.conf
 COPY volumes/website/default.conf /etc/nginx/conf.d/default.conf

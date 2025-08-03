@@ -8,8 +8,62 @@ triggers:
       precise:
         - main
 stages:
+  - name: stage_compile
+    displayName: 编译
+    strategy: naturally
+    trigger: auto
+    executor:
+      - xingxiaolin
+    steps:
+      - step: compile@node
+        name: node_compile
+        displayName: Node.js编译
+
+
+#   Sonar 质量分析在 Gitee 平台仅对企业版和推荐项目开发
+#   https://gitee.com/help/articles/4182#article-header0
+#   相关工具：ESLint、Prettier、Type-Check
+
+#  - name: stage_code_review
+#    displayName: 代码审查
+#    strategy: naturally
+#    trigger: auto
+#    executor:
+#      - xingxiaolin
+#    steps:
+#      - step: code-review@sonarqube
+#        name: sonarqube_code_review
+#        displayName: SonarQube代码审查
+#        type: cert
+#        certificate: your-sonarqube-certificate-id
+#        projectKey: your-project-key
+#        qualityGate: your-quality-gate-name
+#        notify: []
+#        strategy:
+#          retry: '0'
+
+#  - name: stage_security_scan
+#    displayName: 安全扫描
+#    strategy: naturally
+#    trigger: auto
+#    executor:
+#      - xingxiaolin
+#    steps:
+#      - step: security-scan@trivy
+#        name: trivy_security_scan
+#        displayName: Trivy安全扫描
+#        type: cert
+#        certificate: your-trivy-certificate-id
+#        target: ./Dockerfile
+#        format: table
+#        exit-code: 1
+#        severity: HIGH,CRITICAL
+#        notify: []
+#        strategy:
+#          retry: '0'
+
   - name: stage_docker_build
-    displayName: 镜像构建
+    displayName: 阿里云 ACR 镜像构建
     strategy: naturally
     trigger: auto
     executor:
@@ -29,3 +83,40 @@ stages:
         notify: []
         strategy:
           retry: '0'
+
+  - name: stage_push_to_gitee_artifact
+    displayName: 推送镜像到Gitee制品库
+    strategy: naturally
+    trigger: auto
+    executor:
+      - xingxiaolin
+    steps:
+      - step: push@docker
+        name: push_to_gitee_artifact
+        displayName: 推送镜像到Gitee制品库
+        type: cert
+        certificate: your-gitee-certificate-id
+        source: ${GITEE_REPO}:v0.${GITEE_PIPELINE_BUILD_NUMBER}
+        target: your-gitee-artifact-repo:v0.${GITEE_PIPELINE_BUILD_NUMBER}
+        notify: []
+        strategy:
+          retry: '0'
+
+  - name: stage_production_deployment
+    displayName: 生产环境部署
+    strategy: naturally
+    trigger: auto
+    executor:
+      - xingxiaolin
+    steps:
+      - step: deploy@tencentcloud
+        name: lighthouse_deployment
+        displayName: 腾讯云轻量应用服务器部署
+        type: cert
+        certificate: your-tencentcloud-certificate-id
+        instance-id: your-tencentcloud-instance-id
+        region: your-tencentcloud-region
+        command: "ssh root@10.0.4.5 \"docker pull your-gitee-artifact-repo:v0.${GITEE_PIPELINE_BUILD_NUMBER} && docker run -d -p 80:80 your-gitee-artifact-repo:v0.${GITEE_PIPELINE_BUILD_NUMBER}\""
+        notify: []
+        strategy:
+          retry: '3'
