@@ -16,7 +16,7 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,14 +36,38 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-      - name: Build
+        
+      - name: Build documentation
         run: pnpm run docs:build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{secrets.DOCS_SECRET}}
-          folder: docs/.vitepress/dist
-          git-config-name: xiaolinstar
-          git-config-email: xing.xiaolin@foxmail.com
+      # 通用上传制品 action
+#      - name: Upload artifact
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: artifact # default
+#          path: docs/.vitepress/dist
 
+      # 1. 上传 pages 制品
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: 'github-pages' # default
+          path: docs/.vitepress/dist
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      # 2. 部署名为 github-pages 的制品
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
