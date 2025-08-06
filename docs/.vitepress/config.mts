@@ -34,8 +34,8 @@ export default withMermaid({
               link: `/sre/devops`,
               items: [
                 { text: '起步', link: `/sre/devops/start`},
-                { text: '容器化', link: `/sre/devops/docker` },
-                { text: 'docker-compose 容器编排', link: `/sre/devops/docker-compose` },
+                { text: '容器化', link: `/sre/devops/containerize` },
+                { text: '声明式 API', link: `/sre/devops/docker-compose` },
                 { text: 'Pipeline 流水线', link: `/sre/devops/pipeline` },
               ]
             },

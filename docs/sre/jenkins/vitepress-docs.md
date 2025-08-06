@@ -400,17 +400,17 @@ pnpm run docs:dev
 
 想要持续维护该项目或打造个性化网站，请参考VitePress官方文档：[VitePress](https://vitepress.dev/zh/)
 
-## References
+## 参考
 
-[1]. VitePress由Vite和Vue驱动的静态站点生成器，https://vitepress.dev/zh/
+1. VitePress由Vite和Vue驱动的静态站点生成器，https://vitepress.dev/zh/
 
-[2]. Git started，开始你的旅程，https://docs.github.com/zh/get-started/start-your-journey/about-github-and-git
+2. Git started，开始你的旅程，https://docs.github.com/zh/get-started/start-your-journey/about-github-and-git
 
-[3]. GitHub Actions，https://docs.github.com/zh/actions/writing-workflows/quickstart
+3. GitHub Actions，https://docs.github.com/zh/actions/writing-workflows/quickstart
 
-[4]. GitHub Pages，https://docs.github.com/zh/pages
+4. GitHub Pages，https://docs.github.com/zh/pages
 
-[5]. Gitee，https://gitee.com
+5. Gitee，https://gitee.com
 
 ## 联系作者
 

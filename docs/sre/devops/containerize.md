@@ -39,7 +39,7 @@
     2. 将 *dist* 复制到 Nginx 容器中
 4. 基于 `Dockerfile`，执行 `docker build` 生成容器镜像
 5. 将生成的镜像推送到 DockerHub 等镜像仓库
-6. 在云服务器上（具备公网 IP）拉取镜像并运行容器实例
+6. 在云服务器上（具备公网 IP）拉取镜像并运行容器实例，如 `docker run -d -p 80:80 nginx`
 
 考虑到 DockerHub、ghcr 需要**科学上网**才能访问，也可以在生产环境中完成容器化动作，这需要在服务上安装开发环境工具 nodejs、maven 等。
 
@@ -51,7 +51,7 @@
 4. 在 git 仓库中提交变更，并推送到 GitHub
 5. 登录云服务器，`git clone` 克隆仓库或 `git pull` 获取最新提交
 6. 基于 `Dockerfile`，执行 `docker build` 生成容器镜像
-7. 运行容器实例
+7. 运行容器实例，如 `docker run -d -p 80:80 nginx`
 
 
 `Dockerfile` 示例：
@@ -97,7 +97,7 @@ CMD ["nginx", "-g", "daemon off;"]
 4. 制作 `Dockerfile`，将 *dist* 复制到 Nginx 容器中
 5. 基于 `Dockerfile`，执行 `docker build` 生成容器镜像
 6. 将生成的镜像推送到 DockerHub 等镜像仓库
-7. 在云服务器上（具备公网 IP）拉取镜像并运行容器实例
+7. 在云服务器上（具备公网 IP）拉取镜像并运行容器实例，如 `docker run -d -p 80:80 nginx`
 
 同样地，不使用镜像仓库：
 
@@ -108,7 +108,7 @@ CMD ["nginx", "-g", "daemon off;"]
 5. 登录云服务器，`git clone` 克隆仓库或 `git pull` 获取最新提交
 6. 依次执行 `npm install`、`npm run build`，生成分发包 *dist*
 7. 基于 `Dockerfile`，执行 `docker build` 生成容器镜像
-8. 运行容器实例
+8. 运行容器实例，如 `docker run -d -p 80:80 nginx`
 
 `Dockerfile` 示例：
 
