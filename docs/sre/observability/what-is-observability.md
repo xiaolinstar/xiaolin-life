@@ -1,3 +1,9 @@
+# 监控 vs 可观测性 2023
+
+本文引用自 Cloud Native Daily：[Monitoring vs Observability in 2023 — An Honest Take](https://medium.com/cloud-native-daily/monitoring-vs-observability-in-2023-an-honest-take-f68df4e2d774)
+
+***
+
 > 监控和可观测性有何不同？它们在解决潜在问题方面分别多有效？
 
 如果您正在运行一个软件系统，您需要了解它的运行情况：它的运行情况如何，是否按预期运行，以及是否有任何需要您注意的问题。一旦发现问题，您就需要获取相关信息以便进行故障排除。众多工具声称可以帮助您实现这一点，包括监控、APM、可观测性以及介于两者之间的一切。这导致了可观测性领域的一场争夺战，监控供应商声称他们也提供可观测性服务，而“可观测性优先”的参与者则不同意，并指责他们掩盖了[可观测性](https://devops.com/deciphering-the-observability-market/)。
@@ -67,8 +73,7 @@
 如今，描述可观测性实现的最佳方式是——“指标之外的一切，加上指标”。
 
 
-![监控与可观测性.webp](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d10bf64bdad8499cbaf1e16da6572c64~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6ICB5a6e5be05Lqk55qE6bq75Yyq:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIxODE1NjMzMjYxNTM4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1746091559&x-orig-sign=FpT8M4W27yzkotybSa%2FiHbSQmrI%3D)
-
+![监控与可观测性](../img-what-is-observability/monitor-vs-observability.webp)
 
 一个完美的可观测系统会记录生产过程中发生的*一切*，不留任何数据缺口。值得庆幸的是，这不切实际，成本高昂，而且 99% 的数据根本无关紧要，因此，一个普通的可观测平台需要对采集哪些遥测数据以及采集多少遥测数据做出复杂的选择。不同的供应商对此有不同的看法，而且，根据你询问的对象，可观测性似乎也略有不同。
 
@@ -130,12 +135,11 @@
 
 尽管投入了大量资金，但我们似乎最多只是取得了一些渐进的进展。
 
-
-![IncreasingProductionMTTRs.webp](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/f1154a0368984613b1147d7f8378f661~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6ICB5a6e5be05Lqk55qE6bq75Yyq:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIxODE1NjMzMjYxNTM4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1746091739&x-orig-sign=a6ecBkQYrtUrSlAJnPWol8Bw4a8%3D)
+![增长的生产环境MTTRs](../img-what-is-observability/increasing-production-MTTRs.webp)
 
 ## 我们现在在哪里？
 
-到目前为止，我们持续收集越来越多的遥测数据，希望处理和存储成本能够持续下降以​​支持这一目标。但随着数据量的激增，我们遇到了成本之外的新问题，那就是可用性。人类已经无法直接查看数十个仪表板并快速得出结论。因此，我们创建了不同的数据视图和切分方式，以便用户更轻松地测试和验证他们的假设。但这些工具对于普通工程师来说过于复杂，我们需要经过专门培训的“高级用户”（类似于数据科学家），他们能够熟练地驾驭这些海量数据并识别错误。
+到目前为止，我们持续收集越来越多的遥测数据，希望处理和存储成本能够持续下降以支持这一目标。但随着数据量的激增，我们遇到了成本之外的新问题，那就是可用性。人类已经无法直接查看数十个仪表板并快速得出结论。因此，我们创建了不同的数据视图和切分方式，以便用户更轻松地测试和验证他们的假设。但这些工具对于普通工程师来说过于复杂，我们需要经过专门培训的“高级用户”（类似于数据科学家），他们能够熟练地驾驭这些海量数据并识别错误。
 
 如今，许多可观测性公司都采取了类似的方法：捕获更多数据，进行更多分析，并培训能够使用这些工具的高级用户。但这些专业工程师缺乏关于系统各个部分的足够信息，因此无法生成足够好的假设。
 
@@ -157,8 +161,7 @@
 
 因此，我们引入了一套称为可观测性的工具，它位于第 1 级和第 2 级之间，通过为我们提供更多数据来“*帮助理解为什么会出现故障”。*
 
-
-![监控、可观测性和推理.webp](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/26ba663159e847ad908710c0a928e57b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6ICB5a6e5be05Lqk55qE6bq75Yyq:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDIxODE1NjMzMjYxNTM4NCJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1746091807&x-orig-sign=vAGZYd7WVI6sA%2Bmai%2BVHXDDrQ5w%3D)
+![监控，可观测性和推理](../img-what-is-observability/monitoring-observability-and-inferencing.webp)
 
 ## 推理——可观测性加人工智能
 
