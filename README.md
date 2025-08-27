@@ -17,6 +17,7 @@
 * [ ]  nginx.conf URL 匹配，域名访问 grafana
 * [ ]  Markdown 语法支持脚注
 * [ ]  Jenkinsfile 只将 main 分支执行流水线 
+* [ ]  文章支持三级标签索引
 
 
 ## 问题记录

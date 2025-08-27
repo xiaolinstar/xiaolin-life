@@ -44,10 +44,10 @@ Web 静态资源项目使用 Nginx 部署是最佳实践。
 
 ## 参考
 
-1. Docker 官方文档，https://docs.docker.com/
-2. Podman 官方文档，https://podman.io/docs/
-3. Nginx 静态资源服务器，https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/
-4. 静态资源服务器，https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/
-5. git 版本控制，https://git-scm.com/
-6. GitHub 代码托管，https://github.com/
-7. Gitee 国产化 git 代码托管仓库，免科学上网，https://gitee.com/
+1. Docker 官方文档，[https://docs.docker.com/](https://docs.docker.com/)
+2. Podman 官方文档，[https://podman.io/docs/](https://podman.io/docs/)
+3. Nginx 静态资源服务器，[https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/](https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/)
+4. 静态资源服务器，[https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/](https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/)
+5. git 版本控制，[https://git-scm.com/](https://git-scm.com/)
+6. GitHub 代码托管，[https://github.com/](https://github.com/)
+7. Gitee 国产化 git 代码托管仓库，免科学上网，[https://gitee.com/](https://gitee.com/)

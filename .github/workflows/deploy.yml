@@ -1,4 +1,4 @@
-name: VitePress-hope Github Deploy
+name: VitePress-Website Github Pages Deploy
 on:
   push:
     branches:

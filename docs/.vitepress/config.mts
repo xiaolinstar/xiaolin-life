@@ -54,6 +54,8 @@ export default withMermaid({
                             link: `/sre/observability`,
                             items: [
                                 {text: '什么是可观测性？', link: `/sre/observability/what-is-observability`},
+                                {text: '日志服务', link: `/sre/observability/log`},
+                                {text: 'Elastic ELK', link: `/sre/observability/ELK-stack`},
                                 // { text: 'Prometheus', link: `/sre/observability/prometheus` },
                                 // { text: 'Grafana', link: `/sre/observability/grafana` },
                                 // { text: 'Kibana', link: `/sre/observability/kibana` },
