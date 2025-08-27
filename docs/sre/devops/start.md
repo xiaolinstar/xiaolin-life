@@ -1,10 +1,10 @@
 # 起步
 
-开发、构建和部署 Vue3 前端 Web 项目为例，后期根据差异性引入 SpringBoot 服务端项目。
+开发、构建和部署 VitePress 静态站点为例，后期根据差异性引入 SpringBoot 服务端项目。
 
 ## 阶段一：服务能 Run
 
-新手开发起步：
+新手开发起步，能让服务跑起来，是一个重要的里程碑。
 
 1. 在个人电脑上使用 IDE 如 VsCode、WebStorm 开发、调试。
 2. 本地开发环境，查看开发效果 `npm run dev`
@@ -12,11 +12,11 @@
 4. 安装依赖 `npm install`
 5. 以后台方式运行 `nohup npm run dev &`
 
-此方法使用 `nodejs` 作为服务器，支持热启动，用于开发环境，直接作为生产环境的 Web 服务器效率较低。
+此方法使用 `nodejs` 作为服务器，支持热启动，一般用于开发环境，直接作为生产环境的 Web 服务器效率较低。
 
 ## 阶段二：Nginx 静态资源代理
 
-纯前端项目使用 Nginx 部署是最佳实践。
+Web 静态资源项目使用 Nginx 部署是最佳实践。
 
 1. 在个人电脑上使用 IDE 如 VsCode、WebStorm 开发、调试。
 2. 本地开发环境，查看开发效果 `npm run dev`
@@ -26,7 +26,7 @@
 
 ## 阶段三：版本管理与代码托管
 
-为了方便代码版本管理、多人协作、代码共享等，引入了 Git 工具和托管平台 GitHub 或 Gitee。
+为了方便代码版本管理、多人协作、代码共享等，引入了 git 工具和托管平台 GitHub 或 Gitee。
 
 1. 在个人电脑上使用 IDE 如 VsCode、WebStorm 开发、调试。
 2. 本地开发环境，查看开发效果 `npm run dev`
@@ -40,12 +40,14 @@
 
 作为一名起步的开发者，阶段三实现了**最小可行**、且完全手动的交付闭环，绝大多数中小团队止步于此。
 
-下一篇文章，引入 Docker 实现服务容器化，**一次构建，到处运行**，有效解决服务可移植性问题。
+下一篇文章，引入 Docker（Podman） 实现服务容器化，**一次构建，到处运行**，有效解决服务可移植性问题。
 
-## 关注微信公众号，联系作者
+## 参考
 
-微信搜索关注公众号：**持续运维**
-
-如果您有需要技术咨询，或者有想法使本文档变得更好。
-
-联系作者：xing.xiaolin@foxmail.com
+1. Docker 官方文档，https://docs.docker.com/
+2. Podman 官方文档，https://podman.io/docs/
+3. Nginx 静态资源服务器，https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/
+4. 静态资源服务器，https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/
+5. git 版本控制，https://git-scm.com/
+6. GitHub 代码托管，https://github.com/
+7. Gitee 国产化 git 代码托管仓库，免科学上网，https://gitee.com/
