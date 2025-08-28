@@ -19,7 +19,7 @@ export default withMermaid({
             {text: '首页', link: `/`},
             {text: '运维', link: `/sre/`},
             {text: '开发', link: `/software-development/`},
-            {text: '大模型', link: `/big-model/`},
+            {text: '人工智能', link: `/ai/`},
             {text: '轻松办公', link: `/easy-office/`},
             {text: '南京生活', link: `/life-nanjing/`},
         ],
@@ -88,10 +88,10 @@ export default withMermaid({
 
             '/ai/': [
                 {
-                    text: '大模型', link: `/big-model/`,
+                    text: '人工智能', link: `/ai/`,
                     items: [
-                        {text: 'LLM', link: `/big-model/llm`},
-                        {text: 'LangChain', link: `/big-model/langchain`},
+                        {text: 'LLM', link: `/ai/llm`},
+                        {text: 'LangChain', link: `/ai/langchain`},
                     ]
                 }
             ],
