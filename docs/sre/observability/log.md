@@ -1,141 +1,159 @@
-# 日志服务
+# 软件系统日志
 
-本系列文章中仅讨论软件系统的日志。
+## 前言
 
-## 什么是日志服务
+在当今数字化浪潮汹涌澎湃的时代，数据已然成为企业与组织的“生命线”，而日志作为数据的重要组成部分，犹如隐藏在系统深处的“宝藏”，记录着每一个微小的运行细节与关键事件。
 
-日志服务是可观测性体系中的重要组成部分，主要用于收集、存储、查询和分析系统或应用程序生成的日志数据。在现代分布式系统中，日志服务帮助我们理解系统行为、诊断问题和监控系统健康状况。
+然而，海量且分散的日志数据往往如同散落的珍珠，难以被有效串联与挖掘，这使得许多组织在面对复杂多变的业务需求与运维挑战时，犹如盲人摸象，难以精准洞察全局态势。
+
+本文从日志功能入手，思考为什么需要构建日志中心？
+
+## 日志
+
+日志数据是各种系统和应用程序运行时生成的信息。这些数据包括系统事件、错误消息、性能指标和用户活动。例如，日志能够记录故障以及故障发生的事件，便于随后居于此代码中查找错误，从而解决问题。每个日志都带有时间戳，并显示在特定时间点发生的事件。
+
+日志可以现实操作系统中发生的事件，如连接尝试、错误和配置变更等。这些类型的日志被统称为系统日志。
+
+与此不同，应用程序日志显示的是应用程序软件堆栈（特别是专用代理、防火墙以及其他软件应用程序）内所发生事件的信息。这些类型的日志会记录软件的更改、CRUD 操作，应用程序身份验证等信息。
+
+日志的主要作用是帮助系统管理员、开发人员和运维人员监控系统运行情况、排查问题、分析性能瓶颈、进行安全审计以及支持业务决策。日志的特点：
+
+* 时效性：记录系统在特定时间点或时间段内的运行状态、事件和行为；
+* 顺序性：按照事件发生的先后顺序生成的，记录了系统的运行轨迹；
+* 信息丰富性：记录了系统运行的详细信息，包括事件类型、操作结果、错误信息、用户行为、系统状态等；
+* 不可变性：日志一旦生成，其内容通常不应被修改，以保证记录的真实性和完整性；
+* **大量性**：系统运行过程中会产生大量的日志数据，尤其是在高并发和复杂的业务场景下；
+* 多样性：日志的格式和内容因系统、框架和业务需求而异，常见的有文本日志、JSON 格式日志、二进制日志等；
+* **分布式特性**：在分布式系统中，日志可能分散在多个节点上，需要集中管理和分析；
+* 重要性分级：通常根据重要性分为不同的级别，如 DEBUG、INFO、WARN、ERROR 等。
+
+从业务与 IT 系统软件开发工程师视角，可以将日志简单分为两类：**基础设施与框架日志**和**业务与应用自定义日志**。
+
+### 基础设施与框架日志
+
+由操作系统、数据库、开发框架或中间件（由水平极高的开发者定义、服务供应商）生成的日志，主要用于记录系统运行状态、配置信息、性能指标以及底层框架的运行情况。
+
+软件开发工程师不需要手动编写这部分日志，但需要关注它们以排查问题。其特点包括：
+
+* **自动生成**：由框架或中间件自动记录，无需手动编写；
+* **标准化**：格式和内容通常由框架或中间件定义，具有统一的规范；
+* **底层信息**：主要记录系统层面的信息，如启动、错误、性能等。
+
+例如 Spring 日志、Redis 日志、Nacos 日志、MySQL 日志、Nginx 日志。
+
+Spring 日志：
+
+```terminaloutput
+2025-05-28 10:00:00 [main] INFO  o.s.b.SpringApplication - Starting application on localhost with PID 12345
+2025-05-28 10:00:05 [main] ERROR o.s.b.SpringApplication - Application run failed
+java.lang.NullPointerException: Some error occurred
+at com.example.service.MyService.doSomething(MyService.java:42)
+```
+
+MySQL 日志：
+
+```terminaloutput
+    2025-05-28 22:41:25 2025-05-28 22:41:25+08:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
+    2025-05-28 22:41:26 2025-05-28 22:41:26+08:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+    2025-05-28 22:41:26 2025-05-28 22:41:26+08:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
+    2025-05-28 22:41:27 '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+    2025-05-28 22:41:27 2025-05-28T14:41:27.128286Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+    2025-05-28 22:41:27 2025-05-28T14:41:27.393086Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.4.3) starting as process 1
+    2025-05-28 22:41:27 2025-05-28T14:41:27.401134Z 0 [Warning] [MY-010159] [Server] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+    2025-05-28 22:41:27 2025-05-28T14:41:27.479811Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+    2025-05-28 22:41:31 2025-05-28T14:41:31.116967Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+    2025-05-28 22:41:32 2025-05-28T14:41:32.797247Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+    2025-05-28 22:41:32 2025-05-28T14:41:32.797813Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+    2025-05-28 22:41:33 2025-05-28T14:41:33.052484Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+    2025-05-28 22:41:33 2025-05-28T14:41:33.171347Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+    2025-05-28 22:41:33 2025-05-28T14:41:33.171484Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.3'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+```
+
+### 业务与应用自定义日志
+
+由软件开发工程师在编写业务代码时手工编写的日志，主要用于记录业务逻辑的执行过程、用户操作、业务数据等。
+
+这部分日志是开发工程师根据具体需求编写的，具有很强的针对性。其特点包括：
+
+* **手动编写**：由开发工程师根据业务需求编写；
+* **针对性强**：记录业务逻辑的关键信息，便于调试和分析；
+* **格式灵活**：可以根据业务需求自定义日志格式和内容。
+
+例如业务操作日志、调试日志、性能日志。
+
+在业务代码中自定义日志：
+
+> MyBatisPlus 自动填充插件
+
+```java
+/**
+ * @author xingxiaolin xing.xiaolin@foxmail.com
+ * @Description MybatisPlus 自动填充插件
+ * @create 2024/7/8
+ */
+@Component
+@Slf4j
+public class MyMetaObjectHandler implements MetaObjectHandler {
+
+
+    /**
+     * 插入操作自动填充
+     * @param metaObject 元对象
+     */
+    @Override
+    public void insertFill(MetaObject metaObject) {
+        log.info("公共字段自动填充[insert]...");
+        log.info(metaObject.toString());
+        metaObject.setValue("createTime", LocalDateTime.now());
+        metaObject.setValue("updateTime", LocalDateTime.now());
+        metaObject.setValue("createdByUserId", ContextUtil.getUserId());
+        metaObject.setValue("updatedByUserId", ContextUtil.getUserId());
+    }
+
+    @Override
+    public void updateFill(MetaObject metaObject) {
+        log.info("公共字段自动更新[update]...");
+        log.info(metaObject.toString());
+        metaObject.setValue("updateTime", LocalDateTime.now());
+        metaObject.setValue("updatedByUserId", ContextUtil.getUserId());
+    }
+}
+```
+
+服务执行时，日志输出：
+```terminaloutput
+2025-05-28 22:41:27 公共字段自动填充[insert]...
+2025-05-28 22:41:27 MetaObject [originalObject=cn.xiaolin.xiaolinblog.entity.User@7322328d, metaObject=org.apache.ibatis.reflection.MetaObject@4662312a, metaClass=class cn.xiaolin.xiaolinblog.entity.User]
+2025-05-28 22:41:27 公共字段自动更新[update]...
+2025-05-28 22:41:27 MetaObject [originalObject=cn.xiaolin.xiaolinblog.entity.User@7322328d, metaObject=org.apache.ibatis.reflection.MetaObject@4662312a, metaClass=class cn.xiaolin.xiaolinblog.entity.User]
+```
+记录上述日志可用于调试数据库插入和更新时自动字段填充功能。
 
 ## 功能和作用
 
-> 待完善
+影视剧导演总喜欢用这样的镜头体现黑客的专业性与神秘性：一名电脑黑客屏幕上密密麻麻持续输出海量文本，背景是黑色的，专注地盯着屏幕！
 
-在可观测性领域，**日志**、指标、链路并称为"三大支柱"。日志提供了系统运行时的详细信息，是排查问题和分析系统行为的重要依据。特别是在复杂的微服务架构中，日志服务能够帮助我们：
+> 使用“豆包AI”根据上述语言描述生成图像
 
-- 快速定位和诊断问题
-- 分析用户行为和系统性能
-- 满足合规性和审计要求
-- 进行安全事件分析
+![黑客镜头](../img-log/log-hacker.png)
 
-## 演进与发展
+其实可能就执行了一条指令：
 
-软件日志系统的起源可以追述到计算机系统诞生的早期。在计算机技术发展初期，程序员们面临一个共同的困境：如何有效地监控和调试程序执行过程。当时的程序调试主要依靠打印语句，程序员手动在代码中插入打印语句，输出变量值和执行流程信息，以此来追踪程序执行路径和定位错误。
+```terminaloutput
+tail -f /var/log/myapp.log
+```
 
-这种原始方法存在诸多问题：
+依据笔者的开发和运维工作经验，基础日志使用场景：
 
-* 代码侵入性强：调试代码与业务逻辑混杂在一起
-* 难以管理：调试
+1. 健康巡检：版面发布后检查异常日志；
+2. 故障诊断：记录故障现场，用于故障发生后运维专家或开发人员介入；
+3. 审计需要：安全部门与审计部门要求；
 
-1. 计算机诞生之初裸奔时代，人工打印
-2. 早期代表性的日志系统（操作系统日志管理）：syslog，管理 unix-like 服务上的日志
-3. 应用级日志框架：Log4j SLF4J等，日志服务脚手架，方便日志打印管理。
-4. 日志挖掘，全套日志解决方案：ELK
-5. 云原生与可观测性融合：Grafana 生态、OpenTelemetry
-6. 人工智能技术融合：AI增强、LLM检索等
+进阶使用场景：
 
-### 原始裸奔，用户自定义打印和存储
+1. 故障预警：在很多场景中，系统故障是累计的结果（量变到质变），发生前会输出异常日志；
+2. 数据挖掘：从海量日志中挖掘有效信息，大数据分析。
 
-> 很多计算机专业学生在都使用过打印日志的「调试」经历。
+## 总结
 
-日志服务的原始形态，应用程序直接打印日志到 stdout 或 stderr，或者重定向到文件中，没有形成标准和规范。
-
-【画图】
-
-### 简单即正义：日志汇聚尝试，Unix syslog
-
-> 1980 年代互联网黎明期的一次“简单即正义”的工程妥协，却意外成为之后 40 年所有日志体系的鼻祖与通用语。下面按时间线拆分其时代背景、设计初衷与逐步演化的全过程。
-
-1980 年前后的 BSD 4.x 系统通常在一台 VAX 上跑着 20-30 个守护进程（sendmail、ftpd、rshd…），每个进程各自写自己的 log：`/var/log/mail.log`、`/var/log/ftp.log`...，管理员需要开 5-6 个窗口 tail。
-
-更严重的是内核 `printk`、授权失败、su 密码错误等系统级消息散落各处，无法统一查看。
-
-1981 年，Eric Allman 在撰写 sendmail 时顺手写了一个“log anything to anywhere”的小工具，取名 syslog（system log），其设计哲学：
-
-* **最小可用**：用 UDP 514端口广播即可，不保证可靠但足够简单；
-* **分层抽象**：引入 facility（谁在说话）+ severity（说的多严重）双层标记，把杂乱无章的消息变成 8×8=64 个格子；
-* **可插拔**：配置文件 `/etc/syslog.conf` 决定“谁去哪儿”，不必改代码。
-
-第一次把“系统事件”与“应用调试信息”统一到同一条管道，运维只需看一个文件（或一台主机）即可定位故障。
-
-同时奠定了“日志级别（Log Level）”概念，后续所有日志框架（log4j、slf4j、zap、logback）的 DEBUG/INFO/WARN/ERROR 都直接继承了这一思想。
-
-### 应用级日志框架 Log4j
-
-> Spring 服务开发中使用的 @Slf4j 来引入日志框架
-
-1996-1999年互联网热潮，使用 Java 编程语言设计的服务端程序从几十行小工具膨胀称为百万行企业系统，急需像 Unix syslog 那样但为 Java 应用级软件设计的日志框架。
-
-Ceki Gülcü 在开发 Apache 项目时完成了 Log4j 项目，把“日志级别 + 输出目的地 + 格式”全部外置到 `log4j.properties`，代码里只保留一行 `Logger logger = Logger.getLogger(MyClass.class)`
-
-Log4j 的出现让“日志”从开发调试副产品变成可运维、可审计、可分析的一等公民，它定义的“分级-路由-格式”三元组至今仍是所有日志框架（包括云原生的 Fluent Bit、OpenTelemetry Collector）的设计蓝本。
-
-Log4j 虽然是 Java 日志开发框架，但它把“Logger → Appender → Layout”的三层抽象、运行时分级开关、纯配置驱动等理念做成了可复制的范式。随后十年里，几乎所有主流语言都出现了“Log4*”系或受其启发的日志库，形成了跨语言的“Log4 模式家族”。
-
-### 分布式日志系统 Scribe
-
-Log4j、SLF4J 等解决了日志生产的问题。另一方面，随着分布式系统的发展，日志存储在本地文件中已经无法满足需求，需要将分散的日志集中存储到远程服务器上。
-
-> Scribe 项目已于 2022 年停止维护。
-
-Scribe 是最早在工业界大规模应用的分布式日志收集系统之一，由 Facebook 于 2007 年开源。它的核心设计目标是解决大规模分布式环境下（如社交网络）的日志集中收集问题，支撑了 Facebook 早期用户行为日志、系统日志的采集需求。
-
-Scribe 采用的 Push 模式：
-
-* 要求业务服务通过其提供的 SDK（基于Thrift）主动将日志推送到 Scribe 服务器
-* 支持日志的分级存储、本地缓存（当后端存储故障时暂存本地）和批量转发
-
-Scribe 服务器汇聚日志，本身不承担存储和消费功能，更像是一个“日志路由器”，负责将日志可靠地投递到目标存储，而消费则依赖后续的存储系统或分析工具。
-
-这种“转发-存储-消费”的链路，体现了早期分布式日志系统“分层解耦”的设计思想，也为后续更复杂的日志架构提供了参考。
-
-### 日志采集代理 Logstash
-
-基于 Push 模式的 Scribe 系统存在以下问题：
-
-* 业务服务需要使用 Scribe 提供的 SDK 来生成日志，而不是更受欢迎的 Log4* 系列
-* 依赖业务服务主动推送日志，对业务服务的侵入性强
-* 不支持日志的分级过滤（预处理），所有日志都被采集
-
-为了解决上述问题，另一种基于 Pull 模式的日志采集代理 Logstash 最早于2009年公开，专注于日志采集，与日志生产解耦合。
-
-Logstash 是一个开源的服务器端数据处理管道，它从多种来源获取数据，对数据进行转换，然后将其发送到你喜欢的“存储库”中。
-
-Logstash 可以从多种来源（如文件、数据库、消息队列等）采集日志，支持日志的过滤、转换、丰富等功能，最后将日志发送至指定的存储系统（如 Elasticsearch、Kafka 等）。
-
-在应用服务器上部署代理 Agent 的方式，对日志采集并传输到日志服务器。
-
-### 一站式日志解决方案 ELK
-
-Log4j、SLF4J 等解决了日志生成的问题，在分布式系统中的日志检索仍然采用 grep 等工具，相对落后。
-
-随着分布式系统的发展，以及日志挖掘的需求，一站式日志服务解决方案 ELK 应运而生。
-
-
-打印日志的需求已经成为了应用级开发的一个基本需求。
-
-初期，日志作为运行数据存在于应用系统的本地文件中，当出现问题时，运维人员登录和排查问题。
-
-随着系统规模的扩大和复杂性的增加，传统的日志收集和分析方式已无法满足需求。因此，出现了基于容器化、微服务架构的日志服务解决方案。
-
-本项目采用Grafana Loki作为日志收集和存储系统，其架构如下：
-
-### 云原生时代日志解决方案
-
-云原生时代，ELK难以满足要求，需要一种新的日志服务解决方案。
-
-
-### 可观测性，指标、日志、链路集中管理
-
-
-### AI+ 融合
-
-LLM + RAG
-
-LLM + MCP
-
-基于时间序列的异常检测
-
-
-## 参考
-
-1. 软件日志系统的发展历程，[https://www.hitzhangjie.pro/debugger101.io/10-extras/2-development-of-logging.html](https://www.hitzhangjie.pro/debugger101.io/10-extras/2-development-of-logging.html)
+日志作为系统运行的重要记录，分为基础设施与框架日志（自动生成、标准化，如 Spring、MySQL 日志）和业务与应用自定义日志（手动编写、针对性强）。日志具有时效性、顺序性等特点，在健康巡检、故障诊断、安全审计等基础场景，以及故障预警、数据挖掘等进阶场景中作用关键。

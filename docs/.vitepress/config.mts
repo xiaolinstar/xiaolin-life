@@ -54,8 +54,10 @@ export default withMermaid({
                             link: `/sre/observability`,
                             items: [
                                 {text: '什么是可观测性？', link: `/sre/observability/what-is-observability`},
-                                {text: '日志服务', link: `/sre/observability/log`},
+                                {text: '日志', link: `/sre/observability/log`},
+                                {text: '日志系统发展与演进', link: `/sre/observability/log-evolution`},
                                 {text: 'Elastic ELK', link: `/sre/observability/ELK-stack`},
+                                {text: 'Grafana Loki', link: `/sre/observability/grafana-loki`},
                                 // { text: 'Prometheus', link: `/sre/observability/prometheus` },
                                 // { text: 'Grafana', link: `/sre/observability/grafana` },
                                 // { text: 'Kibana', link: `/sre/observability/kibana` },
