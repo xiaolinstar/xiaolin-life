@@ -10,7 +10,6 @@
 * [X]  变更时区为 Asia/Shanghai，自适应黑白主题
 * [X]  在 Jenkins 容器中使用 docker compose 启动
 * [ ]  完善项目 README
-* [ ]  GitHub Pages 文件标签显示
 * [X]  Nginx 支持 stub-status 模块
 * [X]  增加 Prometheus 监控，监控 Linux 宿主机和 Nginx
 * [X]  增加 Loki 日志系统
@@ -43,7 +42,7 @@
 2024-09-13：支持 `Dockerfile` 构建镜像，添加 `Jenkinsfile` 
 2025-01-25：Jenkins容器支持 Docker Compose 能力
 2025-01-25：添加 Prometheus 监控，包括 node-exporter 监控宿主机，nginx-prometheus-exporter 监控 nginx
-
+2025-09-01：使用 Kubernetes 部署服务，外部流量→ NodePort (在节点上) → port (在Service上) → targetPort (在Pod上)
 
 ## 介绍
 
@@ -57,7 +56,38 @@
 - 高可用，部署多个服务，使用 Nginx 作负载均衡
 - Grafana Loki 支持日志管理
 
-## 容器化
+## 单点容器编排 Docker Compose
+
+
+
+## 分布式容器编排 Kubernetes
+
+文件目录 `k8s`
+
+Kubernetes 一键启动所有服务
+```terminaloutput
+kubectl apply -f k8s
+```
+
+逐个启动服务，观察运行情况
+```terminaloutput
+kubectl apply -f k8s/vitepress-website.yaml
+kubectl apply -f k8s/nginx-gateway-config.yaml
+kubectl apply -f k8s/nginx-gateway.yaml
+```
+
+启动完成后检查：
+
+```terminaloutput
+kubectl get pods
+kubectl get services
+kubectl describe deploy nginx-gateway-deploy
+```
+
+访问服务，外部流量→ NodePort (在节点上) → port (在Service上) → targetPort (在Pod上)
+
+[http://localhost:32108](http://localhost:32108)
+
 
 ## Jenkins 与 CI/CD
 

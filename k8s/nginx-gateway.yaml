@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-gateway-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-gateway-pod
+  template:
+    metadata:
+      labels:
+        app: nginx-gateway-pod
+    spec:
+      containers:
+      - name: nginx-gateway-container
+        image: nginx:alpine3.20-perl
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: nginx-config
+          mountPath: /etc/nginx/conf.d/default.conf
+          subPath: default.conf
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: nginx-gateway-config
+
+---
+# 网络类服务，定义一组 Pod 的访问策略
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-gateway-svc
+spec:
+  selector:
+    app: nginx-gateway-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 32108
+  type: NodePort
+
