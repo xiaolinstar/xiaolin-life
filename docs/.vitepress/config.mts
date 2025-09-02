@@ -30,6 +30,14 @@ export default withMermaid({
                     text: '运维', link: `/sre/`,
                     items: [
                         {
+                            text: '学习与思考',
+                            link: `/sre/ops`,
+                            items: [
+                                {text: 'SRE 实践：服务可靠性案例', link: `/sre/ops/time-geek`},
+                                {text: '阿里云 ACP 云原生微服务', link: `/sre/ops/acp-micro-service`},
+                            ]
+                        },
+                        {
                             text: 'CI/CD 与 DevOps',
                             link: `/sre/devops`,
                             items: [
@@ -38,6 +46,8 @@ export default withMermaid({
                                 {text: '容器化', link: `/sre/devops/containerize`},
                                 {text: '声明式 API', link: `/sre/devops/docker-compose`},
                                 {text: 'Pipeline 流水线', link: `/sre/devops/pipeline`},
+                                {text: 'Github Actions 理论概念', link: `/sre/devops/github-actions`},
+                                {text: 'Github Actions 快速体验', link: `/sre/devops/github-actions-tutorial`},
                             ]
                         },
                         {
