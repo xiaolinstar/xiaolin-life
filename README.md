@@ -25,8 +25,6 @@
 - 时区问题
 - 阿里云「HTTPS加速网关」配置，不需要修改原项目任何配置信息，包括 80 端口
 
-脚注：https://bddxg.top/article/note/vitepress%E4%BC%98%E5%8C%96/%E6%B7%BB%E5%8A%A0markdown%E8%84%9A%E6%B3%A8%E5%8A%9F%E8%83%BD.html
-
 ## 配置
 
 本项目依赖以下技术：
@@ -65,12 +63,12 @@
 文件目录 `k8s`
 
 Kubernetes 一键启动所有服务
-```terminaloutput
+```shell
 kubectl apply -f k8s
 ```
 
 逐个启动服务，观察运行情况
-```terminaloutput
+```shell
 kubectl apply -f k8s/vitepress-website.yaml
 kubectl apply -f k8s/nginx-gateway-config.yaml
 kubectl apply -f k8s/nginx-gateway.yaml
@@ -78,7 +76,7 @@ kubectl apply -f k8s/nginx-gateway.yaml
 
 启动完成后检查：
 
-```terminaloutput
+```shell
 kubectl get pods
 kubectl get services
 kubectl describe deploy nginx-gateway-deploy
