@@ -47,7 +47,7 @@ export default withMermaid({
                                 {text: '声明式 API', link: `/sre/devops/docker-compose`},
                                 {text: 'Pipeline 流水线', link: `/sre/devops/pipeline`},
                                 {text: 'Github Actions 理论概念', link: `/sre/devops/github-actions`},
-                                {text: 'Github Actions 工作流', link: `/sre/devops/github-actions-tutorial`},
+                                {text: 'Github Actions 工作流', link: `/sre/devops/github-actions-workflow`},
                             ]
                         },
                         {
@@ -130,6 +130,13 @@ export default withMermaid({
                                 {text: '南京师范大学', link: `/life-nanjing/university/nnu`}
                             ]
                         },
+                        {
+                            text: '桌游聚会',
+                            link: `/life-nanjing/table-game`,
+                            items: [
+                                {text: '阿瓦隆', link: `/life-nanjing/table-game/avalon`}
+                            ]
+                        }
                     ],
                 }
             ]

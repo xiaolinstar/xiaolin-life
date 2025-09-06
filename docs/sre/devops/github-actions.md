@@ -1,4 +1,4 @@
-# GitHub Actions 核心概念与快速体验
+# GitHub Actions 快速介绍
 
 学习 GitHub Actions 中的核心概念基础知识以及基本术语。
 
@@ -78,7 +78,7 @@ on:
   workflow_dispatch:
 ```
 
-基于 `cron` 表达式的定时任务
+**基于 `cron` 表达式的定时任务**
 
 ```yaml
 on:
