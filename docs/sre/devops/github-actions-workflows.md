@@ -1,4 +1,4 @@
-# GitHub Actions 工作流
+# GitHub Actions 工作流实践
 
 本文介绍2个工作流实用的案例小试牛刀，从实践中学习、理解 GitHub Actions。
 
@@ -30,9 +30,9 @@ jobs:
 ```
 
 
-其中，`secrets.GITHUB_TOKEN`  是 GitHub 提供的默认密钥，不需要额外配置。
+其中 `secrets.GITHUB_TOKEN` 是 GitHub 提供的默认密钥，不需要额外配置。
 
-在项目中创建`./github/workflows/greetings.yml`，并粘贴上述模板代码，然后推送变更到 GitHub 仓库。
+在项目中创建 `./github/workflows/greetings.yml`，并粘贴上述模板代码，然后推送变更到 GitHub 仓库。
 
 执行下列操作验证该 greetings 是否生效。
 
@@ -46,7 +46,7 @@ jobs:
 
 **工作流执行需要时间，等待片刻后，即可在 issue 中看到欢迎消息**
 
-> 使用 `secrets.DOCS_SECRET` 执行的用户身份是`github-actions[bot]`。
+> 使用 `secrets.GITHUB_TOKEN` 执行的用户身份为`github-actions[bot]`。
 
 ![github-actions-bot](../img-github-actions-workflows/github-actions-bot.png)
 
@@ -56,9 +56,9 @@ jobs:
 
 ---
 
-根据需要自定义 `greetings.yml`，例如删除 pull request 消息，创建 open-issue 事件时触发。此外，还可以修改 `secrets.DOCS_SECRET`  为自定义 Token，可以是自己或其他用户创建的 Token。
+根据需要自定义 `greetings.yml`，例如删除 pull request 消息，创建 open-issue 事件时触发。此外，还可以修改 `secrets.GITHUB_TOKEN`  为自定义 Token，可以是自己或其他用户创建的 Token。
 
-```shell
+```yaml
 name: Greetings
 
 on:
@@ -105,7 +105,7 @@ const basePath = process.env.GITHUB_ACTIONS === 'true' ? '/xiaolin-docs/' : '/'
 
 > 配置即代码（Configuration as Code，CaC）是基础设施即代码（Infrastructure as Code，IaC）的子集
 
-更准确地说，本项目采用**配置即代码**，即所有的配置都在代码中，免除了在 GUI 中的手动交互。
+更准确地说，本项目采用**配置即代码**，即所有的变更操作都在配置文件中定义，随源代码一同版本控制，免除了在 GUI 中的手动交互。
 
 达到完全自动化流水线 Pipeline 配置文件 `page.yml` 定义如下，所有配置是项目无关的，意味着可迁移性极好，复制到其他 VitePress 项目中无需任何修改：
 
@@ -246,7 +246,7 @@ flowchart TD
 
 ## 总结
 
-使用 GitHub 托管项目源代码，GitHub Actions 实现自动化运维，同时 GitHub Pages 是 Serverless 架构，无需关注 IaaS 资源维护。
+使用 GitHub 托管项目源代码，GitHub Actions 实现自动化运维，同时 GitHub Pages 是 Serverless 架构，免 IaaS 资源维护。
 
 除了在首次构建流水线时需要创建和定义配置 `page.yml`，变更工作已经简单到只需要一次 `git push`，这是一次里程碑式的飞跃。
 
