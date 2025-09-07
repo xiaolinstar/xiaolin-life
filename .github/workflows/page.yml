@@ -1,9 +1,9 @@
 name: VitePress-Website Github Pages Deploy
 on:
-  push:
+  push: # 方式一：push 到 main 分支
     branches:
       - main
-  workflow_dispatch:
+  workflow_dispatch: # 方式二：手动按钮
     inputs:
       logLevel:
         description: 'Log level'
@@ -13,10 +13,10 @@ on:
         description: 'Test scenario tags'
 
 env:
-  TZ: Asia/Shanghai
+  TZ: Asia/Shanghai # 上海时区，系统时间和自适应主题
 
 jobs:
-  build:
+  build: # 1. 构建静态站点
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -57,7 +57,7 @@ jobs:
           name: 'github-pages' # default
           path: docs/.vitepress/dist
 
-  deploy:
+  deploy: # 2. 部署
     needs: build
 
     permissions:

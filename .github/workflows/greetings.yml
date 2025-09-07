@@ -1,16 +1,18 @@
-name: Greetings # 工作流标题
+name: Greetings
 
-on: [pull_request_target, issues] # 触发事件，当有 pull request 或 issue 时触发
+on:
+  issues:
+    types:
+      - opened
 
 jobs:
-  greeting: # job 工作流名称
+  greeting:
     runs-on: ubuntu-latest
     permissions:
-      issues: write # 授权 issue 写操作
-      pull-requests: write # 授权 pull request 写操作
+      issues: write
+      pull-requests: write
     steps:
-      - uses: actions/first-interaction@v1 # GitHub 官方交互 action 模板
+      - uses: actions/first-interaction@v1
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }} # GitHub 密钥 Token，面向开发者与自动化工具
-          issue-message: "Message that will be displayed on users' first issue" # 欢迎 issue 消息
-          pr-message: "Message that will be displayed on users' first pull request" # 欢迎 pull request 消息
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "欢迎提交 issue，我们会尽快回复您"
