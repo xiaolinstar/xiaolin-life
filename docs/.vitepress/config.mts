@@ -85,12 +85,30 @@ export default withMermaid({
                     text: '开发', link: `/software-development/`,
                     items: [
                         {
+                            text: '系统设计',
+                            link: `/software-development/system-design`,
+                            items: [
+                                {
+                                    text: 'Redis 缓存与高可用',
+                                    link: `/software-development/system-design/redis`
+                                },
+                                {
+                                    text: 'Nginx 负载与高可用',
+                                    link: `/software-development/system-design/nginx`,
+                                }
+                            ]
+                        },
+                        {
                             text: '系统架构设计师',
                             link: `/software-development/system-architecture-designer`,
                             items: [
                                 {
                                     text: '软考高级：系统架构设计师',
                                     link: `software-development/system-architecture-designer/ruankao-advanced`
+                                },
+                                {
+                                    text: '数据库系统基础知识',
+                                    link: `/software-development/system-architecture-designer/database`
                                 }
                             ]
                         }
