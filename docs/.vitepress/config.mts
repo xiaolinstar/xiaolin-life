@@ -41,7 +41,8 @@ export default withMermaid({
                             text: 'CI/CD 与 DevOps',
                             link: `/sre/devops`,
                             items: [
-                                {text: 'Web 静态资源网站', link: `/sre/devops/front-dist`},
+                                {text: 'Web 静态站点', link: `/sre/devops/front-dist`},
+                                {text: 'Spring 服务端开发', link: `/sre/devops/spring`},
                                 {text: '起步', link: `/sre/devops/start`},
                                 {text: '容器化', link: `/sre/devops/containerize`},
                                 {text: '声明式 API', link: `/sre/devops/docker-compose`},
@@ -120,9 +121,16 @@ export default withMermaid({
                 {
                     text: '人工智能', link: `/ai/`,
                     items: [
-                        {text: 'LLM', link: `/ai/llm`},
-                        {text: 'LangChain', link: `/ai/langchain`},
-                    ]
+                        {
+                            text: '理论基础', link: `/ai/theory`,
+                            items: [
+                                { text: 'LLM 擅长问题与领域', link: `/ai/theory/when-llm`}
+                            ]
+                        },
+                        {
+                            text: 'LLM', link: `/ai/llm`
+                        },
+                    ],
                 }
             ],
 
