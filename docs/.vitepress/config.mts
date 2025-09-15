@@ -49,6 +49,7 @@ export default withMermaid({
                                 {text: 'Pipeline 流水线', link: `/sre/devops/pipeline`},
                                 {text: 'Github Actions 理论概念', link: `/sre/devops/github-actions`},
                                 {text: 'Github Actions 工作流实践', link: `/sre/devops/github-actions-workflows`},
+                                {text: 'CI/CD 流程分离', link: `/sre/devops/ci-cd-separate`},
                             ]
                         },
                         {
@@ -160,7 +161,10 @@ export default withMermaid({
                             text: '桌游聚会',
                             link: `/life-nanjing/table-game`,
                             items: [
-                                {text: '阿瓦隆', link: `/life-nanjing/table-game/avalon`}
+                                {text: '阿瓦隆', link: `/life-nanjing/table-game/avalon`},
+                                {text: '掼蛋', link: `/life-nanjing/table-game/guandan`},
+                                {text: '谁是卧底', link: `/life-nanjing/table-game/who-is-spy`},
+                                {text: '升级', link: `/life-nanjing/table-game/upgrade`}
                             ]
                         }
                     ],
