@@ -50,7 +50,9 @@ export default withMermaid({
                                 {text: 'Github Actions 理论概念', link: `/sre/devops/github-actions`},
                                 {text: 'Github Actions 工作流实践', link: `/sre/devops/github-actions-workflows`},
                                 {text: 'CI/CD 分离：权责边界', link: `/sre/devops/ci-cd`},
-                                {text: 'CI/CD 分离：治理能力演进', link: `/sre/devops/ci-cd-3stage`},
+                                {text: 'CI 从源代码到制品', link: `/sre/devops/ci-pipeline`},
+                                {text: 'CD 从制品到生产环境', link: `/sre/devops/cd-pipeline`},
+                                {text: '变更管控，CD 就绪条件审查', link: `/sre/devops/cd-approval`},
                             ]
                         },
                         {
