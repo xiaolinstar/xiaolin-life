@@ -115,6 +115,14 @@ export default withMermaid({
                                 {
                                     text: '数据库系统基础知识',
                                     link: `/software-development/system-architecture-designer/database`
+                                },
+                                {
+                                    text: '2025下半年秒杀场景',
+                                    link: `/software-development/system-architecture-designer/202511-exam`
+                                },
+                                {
+                                    text: '论文备考',
+                                    link: `/software-development/system-architecture-designer/paper`
                                 }
                             ]
                         }
