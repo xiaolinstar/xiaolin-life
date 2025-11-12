@@ -35,7 +35,8 @@ export default withMermaid({
                             items: [
                                 {text: 'SRE 实践：服务可靠性案例', link: `/sre/forward/time-geek`},
                                 {text: '阿里云 ACP 云原生微服务', link: `/sre/forward/acp-micro-service`},
-                                {text: '透明，看得见还是看不见', link: `/sre/forward/transparency`}
+                                {text: '透明，看得见还是看不见', link: `/sre/forward/transparency`},
+                                {text: '健康感知，监控、拨测与巡检', link: `/sre/forward/availability-safeguard`},
                             ]
                         },
                         {
