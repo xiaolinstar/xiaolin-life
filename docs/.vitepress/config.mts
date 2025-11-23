@@ -31,7 +31,7 @@ export default withMermaid({
                     items: [
                         {
                             text: '学习与思考',
-                            link: `/sre/ops`,
+                            link: `/sre/forward`,
                             items: [
                                 {text: 'SRE 实践：服务可靠性案例', link: `/sre/forward/time-geek`},
                                 {text: '阿里云 ACP 云原生微服务', link: `/sre/forward/acp-micro-service`},
@@ -163,6 +163,13 @@ export default withMermaid({
                 {
                     text: '南京生活', link: `/life-nanjing/`,
                     items: [
+                        {
+                            text: '风景名胜',
+                            link: `/life-nanjing/entertainment`,
+                            items: [
+                                {text: "鼓楼滨江", link: `/life-nanjing/entertainment/gulou-riverfront`}
+                            ]
+                        },
                         {
                             text: '南京高校',
                             link: `/life-nanjing/university`,
