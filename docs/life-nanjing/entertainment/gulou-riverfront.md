@@ -60,7 +60,7 @@
 
 ![railway-site](../img-gulou-riverfront/railway-site-2.jpg)
 
-火车道遗迹，向远方看，放佛能穿越到宫崎骏的动漫世界。
+火车道遗迹，向远方看，仿佛能穿越到宫崎骏的动漫世界。
 
 ![railway-face](../img-gulou-riverfront/railway-face.jpg)
 
