@@ -126,7 +126,7 @@ export default withMermaid({
                                 {
                                     text: '论文备考',
                                     link: `/software-development/system-architecture-designer/paper`
-                                }
+                                },
                             ]
                         }
                     ]
