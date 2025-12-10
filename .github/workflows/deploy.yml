@@ -31,7 +31,7 @@ jobs:
           sudo apt-get install -y sshpass
           
           # 获取镜像标签
-          IMAGE_TAG="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${{ github.sha }}"
+          IMAGE_TAG="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main"
           
           # 创建临时部署脚本
           cat > deploy-script.sh << EOF
