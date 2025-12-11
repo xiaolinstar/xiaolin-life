@@ -1,11 +1,11 @@
-name: CD Pipeline, Deploy to Target Server
+name: CD Pipeline, Deploy to Tencent Cloud Server
 
 on:
   # CD 流水线触发方式
   workflow_dispatch: # 手动点击触发
   workflow_run:
     # 当 CI 流水线成功完成后自动触发
-    workflows: ["CI Pipeline, Create and Publish a Docker Image"]
+    workflows: ["CI Pipeline, To Alibaba Cloud Container Registry"]
     types:
       - completed
 
