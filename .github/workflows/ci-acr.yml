@@ -1,4 +1,4 @@
-name: CI Pipeline, To GitHub Container Registry
+name: CI Pipeline, To Alibaba Cloud Container Registry
 
 on:
   # 2个 CI 流水线触发方式
@@ -9,13 +9,13 @@ on:
 
 # 定义环境变量
 env:
-  REGISTRY: ghcr.io # GitHub Container Registry
-  IMAGE_NAME: ${{ github.repository }} # 系统环境变量，所在 GitHub 仓库名
+  REGISTRY: ${{ secrets.ACR_REGISTRY }} # 阿里云ACR镜像仓库
+  NAMESPACE: ${{ secrets.ACR_NAMESPACE }} # 阿里云ACR命名空间，需要根据实际情况修改
+  IMAGE_NAME: ${{ github.event.repository.name }} # 阿里云ACR镜像名称，需要根据实际情况修改
 
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
-
 
     permissions:
       contents: read
@@ -27,38 +27,36 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Login to GitHub Container Registry
+      # 登录阿里云ACR
+      - name: Login to Alibaba Cloud Container Registry
         uses: docker/login-action@v3
         with:
-          # 3个仓库相关变量，用户无需关注
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.ACR_USERNAME }} # 阿里云ACR用户名，需要在secrets中配置
+          password: ${{ secrets.ACR_PASSWORD }} # 阿里云ACR密码，需要在secrets中配置
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ env.NAMESPACE }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=raw,value=latest,enable={{is_default_branch}}
 
-
-      # 构建镜像，并推送到 ghcr.io
+      # 构建镜像，并推送到阿里云ACR
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         id: push
         with:
-          context: .  # 构建上下文，默认为项目更目录下的 Dockerfile
+          context: .  # 构建上下文，默认为项目根目录下的 Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      # 生成项目证明
-      - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@v2
-        with:
-          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
 
       # 发送邮件到 QQ 邮箱
       - name: Send email notification
@@ -73,14 +71,13 @@ jobs:
           to: xing.xiaolin@foxmail.com              # 目标邮箱
           from: GitHub Actions
           html_body: |
-            <h2>镜像构建与证明生成完成</h2>
+            <h2>镜像构建完成</h2>
             <p><strong>仓库：</strong>${{ github.repository }}</p>
             <p><strong>分支：</strong>${{ github.ref_name }}</p>
             <p><strong>提交：</strong>${{ github.sha }}</p>
-            <p><strong>镜像：</strong>${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}</p>
+            <p><strong>镜像：</strong>${{ env.REGISTRY }}/${{ env.NAMESPACE }}/${{ env.IMAGE_NAME }}</p>
             <p><strong>标签：</strong>${{ steps.meta.outputs.tags }}</p>
             <p><strong>摘要：</strong>${{ steps.push.outputs.digest }}</p>
-            <p><strong>证明状态：</strong>✅ 已生成并推送至 ghcr.io</p>
+            <p><strong>推送状态：</strong>✅ 已成功推送至阿里云ACR</p>
             <hr>
             <p><small>此邮件由 GitHub Actions 自动发送</small></p>
-            
