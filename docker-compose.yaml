@@ -16,7 +16,7 @@ services:
 
   # VitePress 静态网站
   vitepress-website:
-    image: xxl1997/xiaolin-docs:0.0.1
+    image: xiaolinstar/xiaolin-docs:0.0.1
     build: ./
     container_name: vitepress-website
     volumes:

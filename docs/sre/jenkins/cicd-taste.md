@@ -268,7 +268,7 @@ pipeline {
 
     environment {
         // 定义环境变量，例如 Docker 镜像仓库的 URL
-        DOCKER_REGISTRY = 'xxl1997/xiaolin-docs'
+        DOCKER_REGISTRY = 'xiaolinstar/xiaolin-docs'
         VERSION = '0.0.1'
         CONTAINER_NAME = 'xiaolin-website'
     }
