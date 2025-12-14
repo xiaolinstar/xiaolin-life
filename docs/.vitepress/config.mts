@@ -39,6 +39,7 @@ export default withMermaid({
                                 {text: '健康感知，监控、拨测与巡检', link: `/sre/forward/availability-safeguard`},
                                 {text: '遗留系统的演进策略', link: `/sre/forward/legacy-system`},
                                 {text: '发布变更，AI 价值', link: `/sre/forward/change-control-value`},
+                                {text: '项目管理思考', link: `/sre/forward/project-management`},
                             ]
                         },
                         {
