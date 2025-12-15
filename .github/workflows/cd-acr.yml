@@ -61,10 +61,10 @@ jobs:
             fi
             
             # 停止并移除旧的容器
-            docker-compose down || true
+            docker compose down || true
             
             # 启动新的容器
-            docker-compose up -d
+            docker compose up -d
             
             # 清理未使用的镜像
             docker image prune -f
