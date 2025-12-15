@@ -28,8 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    # 检出项目源码仓库不是必须的
+#      - name: Checkout repository
+#        uses: actions/checkout@v4
 
       - name: Deploy to target server via SSH
         uses: appleboy/ssh-action@v1.0.0
