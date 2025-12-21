@@ -20,6 +20,7 @@ env:
   REGISTRY: ${{ secrets.ACR_REGISTRY }} # 阿里云ACR镜像仓库
   NAMESPACE: ${{ secrets.ACR_NAMESPACE }} # 阿里云ACR命名空间
   IMAGE_NAME: ${{ github.event.repository.name }} # 镜像名称
+  SERVER_DIR: ~/WebstormProjects/xiaolin-docs
 
 jobs:
   deploy-to-server:
@@ -28,9 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    # 检出项目源码仓库不是必须的
-#      - name: Checkout repository
-#        uses: actions/checkout@v4
 
       - name: Deploy to target server via SSH
         uses: appleboy/ssh-action@v1.0.0
@@ -40,7 +38,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             # 拉取最新代码
-            cd ~/WebstormProjects/xiaolin-docs || { echo "Project directory not found"; exit 1; }
+            cd ${{ env.SERVER_DIR }} || { echo "Project directory not found"; exit 1; }
             
             git pull # 拉取最新代码，可选的
 
