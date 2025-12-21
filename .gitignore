@@ -5,3 +5,4 @@ docs/.vitepress/cache
 .idea
 
 volumes/website/logs/
+volumes/website/geoip

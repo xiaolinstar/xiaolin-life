@@ -1,0 +1,67 @@
+name: CD Pipeline, Deploy to Target Server
+
+on:
+  # CD 流水线触发方式
+  workflow_dispatch: # 手动点击触发
+  workflow_run:
+    # 当 CI 流水线成功完成后自动触发
+    workflows: ["CI Pipeline, Create and Publish a Docker Image"]
+    types:
+      - completed
+
+# 定义环境变量
+env:
+  REGISTRY: ghcr.io # GitHub Container Registry
+  IMAGE_NAME: ${{ github.repository }} # 系统环境变量，所在 GitHub 仓库名
+  SERVER_DIR: ~/WebstormProjects/xiaolin-docs
+
+jobs:
+  deploy-to-server:
+    # 仅在 CI 成功完成时运行
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to target server via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            # 停止并移除旧的容器
+            cd ${{ env.SERVER_DIR }}
+            
+            git pull # 拉取最新代码，确保是最新版本的docker-compose.yaml
+            
+            docker compose down || true
+            
+            # 启动新的容器
+            docker compose up -d
+            
+            # 清理未使用的镜像
+            docker image prune -f
+            
+            echo "Deployment completed successfully!"
+
+      # 发送部署成功邮件通知
+      - name: Send deployment success email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.qq.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "🚀 应用部署完成 - ${{ github.repository }}"
+          to: xing.xiaolin@foxmail.com
+          from: GitHub Actions
+          html_body: |
+            <h2>应用已成功部署到目标服务器</h2>
+            <p><strong>仓库：</strong>${{ github.repository }}</p>
+            <p><strong>分支：</strong>${{ github.ref_name }}</p>
+            <p><strong>提交：</strong>${{ github.sha }}</p>
+            <p><strong>镜像：</strong>${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}</p>
+            <p><strong>时间：</strong>$(date)</p>
+            <hr>
+            <p><small>此邮件由 GitHub Actions 自动发送</small></p>
