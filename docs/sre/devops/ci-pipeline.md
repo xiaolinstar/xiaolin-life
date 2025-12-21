@@ -183,6 +183,104 @@ jobs:
 
 ![Email Notification](../img-ci-pipeline/GitHub-Actions-Email.png)
 
+## CI 流水线：Alibaba Cloud Container Registry
+
+GitHub Container Registry 是 GitHub 提供的容器镜像仓库。虽然我的本地开发环境支持科学上网，但是阿里云服务器或腾讯云服务则不支持，导致 CD 受阻。
+
+解决方案有两种：
+- 在云服务器上添加 hosts 解析或使用代理，实现网络支持
+- 使用国内的容器镜像托管仓库，如阿里云容器镜像服务（ACR）
+
+选择 Alibaba Cloud Container Registry（ACR）作为镜像仓库，是因其支持私有镜像仓库，且拥有个人版免费额度，足够个人开发者练手使用。
+
+示例项目中 CI Pipeline with ACR 配置文件
+
+```yaml
+name: CI Pipeline, To Alibaba Cloud Container Registry
+
+on:
+  # 2个 CI 流水线触发方式
+  workflow_dispatch: #  手动点击
+  push: # 推送分支 release
+    branches:
+      - 'release'
+
+# 定义环境变量
+env:
+  REGISTRY: ${{ secrets.ACR_REGISTRY }} # 阿里云ACR镜像仓库
+  NAMESPACE: ${{ secrets.ACR_NAMESPACE }} # 阿里云ACR命名空间，需要根据实际情况修改
+  IMAGE_NAME: ${{ github.event.repository.name }} # 阿里云ACR镜像名称，需要根据实际情况修改
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 登录阿里云ACR
+      - name: Login to Alibaba Cloud Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.ACR_USERNAME }} # 阿里云ACR用户名，需要在secrets中配置
+          password: ${{ secrets.ACR_PASSWORD }} # 阿里云ACR密码，需要在secrets中配置
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.NAMESPACE }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      # 构建镜像，并推送到阿里云ACR
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        id: push
+        with:
+          context: .  # 构建上下文，默认为项目根目录下的 Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      # 发送邮件到 QQ 邮箱
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.qq.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}      # 用户关注，QQ 邮箱账号，例：12345678@qq.com
+          password: ${{ secrets.MAIL_PASSWORD }}      # 用户关注，QQ 邮箱授权码（非登录密码）
+          subject: "🐳 镜像构建完成 - ${{ github.repository }}"
+          to: xing.xiaolin@foxmail.com              # 目标邮箱
+          from: GitHub Actions
+          html_body: |
+            <h2>镜像构建完成</h2>
+            <p><strong>仓库：</strong>${{ github.repository }}</p>
+            <p><strong>分支：</strong>${{ github.ref_name }}</p>
+            <p><strong>提交：</strong>${{ github.sha }}</p>
+            <p><strong>镜像：</strong>${{ env.REGISTRY }}/${{ env.NAMESPACE }}/${{ env.IMAGE_NAME }}</p>
+            <p><strong>标签：</strong>${{ steps.meta.outputs.tags }}</p>
+            <p><strong>摘要：</strong>${{ steps.push.outputs.digest }}</p>
+            <p><strong>推送状态：</strong>✅ 已成功推送至阿里云ACR</p>
+            <hr>
+            <p><small>此邮件由 GitHub Actions 自动发送</small></p>
+```
+
 ## 延伸思考
 
 自然地，本文引入了一个关键的 SRE 运维课题：**变更管控**，将在后续文章中做专题研究。
