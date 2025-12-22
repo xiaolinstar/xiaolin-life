@@ -57,6 +57,7 @@ export default withMermaid({
                                 {text: 'CI/CD 分离：权责边界', link: `/sre/devops/ci-cd`},
                                 {text: 'CI 从源代码到容器镜像', link: `/sre/devops/ci-pipeline`},
                                 {text: 'CD 从制品到生产环境', link: `/sre/devops/cd-pipeline`},
+                                {text: 'CD 部署与交付', link: `/sre/devops/what-is-cd`},
                                 {text: '变更管控，CD 就绪条件审查', link: `/sre/devops/cd-approval`},
                             ]
                         },
