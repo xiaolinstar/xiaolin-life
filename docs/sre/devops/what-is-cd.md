@@ -3,7 +3,7 @@
 持续部署（Continuous Deployment）与持续交付（Continuous Delivery）的缩写都是 CD，它们的联系和区别是什么？我的理解：
 
 - 集成 Integration，将源代码构建为制品或容器镜像，推送到制品/镜像仓库。
-- 部署 Deployment，将制品/镜像仓库应用到服务器上，并成功启动为服务进程。
+- 部署 Deployment，将制品/镜像仓库分发到服务器上，并成功启动为服务进程。
 - 交付 Delivery，产品功能对用户开放使用。
 
 ## 经典定义

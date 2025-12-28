@@ -142,7 +142,9 @@ export default withMermaid({
                         {
                             text: '理论基础', link: `/ai/theory`,
                             items: [
-                                { text: 'LLM 擅长问题与领域', link: `/ai/theory/when-llm`}
+                                { text: 'LLM 擅长问题与领域', link: `/ai/theory/when-llm`},
+                                { text: 'AI Coding', link: `/ai/theory/ai-coding`},
+
                             ]
                         },
                         {
