@@ -9,16 +9,18 @@
 * [X]  使用 https 访问，端口号443
 * [X]  变更时区为 Asia/Shanghai，自适应黑白主题
 * [X]  在 Jenkins 容器中使用 docker compose 启动
-* [ ]  完善项目 README
+* [X]  完善项目 README
 * [X]  Nginx 支持 stub-status 模块
 * [X]  增加 Prometheus 监控，监控 Linux 宿主机和 Nginx
 * [X]  增加 Loki 日志系统
 * [X]  实现 GitHub Actions CI/CD 流水线
 * [X]  配置 SSH 方式 CD 部署
-* [ ]  nginx.conf URL 匹配，域名访问 grafana
-* [ ]  Markdown 语法支持脚注
+* [X]  nginx.conf URL 匹配，域名访问 grafana
+* [X]  Markdown 语法支持脚注
 * [ ]  Jenkinsfile 只将 main 分支执行流水线 
 * [ ]  文章支持三级标签索引
+* [ ]  数据库执行，使用传统的 shell 执行，编排到 Pipeline 中
+* [ ]  数据库执行，使用专门的数据库执行工具，Bytebase、Liquibase
 
 ## 问题记录
 - VitePress 中图片等静态文件 build

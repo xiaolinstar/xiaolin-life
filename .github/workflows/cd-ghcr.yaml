@@ -5,7 +5,7 @@ on:
   workflow_dispatch: # 手动点击触发
   workflow_run:
     # 当 CI 流水线成功完成后自动触发
-    workflows: ["CI Pipeline, Create and Publish a Docker Image"]
+    workflows: ["CI Pipeline, To GitHub Container Registry"]
     types:
       - completed
 
@@ -44,7 +44,11 @@ jobs:
             
             echo "Deployment completed successfully!"
 
-      # 发送部署成功邮件通知
+  # 发送部署成功邮件通知
+  send-email:
+    needs: deploy-to-server
+    runs-on: ubuntu-latest
+    steps:
       - name: Send deployment success email
         uses: dawidd6/action-send-mail@v3
         with:

@@ -71,6 +71,10 @@ jobs:
             echo "Deployment completed successfully!"
 
       # 发送部署成功邮件通知
+  send-email:
+    needs: deploy-to-server
+    runs-on: ubuntu-latest
+    steps:
       - name: Send deployment success email
         uses: dawidd6/action-send-mail@v3
         with:
