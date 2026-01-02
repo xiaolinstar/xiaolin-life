@@ -191,8 +191,15 @@ export default withMermaid({
                             items: [
                                 {text: '阿瓦隆', link: `/life-nanjing/table-game/avalon`},
                                 {text: '掼蛋', link: `/life-nanjing/table-game/guandan`},
-                                {text: '谁是卧底', link: `/life-nanjing/table-game/who-is-spy`},
+                                {text: '谁是卧底', link: `/life-nanjing/table-game/undercover`},
                                 {text: '升级', link: `/life-nanjing/table-game/upgrade`}
+                            ]
+                        },
+                        {
+                            text: '生活思考',
+                            link: `/life-nanjing/thinks`,
+                            items: [
+                                {text: '人人都是博主', link: `/life-nanjing/thinks/blogger`}
                             ]
                         }
                     ],
