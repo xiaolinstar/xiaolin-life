@@ -40,7 +40,7 @@ export default withMermaid({
                                 { text: '遗留系统的演进策略', link: `/sre/forward/legacy-system` },
                                 { text: '发布变更，AI 价值', link: `/sre/forward/change-control-value` },
                                 { text: '项目管理思考', link: `/sre/forward/project-management` },
-                                { text: '异常处理抉择', link: `/sre/forward/when-exception` },
+                                { text: '异常处理架构设计', link: `/sre/forward/when-exception` },
                             ]
                         },
                         {
