@@ -163,7 +163,8 @@ export default withMermaid({
                         { text: 'Thunderbird 解放收件箱', link: `/easy-office/email-thunderbird` },
                         { text: '易读易写 Markdown', link: `/easy-office/markdown` },
                         { text: '二进制考试', link: `/easy-office/binary-exam` },
-                        { text: 'Linux 学习', link: `/easy-office/linux-learn` }
+                        { text: 'Linux 学习', link: `/easy-office/linux-learn` },
+                        { text: 'Mac办公体验', link: `/easy-office/mac` }
                     ]
                 }
             ],
