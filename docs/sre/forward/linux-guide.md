@@ -1,5 +1,10 @@
 # 云服务器 Linux 起手式，为什么你的 shell 这么好看？
 
+开发运维人员经常与黑乎乎的终端打交道，使用体验差、效率低。一些用户了解可使用各类软件如oh-my-zsh等来优化用户体验，但在云服务器配置过程中面临的网络访问困难、重复配置效率低下等痛点。本文介绍 Linux 环境起手式，安装必备的软件，包括 zsh、oh-my-zsh、git、docker 等。
+
+*关键词：云服务器配置、国内网络优化、oh-my-zsh、Docker、系统镜像*
+
+
 面向云服务器环境，开发、运维工程师，特别适用于国内网络。
 
 注：本文所有的命令都是在 Ubuntu 22.04 LTS 上测试通过的，基于腾讯云服务器。
@@ -260,11 +265,9 @@ git clone https://gitee.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-
 git clone https://gitee.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # zsh-completions：命令补全
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
-
+git clone https://gitee.com/wangnd/zsh-completions.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 # autojump 自动跳转插件
-
 sudo apt-get install autojump
 ```
 
