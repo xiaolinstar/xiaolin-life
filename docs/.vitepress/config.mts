@@ -43,6 +43,7 @@ export default withMermaid({
                                 { text: '异常处理架构设计', link: `/sre/forward/when-exception` },
                                 { text: 'Linux 起手式', link: `/sre/forward/linux-guide` },
                                 { text: 'DevOps 平台思考', link: `/sre/forward/devops-platform` },
+                                { text: 'Git Submodule 父子项目协作', link: `/sre/forward/git-submodule` },
                             ]
                         },
                         {
