@@ -2,17 +2,17 @@
 
 我在微信公众号上已经实现了桌游“谁是卧底”发牌器，独立于此项目，又开发了桌游“阿瓦隆”。现在我想将这两个桌游发牌器同时在微信公众号中支持，该如何进行项目管理？
 
-另一个场景，独立开发前后端项目backend和frontend，想要将它们整合在一起实现**一键部署**，该如何作？
+另一个场景，独立开发前后端项目 backend 和 frontend，想要将它们整合在一起实现**一键部署**，该如何做？
 
-在一个大的项目中，管理多个子模块？还是在多个子项目上抽象父项目？ 从架构设计角度，遵循**高内聚低耦合**的原则，肯定是后者，能保证多个项目独立开发，互不干扰，父项目则负责协调多个子项目的整合。
+在大型项目中，是选择管理多个子模块，还是在多个子项目基础上抽象出父项目？从架构设计角度考虑，遵循**高内聚低耦合**的原则，后者显然是更好的选择，能够保证各项目独立开发、互不干扰，而父项目则负责协调各子项目的整合。
 
-我引入了 `git submodule` 来管理子项目，完美实现“物理隔离，逻辑统一”。它是一个一般用户接触不到的 git 模块，但作为系统架构设计师，脑子里装着它的存在，在具体的项目规划中会起到重要作用。
+我引入了 `git submodule` 来管理子项目，完美实现“物理隔离，逻辑统一”。这是一个一般用户接触不到的 git 模块，但对于系统架构设计师而言，了解它的存在并在具体项目规划中应用，将发挥重要作用。
 
 ## 虚拟案例：美团“本地生活”的进化之路
 
 为了说明这个问题，我们模拟一个“美团版”的场景。
 
-早期的美团，团购 (tuangou) 和 外卖 (waimai) 是两套人马，独立开发、独立运营。随着业务版图扩张，公司成立了 local-life (本地生活) 团队，目标是打造一个统一门户，汇聚成为顶流App，占据应用商店排行榜。
+早期的美团，团购 (tuangou) 和 外卖 (waimai) 是两套人马，独立开发和运营。随着业务版图扩张，公司成立了 local-life (本地生活) 团队，目标是打造一个统一门户，汇聚成为顶流App，占据应用商店排行榜。
 
 核心诉求：
 
@@ -26,27 +26,21 @@
 
 > 更多命令字典，推荐菜鸟教程：https://www.runoob.com/git/git-submodule.html
 
-先快速查看`git submodule`的指令手册`git submodule --help
-
-`
+先快速查看`git submodule`的指令手册`git submodule --help`
 
 ```
-NAME
-       git-submodule - Initialize, update or inspect submodules
-
-SYNOPSIS
-       git submodule [--quiet] [--cached]
-       git submodule [--quiet] add [<options>] [--] <repository> [<path>]
-       git submodule [--quiet] status [--cached] [--recursive] [--] [<path>...]
-       git submodule [--quiet] init [--] [<path>...]
-       git submodule [--quiet] deinit [-f|--force] (--all|[--] <path>...)
-       git submodule [--quiet] update [<options>] [--] [<path>...]
-       git submodule [--quiet] set-branch [<options>] [--] <path>
-       git submodule [--quiet] set-url [--] <path> <newurl>
-       git submodule [--quiet] summary [<options>] [--] [<path>...]
-       git submodule [--quiet] foreach [--recursive] <command>
-       git submodule [--quiet] sync [--recursive] [--] [<path>...]
-       git submodule [--quiet] absorbgitdirs [--] [<path>...]
+git submodule [--quiet] [--cached]
+git submodule [--quiet] add [<options>] [--] <repository> [<path>]
+git submodule [--quiet] status [--cached] [--recursive] [--] [<path>...]
+git submodule [--quiet] init [--] [<path>...]
+git submodule [--quiet] deinit [-f|--force] (--all|[--] <path>...)
+git submodule [--quiet] update [<options>] [--] [<path>...]
+git submodule [--quiet] set-branch [<options>] [--] <path>
+git submodule [--quiet] set-url [--] <path> <newurl>
+git submodule [--quiet] summary [<options>] [--] [<path>...]
+git submodule [--quiet] foreach [--recursive] <command>
+git submodule [--quiet] sync [--recursive] [--] [<path>...]
+git submodule [--quiet] absorbgitdirs [--] [<path>...]
 ```
 
 与复杂的`git`指令一样，起步阶段只需要关注这几条“瑞士军刀”命令：
@@ -55,7 +49,7 @@ SYNOPSIS
 
 `git submodule add https://github.com/meituan/tuangou.git`
 
-这会在根目录生成一个 .gitmodules 文件，这玩意就是父项目的“户口本”，记录了子模块是谁、在哪。
+这会在根目录生成一个 .gitmodules 文件，这个文件相当于父项目的“户口本”，记录了子模块是谁、在哪。
 
 **一键拉取**
 
@@ -106,9 +100,8 @@ git submodule update --init --recursive
 
 ## 总结
 
-Submodule 最大的好处是解耦。它允许团队保留各自的 Git 权限、不同的开发流转速度。如果你也面临多团队协作、统一平台构建的难题，不妨试试 Git Submodule。它是目前运维架构中，性价比极高的“降熵”工具。
+Submodule 最大的优势在于解耦，它允许各团队保留独立的 Git 权限和不同的开发节奏。如果你也面临多团队协作、统一平台构建的难题，不妨试试 Git Submodule。它是目前运维架构中，性价比极高的“降熵”工具。
 
 ## 参考
 
-1. Git 官方文档-子模块，https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97
-2. 菜鸟教程git submodule，https://www.runoob.com/git/git-submodule.html
+1. 菜鸟教程 git submodule，https://www.runoob.com/git/git-submodule.html
