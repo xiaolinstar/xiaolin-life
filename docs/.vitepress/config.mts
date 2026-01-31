@@ -65,6 +65,7 @@ export default withMermaid({
                                 { text: 'CD 部署与交付', link: `/sre/devops/what-is-cd` },
                                 { text: '发布变更管控', link: `/sre/devops/change-management` },
                                 { text: 'K3s', link: `/sre/devops/k3s` },
+                                { text: 'Exception 异常处理 01', link: `/sre/devops/exception-01` },
                             ]
                         },
                         {
