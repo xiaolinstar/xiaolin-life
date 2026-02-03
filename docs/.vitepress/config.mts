@@ -45,6 +45,7 @@ export default withMermaid({
                                 { text: 'DevOps 平台思考', link: `/sre/forward/devops-platform` },
                                 { text: 'Git Submodule 父子项目协作', link: `/sre/forward/git-submodule` },
                                 { text: '2026 运营规划', link: `/sre/forward/2026mp` },
+                                { text: '云原生CI/CD全局视角', link: `/sre/forward/cloud-native-ci-cd` }
                             ]
                         },
                         {
@@ -65,7 +66,9 @@ export default withMermaid({
                                 { text: 'CD 部署与交付', link: `/sre/devops/what-is-cd` },
                                 { text: '发布变更管控', link: `/sre/devops/change-management` },
                                 { text: 'K3s', link: `/sre/devops/k3s` },
-                                { text: 'Exception 异常处理 01', link: `/sre/devops/exception-01` },
+                                { text: 'Exception 异常架构设计 00', link: `/sre/devops/exception-00` },
+                                { text: 'Exception 异常架构设计 01', link: `/sre/devops/exception-01` },
+                                { text: 'Exception 异常架构设计 02', link: `/sre/devops/exception-02` }
                             ]
                         },
                         {
