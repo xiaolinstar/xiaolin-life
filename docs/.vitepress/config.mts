@@ -224,7 +224,7 @@ export default withMermaid({
         // 页脚
         footer: {
             message: '微信公众号：持续运维，掘金：老实巴交的麻匪',
-            copyright: 'Copyright © 2025  XingXiaolin'
+            copyright: 'Copyright © 2026  XingXiaolin'
         },
         // 支持模糊搜索
         search: {
