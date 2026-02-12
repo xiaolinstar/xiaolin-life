@@ -159,7 +159,10 @@ export default withMermaid({
                             ]
                         },
                         {
-                            text: 'LLM', link: `/ai/llm`
+                            text: 'LLM', link: `/ai/llm`,
+                            items: [
+                                { text: '登录 Antigravity', link: `/ai/llm/antigravity` },
+                            ]
                         },
                     ],
                 }
