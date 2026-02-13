@@ -71,7 +71,7 @@ except ValueError as e:           # 捕获特定异常
 except ZeroDivisionError as e:    # 多个except子句
     print(f"除零错误: {e}")
 except Exception as e:            # 通用异常捕获
-		raise MyException # 其他异常Exception转换为用户自定义异常MyException
+        raise MyException # 其他异常Exception转换为用户自定义异常MyException
 ```
 
 #### 自定义异常
@@ -165,7 +165,7 @@ DataAccessException -> FileNotFoundError
 
 `Python`中所有的异常都是`BaseException`的子类。主要层级：
 
-```
+```text
 BaseException
  ├── SystemExit           # 程序退出
  ├── KeyboardInterrupt    # 用户中断(Ctrl+C)
@@ -242,9 +242,9 @@ with open("file.txt", "r") as file:
 
 应用级开发框架是基于**RESTful API**设计的，因此有专门封装面向HTTP的异常类，如`Flask`中的`HTTPException`。
 
-**常见HTTP异常**
+**常见HTTP异常**  
 
-```
+```text
 abort(404)           # NotFound
 abort(400)           # BadRequest
 abort(401)           # Unauthorized
@@ -262,7 +262,7 @@ user = User.query.get(user_id)
 # abort
 user = User.query.get(user_id)
     if not user:
-    		abort(404, f"用户 {user_id} 不存在")
+        abort(404, f"用户 {user_id} 不存在")
 ```
 
 ### 异常处理器 `handler`
