@@ -9,7 +9,7 @@ const basePath = process.env.GITHUB_ACTIONS === 'true' ? '/xiaolin-docs/' : '/'
 // export default defineConfig({
 export default withMermaid({
     base: basePath, // (*)设置域名前缀
-    title: "持续运维",
+    title: "AI持续运维",
     description: "系统运维管理员日常工作经验交流与分享",
     head: [['link', { rel: 'icon', href: '/sparrow.svg' }]],
     themeConfig: {
@@ -230,8 +230,8 @@ export default withMermaid({
         ],
         // 页脚
         footer: {
-            message: '微信公众号：持续运维，掘金：老实巴交的麻匪',
-            copyright: 'Copyright © 2026  XingXiaolin'
+            message: '微信公众号：AI持续运维，掘金：AI持续运维',
+            copyright: 'Copyright © 2026 xingxiaolin | <a href="https://beian.miit.gov.cn/" target="_blank">ICP 备案号：苏ICP备2026011017号-1</a> | <a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">公网安备：待填写</a>'
         },
         // 支持模糊搜索
         search: {
