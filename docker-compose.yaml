@@ -7,7 +7,7 @@ services:
     image: nginx:alpine3.20-perl
     container_name: nginx-gateway
     ports:
-      - "80:80"
+      - "443:443"
     networks:
       - tiny-sparrow-network
     volumes:
