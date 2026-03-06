@@ -17,8 +17,7 @@ services:
 
   # VitePress 静态网站
   vitepress-website:
-    image: xiaolinstar/xiaolin-docs:0.0.1
-    build: ./
+    image: ghcr.io/xiaolinstar/xiaolin-docs:latest
     container_name: vitepress-website
     volumes:
       - ./volumes/website/logs:/var/log/nginx

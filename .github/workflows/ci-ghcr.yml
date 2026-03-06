@@ -6,6 +6,7 @@ on:
   push: # 推送分支 release
     branches:
       - 'release'
+      - 'main'
 
 # 定义环境变量
 env:
