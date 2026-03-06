@@ -1,4 +1,4 @@
-# GitHub Actions 快速介绍
+# 从零实现 CI/CD：GitHub Actions 快速介绍
 
 学习 GitHub Actions 中的核心概念基础知识以及基本术语。
 
