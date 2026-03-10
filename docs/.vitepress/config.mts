@@ -231,7 +231,7 @@ export default withMermaid({
         // 页脚
         footer: {
             message: '微信公众号：AI持续运维，掘金：AI持续运维',
-            copyright: 'Copyright © 2026 xingxiaolin | <a href="https://beian.miit.gov.cn/" target="_blank">ICP 备案号：苏ICP备2026011017号-1</a> | <a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">公网安备：待填写</a>'
+            copyright: 'Copyright © 2026 xingxiaolin <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;"><a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2026011017 号 -1</a><div style="display: inline-flex; align-items: center; white-space: nowrap;"><img src="/asset/beian-gongan.png" alt="公安备案" style="width: 16px; height: 16px; margin-right: 4px; flex-shrink: 0;"><a href="http://www.beian.mps.gov.cn/#query/webSearch?code=32010602012313"ref="noreferrer target="_blank">苏公网安备32010602012313号</a></div></div>'
         },
         // 支持模糊搜索
         search: {
