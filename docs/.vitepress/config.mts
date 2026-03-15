@@ -178,12 +178,14 @@ export default withMermaid({
                                 { text: 'LLM 擅长问题与领域', link: `/ai/theory/when-llm` },
                                 { text: 'AI Coding', link: `/ai/theory/ai-coding` },
 
+
                             ]
                         },
                         {
                             text: 'LLM', link: `/ai/llm`,
                             items: [
                                 { text: '登录 Antigravity', link: `/ai/llm/antigravity` },
+                                { text: '半小时启动 OpenClaw', link: `/ai/llm/openclaw` }
                             ]
                         },
                     ],
