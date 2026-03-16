@@ -81,7 +81,7 @@ https://cloud.tencent.com/act/cps/redirect?redirect=1079&cps_key=aaaf11280836364
 
 腾讯云提供了全面和详尽的玩转 OpenClaw 文档，可跳转查看。
 
-![腾讯云：玩转 OpenClaw 合集](https://cloud.tencent.com/developer/article/2624973)
+[腾讯云：玩转 OpenClaw 合集](https://cloud.tencent.com/developer/article/2624973)
 
 好的产品不需要说明书，我在安装过程中完全没有看文档。
 
@@ -125,8 +125,8 @@ https://cloud.tencent.com/act/cps/redirect?redirect=1079&cps_key=aaaf11280836364
 - [🔥🔥🔥玩转OpenClaw｜云上OpenClaw最全教程合辑](https://cloud.tencent.com/developer/article/2624973)
 - [玩转OpenClaw｜OpenClaw(Clawdbot)接入自定义大模型教程](https://cloud.tencent.com/developer/article/2625144)
 - [OpenClaw GitHub 仓库](https://github.com/OpenClaw/OpenClaw)
-- [智谱 AI 开放平台](https://open.bigmodel.cn/)
-- [飞书机器人开发文档](https://open.feishu.cn/document/ukTMzUjL4YjMxMzNzADMyMjUzMTIy)
+- [智谱 AI](https://open.bigmodel.cn/)
+- [飞书开发平台](https://open.feishu.cn/?lang=zh-CN)
 
 
 **最后唠叨一句：**
