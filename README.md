@@ -1,4 +1,4 @@
-# 🚀 持续运维｜xiaolin-docs
+# 🚀 AI持续运维｜xiaolin-docs
 
 <p align="center">
   <img src="./docs/public/sparrow.svg" width="120" alt="Logo">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://xiaolin.fun">🌐 在线访问: xiaolin.fun</a>
+  <a href="https://xiaolin.fun">🌐 在线访问: xiaolinstar.cn</a>
 </p>
 
 ---
