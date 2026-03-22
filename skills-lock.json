@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "computedHash": "d31e234f0c90694a670222cdd1dafa853e051d7066beda389f1097c22dadd461"
+    },
+    "gh-cli": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "cbe644b0c6760ae2a1eaafa39133920d889331327065d92a131675a665273e56"
+    },
+    "wechat-article-writer": {
+      "source": "iamzhihuix/happy-claude-skills",
+      "sourceType": "github",
+      "computedHash": "8dc010602abc29f8c45fd0fa2ba5b2f46c5a058dc860a18f1f1a87a73cf96134"
+    },
+    "markdown-formatter": {
+      "source": "vernox/skills",
+      "sourceType": "github",
+      "computedHash": "70387b32c6947ed0283ca2fba3d548dbbb9d7ee0e5a6fc3abebba9a1801c4025"
+    }
+  }
+}

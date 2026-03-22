@@ -65,7 +65,8 @@ export default withMermaid({
                                 { text: 'Git Submodule 父子项目协作', link: `/sre/forward/git-submodule` },
                                 { text: '2026 运营规划', link: `/sre/forward/2026mp` },
                                 { text: '云原生CI/CD全局视角', link: `/sre/forward/cloud-native-ci-cd` },
-                                { text: '手机存储不够用', link: `/sre/forward/phone-storage` }
+                                { text: '手机存储不够用', link: `/sre/forward/phone-storage` },
+                                { text: '流程的副作用', link: `/sre/forward/process-side-effects.md`}
                             ]
                         },
                         {
