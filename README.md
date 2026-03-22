@@ -124,7 +124,7 @@ kubectl apply -f k8s/
 ## 🤝 关注作者
 
 <div align="center">
-  <p><b>微信公众号：持续运维</b></p>
-  <p>掘金：老实巴交的麻匪</p>
+  <p><b>微信公众号：AI持续运维</b></p>
+  <p>掘金：AI持续运维</p>
   <p>Copyright © 2026 XingXiaolin</p>
 </div>
