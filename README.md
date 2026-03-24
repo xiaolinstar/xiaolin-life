@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://xiaolin.fun">🌐 在线访问: xiaolinstar.cn</a>
+  <a href="https://xiaolinstar.cn">🌐 在线访问: xiaolinstar.cn</a>
 </p>
 
 ---
