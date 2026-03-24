@@ -43,7 +43,7 @@
 
 Spring 日志：
 
-```terminaloutput
+```text
 2025-05-28 10:00:00 [main] INFO  o.s.b.SpringApplication - Starting application on localhost with PID 12345
 2025-05-28 10:00:05 [main] ERROR o.s.b.SpringApplication - Application run failed
 java.lang.NullPointerException: Some error occurred
@@ -52,21 +52,21 @@ at com.example.service.MyService.doSomething(MyService.java:42)
 
 MySQL 日志：
 
-```terminaloutput
-    2025-05-28 22:41:25 2025-05-28 22:41:25+08:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
-    2025-05-28 22:41:26 2025-05-28 22:41:26+08:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
-    2025-05-28 22:41:26 2025-05-28 22:41:26+08:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
-    2025-05-28 22:41:27 '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
-    2025-05-28 22:41:27 2025-05-28T14:41:27.128286Z 0 [System] [MY-015015] [Server] MySQL Server - start.
-    2025-05-28 22:41:27 2025-05-28T14:41:27.393086Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.4.3) starting as process 1
-    2025-05-28 22:41:27 2025-05-28T14:41:27.401134Z 0 [Warning] [MY-010159] [Server] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
-    2025-05-28 22:41:27 2025-05-28T14:41:27.479811Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-    2025-05-28 22:41:31 2025-05-28T14:41:31.116967Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-    2025-05-28 22:41:32 2025-05-28T14:41:32.797247Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-    2025-05-28 22:41:32 2025-05-28T14:41:32.797813Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-    2025-05-28 22:41:33 2025-05-28T14:41:33.052484Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
-    2025-05-28 22:41:33 2025-05-28T14:41:33.171347Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
-    2025-05-28 22:41:33 2025-05-28T14:41:33.171484Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.3'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+```text
+2025-05-28 22:41:25 2025-05-28 22:41:25+08:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
+2025-05-28 22:41:26 2025-05-28 22:41:26+08:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2025-05-28 22:41:26 2025-05-28 22:41:26+08:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.4.3-1.el9 started.
+2025-05-28 22:41:27 '/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2025-05-28 22:41:27 2025-05-28T14:41:27.128286Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2025-05-28 22:41:27 2025-05-28T14:41:27.393086Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.4.3) starting as process 1
+2025-05-28 22:41:27 2025-05-28T14:41:27.401134Z 0 [Warning] [MY-010159] [Server] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+2025-05-28 22:41:27 2025-05-28T14:41:27.479811Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-05-28 22:41:31 2025-05-28T14:41:31.116967Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-05-28 22:41:32 2025-05-28T14:41:32.797247Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-05-28 22:41:32 2025-05-28T14:41:32.797813Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-05-28 22:41:33 2025-05-28T14:41:33.052484Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-05-28 22:41:33 2025-05-28T14:41:33.171347Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-05-28 22:41:33 2025-05-28T14:41:33.171484Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.3'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
 ```
 
 ### 业务与应用自定义日志
@@ -121,7 +121,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 ```
 
 服务执行时，日志输出：
-```terminaloutput
+```text
 2025-05-28 22:41:27 公共字段自动填充[insert]...
 2025-05-28 22:41:27 MetaObject [originalObject=cn.xiaolin.xiaolinblog.entity.User@7322328d, metaObject=org.apache.ibatis.reflection.MetaObject@4662312a, metaClass=class cn.xiaolin.xiaolinblog.entity.User]
 2025-05-28 22:41:27 公共字段自动更新[update]...
@@ -139,7 +139,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
 其实可能就执行了一条指令：
 
-```terminaloutput
+```shell
 tail -f /var/log/myapp.log
 ```
 
