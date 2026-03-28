@@ -135,7 +135,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
 > 使用“豆包AI”根据上述语言描述生成图像
 
-![黑客镜头](../img-log/log-hacker.png)
+![黑客镜头](/images/img-log/log-hacker.png)
 
 其实可能就执行了一条指令：
 

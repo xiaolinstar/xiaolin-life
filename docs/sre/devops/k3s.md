@@ -72,7 +72,7 @@
 - 开箱即用，无需配置
 - 图形化界面，操作直观
 
-![Kubernetes in Docker Desktop](../img-k3s/k8s-in-docker-desktop.png)
+![Kubernetes in Docker Desktop](/images/img-k3s/k8s-in-docker-desktop.png)
 
 ## 实战：在Ubuntu上部署K3s
 
@@ -106,7 +106,7 @@ curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIR
 
 查看k3s服务状态和计算资源占用情况 `top`
 
-![top-k3s-server](../img-k3s/top-k3s-server.png)
+![top-k3s-server](/images/img-k3s/top-k3s-server.png)
 
 #### 第二步：验证安装
 
@@ -266,7 +266,7 @@ curl http://<EXTERNAL-IP>:80
 
 如果你喜欢图形化界面，可以安装Kubernetes Dashboard，需使用helm包管理工具，本文不做详细介绍。
 
-![Kubernetes Dashboard](../img-k3s/kubernetes-dashboard.png)
+![Kubernetes Dashboard](/images/img-k3s/kubernetes-dashboard.png)
 
 ## 总结
 

@@ -35,7 +35,7 @@ flowchart TD
 
 芒果台（湖南卫视）早期著名综艺节目《快乐大本营》中，快乐家族经常和嘉宾玩此游戏。
 
-![快乐家族，谁是卧底](../img-undercover/happy-family-undercover.jpg)
+![快乐家族，谁是卧底](/images/img-undercover/happy-family-undercover.jpg)
 
 ## 阵营与身份
 
@@ -99,7 +99,7 @@ flowchart TD
 
 微信公众号「持续运维」已上线「谁是卧底」发牌器，发送“谁是卧底”消息即可获取游戏帮助。
 
-![谁是卧底发牌器](../img-undercover/stick-ops-undercover.jpg)
+![谁是卧底发牌器](/images/img-undercover/stick-ops-undercover.jpg)
 
 ### 项目特点
 

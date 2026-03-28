@@ -21,11 +21,11 @@
 
 Jetbrains IDEA 创建 SpringBoot 3.x 项目，选择 Jdk 17，并选择 Maven 构建项目。
 
-![jetbrains-idea-spring](../img-spring/idea-spring-start.png)
+![jetbrains-idea-spring](/images/img-spring/idea-spring-start.png)
 
 仅选择 spring-web 依赖模块
 
-![spring-web](../img-spring/spring-web.png)
+![spring-web](/images/img-spring/spring-web.png)
 
 创建完成后，进入项目，编写 Spring 项目的 HelloWorld
 
@@ -49,11 +49,11 @@ public class StickopsDemoApplication {
 
 在 IDEA 中点击 `Run` 按钮，任选其一均可
 
-![run-hello](../img-spring/run-hello.png)
+![run-hello](/images/img-spring/run-hello.png)
 
 在浏览器中访问 [http://localhost:8080/hello](http://localhost:8080/hello)，即可看到输出 "hello world"
 
-![spring-hello-world](../img-spring/spring-hello-world.png)
+![spring-hello-world](/images/img-spring/spring-hello-world.png)
 
 ## 生产环境
 
@@ -65,7 +65,7 @@ public class StickopsDemoApplication {
 
 > 如果插件没有显示，可在 Settings -> Plugins 的 Marketplace 中安装
 
-![maven-helper](../img-spring/maven-helper.png)
+![maven-helper](/images/img-spring/maven-helper.png)
 
 #### 方式二：命令式 Maven 中构建
 
@@ -81,7 +81,7 @@ mvn clean package
 
 完成后，可在项目中生成 `target` 目录，其中包含了构建好的 jar 包
 
-![spring-target](../img-spring/spring-target.png)
+![spring-target](/images/img-spring/spring-target.png)
 
 ### 启动项目 java -jar
 

@@ -2,7 +2,7 @@
 
 [CI Pipeline](cicd-08.md) 从源代码到镜像仓库，CD Pipeline 从镜像仓库到生产环境，流水线在项目建设初期定义，可重复执行。
 
-![CICD最小可行方案](../img-cd-pipeline/cicd-minimal.png)
+![CICD最小可行方案](/images/img-cd-pipeline/cicd-minimal.png)
 
 ## 配置即代码，Docker Compose 生命式部署
 
@@ -208,7 +208,7 @@ appleboy/ssh-action@v1.0.0 是 GitHub Actions Workflow 插件，用于在 GitHub
 - `MAIL_USERNAME`：发送邮件的邮箱用户名
 - `MAIL_PASSWORD`：发送邮件的邮箱密码
 
-![CD 运行记录](../img-cd-pipeline/cd-pipeline-runs.png)
+![CD 运行记录](/images/img-cd-pipeline/cd-pipeline-runs.png)
 
 ## 总结
 
