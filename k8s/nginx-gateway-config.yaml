@@ -15,7 +15,7 @@ data:
         # 开启ssl，使用https
         # ssl;
         # 域名 部署服务器IP 本地环回地址
-        server_name  www.xingxiaolin.cn xiaolin.fun localhost;
+        server_name  www.xingxiaolin.cn xiaolinstar.cn localhost;
 
         access_log  /var/log/nginx/host.access.log  main;
 

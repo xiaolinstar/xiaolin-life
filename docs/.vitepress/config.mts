@@ -1,7 +1,7 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid"
 import markdownItTaskListPlus from "markdown-it-task-list-plus"
-import llms, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
+import llms from 'vitepress-plugin-llms'
 
 
 // @ts-ignore 网站基础路径，区分GitHub部署和常规部署
@@ -280,7 +280,6 @@ export default withMermaid({
         lineNumbers: true,
         config: (md) => {
             md.use(markdownItTaskListPlus)
-            md.use(copyOrDownloadAsMarkdownButtons)
         }
     },
 
