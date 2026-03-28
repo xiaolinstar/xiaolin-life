@@ -1,6 +1,7 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid"
 import markdownItTaskListPlus from "markdown-it-task-list-plus"
+import llms, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 
 
 // @ts-ignore 网站基础路径，区分GitHub部署和常规部署
@@ -12,6 +13,9 @@ export default withMermaid({
     base: basePath, // (*)设置域名前缀
     title: "AI持续运维",
     description: "系统运维管理员日常工作经验交流与分享",
+    vite: {
+        plugins: [llms()],
+    },
     head: [
     ['link', { rel: 'icon', href: '/sparrow.svg' }],
     ['style', {}, `
@@ -276,6 +280,7 @@ export default withMermaid({
         lineNumbers: true,
         config: (md) => {
             md.use(markdownItTaskListPlus)
+            md.use(copyOrDownloadAsMarkdownButtons)
         }
     },
 
