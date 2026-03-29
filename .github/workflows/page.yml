@@ -43,6 +43,9 @@ jobs:
       - name: Build documentation
         run: pnpm run docs:build
 
+      - name: Create .nojekyll
+        run: touch docs/.vitepress/dist/.nojekyll
+
       # 通用上传制品 action
 #      - name: Upload artifact
 #        uses: actions/upload-artifact@v4
