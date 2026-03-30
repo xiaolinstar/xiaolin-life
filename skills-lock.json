@@ -25,6 +25,12 @@
       "source": "iamzhihuix/happy-claude-skills",
       "sourceType": "github",
       "computedHash": "8dc010602abc29f8c45fd0fa2ba5b2f46c5a058dc860a18f1f1a87a73cf96134"
+    },
+    "git": {
+      "name": "Git",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=git",
+      "source": "skillhub",
+      "version": "1.0.8"
     }
   }
 }
