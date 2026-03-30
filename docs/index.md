@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "小林的生活"
-  text: "记录生活点滴，分享城市探索与生活感悟"
+  name: "乐享生活"
+  text: "天助自助者"
   tagline: 南京生活、轻松办公、城市探索
   image:
     src: /sparrow.svg

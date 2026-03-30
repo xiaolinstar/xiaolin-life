@@ -1,8 +1,6 @@
 ---
-trigger: always_on
-description: 项目通用规则
+alwaysApply: true
 ---
-
 # 项目通用规则
 
 - 始终使用中文回复用户，但技术专有名词可保留英文（如 API、Python、DTO等）。

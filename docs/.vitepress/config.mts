@@ -11,8 +11,8 @@ const basePath = process.env.GITHUB_ACTIONS === 'true' ? '/xiaolin-life/' : '/'
 // export default defineConfig({
 export default withMermaid({
     base: basePath, // (*)设置域名前缀
-    title: "小林生活",
-    description: "记录生活点滴",
+    title: "乐享生活",
+    description: "记录生活点滴，分享城市探索与生活感悟",
     vite: {
         plugins: [llms()],
     },
