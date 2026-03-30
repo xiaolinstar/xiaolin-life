@@ -1,66 +1,47 @@
-# 🚀 AI持续运维｜xiaolin-docs
+# 🌟 小林的生活
 
 <p align="center">
   <img src="./docs/public/sparrow.svg" width="120" alt="Logo">
 </p>
 
 <p align="center">
-  <strong>系统运维管理员的日常工作经验分享与 SRE 实践平台</strong>
-</p>
-
-<p align="center">
-  <a href="https://xiaolinstar.cn">🌐 在线访问: xiaolinstar.cn</a>
+  <strong>记录生活点滴，分享城市探索与生活感悟</strong>
 </p>
 
 ---
 
 ## 📖 项目简介
 
-`xiaolin-docs` 是一个基于 **VitePress** 构建的个人知识库系统。它不仅仅是一个静态文档站点，更是一个完整的 **SRE (Site Reliability Engineering)** 实践案例。
-
-本项目集成了现代化的 **CI/CD 流水线**、**全栈可观测性方案** 以及 **容器化编排部署**，展示了从代码提交到生产环境稳定运行的全生命周期管理。
+`xiaolin-life` 是一个基于 **VitePress** 构建的个人生活记录平台。这里记录着城市探索、生活感悟、轻松办公工具使用经验，以及南京这座城市的美好瞬间。
 
 ## 🌟 核心板块
 
-### 🛠️ 运维与 SRE (SRE)
-- **学习与思考**：SRE 实践、项目管理、异常处理架构、2026 运营规划等。
-- **CI/CD & DevOps**：从 Jenkins 到 GitHub Actions 的演进，流水线设计，制品库管理。
-- **可观测性**：日志系统演进、Grafana Loki、Prometheus 监控体系。
+### 🏙️ 南京生活
+- **风景名胜**：鼓楼滨江、朝天宫、南京博物馆、中山陵等城市地标探索
+- **南京高校**：南京大学、南京师范大学等高校巡礼
+- **桌游聚会**：阿瓦隆、掼蛋、谁是卧底、升级等桌游体验
+- **生活思考**：人人都是博主、内容仓库等生活感悟
 
-### 💻 开发与架构 (Development)
-- **系统设计**：Redis 缓存、Nginx 负载均衡等高可用方案。
-- **系统架构设计师**：软考高级备考经验、数据库系统知识、秒杀系统设计。
-
-### 🤖 人工智能 (AI)
-- **理论基础**：LLM 擅长领域、AI Coding 实践。
-- **LLM 系统**：大语言模型相关技术探索。
-
-### ☕ 生活与办公
-- **轻松办公**：Thunderbird 邮件管理、Markdown 语法、Mac 办公体验。
-- **南京生活**：风景名胜、高校巡礼、桌游聚会（阿瓦隆、掼蛋等）。
+### ☕ 轻松办公
+- **Thunderbird 邮件管理**：解放收件箱，高效邮件管理技巧
+- **Markdown 语法**：易读易写的文档写作工具
+- **Linux 学习**：技术学习笔记与经验分享
+- **Mac 办公体验**：Mac 系统下的高效办公配置
 
 ---
 
-## 🛠️ 技术栈与架构
+## 🛠️ 技术栈
 
 ### 核心引擎
 - **文档方案**: [VitePress](https://vitepress.dev/) + [Mermaid](https://mermaid.js.org/) (绘图) + [MathJax](https://www.mathjax.org/) (公式)
-- **服务端**: Nginx (静态资源代理 & 软负载)
+- **服务端**: Nginx (静态资源代理)
 - **包管理**: pnpm / npm
-
-### 基础设施与运维 (SRE Capabilities)
-- **容器化**: Docker & Docker Compose
-- **集群编排**: Kubernetes (K8s)
-- **CI/CD**: Jenkins (Legacy) & GitHub Actions (Modern)
-- **可观测性 (Observability)**:
-  - **指标监控**: Prometheus + Grafana + Node Exporter + Nginx Exporter
-  - **日志管理**: Grafana Loki + Promtail
 
 ---
 
 ## 🚀 快速开始
 
-### 本地开发 (Local Development)
+### 本地开发
 
 ```bash
 # 安装依赖
@@ -70,54 +51,21 @@ pnpm install
 pnpm docs:dev
 ```
 
-### 容器化运行 (Docker Compose)
-
-一键启动整套可观测性环境：
+### 容器化运行
 
 ```bash
 docker-compose up -d
 ```
 
 - **网站访问**: [http://localhost](http://localhost)
-- **Grafana 看板**: [http://localhost:9000](http://localhost:9000) (已预置 Prometheus & Loki 数据源)
-- **Loki 接口**: [http://localhost:3100](http://localhost:3100)
-
----
-
-## ⚓ 部署方案
-
-### 1. GitHub Actions (推荐)
-配置文件位于 `.github/workflows/`：
-- **CI**: `release-package.yml` - 构建 Docker 镜像并推送至 GHCR。
-- **CD**: `deploy.yml` - 通过 SSH 自动化部署至目标服务器。
-
-### 2. Jenkins
-支持传统的 `Jenkinsfile` 声明式流水线，实现代码拉取、镜像构建与滚动更新。
-
-### 3. Kubernetes
-提供全套 K8s 部署清单文件（`k8s/` 目录）：
-```bash
-kubectl apply -f k8s/
-```
-
----
-
-## 📊 可观测性展示
-
-本项目深度集成了 **Grafana 生态**，实现了以下监控能力：
-
-- **系统监控**: 监控 Linux 宿主机 CPU、内存、磁盘等指标。
-- **Nginx 监控**: 实时分析并发连接、请求速率及服务状态（通过 `stub_status`）。
-- **日志聚合**: Promtail 实时收集 Nginx 日志并发送至 Loki，在 Grafana 中进行实时查询。
 
 ---
 
 ## 📅 更新日志
 
-- **2026-02-06**: 重构 README，完善 SRE 架构描述，更新 2026 运营规划文档。
-- **2025-12-10**: 全面接入 GitHub Actions CI/CD 流水线。
-- **2025-09-01**: 支持 Kubernetes 全自动化部署。
-- **2025-01-25**: 集成 Prometheus + Grafana + Loki 全栈可观测性系统。
+- **2026-03-30**: 项目分离，专注于生活内容
+- **2025-12-10**: 全面接入 GitHub Actions CI/CD 流水线
+- **2025-09-01**: 支持 Kubernetes 全自动化部署
 
 ---
 

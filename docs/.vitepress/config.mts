@@ -5,14 +5,14 @@ import llms from 'vitepress-plugin-llms'
 
 
 // @ts-ignore 网站基础路径，区分GitHub部署和常规部署
-const basePath = process.env.GITHUB_ACTIONS === 'true' ? '/xiaolin-docs/' : '/'
+const basePath = process.env.GITHUB_ACTIONS === 'true' ? '/xiaolin-life/' : '/'
 
 // https://vitepress.dev/reference/site-config
 // export default defineConfig({
 export default withMermaid({
     base: basePath, // (*)设置域名前缀
-    title: "AI持续运维",
-    description: "系统运维管理员日常工作经验交流与分享",
+    title: "小林生活",
+    description: "记录生活点滴",
     vite: {
         plugins: [llms()],
     },
@@ -40,174 +40,19 @@ export default withMermaid({
         logo: '/sparrow.svg',
         nav: [
             { text: '首页', link: `/` },
-            { text: '运维', link: `/sre/` },
-            { text: '开发', link: `/software-development/` },
-            { text: '人工智能', link: `/ai/` },
             { text: '轻松办公', link: `/easy-office/` },
             { text: '南京生活', link: `/life-nanjing/` },
         ],
 
         sidebar: {
-            '/sre/': [
-                {
-                    text: '运维', link: `/sre/`,
-                    items: [
-                        {
-                            text: '学习与思考',
-                            link: `/sre/forward`,
-                            items: [
-                                { text: 'SRE 实践：服务可靠性案例', link: `/sre/forward/time-geek` },
-                                { text: '阿里云 ACP 微服务', link: `/sre/forward/acp-microservice` },
-                                { text: '透明，看得见还是看不见', link: `/sre/forward/transparency` },
-                                { text: '健康感知，监控、拨测与巡检', link: `/sre/forward/availability-safeguard` },
-                                { text: '遗留系统的演进策略', link: `/sre/forward/legacy-system` },
-                                { text: '发布变更，AI 价值', link: `/sre/forward/change-control-value` },
-                                { text: '项目管理思考', link: `/sre/forward/project-management` },
-                                { text: '异常处理架构设计', link: `/sre/forward/when-exception` },
-                                { text: 'Linux 起手式', link: `/sre/forward/linux-guide` },
-                                { text: 'DevOps 平台思考', link: `/sre/forward/devops-platform` },
-                                { text: 'Git Submodule 父子项目协作', link: `/sre/forward/git-submodule` },
-                                { text: '2026 运营规划', link: `/sre/forward/2026mp` },
-                                { text: '云原生CI/CD全局视角', link: `/sre/forward/cloud-native-ci-cd` },
-                                { text: '手机存储不够用', link: `/sre/forward/phone-storage` },
-                                { text: '流程的副作用', link: `/sre/forward/process-side-effects.md`},
-                                { text: '自动生成 Skill 的价值', link: `/sre/forward/skill-autogen`},
-                            ]
-                        },
-                        {
-                            text: 'CI/CD 与 DevOps',
-                            link: `/sre/devops`,
-                            items: [
-                                { text: 'Web 静态站点', link: `/sre/devops/front-dist` },
-                                { text: 'Spring 服务端开发', link: `/sre/devops/spring` },
-                                { text: '从零实现 CI/CD 01', link: `/sre/devops/cicd-01` },
-                                { text: '从零实现 CI/CD 02', link: `/sre/devops/cicd-02` },
-                                { text: '从零实现 CI/CD 03', link: `/sre/devops/cicd-03` },
-                                { text: '从零实现 CI/CD 04', link: `/sre/devops/cicd-04` },
-                                { text: '从零实现 CI/CD 05', link: `/sre/devops/cicd-05` },
-                                { text: '从零实现 CI/CD 06', link: `/sre/devops/cicd-06` },
-                                { text: '从零实现 CI/CD 07', link: `/sre/devops/cicd-07` },
-                                { text: '从零实现 CI/CD 08', link: `/sre/devops/cicd-08` },
-                                { text: '从零实现 CI/CD 09', link: `/sre/devops/cicd-09` },
-                                { text: 'CD 部署与交付', link: `/sre/devops/what-is-cd` },
-                                { text: '发布变更管控', link: `/sre/devops/change-management` },
-                                { text: 'K3s', link: `/sre/devops/k3s` },
-                                { text: 'Exception 异常架构设计 00', link: `/sre/devops/exception-00` },
-                                { text: 'Exception 异常架构设计 01', link: `/sre/devops/exception-01` },
-                                { text: 'Exception 异常架构设计 02', link: `/sre/devops/exception-02` },
-                                { text: 'Exception 异常架构设计 03', link: `/sre/devops/exception-03` },
-                                { text: 'Exception 异常架构设计 04', link: `/sre/devops/exception-04` },
-                                { text: 'Exception 异常架构设计 05', link: `/sre/devops/exception-05` }
-                            ]
-                        },
-                        {
-                            text: 'Jenkins',
-                            link: `/sre/jenkins`,
-                            items: [
-                                { text: '你好 Jenkins', link: `/sre/jenkins/hello-jenkins` },
-                                { text: 'CI/CD 初体验', link: `/sre/jenkins/cicd-taste` },
-                                { text: 'VitePress 快速搭建个人网站', link: `/sre/jenkins/vitepress-docs` },
-                            ],
-                        },
-                        {
-                            text: '可观测性',
-                            link: `/sre/observability`,
-                            items: [
-                                { text: '什么是可观测性？', link: `/sre/observability/what-is-observability` },
-                                { text: '日志', link: `/sre/observability/log` },
-                                { text: '日志系统发展与演进', link: `/sre/observability/log-evolution` },
-                                { text: 'Elastic ELK', link: `/sre/observability/ELK-stack` },
-                                { text: 'Grafana Loki', link: `/sre/observability/grafana-loki` },
-                                // { text: 'Prometheus', link: `/sre/observability/prometheus` },
-                                // { text: 'Grafana', link: `/sre/observability/grafana` },
-                                // { text: 'Kibana', link: `/sre/observability/kibana` },
-                                // { text: 'ELK', link: `/sre/observability/elk` },
-                                // { text: 'Jaeger', link: `/sre/observability/jaeger` },
-                                // { text: 'Zipkin', link: `/sre/observability/zipkin` },
-                                // { text: 'OpenTelemetry', link: `/sre/observability/opentelemetry` },
-                            ]
-                        }
-                    ]
-                }
-            ],
-            '/software-development/': [
-                {
-                    text: '开发', link: `/software-development/`,
-                    items: [
-                        {
-                            text: '系统设计',
-                            link: `/software-development/system-design`,
-                            items: [
-                                {
-                                    text: 'Redis 缓存与高可用',
-                                    link: `/software-development/system-design/redis`
-                                },
-                                {
-                                    text: 'Nginx 负载与高可用',
-                                    link: `/software-development/system-design/nginx`,
-                                }
-                            ]
-                        },
-                        {
-                            text: '系统架构设计师',
-                            link: `/software-development/system-architecture-designer`,
-                            items: [
-                                {
-                                    text: '软考高级：系统架构设计师',
-                                    link: `software-development/system-architecture-designer/ruankao-advanced`
-                                },
-                                {
-                                    text: '数据库系统基础知识',
-                                    link: `/software-development/system-architecture-designer/database`
-                                },
-                                {
-                                    text: '2025下半年秒杀场景',
-                                    link: `/software-development/system-architecture-designer/202511-exam`
-                                },
-                                {
-                                    text: '论文备考',
-                                    link: `/software-development/system-architecture-designer/paper`
-                                },
-                            ]
-                        }
-                    ]
-                }
-            ],
-
-            '/ai/': [
-                {
-                    text: '人工智能', link: `/ai/`,
-                    items: [
-                        {
-                            text: '理论基础', link: `/ai/theory`,
-                            items: [
-                                { text: 'LLM 擅长问题与领域', link: `/ai/theory/when-llm` },
-                                { text: 'AI Coding', link: `/ai/theory/ai-coding` },
-
-
-                            ]
-                        },
-                        {
-                            text: 'LLM', link: `/ai/llm`,
-                            items: [
-                                { text: '登录 Antigravity', link: `/ai/llm/antigravity` },
-                                { text: '半小时启动 OpenClaw', link: `/ai/llm/openclaw` },
-                                { text: 'AI 记忆系统', link: `/ai/llm/dotai` }
-                            ]
-                        },
-                    ],
-                }
-            ],
-
             '/easy-office/': [
                 {
                     text: '轻松办公', link: `/easy-office/`,
                     items: [
-                        { text: 'Thunderbird 解放收件箱', link: `/easy-office/email-thunderbird` },
-                        { text: '易读易写 Markdown', link: `/easy-office/markdown` },
-                        { text: '二进制考试', link: `/easy-office/binary-exam` },
+                        { text: 'Thunderbird 邮件管理', link: `/easy-office/email-thunderbird` },
+                        { text: 'Markdown 语法', link: `/easy-office/markdown` },
                         { text: 'Linux 学习', link: `/easy-office/linux-learn` },
-                        { text: 'Mac办公体验', link: `/easy-office/mac` }
+                        { text: 'Mac 办公体验', link: `/easy-office/mac` }
                     ]
                 }
             ],
