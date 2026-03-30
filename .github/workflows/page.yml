@@ -1,4 +1,5 @@
 name: VitePress-Website Github Pages Deploy
+
 on:
   push: # 方式一：push 到 main 分支
     branches:
@@ -14,6 +15,11 @@ on:
 
 env:
   TZ: Asia/Shanghai # 上海时区，系统时间和自适应主题
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build: # 1. 构建静态站点
@@ -39,21 +45,14 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-        
+
       - name: Build documentation
         run: pnpm run docs:build
 
       - name: Create .nojekyll
         run: touch docs/.vitepress/dist/.nojekyll
 
-      # 通用上传制品 action
-#      - name: Upload artifact
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: artifact # default
-#          path: docs/.vitepress/dist
-
-      # 1. 上传 pages 制品
+      # 上传 pages 制品
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -62,11 +61,6 @@ jobs:
 
   deploy: # 2. 部署
     needs: build
-
-    permissions:
-      pages: write
-      id-token: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
