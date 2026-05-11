@@ -1,0 +1,10 @@
+author:
+  name: 邢小林
+  email: xiaolin@example.com
+  bio: 南京生活、轻松办公、城市探索
+  picture: /assets/images/avatar.jpg
+  links:
+    - title: GitHub
+      url: https://github.com/xiaolinstar
+    - title: 微博
+      url: https://weibo.com

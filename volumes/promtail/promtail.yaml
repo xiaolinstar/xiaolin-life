@@ -9,7 +9,7 @@ clients:
   - url: http://loki-website:3100/loki/api/v1/push
 
 scrape_configs:
-  - job_name: 'xiaolin-docs-nginx'
+  - job_name: 'xiaolin-life-nginx'
     # 1. 定义抓取目标
     static_configs:
       - targets:

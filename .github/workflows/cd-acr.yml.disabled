@@ -20,7 +20,7 @@ env:
   REGISTRY: ${{ secrets.ACR_REGISTRY }} # 阿里云ACR镜像仓库
   NAMESPACE: ${{ secrets.ACR_NAMESPACE }} # 阿里云ACR命名空间
   IMAGE_NAME: ${{ github.event.repository.name }} # 镜像名称
-  SERVER_DIR: ~/WebstormProjects/xiaolin-docs
+  SERVER_DIR: ~/WebstormProjects/xiaolin-life
 
 jobs:
   deploy-to-server:

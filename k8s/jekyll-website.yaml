@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jekyll-website-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jekyll-website-pod
+  template:
+    metadata:
+      labels:
+        app: jekyll-website-pod
+    spec:
+      containers:
+      - name: jekyll-website-container
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: jekyll-site
+          mountPath: /usr/share/nginx/html
+        - name: logs
+          mountPath: /var/log/nginx
+      volumes:
+      - name: jekyll-site
+        emptyDir: {}
+      - name: logs
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jekyll-website-svc
+spec:
+  selector:
+    app: jekyll-website-pod
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP

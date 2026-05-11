@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% feed_meta %}
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --heading-color: #1a1a1a;
+      --link-color: #0078d4;
+      --border-color: #e0e0e0;
+      --code-bg: #f5f5f5;
+      --sidebar-width: 260px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-color);
+      background: var(--bg-color);
+    }
+    a { color: var(--link-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      background: var(--bg-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .site-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+    .site-title a { color: inherit; }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+    nav a {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--link-color); text-decoration: none; }
+    .layout {{ "{" }} display: flex; gap: 40px; padding: 40px 0; {{ "}" }}
+    main { flex: 1; max-width: 800px; }
+    .sidebar {
+      width: var(--sidebar-width);
+      flex-shrink: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      position: sticky;
+      top: 100px;
+    }
+    .sidebar li { margin-bottom: 8px; }
+    .sidebar a {
+      color: var(--text-color);
+      display: block;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background: var(--code-bg);
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    .sidebar .sub-menu { margin-left: 16px; }
+    article h1 {
+      font-size: 32px;
+      color: var(--heading-color);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--link-color);
+    }
+    article h2 {
+      font-size: 24px;
+      color: var(--heading-color);
+      margin: 32px 0 16px;
+    }
+    article h3 {
+      font-size: 20px;
+      color: var(--heading-color);
+      margin: 24px 0 12px;
+    }
+    article p { margin-bottom: 16px; }
+    article ul, article ol { margin: 16px 0; padding-left: 24px; }
+    article li { margin-bottom: 8px; }
+    article blockquote {
+      border-left: 4px solid var(--link-color);
+      padding: 12px 20px;
+      margin: 20px 0;
+      background: var(--code-bg);
+      font-style: italic;
+    }
+    article pre {
+      background: var(--code-bg);
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    article code {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 14px;
+    }
+    article pre code { background: none; padding: 0; }
+    article table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    article th, article td {
+      border: 1px solid var(--border-color);
+      padding: 10px 16px;
+      text-align: left;
+    }
+    article th { background: var(--code-bg); font-weight: 600; }
+    article img {
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+    .post-meta {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .home-hero {
+      text-align: center;
+      padding: 80px 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 40px;
+    }
+    .home-hero h1 { font-size: 48px; margin-bottom: 16px; border: none; color: white; }
+    .home-hero p { font-size: 20px; opacity: 0.9; }
+    .home-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .feature-card {
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .feature-card h3 { margin: 0 0 12px; font-size: 20px; }
+    .feature-card p { color: #666; margin: 0; }
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 40px 0;
+      margin-top: 60px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .layout {{ "{" }} flex-direction: column; {{ "}" }}
+      .sidebar {{ "{" }} width: 100%; {{ "}" }}
+      .sidebar ul {{ "{" }} position: static; display: flex; flex-wrap: wrap; gap: 8px; {{ "}" }}
+      nav ul {{ "{" }} flex-wrap: wrap; gap: 12px; {{ "}" }}
+      .home-hero h1 {{ "{" }} font-size: 32px; {{ "}" }}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="site-title">
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </div>
+      <nav>
+        <ul>
+          {% for item in site.data.navigation.main %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="layout">
+      <main>
+        {{ content }}
+      </main>
+      {% if page.url == "/" or page.sidebar %}
+      <aside class="sidebar">
+        <ul>
+          {% for item in site.data.navigation.main %}
+            {% if item.menu %}
+              <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% for sub in item.menu %}
+                <li class="sub-menu"><a href="{{ sub.url }}">{{ sub.title }}</a></li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </aside>
+      {% endif %}
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
+      <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+    </div>
+  </footer>
+</body>
+</html>

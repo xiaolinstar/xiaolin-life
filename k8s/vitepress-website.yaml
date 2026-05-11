@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: vitepress-website-container
-        image: xiaolinstar/xiaolin-docs:0.0.1
+        image: xiaolinstar/xiaolin-life:0.0.1
         ports:
         - containerPort: 8080
         env:

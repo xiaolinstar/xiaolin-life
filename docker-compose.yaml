@@ -1,35 +1,31 @@
 networks:
   tiny-sparrow-network:
     external: false
+
 services:
-  # 软负载
   nginx-gateway:
     image: nginx:alpine3.20-perl
     container_name: nginx-gateway
     ports:
       - "443:443"
+      - "80:80"
     networks:
       - tiny-sparrow-network
     volumes:
-      # 设置目录挂载
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./volumes/jekyll/default.conf:/etc/nginx/conf.d/default.conf:ro
       - ./cert:/etc/nginx/cert
 
-  # VitePress 静态网站
-  vitepress-website:
-    image: ghcr.io/xiaolinstar/xiaolin-docs:latest
-    container_name: vitepress-website
+  jekyll-website:
+    image: nginx:alpine
+    container_name: jekyll-website
     volumes:
+      - ./volumes/jekyll/site:/usr/share/nginx/html:ro
       - ./volumes/website/logs:/var/log/nginx
     networks:
       - tiny-sparrow-network
-    environment:
-      # 设置中国时区
-      TZ: Asia/Shanghai
+    depends_on:
+      - nginx-gateway
 
-
-  # Grafana
-  # 默认端口3000
   grafana-website:
     image: grafana/grafana:11.3.2-ubuntu
     container_name: grafana-website
@@ -43,62 +39,49 @@ services:
       - ./volumes/grafana/provisioning/etc/dashboards:/etc/grafana/provisioning/dashboards:ro
       - ./volumes/grafana/provisioning/var/dashboards:/var/lib/grafana/dashboards:ro
     environment:
-      # 中国时区、匿名登陆
       TZ: Asia/Shanghai
       GF_AUTH_ANONYMOUS_ENABLED: true
       GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
       GF_USERS_ALLOW_SIGN_UP: false
 
-  # Prometheus
   prometheus-website:
     image: prom/prometheus:v2.53.3
     container_name: prometheus-website
     volumes:
-      # 设置目录挂载
       - ./volumes/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     environment:
       TZ: Asia/Shanghai
     networks:
       - tiny-sparrow-network
     command:
-      - "--config.file=/etc/prometheus/prometheus.yml" # prometheus配置文件
-      - "--storage.tsdb.path=/prometheus" # prometheus数据存储路径
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
 
-  # 启动node-exporter
-  # 该模式仅支持在 Linux 中运行
-  # 容器内端口9100
   node-exporter-website:
     image: prom/node-exporter:v1.8.2
     container_name: node-exporter-website
     environment:
       TZ: Asia/Shanghai
-    # host宿主机模式
     network_mode: host
-    # 容器与宿主机共享进程号
     pid: host
-    # https://github.com/prometheus/node_exporter
     volumes:
       - '/:/host:ro,rslave'
     command:
       - '--path.rootfs=/host'
 
-  # nginx-prometheus-exporter
   nginx-exporter-website:
     image: nginx/nginx-prometheus-exporter:1.4
     container_name: nginx-exporter-website
-    # 默认端口：9113
     environment:
       TZ: Asia/Shanghai
     networks:
       - tiny-sparrow-network
-    # 需要与抓取的 Nginx 服务在同一网络，且信息一致
-    command: "--nginx.scrape-uri=http://vitepress-website:8081/stub_status" # 配置 Prometheus 抓取 Nginx 状态的 URI
+    command: "--nginx.scrape-uri=http://jekyll-website:80/stub_status"
 
   promtail-website:
     image: grafana/promtail:3.4
     container_name: promtail-website
     volumes:
-      # 设置目录挂载
       - ./volumes/promtail/promtail.yaml:/etc/promtail/promtail.yaml:ro
       - ./volumes/website/logs:/var/log
     environment:
@@ -106,12 +89,10 @@ services:
     networks:
       - tiny-sparrow-network
     command:
-      - "--config.file=/etc/promtail/promtail.yaml" # promtail配置文件
+      - "--config.file=/etc/promtail/promtail.yaml"
     depends_on:
       - loki-website
 
-  # Loki
-  # 默认端口3100
   loki-website:
     image: grafana/loki:3.4
     container_name: loki-website

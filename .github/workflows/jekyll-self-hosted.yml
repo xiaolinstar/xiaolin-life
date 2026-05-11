@@ -1,0 +1,68 @@
+name: Jekyll Self-Hosted Deploy via SSH
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+
+      - name: Create .nojekyll
+        run: touch _site/.nojekyll
+
+      - name: Prepare artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-site
+          path: _site
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: jekyll-site
+          path: _site
+
+      - name: Deploy to gateway server via SSH
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || '22' }}
+          command: |
+            WEBROOT="/var/www/jekyll"
+            mkdir -p "$WEBROOT"
+            tar -czf /tmp/jekyll-site-$(date +%Y%m%d-%H%M%S).tar.gz -C _site .
+            tar -xzf /tmp/jekyll-site-$(date +%Y%m%d-%H%M%S).tar.gz -C "$WEBROOT"
+            chown -R nginx:nginx "$WEBROOT"
+            chmod -R 755 "$WEBROOT"
+            rm -f /tmp/jekyll-site-*.tar.gz
+            echo "Deployment completed successfully at $(date)"
