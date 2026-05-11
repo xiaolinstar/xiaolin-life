@@ -29,17 +29,16 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+          cache: bundler
 
       - name: Install dependencies
-        run: |
-          bundle config set --local path 'vendor/bundle'
-          bundle install
-          bundle add jekyll-feed jekyll-seo-tag jekyll-sitemap --skip-install
+        run: bundle install
 
       - name: Build Jekyll site
         run: bundle exec jekyll build --trace
         env:
           JEKYLL_ENV: production
+          GITHUB_PAGES: true
 
       - name: Create .nojekyll
         run: touch _site/.nojekyll
