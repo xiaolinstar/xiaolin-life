@@ -75,7 +75,7 @@
       font-weight: 500;
     }
     nav a:hover { color: var(--link-color); text-decoration: none; }
-    .layout {{ "{" }} display: flex; gap: 40px; padding: 40px 0; {{ "}" }}
+    .layout { display: flex; gap: 40px; padding: 40px 0; }
     main { flex: 1; max-width: 800px; }
     .sidebar {
       width: var(--sidebar-width);
@@ -196,11 +196,11 @@
       font-size: 14px;
     }
     @media (max-width: 768px) {
-      .layout {{ "{" }} flex-direction: column; {{ "}" }}
-      .sidebar {{ "{" }} width: 100%; {{ "}" }}
-      .sidebar ul {{ "{" }} position: static; display: flex; flex-wrap: wrap; gap: 8px; {{ "}" }}
-      nav ul {{ "{" }} flex-wrap: wrap; gap: 12px; {{ "}" }}
-      .home-hero h1 {{ "{" }} font-size: 32px; {{ "}" }}
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .sidebar ul { position: static; display: flex; flex-wrap: wrap; gap: 8px; }
+      nav ul { flex-wrap: wrap; gap: 12px; }
+      .home-hero h1 { font-size: 32px; }
     }
   </style>
 </head>
