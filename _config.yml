@@ -16,28 +16,19 @@ author: *name
 email: xiaolin@example.com
 lang: zh-CN
 
-# Theme
-theme: hydejack
-remote_theme: hydecorp/hydejack@v9
-
-# Hydejack Configuration
-accent_image: /assets/img/sidebar-bg.jpg
-accent_color: '#4fb1ba'
-google_fonts:
-  - Noto+Sans+SC:wght@400;500;700
+# Theme - Use remote_theme for GitHub Pages
+remote_theme: jekyll/minima
 
 # Build Settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:title/
+permalink: pretty
 timezone: Asia/Shanghai
 
-# Plugins (loaded in GitHub Actions CI)
+# Plugins (supported by GitHub Pages)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-include-cache
 
 # Exclude from processing.
 exclude:
@@ -79,24 +70,9 @@ defaults:
     scope:
       path: ""
     values:
-      layout: page
-      toc: true
-      show_author: true
-      show_date: true
-      comments: false
+      layout: default
   -
     scope:
       path: "_posts"
     values:
       layout: post
-      show_author: true
-      show_date: true
-
-# Hydejack Collections
-collections:
-  featured_categories:
-    permalink: /:name/
-    output: true
-  featured_tags:
-    permalink: /tag/:name/
-    output: true
