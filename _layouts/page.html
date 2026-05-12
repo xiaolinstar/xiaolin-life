@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="container layout">
+  <main>
+    <article>
+      {% if page.title and page.layout != "home" %}
+      <h1>{{ page.title }}</h1>
+      {% endif %}
+      
+      {% if page.date %}
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      </div>
+      {% endif %}
+      
+      {{ content }}
+    </article>
+  </main>
+  
+  {% if page.url == "/" %}
+  <aside class="sidebar">
+    <ul>
+      {% for item in site.data.navigation.main %}
+        <li>
+          <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}>
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+</div>

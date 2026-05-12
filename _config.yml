@@ -10,8 +10,8 @@ title: 邢小林的生活站点
 name: &name 邢小林
 description: >-
   南京生活、轻松办公、城市探索，记录生活中的美好与成长。
-url: https://xiaolinstar.cn
-baseurl: ""
+url: https://xiaolinstar.github.io
+baseurl: "/xiaolin-life"
 author: *name
 email: xiaolin@example.com
 lang: zh-CN
@@ -71,8 +71,3 @@ defaults:
       path: ""
     values:
       layout: default
-  -
-    scope:
-      path: "_posts"
-    values:
-      layout: post
