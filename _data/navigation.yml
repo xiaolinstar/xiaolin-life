@@ -1,41 +1,9 @@
-title: 首页
-items:
+main:
   - title: 首页
     url: /
-
-main:
-  - title: 生活
-    url: /life/
-    menu:
-      - title: 南京生活
-        url: /life/nanjing/
-        menu:
-          - title: 游玩
-            url: /life/nanjing/places/
-          - title: 高校
-            url: /life/nanjing/university/
-          - title: 桌游
-            url: /life/nanjing/table-game/
-          - title: 美食
-            url: /life/nanjing/entertainment/
-          - title: 感悟
-            url: /life/nanjing/thinks/
-      - title: 轻松办公
-        url: /office/
-        menu:
-          - title: 邮件管理
-            url: /office/email/
-          - title: 写作技巧
-            url: /office/markdown/
-          - title: Mac 技巧
-            url: /office/mac/
+  - title: 南京生活
+    url: /life/nanjing/
+  - title: 轻松办公
+    url: /office/
   - title: 关于
     url: /about/
-
-footer:
-  - title: 归档
-    url: /archives/
-  - title: 标签
-    url: /tags/
-  - title: 订阅
-    url: /feed.xml

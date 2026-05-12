@@ -14,6 +14,17 @@ url: https://xiaolinstar.cn
 baseurl: ""
 author: *name
 email: xiaolin@example.com
+lang: zh-CN
+
+# Theme
+theme: hydejack
+remote_theme: hydecorp/hydejack@v9
+
+# Hydejack Configuration
+accent_image: /assets/img/sidebar-bg.jpg
+accent_color: '#4fb1ba'
+google_fonts:
+  - Noto+Sans+SC:wght@400;500;700
 
 # Build Settings
 markdown: kramdown
@@ -26,6 +37,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-include-cache
 
 # Exclude from processing.
 exclude:
@@ -67,42 +79,24 @@ defaults:
     scope:
       path: ""
     values:
-      layout: default
+      layout: page
       toc: true
-      show-author: true
-      show-date: true
+      show_author: true
+      show_date: true
       comments: false
   -
     scope:
       path: "_posts"
     values:
       layout: post
-      show-author: true
-      show-date: true
-  -
-    scope:
-      path: "life"
-    values:
-      layout: page
-      category: life
-  -
-    scope:
-      path: "office"
-    values:
-      layout: page
-      category: office
+      show_author: true
+      show_date: true
 
-# Collections
+# Hydejack Collections
 collections:
-  life:
-    title: 生活
+  featured_categories:
+    permalink: /:name/
     output: true
-    permalink: /life/:path/
-  office:
-    title: 办公
+  featured_tags:
+    permalink: /tag/:name/
     output: true
-    permalink: /office/:path/
-  about:
-    title: 关于
-    output: true
-    permalink: /about/
