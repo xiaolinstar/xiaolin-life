@@ -16,36 +16,17 @@ author: *name
 email: xiaolin@example.com
 lang: zh-CN
 
-# Theme Configuration - Using remote_theme for GitHub Pages
-# Note: Theme assets will be loaded from GitHub
-remote_theme: kitian616/jekyll-TeXt-theme
+# Chirpy Theme - Dark/Light mode supported
+remote_theme: chirpy-theme/chirpy
 
-text_skin: default
-highlight_theme: default
-
-# Navigation
-navigation:
-  - title: 首页
-    url: /
-  - title: 南京生活
-    url: /life/nanjing/
-  - title: 轻松办公
-    url: /office/
-  - title: 关于
-    url: /about/
-
-# Social Sites
-github: xiaolinstar
-# twitter: username
-# weibo: username
-# googleplus: username
-# zhihu: username
+# Timezone
+timezone: Asia/Shanghai
 
 # Build Settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
-timezone: Asia/Shanghai
+paginate: 10
 
 # Plugins (supported by GitHub Pages)
 plugins:
@@ -93,4 +74,4 @@ defaults:
     scope:
       path: ""
     values:
-      layout: default
+      layout: page

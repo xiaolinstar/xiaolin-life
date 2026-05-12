@@ -4,11 +4,11 @@
       <a href="{{ site.baseurl }}/">{{ site.title }}</a>
     </div>
     <nav class="header__nav">
-      {% for item in site.navigation %}
-      <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">
-        {{ item.title }}
-      </a>
-      {% endfor %}
+      <a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>首页</a>
+      <a href="{{ site.baseurl }}/life/nanjing/" {% if page.url contains "life" %}class="active"{% endif %}>南京生活</a>
+      <a href="{{ site.baseurl }}/office/" {% if page.url contains "office" %}class="active"{% endif %}>轻松办公</a>
+      <a href="{{ site.baseurl }}/about/" {% if page.url contains "about" %}class="active"{% endif %}>关于</a>
+      <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">🌙</button>
     </nav>
   </div>
 </header>
