@@ -32,7 +32,7 @@ description: 构建可对话的内容仓库
 
 以本文为例，你可以用两种方式访问：
 
-- **面向人类**：[https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse.html](https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse.html)
+- **面向人类**：[https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse/](https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse/)
 - **面向 AI**：[https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse.md](https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse.md)
 
 只需将 `.html` 改为 `.md`，AI 就能直接读取纯净的 Markdown 源文件。这意味着你的每一篇文章都同时服务于两个对象：人类读者和 AI 智能体。
@@ -61,7 +61,7 @@ description: 构建可对话的内容仓库
 **让 AI 基于你的积累回答问题**
 
 ```text
-我想写一篇关于"CI/CD 最佳实践"的文章，请先阅读 https://xiaolinstar.cn/sre/devops/cicd-01.md 等相关内容，然后给我一些建议
+我想写一篇关于"南京 City Walk"的文章，请先阅读 https://xiaolinstar.cn/life/nanjing/entertainment/gulou-riverfront.md 等相关内容，然后给我一些建议
 ```
 
 **让 AI 做你的内容策划师**

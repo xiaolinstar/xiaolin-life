@@ -15,4 +15,4 @@ description: 关于邢小林
 
 ## 这个站点
 
-这个站点使用 Jekyll + Hydejack 构建，部署在 GitHub Pages 和自托管服务器上。
+这个站点使用 Jekyll 构建，部署在 GitHub Pages 和自托管服务器上。

@@ -26,7 +26,7 @@ jobs:
         run: bundle install
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build --trace
+        run: bundle exec jekyll build --trace --config _config.yml,_config.self-hosted.yml
         env:
           JEKYLL_ENV: production
 
@@ -50,19 +50,30 @@ jobs:
           name: jekyll-site
           path: _site
 
-      - name: Deploy to gateway server via SSH
+      - name: Upload site to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || '22' }}
+          source: "_site/*"
+          target: "/tmp/xiaolin-life-site"
+          strip_components: 1
+          rm: true
+
+      - name: Publish site on server
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT || '22' }}
-          command: |
-            WEBROOT="/var/www/jekyll"
+          script: |
+            WEBROOT="${{ secrets.SSH_TARGET_DIR || '/opt/xiaolin-life/volumes/jekyll/site' }}"
             mkdir -p "$WEBROOT"
-            tar -czf /tmp/jekyll-site-$(date +%Y%m%d-%H%M%S).tar.gz -C _site .
-            tar -xzf /tmp/jekyll-site-$(date +%Y%m%d-%H%M%S).tar.gz -C "$WEBROOT"
-            chown -R nginx:nginx "$WEBROOT"
+            find "$WEBROOT" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+            cp -a /tmp/xiaolin-life-site/. "$WEBROOT"/
             chmod -R 755 "$WEBROOT"
-            rm -f /tmp/jekyll-site-*.tar.gz
+            rm -rf /tmp/xiaolin-life-site
             echo "Deployment completed successfully at $(date)"

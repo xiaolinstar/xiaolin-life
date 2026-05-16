@@ -10,14 +10,11 @@ title: 邢小林的生活站点
 name: &name 邢小林
 description: >-
   南京生活、轻松办公、城市探索，记录生活中的美好与成长。
-url: https://xiaolinstar.github.io
-baseurl: "/xiaolin-life"
+url: https://xiaolinstar.cn
+baseurl: ""
 author: *name
 email: xiaolin@example.com
 lang: zh-CN
-
-# Chirpy Theme - Dark/Light mode supported
-remote_theme: chirpy-theme/chirpy
 
 # Timezone
 timezone: Asia/Shanghai
@@ -26,13 +23,13 @@ timezone: Asia/Shanghai
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
-paginate: 10
 
-# Plugins (supported by GitHub Pages)
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-aeo
 
 # Exclude from processing.
 exclude:
@@ -42,6 +39,7 @@ exclude:
   - .bundle
   - vendor
   - node_modules
+  - cert
   - _drafts
   - vendor/bundle/
   - vendor/cache/
@@ -60,12 +58,11 @@ exclude:
   - docker-compose.yaml
   - Dockerfile
   - nginx.conf
+  - AGENTS.md
   - CLAUDE.md
   - README.md
-  - docs
+  - sre
   - package.json
-  - package-lock.json
-  - pnpm-lock.yaml
   - skills-lock.json
 
 # Frontmatter Defaults
