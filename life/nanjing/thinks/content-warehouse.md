@@ -32,8 +32,8 @@ description: 构建可对话的内容仓库
 
 以本文为例，你可以用两种方式访问：
 
-- **面向人类**：[https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse/](https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse/)
-- **面向 AI**：[https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse.md](https://xiaolinstar.cn/life/nanjing/thinks/content-warehouse.md)
+- **面向人类**：[https://xiaolin.fun/life/nanjing/thinks/content-warehouse/](https://xiaolin.fun/life/nanjing/thinks/content-warehouse/)
+- **面向 AI**：[https://xiaolin.fun/life/nanjing/thinks/content-warehouse.md](https://xiaolin.fun/life/nanjing/thinks/content-warehouse.md)
 
 只需将 `.html` 改为 `.md`，AI 就能直接读取纯净的 Markdown 源文件。这意味着你的每一篇文章都同时服务于两个对象：人类读者和 AI 智能体。
 
@@ -42,10 +42,10 @@ description: 构建可对话的内容仓库
 现在你已经完成了配置，只需要告诉 AI 如何访问你的内容仓库。以下是一个通用的提示词模板，可以在任何 AI IDE（Cursor、Trae、OpenCode 等）中使用：
 
 ```text
-我有一个 Jekyll 站点，部署在 https://xiaolinstar.cn/
+我有一个 Jekyll 站点，部署在 https://xiaolin.fun/
 - 站点的所有 Markdown 源文件可以直接用 .md 后缀访问
-- 站点索引文件位于 https://xiaolinstar.cn/llms.txt
-- 完整内容文件位于 https://xiaolinstar.cn/llms-full.txt
+- 站点索引文件位于 https://xiaolin.fun/llms.txt
+- 完整内容文件位于 https://xiaolin.fun/llms-full.txt
 
 请先了解我的内容库，然后回答我的问题。
 ```
@@ -55,19 +55,19 @@ description: 构建可对话的内容仓库
 **让 AI 了解你的知识体系**
 
 ```text
-请阅读 https://xiaolinstar.cn/llms.txt，告诉我博客的主要内容领域分布
+请阅读 https://xiaolin.fun/llms.txt，告诉我博客的主要内容领域分布
 ```
 
 **让 AI 基于你的积累回答问题**
 
 ```text
-我想写一篇关于"南京 City Walk"的文章，请先阅读 https://xiaolinstar.cn/life/nanjing/entertainment/gulou-riverfront.md 等相关内容，然后给我一些建议
+我想写一篇关于"南京 City Walk"的文章，请先阅读 https://xiaolin.fun/life/nanjing/entertainment/gulou-riverfront.md 等相关内容，然后给我一些建议
 ```
 
 **让 AI 做你的内容策划师**
 
 ```text
-请分析 https://xiaolinstar.cn/llms-full.txt，帮我梳理过去一年在"AI"领域写了哪些内容
+请分析 https://xiaolin.fun/llms-full.txt，帮我梳理过去一年在"AI"领域写了哪些内容
 ```
 
 **核心思路**：只需告诉 AI 你的站点地址和文件规则，它就能像访问本地文件一样访问你的内容。

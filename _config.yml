@@ -10,7 +10,7 @@ title: 邢小林的生活站点
 name: &name 邢小林
 description: >-
   南京生活、轻松办公、城市探索，记录生活中的美好与成长。
-url: https://xiaolinstar.cn
+url: https://xiaolin.fun
 baseurl: ""
 author: *name
 email: xiaolin@example.com
@@ -55,6 +55,7 @@ exclude:
   - .qoder
   - k8s
   - volumes
+  - compose.yaml
   - docker-compose.yaml
   - Dockerfile
   - nginx.conf

@@ -49,7 +49,8 @@ npm run site:dev
 - `office/`：轻松办公、工具使用、系统学习等内容。
 - `_layouts/`、`_includes/`、`_data/`：Jekyll 模板、公共片段和导航数据。
 - `assets/`：站点样式、脚本和图片资源。
-- `k8s/`、`volumes/`、`docker-compose.yaml`、`nginx.conf`：自托管部署与运维配置。
+- `compose.yaml`：独立网站容器部署。
+- `k8s/`、`volumes/`、`docker-compose.yaml`、`nginx.conf`：完整自托管部署与运维配置。
 
 日常运营只需要维护 Markdown 页面和 `assets/images/` 中的图片；新增页面时，在对应目录创建 `.md` 文件并补充 YAML Front Matter。
 
@@ -97,7 +98,15 @@ npm run site:build
 
 ### Docker Compose
 
-云服务器上可以继续使用 `docker-compose.yaml` 运行 Nginx 网关、静态站点容器与监控组件。静态站点容器默认读取：
+如果网关部署在独立服务器，可使用 `compose.yaml` 只运行网站容器：
+
+```bash
+docker compose -f compose.yaml up -d
+```
+
+独立网站容器会将站点服务暴露到宿主机 `8081` 端口，供 `xiaolin-gateway` 反向代理访问；`xiaolin.fun`、`www.xiaolin.fun` 的 HTTPS 证书与公网入口统一在 `xiaolin-gateway` 中维护，本项目不提交证书文件。
+
+云服务器上也可以继续使用 `docker-compose.yaml` 运行 Nginx 网关、静态站点容器与监控组件。静态站点容器默认读取：
 
 ```text
 ./volumes/jekyll/site
