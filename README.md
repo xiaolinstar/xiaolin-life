@@ -25,7 +25,7 @@
 - 代码高亮：Rouge。
 - SEO、订阅与 LLM 访问：`jekyll-seo-tag`、`jekyll-sitemap`、`jekyll-feed`、`jekyll-aeo`。
 - 服务端：Nginx。
-- 部署：GitHub Pages、自托管云服务器、Docker Compose。
+- 部署：GitHub Actions、GitHub Container Registry、Docker Compose。
 
 ## 本地开发
 
@@ -56,57 +56,44 @@ npm run site:dev
 
 ## 构建
 
-GitHub Pages 使用仓库页路径 `/xiaolin-life`：
-
-```bash
-npm run site:build:github
-```
-
-云服务器使用根路径：
-
-```bash
-npm run site:build:self-hosted
-```
-
-默认构建等同于云服务器构建：
-
 ```bash
 npm run site:build
 ```
 
 ## 部署
 
-### GitHub Pages
+### GitHub Actions
 
-`.github/workflows/jekyll-pages.yml` 会在 `main` 分支推送后自动构建并部署到 GitHub Pages。
+项目使用两条流水线完成容器化部署：
 
-### 云服务器
+- `.github/workflows/ci-ghcr.yml`：构建 Docker 镜像并推送到 GitHub Container Registry。
+- `.github/workflows/cd-ghcr.yml`：登录目标服务器，拉取最新代码，并通过 `docker compose up -d` 部署。
 
-`.github/workflows/jekyll-self-hosted.yml` 会构建 `_site`，通过 SSH 上传到服务器，并发布到默认目录：
+需要配置以下 GitHub Actions Secrets：
 
-```text
-/opt/xiaolin-life/volumes/jekyll/site
-```
+- `SERVER_HOST`：服务器地址。
+- `SERVER_USER`：SSH 登录用户。
+- `SERVER_PASSWORD`：SSH 登录密码。
 
-需要配置以下 GitHub Secrets：
-
-- `SSH_HOST`：服务器地址。
-- `SSH_USERNAME`：登录用户。
-- `SSH_PRIVATE_KEY`：SSH 私钥。
-- `SSH_PORT`：SSH 端口，可选，默认 `22`。
-- `SSH_TARGET_DIR`：站点发布目录，可选，默认 `/opt/xiaolin-life/volumes/jekyll/site`。
+`GITHUB_TOKEN` 由 GitHub Actions 自动注入，用于推送镜像到 GitHub Container Registry，无需手动配置。
 
 ### Docker Compose
 
-如果网关部署在独立服务器，可使用 `compose.yaml` 只运行网站容器：
+在服务器上使用 `compose.yaml` 只运行网站容器：
 
 ```bash
-docker compose -f compose.yaml up -d
+docker compose up -d
 ```
 
 独立网站容器会将站点服务暴露到宿主机 `8081` 端口，供 `xiaolin-gateway` 反向代理访问；`xiaolin.fun`、`www.xiaolin.fun` 的 HTTPS 证书与公网入口统一在 `xiaolin-gateway` 中维护，本项目不提交证书文件。
 
-云服务器上也可以继续使用 `docker-compose.yaml` 运行 Nginx 网关、静态站点容器与监控组件。静态站点容器默认读取：
+CD 默认服务器目录为：
+
+```text
+~/AgentProjects/xiaolin-life
+```
+
+如需完整自托管环境，也可以使用 `docker-compose.yaml` 运行 Nginx 网关、静态站点容器与监控组件。静态站点容器默认读取：
 
 ```text
 ./volumes/jekyll/site
@@ -116,7 +103,7 @@ docker compose -f compose.yaml up -d
 
 - Jekyll 正式内容位于根目录、`life/`、`office/`、`_layouts/`、`_includes/`、`_data/` 和 `assets/`。
 - 旧 VitePress 内容已移除，仓库只保留 Jekyll 站点与部署配置。
-- 新页面图片统一放在 `assets/images/`，Markdown 中使用 `relative_url` 以兼容 GitHub Pages 和云服务器。
+- 新页面图片统一放在 `assets/images/`，Markdown 中使用 `relative_url` 以兼容不同部署路径。
 - `package.json` 只保留 Jekyll 相关脚本，不再承担 VitePress 构建。
 
 ## LLM 访问
