@@ -22,7 +22,7 @@ timezone: Asia/Shanghai
 # Build Settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:path/:basename/
+# 让 Jekyll 保持目录结构作为默认的 permalink
 
 # Plugins
 plugins:
