@@ -1,16 +1,10 @@
 {
-  "name": "xiaolin-life",
   "version": "0.0.2",
-  "description": "小林的生活 - 个人生活静态站点",
   "scripts": {
-    "dev": "make dev",
-    "build": "make build",
-    "build:github": "make build-github",
-    "build:self": "make build-self",
-    "clean": "make clean",
-    "install": "make install"
-  },
-  "keywords": ["jekyll", "blog", "life"],
-  "author": "xiaolin",
-  "license": "MIT"
+    "site:dev": "bundle exec jekyll serve --livereload",
+    "site:build": "bundle exec jekyll build --config _config.yml,_config.self-hosted.yml",
+    "site:build:github": "bundle exec jekyll build --config _config.yml,_config.github-pages.yml",
+    "site:build:self": "bundle exec jekyll build --config _config.yml,_config.self-hosted.yml",
+    "site:clean": "bundle exec jekyll clean"
+  }
 }
