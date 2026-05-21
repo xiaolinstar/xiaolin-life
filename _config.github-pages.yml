@@ -1,3 +1,4 @@
 # GitHub Pages 构建覆盖配置
 url: https://xiaolinstar.github.io
 baseurl: "/xiaolin-life"
+permalink: /:path/:basename/
