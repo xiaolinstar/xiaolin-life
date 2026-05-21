@@ -1,5 +1,6 @@
 {
   "version": "0.0.2",
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "site:dev": "bundle exec jekyll serve --livereload",
     "site:build": "bundle exec jekyll build --config _config.yml,_config.self-hosted.yml",
