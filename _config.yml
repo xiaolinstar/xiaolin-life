@@ -22,7 +22,7 @@ timezone: Asia/Shanghai
 # Build Settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+permalink: /:path/:basename/
 
 # Plugins
 plugins:
