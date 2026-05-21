@@ -8,7 +8,19 @@
       <a href="{{ site.baseurl }}/life/" {% if page.url contains "life" %}class="active"{% endif %}>生活记录</a>
       <a href="{{ site.baseurl }}/office/" {% if page.url contains "office" %}class="active"{% endif %}>轻松办公</a>
       <a href="{{ site.baseurl }}/about/" {% if page.url contains "about" %}class="active"{% endif %}>关于</a>
+      <button class="search-toggle" onclick="toggleSearch()" title="搜索">🔍</button>
       <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">🌙</button>
     </nav>
   </div>
 </header>
+
+<!-- 搜索模态框 -->
+<div id="search-modal" class="search-modal hidden">
+  <div class="search-modal__content">
+    <div class="search-modal__header">
+      <input type="text" id="search-input" class="search-input" placeholder="搜索文章... (按 ESC 关闭)" autofocus>
+      <button class="search-close" onclick="toggleSearch()">×</button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>

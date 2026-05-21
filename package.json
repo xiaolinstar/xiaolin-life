@@ -5,6 +5,12 @@
     "site:build": "bundle exec jekyll build --config _config.yml,_config.self-hosted.yml",
     "site:build:github": "bundle exec jekyll build --config _config.yml,_config.github-pages.yml",
     "site:build:self": "bundle exec jekyll build --config _config.yml,_config.self-hosted.yml",
-    "site:clean": "bundle exec jekyll clean"
+    "site:clean": "bundle exec jekyll clean",
+    "search:index": "npx pagefind --site _site",
+    "build": "npm run site:build && npm run search:index",
+    "build:github": "npm run site:build:github && npm run search:index"
+  },
+  "devDependencies": {
+    "pagefind": "^1.0.0"
   }
 }
