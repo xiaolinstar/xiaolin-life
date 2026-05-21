@@ -6,13 +6,13 @@ description: 南京生活、轻松办公、城市探索
 
 欢迎来到我的生活站点！这里记录着南京生活、轻松办公、城市探索的点点滴滴。
 
-## 南京生活
+## 生活记录
 
-- [名胜古迹]({{ site.baseurl }}/life/nanjing/places/) - 总统府、中山陵、明孝陵等
-- [高校巡礼]({{ site.baseurl }}/life/nanjing/university/) - 南京大学、南京师范大学等
-- [桌游时光]({{ site.baseurl }}/life/nanjing/table-game/) - 掼蛋、升级、谁是卧底、阿瓦隆
-- [美食探店]({{ site.baseurl }}/life/nanjing/entertainment/) - 碳水美食、南京小吃
-- [生活感悟]({{ site.baseurl }}/life/nanjing/thinks/) - 数字劳动、内容仓库
+- [名胜古迹]({{ site.baseurl }}/life/places/) - 总统府、中山陵、明孝陵等
+- [高校巡礼]({{ site.baseurl }}/life/university/) - 南京大学、南京师范大学等
+- [桌游时光]({{ site.baseurl }}/life/table-game/) - 掼蛋、升级、谁是卧底、阿瓦隆
+- [美食探店]({{ site.baseurl }}/life/entertainment/) - 碳水美食、南京小吃
+- [生活感悟]({{ site.baseurl }}/life/thinks/) - 数字劳动、内容仓库
 
 ## 轻松办公
 
