@@ -3,8 +3,17 @@ layout: page
 title: 生活感悟
 description: 关于生活的思考
 ---
-## 生活感悟
+
+# 生活感悟
 
 记录生活中的思考与成长。
 
-- [给阿嬷的情书]({{ "/life/thinks/grandma-letter/" | relative_url }}) — 电影《阿嬷的情书》观后感
+## 文章列表
+
+<ul>
+{% for page in site.pages %}
+  {% if page.url contains '/life/thinks/' and page.url != '/life/thinks/' %}
+    <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
