@@ -435,3 +435,47 @@ img { max-width: 100%; height: auto; }
     padding-right: 10px;
   }
 }
+
+/* ICP 备案样式 */
+.footer__icp {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer__icp a {
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer__icp a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.icp-icon {
+  margin-right: 4px;
+}
+
+.icp-divider {
+  color: var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .footer__icp {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .icp-divider {
+    display: none;
+  }
+}

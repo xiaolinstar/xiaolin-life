@@ -1,0 +1,9 @@
+icp:
+  number: "今天不上班"
+  url: "https://beian.miit.gov.cn/"
+
+gongan:
+  number: "32011102000001"
+  url: "https://www.beian.gov.cn/"
+
+display: true
