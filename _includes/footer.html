@@ -1,10 +1,13 @@
 <footer class="footer">
   <div class="footer__container">
-    <div class="footer__main">
-      <span class="footer__copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</span>
-      {% if site.data.icp.display %}
+    <div class="footer__copyright-line">
+      <span>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</span>
       <span class="footer__divider">|</span>
-      <a href="{{ site.data.icp.icp.url }}" target="_blank" rel="noopener noreferrer" class="footer__icp">
+      <span>Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+    </div>
+    {% if site.data.icp.display %}
+    <div class="footer__icp-line">
+      <a href="{{ site.data.icp.icp.url }}" target="_blank" rel="noopener noreferrer">
         {{ site.data.icp.icp.number }}
       </a>
       <span class="footer__divider">|</span>
@@ -12,8 +15,7 @@
         <img src="{{ "/assets/gonganlian.png" | relative_url }}" alt="公安联网备案" class="footer__gongan-icon">
         {{ site.data.icp.gongan.number }}
       </a>
-      {% endif %}
     </div>
-    <p class="footer__powered">Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+    {% endif %}
   </div>
 </footer>
