@@ -4,6 +4,6 @@ icp:
 
 gongan:
   number: "苏公网安备32010602012446号"
-  url: "https://www.beian.gov.cn/"
+  url: "https://beian.mps.gov.cn/#/query/webSearch?code=32010602012446"
 
 display: true

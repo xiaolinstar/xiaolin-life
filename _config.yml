@@ -6,14 +6,14 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site Settings
-title: 邢小林的生活站点
+title: 今天不上班
 name: &name 邢小林
 description: >-
   南京生活、轻松办公、城市探索，记录生活中的美好与成长。
 url: https://xiaolin.fun
 baseurl: ""
 author: *name
-email: xiaolin@example.com
+email: xing.xiaolin@foxmail.com
 lang: zh-CN
 
 # Timezone
