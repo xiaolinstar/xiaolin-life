@@ -283,32 +283,33 @@ img { max-width: 100%; height: auto; }
   padding: 0 24px;
 }
 
-.footer__copyright-line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
+.footer__copyright {
+  margin-bottom: 6px;
+}
+
+.footer__powered {
+  font-size: 12px;
+  opacity: 0.6;
   margin-bottom: 8px;
 }
 
-.footer__icp-line {
+.footer__icp {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 12px;
+  font-size: 11px;
 }
 
-.footer__icp-line a {
+.footer__icp a {
   color: var(--text-color);
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 0.3s;
 }
 
-.footer__icp-line a:hover {
+.footer__icp a:hover {
   opacity: 1;
   text-decoration: underline;
 }
@@ -320,12 +321,12 @@ img { max-width: 100%; height: auto; }
 .footer__gongan {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
 }
 
 .footer__gongan-icon {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   vertical-align: middle;
 }
 

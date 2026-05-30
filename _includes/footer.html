@@ -1,12 +1,9 @@
 <footer class="footer">
   <div class="footer__container">
-    <div class="footer__copyright-line">
-      <span>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</span>
-      <span class="footer__divider">|</span>
-      <span>Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
-    </div>
+    <p class="footer__copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <p class="footer__powered">Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
     {% if site.data.icp.display %}
-    <div class="footer__icp-line">
+    <div class="footer__icp">
       <a href="{{ site.data.icp.icp.url }}" target="_blank" rel="noopener noreferrer">
         {{ site.data.icp.icp.number }}
       </a>
