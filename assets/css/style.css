@@ -316,17 +316,21 @@ img { max-width: 100%; height: auto; }
 
 .footer__divider {
   color: var(--border-color);
+  font-size: 10px;
 }
 
 .footer__gongan {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
 }
 
 .footer__gongan-icon {
-  width: 10px;
-  height: 10px;
+  width: 8px !important;
+  height: 8px !important;
+  max-width: 8px !important;
+  max-height: 8px !important;
+  object-fit: contain;
   vertical-align: middle;
 }
 
