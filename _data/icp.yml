@@ -1,9 +1,9 @@
 icp:
-  number: "今天不上班"
+  number: "苏ICP备2026011017号-5"
   url: "https://beian.miit.gov.cn/"
 
 gongan:
-  number: "32011102000001"
+  number: "苏公网安备32010602012446号"
   url: "https://www.beian.gov.cn/"
 
 display: true
