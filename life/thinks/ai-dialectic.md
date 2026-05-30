@@ -1,4 +1,8 @@
-# AI 不是万能的，AI 又是万能的
+---
+layout: page
+title: AI的辩证思考
+description: 从辩证思维角度来谈谈对 AI 的理解
+---
 
 我见过两类人，对 AI 的态度截然不同。
 
