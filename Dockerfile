@@ -7,9 +7,9 @@ RUN apk add --no-cache curl tar \
 FROM hugo AS build-stage
 WORKDIR /app
 
-RUN apk add --no-cache nodejs npm python3 git tzdata \
-  && corepack enable \
-  && corepack prepare pnpm@9.15.0 --activate
+RUN apk add --no-cache nodejs npm python3 py3-pip git tzdata \
+  && npm install -g pnpm@9.15.0 \
+  && pip install --break-system-packages pillow
 
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile

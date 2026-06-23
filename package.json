@@ -17,8 +17,5 @@
   },
   "devDependencies": {
     "pagefind": "^1.4.0"
-  },
-  "optionalDependencies": {
-    "pillow": "^11.0.0"
   }
 }

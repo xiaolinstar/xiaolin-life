@@ -23,6 +23,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
+          command_timeout: 30m
           script: |
             cd ${{ env.SERVER_DIR }}
             git pull

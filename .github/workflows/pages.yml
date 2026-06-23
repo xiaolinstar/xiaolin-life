@@ -39,6 +39,9 @@ jobs:
           corepack enable
           corepack prepare pnpm@9.15.0 --activate
 
+      - name: Install Python dependencies
+        run: pip install pillow
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
