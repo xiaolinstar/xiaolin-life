@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="åØ!">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="420" y="220" width="360" height="220" fill="#ffffff" opacity="0.12" rx="8"/>
+  <polygon points="600,160 780,240 420,240" fill="#ffffff" opacity="0.2"/>
+  <rect x="480" y="280" width="40" height="80" fill="#ffffff" opacity="0.15"/>
+  <rect x="560" y="280" width="40" height="80" fill="#ffffff" opacity="0.15"/>
+  <rect x="640" y="280" width="40" height="80" fill="#ffffff" opacity="0.15"/>
+  <text x="80" y="520" fill="#eff6ff" font-family="Noto Sans SC, sans-serif" font-size="48" font-weight="700">åØ!</text>
+  <text x="80" y="575" fill="#dbeafe" font-family="Noto Sans SC, sans-serif" font-size="24" opacity="0.85">Ø!á< · !í+e</text>
+</svg>

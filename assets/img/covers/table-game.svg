@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="L8öI">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="50%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="180" r="90" fill="#ffffff" opacity="0.1"/>
+  <rect x="300" y="260" width="140" height="200" rx="16" fill="#ffffff" opacity="0.18" transform="rotate(-12 370 360)"/>
+  <rect x="480" y="240" width="140" height="200" rx="16" fill="#ffffff" opacity="0.14" transform="rotate(8 550 340)"/>
+  <rect x="660" y="270" width="140" height="200" rx="16" fill="#ffffff" opacity="0.16" transform="rotate(-5 730 370)"/>
+  <text x="80" y="520" fill="#faf5ff" font-family="Noto Sans SC, sans-serif" font-size="48" font-weight="700">L8öI</text>
+  <text x="80" y="575" fill="#f3e8ff" font-family="Noto Sans SC, sans-serif" font-size="24" opacity="0.85">Z · Ve · "P</text>
+</svg>

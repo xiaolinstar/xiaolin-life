@@ -4,11 +4,18 @@ description: "多人语言推理类桌游"
 date: 2025-05-21
 draft: false
 showTableOfContents: true
+summary: "4-8 人语言推理聚会游戏，找出卧底即可。"
 categories:
   - "生活"
   - "桌游时光"
+tags:
+  - "桌游"
+  - "谁是卧底"
+  - "聚会"
 ---
 「谁是卧底」是一款多人参与的语言推理类桌游，适合4-8人游玩，最佳游戏人数为5-6人，核心围绕"词语描述"与"逻辑推理"展开。玩家通过描述自己的词语、观察他人描述，投票找出隐藏的"卧底"，兼具趣味性与互动性，游戏节奏明快，适合各类聚会场合。
+
+{{< carousel images="gallery/*" interval="4500" aspectRatio="16-9" captions="{friends.jpg:聚会桌游（占位图）}" >}}
 
 ## 阵营与身份
 

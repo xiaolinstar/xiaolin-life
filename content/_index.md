@@ -1,27 +1,13 @@
 ---
-title: "邢小林的生活站点"
+title: "今天不上班"
 description: "南京生活、轻松办公、城市探索"
 date: 2025-05-21
 draft: false
 showTableOfContents: false
 ---
-欢迎来到我的生活站点！这里记录着南京生活、轻松办公、城市探索的点点滴滴。
 
-## 生活记录
+{{< alert >}}
+**生活频道已上线。** 这里记录南京的风景、美食、桌游与办公技巧 —— 图文为主，持续更新中。
+{{< /alert >}}
 
-- [名胜古迹](/life/places/) — 总统府、中山陵、明孝陵等
-- [高校巡礼](/life/university/) — 南京大学、南京师范大学等
-- [桌游时光](/life/table-game/) — 掼蛋、升级、谁是卧底、阿瓦隆
-- [美食探店](/life/entertainment/) — 碳水美食、南京小吃
-- [生活感悟](/life/thinks/) — 数字劳动、内容仓库
-
-## 轻松办公
-
-- [Thunderbird 邮件管理](/office/email/)
-- [Markdown 文本编辑](/office/markdown/)
-- [Mac 办公体验](/office/mac/)
-- [Linux 学习路线](/office/linux/)
-
-## 关于我
-
-欢迎了解更多[关于我](/about/)的信息。
+探索 **[生活记录](/life/)** 与 **[轻松办公](/office/)**，或直接浏览下方最近文章。

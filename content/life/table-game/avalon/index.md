@@ -4,11 +4,18 @@ description: "身份推理类桌游"
 date: 2025-05-21
 draft: false
 showTableOfContents: true
+summary: "5-10 人身份推理桌游，蓝方与红方的经典对抗。"
 categories:
   - "生活"
   - "桌游时光"
+tags:
+  - "桌游"
+  - "阿瓦隆"
+  - "聚会"
 ---
 阿瓦隆是一款身份推理类桌游，适合 5-10 人参与，核心围绕 "好人阵营（蓝方）" 与 "坏人阵营（红方）" 的对抗展开。玩家进行**逻辑推理**与**演讲**，通过**投票表决**、**任务执行**、**技能使用**实现阵营目标，兼具策略性与互动性，无玩家中途淘汰机制。
+
+{{< carousel images="gallery/*" interval="4500" aspectRatio="16-9" captions="{boardgame.jpg:阿瓦隆桌游（占位图）}" >}}
 
 ## 阵营与身份
 

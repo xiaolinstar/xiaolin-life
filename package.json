@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "hugo": "bash scripts/hugo.sh",
@@ -7,11 +7,18 @@
     "site:build": "bash scripts/hugo.sh --minify --gc --environment production",
     "site:build:github": "bash scripts/hugo.sh --minify --gc --environment github-pages",
     "site:clean": "rm -rf public resources .hugo_build.lock",
-    "search:index": "npx pagefind --site public",
-    "build": "npm run site:build && npm run search:index",
-    "build:github": "npm run site:build:github && npm run search:index"
+    "featured:setup": "python3 scripts/setup-featured-images.py",
+    "photos:generate": "python3 scripts/generate-placeholder-photos.py",
+    "search:index": "pnpm exec pagefind --site public",
+    "prebuild": "pnpm run photos:generate && pnpm run featured:setup",
+    "prebuild:github": "pnpm run photos:generate && pnpm run featured:setup",
+    "build": "pnpm run site:build && pnpm run search:index",
+    "build:github": "pnpm run site:build:github && pnpm run search:index"
   },
   "devDependencies": {
     "pagefind": "^1.4.0"
+  },
+  "optionalDependencies": {
+    "pillow": "^11.0.0"
   }
 }

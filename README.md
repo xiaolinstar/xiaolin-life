@@ -29,14 +29,14 @@
 
 ## 本地开发
 
-需要 Hugo **0.158+ extended** 和 Node.js 20+。
+需要 Hugo **0.158+ extended** 和 Node.js 20+、pnpm 9+。
 
 ```bash
-# 安装 Node 依赖
-npm install
+# 安装依赖
+pnpm install
 
 # 启动开发服务器（热更新）
-npm run site:dev
+pnpm run site:dev
 ```
 
 若未全局安装 Hugo，项目已提供 `.tools/hugo158` 作为本地 fallback（`scripts/hugo.sh` 会自动选择）。
@@ -76,7 +76,7 @@ scripts/          构建与迁移脚本
 ## 构建
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 产物输出到 `public/`，包含 Pagefind 搜索索引。

@@ -35,17 +35,19 @@ jobs:
           node-version: "20"
 
       - name: Enable pnpm via corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.15.0 --activate
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile || npm install
+        run: pnpm install --frozen-lockfile
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
 
       - name: Build site
-        run: npm run build:github
+        run: pnpm run build:github
         env:
           HUGO_ENVIRONMENT: github-pages
 

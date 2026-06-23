@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="éﬂ¢ó">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9a3412"/>
+      <stop offset="50%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#fcd34d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="620" cy="340" rx="220" ry="80" fill="#ffffff" opacity="0.12"/>
+  <circle cx="520" cy="300" r="48" fill="#ffffff" opacity="0.2"/>
+  <circle cx="620" cy="280" r="56" fill="#ffffff" opacity="0.16"/>
+  <circle cx="720" cy="310" r="44" fill="#ffffff" opacity="0.18"/>
+  <text x="80" y="520" fill="#fff7ed" font-family="Noto Sans SC, sans-serif" font-size="48" font-weight="700">éﬂ¢ó</text>
+  <text x="80" y="575" fill="#ffedd5" font-family="Noto Sans SC, sans-serif" font-size="24" opacity="0.85">≥4ÎP ∑ W¨sS</text>
+</svg>

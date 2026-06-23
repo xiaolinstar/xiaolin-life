@@ -4,16 +4,36 @@
   weight = 10
 
 [[main]]
-  name = "生活记录"
+  name = "生活"
   pageRef = "life"
   weight = 20
 
 [[main]]
-  name = "轻松办公"
+  name = "办公"
   pageRef = "office"
   weight = 30
 
 [[main]]
   name = "关于"
   pageRef = "about"
+  weight = 40
+
+[[footer]]
+  name = "生活记录"
+  pageRef = "life"
+  weight = 10
+
+[[footer]]
+  name = "轻松办公"
+  pageRef = "office"
+  weight = 20
+
+[[footer]]
+  name = "关于"
+  pageRef = "about"
+  weight = 30
+
+[[footer]]
+  name = "GitHub"
+  url = "https://github.com/xiaolinstar"
   weight = 40

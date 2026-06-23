@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="ÎoÜ">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="45%" stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M0 480 Q300 420 600 460 T1200 430 L1200 630 L0 630 Z" fill="#ffffff" opacity="0.12"/>
+  <path d="M120 420 L220 280 L320 420 Z" fill="#ffffff" opacity="0.25"/>
+  <path d="M280 420 L400 240 L520 420 Z" fill="#ffffff" opacity="0.18"/>
+  <rect x="560" y="300" width="120" height="120" fill="#ffffff" opacity="0.15" rx="4"/>
+  <text x="80" y="520" fill="#fff7ed" font-family="Noto Sans SC, sans-serif" font-size="48" font-weight="700">ÎoÜ</text>
+  <text x="80" y="575" fill="#ffedd5" font-family="Noto Sans SC, sans-serif" font-size="24" opacity="0.85">mäý · Î0</text>
+</svg>
