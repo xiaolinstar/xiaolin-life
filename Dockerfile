@@ -7,7 +7,7 @@ RUN apk add --no-cache curl tar \
 FROM hugo AS build-stage
 WORKDIR /app
 
-RUN apk add --no-cache nodejs npm python3 py3-pip git tzdata \
+RUN apk add --no-cache bash nodejs npm python3 py3-pip git tzdata \
   && npm install -g pnpm@9.15.0 \
   && pip install --break-system-packages pillow
 
