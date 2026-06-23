@@ -1,15 +1,14 @@
-FROM alpine:3.20 AS hugo
+FROM node:20-bookworm-slim AS build-stage
 ARG HUGO_VERSION=0.158.0
-RUN apk add --no-cache curl tar \
-  && curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
-    | tar xz -C /usr/local/bin hugo
-
-FROM hugo AS build-stage
 WORKDIR /app
 
-RUN apk add --no-cache bash nodejs npm python3 py3-pip git tzdata \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl ca-certificates bash git tzdata python3 python3-pip \
+  && curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
+    | tar xz -C /usr/local/bin hugo \
   && npm install -g pnpm@9.15.0 \
-  && pip install --break-system-packages pillow
+  && pip install --break-system-packages pillow \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
