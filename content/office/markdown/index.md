@@ -186,7 +186,7 @@ gantt
         another task    :10d
 ```
 
-4. [Jekyll](https://jekyllrb.com/) 使用 Markdown 快速创建个人博客，本站点使用 **Jekyll** 搭建。
+4. [Jekyll](https://jekyllrb.com/) 使用 Markdown 快速创建个人博客；[Hugo](https://gohugo.io/) 是另一款流行的静态站点生成器，本站点使用 **Hugo + Blowfish** 搭建。
 
 ## 三、快速体验
 

@@ -6,10 +6,11 @@
 /.hugo_build.lock
 package-lock.json
 
+# 历史 Jekyll 本地产物（勿提交）
+/_site/
 /vendor/
 /.bundle/
-/.jekyll-cache/
-/_site/
+
 .idea
 
 volumes/website/logs/

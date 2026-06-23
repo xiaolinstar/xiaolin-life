@@ -114,6 +114,4 @@ git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blo
 
 ## 从 Jekyll 迁移
 
-已完成全面迁移（2026-06）。旧 Jekyll 源文件已移除，历史迁移脚本保留在 `scripts/migrate_jekyll_to_hugo.py`。
-
-URL 路径保持不变（如 `/life/places/nanjing-museum/`）。
+已于 2026-06 完成迁移至 Hugo + Blowfish，URL 路径保持不变（如 `/life/places/nanjing-museum/`）。
