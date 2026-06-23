@@ -19,6 +19,9 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "img" / "photos"
 OUT.mkdir(parents=True, exist_ok=True)
 
+DEFAULT_PHOTO_URL = "https://picsum.photos/seed/xiaolin-life-default/1200/630"
+DEFAULT_PHOTO_NAME = "article-default.jpg"
+
 PALETTES = {
     "home-bg": ("#0f172a", "#1e3a5f", "#2d6a8a", "今天不上班", "南京生活 · 城市探索"),
     "cityscape": ("#1e293b", "#334155", "#64748b", "南京", "城市漫步"),
@@ -103,7 +106,19 @@ def draw_photo(name: str, size: tuple[int, int], title: str, subtitle: str, colo
     print(f"generated {dest}")
 
 
+def ensure_default_photo() -> None:
+    dest = OUT / DEFAULT_PHOTO_NAME
+    if dest.exists():
+        return
+    import urllib.request
+
+    print(f"Downloading default photo from {DEFAULT_PHOTO_URL}")
+    urllib.request.urlretrieve(DEFAULT_PHOTO_URL, dest)
+    print(f"generated {dest}")
+
+
 def main() -> None:
+    ensure_default_photo()
     for name, (c1, c2, c3, title, subtitle) in PALETTES.items():
         size = (1920, 1080) if name == "home-bg" else (1200, 630)
         draw_photo(name, size, title, subtitle, (c1, c2, c3))

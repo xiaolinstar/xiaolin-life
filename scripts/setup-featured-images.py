@@ -8,22 +8,36 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "content"
-COVERS = ROOT / "assets" / "img" / "covers"
 PHOTOS = ROOT / "assets" / "img" / "photos"
 STATIC_IMAGES = ROOT / "static" / "assets" / "images"
 
-SECTION_COVER = {
-    "life/places": "places.svg",
-    "life/university": "university.svg",
-    "life/table-game": "table-game.svg",
-    "life/entertainment": "entertainment.svg",
-    "life/thinks": "thinks.svg",
-    "office": "office.svg",
-    "life": "default.svg",
-    "about": "default.svg",
+DEFAULT_PHOTO = "article-default.jpg"
+
+# 分区列表页优先使用的占位图
+SECTION_INDEX_PHOTOS = {
+    "content/life/_index.md": "cityscape.jpg",
+    "content/life/places/_index.md": "cityscape.jpg",
+    "content/life/university/_index.md": "campus.jpg",
+    "content/life/table-game/_index.md": "boardgame.jpg",
+    "content/life/entertainment/_index.md": "food.jpg",
+    "content/life/thinks/_index.md": "friends.jpg",
+    "content/office/_index.md": "cityscape.jpg",
+    "content/_index.md": "home-bg.jpg",
+    "content/about/index.md": DEFAULT_PHOTO,
 }
 
-# 优先使用本地占位图或真实配图
+# 分区文章默认占位图（无专属配图时使用）
+SECTION_PHOTO = {
+    "life/places": "cityscape.jpg",
+    "life/university": "campus.jpg",
+    "life/table-game": "boardgame.jpg",
+    "life/entertainment": "food.jpg",
+    "life/thinks": "friends.jpg",
+    "office": "cityscape.jpg",
+    "life": "cityscape.jpg",
+    "about": DEFAULT_PHOTO,
+}
+
 PHOTO_FEATURED: dict[str, str] = {
     "life/places/nanjing-museum": "museum.jpg",
     "life/places/sun-mausoleum": "mausoleum.jpg",
@@ -46,17 +60,6 @@ REAL_FEATURED: dict[str, str] = {
     "office/markdown": "img-markdown/deepseek-markdown.jpg",
 }
 
-SECTION_INDEX_COVERS = {
-    "content/life/_index.md": "cityscape.jpg",
-    "content/life/places/_index.md": "cityscape.jpg",
-    "content/life/university/_index.md": "campus.jpg",
-    "content/life/table-game/_index.md": "boardgame.jpg",
-    "content/life/entertainment/_index.md": "food.jpg",
-    "content/life/thinks/_index.md": "friends.jpg",
-    "content/office/_index.md": "cityscape.jpg",
-    "content/_index.md": "home-bg.jpg",
-}
-
 GALLERY_COPY: dict[str, str] = {
     "life/places/nanjing-museum": "museum.jpg",
     "life/places/sun-mausoleum": "mausoleum.jpg",
@@ -73,11 +76,41 @@ def rel_from_content(page_dir: Path) -> str:
     return str(page_dir.relative_to(CONTENT)).replace("\\", "/")
 
 
-def pick_cover(rel: str) -> str:
-    for prefix, cover in sorted(SECTION_COVER.items(), key=lambda x: -len(x[0])):
+def photo_path(name: str) -> Path | None:
+    path = PHOTOS / name
+    return path if path.exists() else None
+
+
+def pick_section_photo(rel: str) -> Path:
+    for prefix, photo_name in sorted(SECTION_PHOTO.items(), key=lambda x: -len(x[0])):
         if rel == prefix or rel.startswith(prefix + "/"):
-            return cover
-    return "default.svg"
+            found = photo_path(photo_name)
+            if found:
+                return found
+    default = photo_path(DEFAULT_PHOTO)
+    if default:
+        return default
+    raise FileNotFoundError(f"Default photo not found: {PHOTOS / DEFAULT_PHOTO}")
+
+
+def resolve_featured_source(rel: str, index_file: Path) -> Path:
+    index_key = str(index_file.relative_to(ROOT))
+    if index_key in SECTION_INDEX_PHOTOS:
+        found = photo_path(SECTION_INDEX_PHOTOS[index_key])
+        if found:
+            return found
+
+    if rel in REAL_FEATURED:
+        image_path = STATIC_IMAGES / REAL_FEATURED[rel]
+        if image_path.exists():
+            return image_path
+
+    if rel in PHOTO_FEATURED:
+        found = photo_path(PHOTO_FEATURED[rel])
+        if found:
+            return found
+
+    return pick_section_photo(rel)
 
 
 def clear_featured(page_dir: Path) -> None:
@@ -109,57 +142,20 @@ def setup_gallery(page_dir: Path, rel: str) -> None:
     print(f"  gallery: {dest.relative_to(ROOT)}")
 
 
-def setup_page(page_dir: Path) -> None:
-    if not (page_dir / "index.md").exists() and not (page_dir / "_index.md").exists():
-        return
-
+def setup_page(page_dir: Path, index_file: Path) -> None:
     rel = rel_from_content(page_dir)
-
-    if rel in REAL_FEATURED:
-        image_path = STATIC_IMAGES / REAL_FEATURED[rel]
-        if image_path.exists():
-            copy_featured(page_dir, image_path)
-            setup_gallery(page_dir, rel)
-            return
-
-    if rel in PHOTO_FEATURED:
-        photo_path = PHOTOS / PHOTO_FEATURED[rel]
-        if photo_path.exists():
-            copy_featured(page_dir, photo_path)
-            setup_gallery(page_dir, rel)
-            return
-
-    cover_name = pick_cover(rel)
-    cover_path = COVERS / cover_name
-    if cover_path.exists():
-        copy_featured(page_dir, cover_path)
-
-
-def setup_section_indexes() -> None:
-    for rel_path, cover_name in SECTION_INDEX_COVERS.items():
-        index_path = ROOT / rel_path
-        if not index_path.exists():
-            continue
-        page_dir = index_path.parent
-        photo_path = PHOTOS / cover_name
-        if photo_path.exists():
-            copy_featured(page_dir, photo_path)
-            continue
-        cover_path = COVERS / cover_name
-        if cover_path.exists():
-            copy_featured(page_dir, cover_path)
+    source = resolve_featured_source(rel, index_file)
+    copy_featured(page_dir, source)
+    setup_gallery(page_dir, rel)
 
 
 def main() -> None:
     print("Setting up featured images...")
-    setup_section_indexes()
-
-    for index_file in sorted(CONTENT.rglob("index.md")):
-        page_dir = index_file.parent
-        rel = rel_from_content(page_dir)
-        setup_page(page_dir)
-        setup_gallery(page_dir, rel)
-
+    index_files = sorted(
+        path for path in CONTENT.rglob("*.md") if path.name in {"index.md", "_index.md"}
+    )
+    for index_file in index_files:
+        setup_page(index_file.parent, index_file)
     print("Done.")
 
 

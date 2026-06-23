@@ -5,7 +5,7 @@ networks:
 services:
   # Hugo 静态网站
   xiaolin-life-website:
-    image: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
+    image: ghcr.io/xiaolinstar/xiaolin-life:main
     container_name: xiaolin-life-website
     volumes:
       - ./volumes/website/logs:/var/log/nginx
