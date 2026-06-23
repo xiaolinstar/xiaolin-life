@@ -9,7 +9,7 @@ on:
 
 env:
   SERVER_DIR: ~/AgentProjects/xiaolin-life
-  IMAGE: ghcr.io/xiaolinstar/xiaolin-life:main
+  IMAGE: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
