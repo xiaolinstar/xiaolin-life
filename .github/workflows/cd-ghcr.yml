@@ -9,7 +9,6 @@ on:
 
 env:
   SERVER_DIR: ~/AgentProjects/xiaolin-life
-  IMAGE: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
@@ -26,26 +25,8 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           command_timeout: 45m
           script: |
-            set -euo pipefail
             cd ${{ env.SERVER_DIR }}
             git pull
-
-            echo "Pulling image: ${{ env.IMAGE }}"
-            pulled=0
-            for attempt in 1 2 3; do
-              echo "Pull attempt ${attempt}..."
-              if timeout 1200 docker pull "${{ env.IMAGE }}"; then
-                pulled=1
-                break
-              fi
-              echo "Pull attempt ${attempt} failed, retrying in 15s..."
-              sleep 15
-            done
-            if [ "${pulled}" -ne 1 ]; then
-              echo "Docker pull failed after 3 attempts"
-              exit 1
-            fi
-
-            docker compose -f compose.yaml up -d --pull never --remove-orphans
+            docker compose -f compose.yaml pull
+            docker compose -f compose.yaml up -d
             docker image prune -f
-            echo "Deployment completed successfully!"
