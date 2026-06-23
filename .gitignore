@@ -1,11 +1,14 @@
 .DS_Store
 
 /node_modules/
-/_site/
-/.jekyll-cache/
-/.jekyll-metadata
+/public/
+/resources/
+/.hugo_build.lock
+
 /vendor/
 /.bundle/
+/.jekyll-cache/
+/_site/
 .idea
 
 volumes/website/logs/
@@ -14,3 +17,10 @@ volumes/website/geoip
 .qoder/**/__pycache__/
 .qoder/**/*.pyc
 cert/
+
+# 本地 Hugo 二进制（可选，体积较大）
+.tools/hugo
+.tools/hugo145
+.tools/hugo158
+.tools/*.tar.gz
+.tools/

@@ -1,0 +1,25 @@
+{{ if site.Params.icp.display }}
+<div class="mt-4 text-xs text-neutral-500 dark:text-neutral-400 text-center space-x-2">
+  <a
+    href="{{ site.Params.icp.icpUrl }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hover:underline hover:decoration-primary-400 hover:text-primary-500">
+    {{ site.Params.icp.icpNumber }}
+  </a>
+  <span>|</span>
+  <a
+    href="{{ site.Params.icp.gonganUrl }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-1 hover:underline hover:decoration-primary-400 hover:text-primary-500">
+    <img
+      src="/assets/gonganlian.png"
+      alt="公安联网备案"
+      class="nozoom inline-block w-3 h-3"
+      width="12"
+      height="12" />
+    {{ site.Params.icp.gonganNumber }}
+  </a>
+</div>
+{{ end }}

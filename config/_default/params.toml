@@ -1,0 +1,75 @@
+colorScheme = "blowfish"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = true
+enableStructuredBreadcrumbs = true
+
+disableImageOptimization = false
+disableImageOptimizationMD = false
+
+fingerprintAlgorithm = "sha512"
+
+[header]
+  layout = "basic"
+
+[footer]
+  showMenu = false
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 6
+  showMoreLink = true
+  showMoreLinkDest = "/life/"
+  cardView = true
+  cardViewScreenWidth = false
+
+[article]
+  showDate = true
+  showAuthor = true
+  showHero = true
+  heroStyle = "basic"
+  showBreadcrumbs = true
+  showPagination = true
+  showReadingTime = true
+  showTableOfContents = true
+  showTaxonomies = true
+  showCategories = true
+  showTags = true
+  showWordCount = false
+  showZenMode = true
+
+[list]
+  showHero = false
+  showSummary = true
+  showBreadcrumbs = true
+  showTableOfContents = false
+  showCards = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = false
+
+[taxonomy]
+  showBreadcrumbs = true
+  cardView = true
+
+[term]
+  showBreadcrumbs = true
+  showTableOfContents = false
+  cardView = true
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[icp]
+  display = true
+  icpNumber = "苏ICP备2026011017号-5"
+  icpUrl = "https://beian.miit.gov.cn/"
+  gonganNumber = "苏公网安备32010602012446号"
+  gonganUrl = "https://beian.mps.gov.cn/#/query/webSearch?code=32010602012446"

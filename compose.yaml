@@ -3,7 +3,7 @@ networks:
     external: false
 
 services:
-  # Jekyll 静态网站
+  # Hugo 静态网站
   xiaolin-life-website:
     image: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
     container_name: xiaolin-life-website

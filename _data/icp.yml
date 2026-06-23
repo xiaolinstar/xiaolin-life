@@ -1,9 +1,0 @@
-icp:
-  number: "苏ICP备2026011017号-5"
-  url: "https://beian.miit.gov.cn/"
-
-gongan:
-  number: "苏公网安备32010602012446号"
-  url: "https://beian.mps.gov.cn/#/query/webSearch?code=32010602012446"
-
-display: true

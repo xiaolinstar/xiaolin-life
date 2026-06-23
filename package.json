@@ -1,20 +1,17 @@
 {
-  "version": "0.0.2",
+  "version": "1.0.0",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "site:dev": "bundle exec jekyll serve --livereload",
-    "site:build": "bundle exec jekyll build --config _config.yml,_config.self-hosted.yml",
-    "site:build:github": "bundle exec jekyll build --config _config.yml,_config.github-pages.yml",
-    "site:build:self": "bundle exec jekyll build --config _config.yml,_config.self-hosted.yml",
-    "site:clean": "bundle exec jekyll clean",
-    "search:build": "npx esbuild assets/js/search.ts --bundle --outfile=assets/js/search.js --format=iife",
-    "search:index": "npx pagefind --site _site",
-    "build": "npm run search:build && npm run site:build && npm run search:index",
-    "build:github": "npm run search:build && npm run site:build:github && npm run search:index"
+    "hugo": "bash scripts/hugo.sh",
+    "site:dev": "bash scripts/hugo.sh server -D --disableFastRender",
+    "site:build": "bash scripts/hugo.sh --minify --gc --environment production",
+    "site:build:github": "bash scripts/hugo.sh --minify --gc --environment github-pages",
+    "site:clean": "rm -rf public resources .hugo_build.lock",
+    "search:index": "npx pagefind --site public",
+    "build": "npm run site:build && npm run search:index",
+    "build:github": "npm run site:build:github && npm run search:index"
   },
   "devDependencies": {
-    "esbuild": "^0.20.0",
-    "pagefind": "^1.0.0",
-    "typescript": "^5.3.0"
+    "pagefind": "^1.4.0"
   }
 }

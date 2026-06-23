@@ -1,0 +1,21 @@
+# {{ site.Title }} — Full Content
+
+> {{ site.Params.description | default site.Language.Params.description }}
+
+Base URL: {{ site.BaseURL }}
+
+---
+
+{{ range site.RegularPages.ByTitle }}
+## {{ .Title }}
+
+URL: {{ .Permalink }}
+{{ with .Description }}Description: {{ . }}{{ end }}
+{{ with .Params.categories }}Categories: {{ delimit . ", " }}{{ end }}
+{{ with .Params.tags }}Tags: {{ delimit . ", " }}{{ end }}
+
+{{ .Plain }}
+
+---
+
+{{ end }}

@@ -1,9 +1,0 @@
-main:
-  - title: 首页
-    url: /
-  - title: 生活记录
-    url: /life/
-  - title: 轻松办公
-    url: /office/
-  - title: 关于
-    url: /about/

@@ -1,8 +1,9 @@
 /node_modules/
+/public/
+/resources/
+/.hugo_build.lock
 /vendor/
-/_site/
 /.bundle/
-/.jekyll-cache/
 /.git/
 .idea
 
@@ -15,3 +16,11 @@ volumes/website/logs/
 volumes/website/geoip/
 
 cert/
+.tools/
+.agent/
+.agents/
+.claude/
+.qoder/
+.trae/
+.vscode/
+sre/

@@ -1,0 +1,19 @@
+[[main]]
+  name = "首页"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "生活记录"
+  pageRef = "life"
+  weight = 20
+
+[[main]]
+  name = "轻松办公"
+  pageRef = "office"
+  weight = 30
+
+[[main]]
+  name = "关于"
+  pageRef = "about"
+  weight = 40

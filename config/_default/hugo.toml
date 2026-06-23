@@ -1,0 +1,70 @@
+theme = "blowfish"
+baseURL = "https://xiaolin.fun/"
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+title = "今天不上班"
+timeZone = "Asia/Shanghai"
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+summaryLength = 30
+enableEmoji = true
+
+buildDrafts = false
+buildFuture = false
+
+[pagination]
+  pagerSize = 24
+
+[imaging]
+  anchor = "Center"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "LLMSTXT", "LLMSFULLTXT"]
+
+[outputFormats.LLMSTXT]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.LLMSFULLTXT]
+  mediaType = "text/plain"
+  baseName = "llms-full"
+  isPlainText = true
+  notAlternative = true
+
+[related]
+  threshold = 0
+  toLower = false
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+
+  [[related.indices]]
+    name = "series"
+    weight = 50
+
+  [[related.indices]]
+    name = "authors"
+    weight = 20
+
+  [[related.indices]]
+    name = "date"
+    weight = 10

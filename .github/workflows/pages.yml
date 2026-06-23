@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Hugo site to Pages
 
 on:
   push:
@@ -20,32 +20,39 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
-          bundler-cache: true
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.158.0"
+          extended: true
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
+
       - name: Enable pnpm via corepack
         run: corepack enable
-      - name: Install Pagefind
-        run: pnpm install --frozen-lockfile
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile || npm install
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
-      - name: Build TypeScript
-        run: npx esbuild assets/js/search.ts --bundle --outfile=assets/js/search.js --format=iife
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --config "_config.yml,_config.github-pages.yml"
+
+      - name: Build site
+        run: npm run build:github
         env:
-          JEKYLL_ENV: production
-      - name: Build Search Index
-        run: npx pagefind --site _site
+          HUGO_ENVIRONMENT: github-pages
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
+        with:
+          path: public
 
   deploy:
     environment:

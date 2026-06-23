@@ -1,0 +1,17 @@
+# {{ site.Title }}
+
+> {{ site.Params.description | default site.Language.Params.description }}
+
+Base URL: {{ site.BaseURL }}
+
+## 站点导航
+
+{{ range site.Menus.main }}
+- {{ .Name }}: {{ .URL | absURL }}
+{{ end }}
+
+## 内容索引
+
+{{ range site.RegularPages.ByTitle }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }} — {{ . }}{{ end }}
+{{ end }}
