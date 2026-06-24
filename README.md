@@ -32,6 +32,13 @@
 需要 Hugo **0.158+ extended** 和 Node.js 20+、pnpm 9+。
 
 ```bash
+# 克隆（含 Blowfish 主题 submodule）
+git clone --recurse-submodules https://github.com/xiaolinstar/xiaolin-life.git
+cd xiaolin-life
+
+# 已有仓库时初始化 submodule
+git submodule update --init --recursive
+
 # 安装依赖
 pnpm install
 
@@ -109,11 +116,12 @@ CD 默认服务器目录：`~/AgentProjects/xiaolin-life`
 
 ## 主题升级
 
-当前 `themes/blowfish` 为 vendored 副本。网络可用时建议改为 git submodule：
+`themes/blowfish` 为 [Blowfish](https://github.com/nunocoracao/blowfish) 的 git submodule（跟踪 `main` 分支）。
 
 ```bash
-rm -rf themes/blowfish
-git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blowfish
+git submodule update --remote --merge themes/blowfish
+pnpm run build   # 验证构建
+git add themes/blowfish && git commit -m "chore: bump blowfish theme"
 ```
 
 ## 从 Jekyll 迁移
