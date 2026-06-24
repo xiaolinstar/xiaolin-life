@@ -85,8 +85,8 @@ pnpm run build
 
 ### GitHub Actions
 
-- `.github/workflows/ci-ghcr.yml`：构建 Docker 镜像并推送到 GHCR
-- `.github/workflows/cd-ghcr.yml`：SSH 部署到自托管服务器
+- `.github/workflows/ci-ghcr.yml`：构建 Docker 镜像、导出静态产物并推送到 GHCR
+- `.github/workflows/cd-ghcr.yml`：rsync 静态产物到服务器并重启 nginx
 - `.github/workflows/pages.yml`：部署到 GitHub Pages
 
 GitHub Actions Secrets（自托管 CD）：
@@ -95,9 +95,13 @@ GitHub Actions Secrets（自托管 CD）：
 
 ### Docker Compose
 
+服务器使用 **nginx + 本地静态目录**（`volumes/website/site/`），不再每次拉取 ~260MB 站点镜像：
+
 ```bash
 docker compose up -d
 ```
+
+CD 流程：CI 导出 `public/` → scp 到服务器 → `docker compose up -d` 重启 nginx。
 
 网站容器暴露宿主机 `8081` 端口，由 `xiaolin-gateway` 反向代理；HTTPS 证书在网关维护。
 

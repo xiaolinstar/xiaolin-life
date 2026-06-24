@@ -15,6 +15,8 @@ package-lock.json
 
 volumes/website/logs/
 volumes/website/geoip
+volumes/website/site/*
+!volumes/website/site/.gitkeep
 .qoder/**/*.py
 .qoder/**/__pycache__/
 .qoder/**/*.pyc

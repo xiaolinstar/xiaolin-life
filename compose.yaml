@@ -3,11 +3,15 @@ networks:
     external: false
 
 services:
-  # Hugo 静态网站
+  # Hugo 静态网站（nginx + 本地静态目录，CD 通过 rsync 更新 site 目录）
   xiaolin-life-website:
-    image: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
+    image: nginx:alpine3.20-perl
     container_name: xiaolin-life-website
     volumes:
+      - ./volumes/website/site:/usr/share/nginx/html:ro
+      - ./volumes/website/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./volumes/website/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./volumes/website/nginx-stub-status.conf:/etc/nginx/conf.d/nginx-stub-status.conf:ro
       - ./volumes/website/logs:/var/log/nginx
     networks:
       - tiny-sparrow-network
@@ -15,3 +19,4 @@ services:
       - "8081:8080"
     environment:
       TZ: Asia/Shanghai
+    restart: unless-stopped

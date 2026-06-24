@@ -20,6 +20,7 @@ jobs:
       packages: write
       attestations: write
       id-token: write
+      actions: write
 
     steps:
       - name: Checkout repository
@@ -49,6 +50,20 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Export static site from image
+        run: |
+          cid=$(docker create ${{ steps.push.outputs.imageid }})
+          docker cp "$cid:/usr/share/nginx/html" ./public-site
+          docker rm "$cid"
+          du -sh ./public-site
+
+      - name: Upload static site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-site
+          path: public-site
+          retention-days: 3
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v3

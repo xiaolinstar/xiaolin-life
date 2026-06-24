@@ -9,6 +9,7 @@ on:
 
 env:
   SERVER_DIR: ~/AgentProjects/xiaolin-life
+  SITE_DIR: ~/AgentProjects/xiaolin-life/volumes/website/site
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
@@ -17,16 +18,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy to target server via SSH
+      - name: Resolve CI run id
+        id: ci-run
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            run_id=$(gh run list --workflow=ci-ghcr.yml --branch=main --status=success --limit=1 --json databaseId --jq '.[0].databaseId')
+          else
+            run_id="${{ github.event.workflow_run.id }}"
+          fi
+          echo "run_id=${run_id}" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download static site artifact
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ steps.ci-run.outputs.run_id }}
+          name: public-site
+          path: public-site
+
+      - name: Upload static site to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          source: "public-site/*"
+          target: ${{ env.SITE_DIR }}
+          strip_components: 1
+          overwrite: true
+          rm: true
+          timeout: 30m
+
+      - name: Restart website container
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          command_timeout: 45m
+          command_timeout: 10m
           script: |
+            set -euo pipefail
             cd ${{ env.SERVER_DIR }}
-            git pull
-            docker compose -f compose.yaml pull
+            git pull --ff-only
+            mkdir -p volumes/website/site volumes/website/logs
             docker compose -f compose.yaml up -d
             docker image prune -f
+            echo "Deployment completed successfully!"
