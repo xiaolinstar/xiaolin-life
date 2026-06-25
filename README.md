@@ -1,4 +1,31 @@
+<div align="center">
+
 # 小林的生活
+
+[![Stars](https://img.shields.io/github/stars/xiaolinstar/xiaolin-life?style=for-the-badge&logo=github)](https://github.com/xiaolinstar/xiaolin-life/stargazers)
+[![Forks](https://img.shields.io/github/forks/xiaolinstar/xiaolin-life?style=for-the-badge&logo=github)](https://github.com/xiaolinstar/xiaolin-life/network/members)
+[![Issues](https://img.shields.io/github/issues/xiaolinstar/xiaolin-life?style=for-the-badge&logo=github)](https://github.com/xiaolinstar/xiaolin-life/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/xiaolinstar/xiaolin-life?style=for-the-badge&logo=git)](https://github.com/xiaolinstar/xiaolin-life/commits/main)
+
+[![Website](https://img.shields.io/badge/网站-xiaolin.fun-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://xiaolin.fun/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-预览-181717?style=for-the-badge&logo=github)](https://xiaolinstar.github.io/xiaolin-life/)
+
+[![CI](https://img.shields.io/github/actions/workflow/status/xiaolinstar/xiaolin-life/ci-ghcr.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=CI)](https://github.com/xiaolinstar/xiaolin-life/actions/workflows/ci-ghcr.yml)
+[![Pages Deploy](https://img.shields.io/github/actions/workflow/status/xiaolinstar/xiaolin-life/pages.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=Pages)](https://github.com/xiaolinstar/xiaolin-life/actions/workflows/pages.yml)
+[![CD](https://img.shields.io/github/actions/workflow/status/xiaolinstar/xiaolin-life/cd-ghcr.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=CD)](https://github.com/xiaolinstar/xiaolin-life/actions/workflows/cd-ghcr.yml)
+
+[![Hugo](https://img.shields.io/badge/Hugo-0.158+-extended-FF4088?style=for-the-badge&logo=hugo&logoColor=white)](https://gohugo.io/)
+[![Blowfish](https://img.shields.io/badge/Theme-Blowfish-0891B2?style=for-the-badge)](https://blowfish.page/zh-cn/)
+[![pnpm](https://img.shields.io/badge/pnpm-9.15+-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+
+**南京生活 · 轻松办公 · 城市探索 · 日常思考**
+
+[🌐 访问站点](https://xiaolin.fun/) · [📖 本地开发](#本地开发) · [🚀 部署说明](#部署) · [💬 提交 Issue](https://github.com/xiaolinstar/xiaolin-life/issues)
+
+</div>
+
+---
 
 `xiaolin-life` 是基于 **Hugo + Blowfish** 构建的个人生活静态站点，记录南京生活、轻松办公、城市探索与日常思考。
 
@@ -20,12 +47,20 @@
 
 ## 技术栈
 
-- 静态站点引擎：Hugo 0.158+（extended）
-- 主题：[Blowfish](https://blowfish.page/zh-cn/)
-- 搜索：Fuse.js（主题内置）+ Pagefind（构建后索引）
-- LLM 访问：构建时自动生成 `llms.txt` / `llms-full.txt`
-- 服务端：Nginx
-- 部署：GitHub Actions、GitHub Container Registry、Docker Compose
+[![Hugo](https://img.shields.io/badge/Hugo-0.158+-extended-FF4088?style=flat-square&logo=hugo&logoColor=white)](https://gohugo.io/)
+[![Blowfish](https://img.shields.io/badge/Blowfish-v2.103+-0891B2?style=flat-square)](https://blowfish.page/zh-cn/)
+[![Pagefind](https://img.shields.io/badge/Pagefind-搜索索引-6366F1?style=flat-square)](https://pagefind.app/)
+[![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?style=flat-square&logo=nginx&logoColor=white)](https://nginx.org/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/xiaolinstar/xiaolin-life/actions)
+[![GHCR](https://img.shields.io/badge/GHCR-镜像仓库-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/xiaolinstar/xiaolin-life/pkgs/container/xiaolin-life)
+
+| 类别 | 说明 |
+| --- | --- |
+| 静态站点 | Hugo 0.158+（extended） |
+| 主题 | [Blowfish](https://blowfish.page/zh-cn/)（git submodule） |
+| 搜索 | Fuse.js（主题内置）+ Pagefind（构建后索引） |
+| LLM | 构建时自动生成 `llms.txt` / `llms-full.txt` |
+| 部署 | GitHub Actions · GHCR · Docker Compose · rsync |
 
 ## 本地开发
 
