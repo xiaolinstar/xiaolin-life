@@ -10,12 +10,15 @@ on:
 env:
   SERVER_DIR: ~/AgentProjects/xiaolin-life
   SITE_DIR: ~/AgentProjects/xiaolin-life/volumes/website/site
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy-to-server:
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: read
 
     steps:
       - name: Resolve CI run id
@@ -31,7 +34,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download static site artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ steps.ci-run.outputs.run_id }}
@@ -61,8 +64,8 @@ jobs:
           script: |
             set -euo pipefail
             cd ${{ env.SERVER_DIR }}
-            git pull --ff-only
-            git submodule update --init --recursive
+            # 服务器仅托管静态产物，无需拉取 Blowfish submodule
+            git -c submodule.recurse=false pull --ff-only
             mkdir -p volumes/website/site volumes/website/logs
             docker compose -f compose.yaml up -d
             docker image prune -f
