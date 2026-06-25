@@ -166,11 +166,11 @@ Markdown作为轻量级的标记语言，很容易实现编程扩展
 
 1. [markmap](https://markmap.js.org/) Markdown 和思维导图之间轻松转换。
 
-![markmap](/assets/images/img-markdown/markmap.png)
+![markmap](/assets/images/img-markdown/markmap.jpg)
 
 2. [aippt](https://www.aippt.cn) 基于 Markdown 文本大纲格式快速生成PPT。
 
-![aippt](/assets/images/img-markdown/aippt.png)
+![aippt](/assets/images/img-markdown/aippt.jpg)
 
 3. [mermaid](https://mermaid.nodejs.cn/) 基于 JavaScript 的图标工具，支持流程图、时序图、类图、状态图、实体关系图、甘特图等。
 
