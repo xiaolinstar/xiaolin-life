@@ -1,4 +1,4 @@
-name: CI Pipeline, To GitHub Container Registry
+name: CI Pipeline, Build Static Site
 
 on:
   workflow_dispatch:
@@ -6,19 +6,12 @@ on:
     branches:
       - main
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
-  build-and-push-image:
+  build:
     runs-on: ubuntu-latest
 
     permissions:
       contents: read
-      packages: write
-      attestations: write
-      id-token: write
       actions: write
 
     steps:
@@ -27,48 +20,36 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          hugo-version: "0.158.0"
+          extended: true
 
-      - name: Extract metadata for Docker
-        id: meta
-        uses: docker/metadata-action@v6
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=ref,event=branch
-            type=sha
+          node-version: "24"
 
-      - name: Build and push Docker image
-        id: push
-        uses: docker/build-push-action@v7
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Export static site from image
+      - name: Enable pnpm via corepack
         run: |
-          cid=$(docker create ${{ steps.push.outputs.imageid }})
-          docker cp "$cid:/usr/share/nginx/html" ./public-site
-          docker rm "$cid"
-          du -sh ./public-site
+          corepack enable
+          corepack prepare pnpm@9.15.0 --activate
+
+      - name: Install Python dependencies
+        run: pip install pillow
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        run: pnpm run build
+        env:
+          HUGO_ENVIRONMENT: production
 
       - name: Upload static site artifact
         uses: actions/upload-artifact@v7
         with:
           name: public-site
-          path: public-site
+          path: public
           retention-days: 3
-
-      - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@v3
-        with:
-          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true

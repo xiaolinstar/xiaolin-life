@@ -14,7 +14,7 @@
 [![Pages Deploy](https://img.shields.io/github/actions/workflow/status/xiaolinstar/xiaolin-life/pages.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=Pages)](https://github.com/xiaolinstar/xiaolin-life/actions/workflows/pages.yml)
 [![CD](https://img.shields.io/github/actions/workflow/status/xiaolinstar/xiaolin-life/cd-ghcr.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=CD)](https://github.com/xiaolinstar/xiaolin-life/actions/workflows/cd-ghcr.yml)
 
-[![Hugo](https://img.shields.io/badge/Hugo-0.158+-extended-FF4088?style=for-the-badge&logo=hugo&logoColor=white)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-0.158%2B%20extended-FF4088?style=for-the-badge&logo=hugo&logoColor=white)](https://gohugo.io/)
 [![Blowfish](https://img.shields.io/badge/Theme-Blowfish-0891B2?style=for-the-badge)](https://blowfish.page/zh-cn/)
 [![pnpm](https://img.shields.io/badge/pnpm-9.15+-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
@@ -47,12 +47,11 @@
 
 ## 技术栈
 
-[![Hugo](https://img.shields.io/badge/Hugo-0.158+-extended-FF4088?style=flat-square&logo=hugo&logoColor=white)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-0.158%2B%20extended-FF4088?style=flat-square&logo=hugo&logoColor=white)](https://gohugo.io/)
 [![Blowfish](https://img.shields.io/badge/Blowfish-v2.103+-0891B2?style=flat-square)](https://blowfish.page/zh-cn/)
 [![Pagefind](https://img.shields.io/badge/Pagefind-搜索索引-6366F1?style=flat-square)](https://pagefind.app/)
 [![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?style=flat-square&logo=nginx&logoColor=white)](https://nginx.org/)
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/xiaolinstar/xiaolin-life/actions)
-[![GHCR](https://img.shields.io/badge/GHCR-镜像仓库-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/xiaolinstar/xiaolin-life/pkgs/container/xiaolin-life)
 
 | 类别 | 说明 |
 | --- | --- |
@@ -60,7 +59,7 @@
 | 主题 | [Blowfish](https://blowfish.page/zh-cn/)（git submodule） |
 | 搜索 | Fuse.js（主题内置）+ Pagefind（构建后索引） |
 | LLM | 构建时自动生成 `llms.txt` / `llms-full.txt` |
-| 部署 | GitHub Actions · GHCR · Docker Compose · rsync |
+| 部署 | GitHub Actions · rsync · Docker Compose（nginx） |
 
 ## 本地开发
 
@@ -98,7 +97,7 @@ assets/img/       Hugo 管道资源（头像等）
 scripts/          构建与迁移脚本
 ```
 
-日常运营：在 `content/` 对应目录新增 `index.md`（或 Page Bundle 目录），图片放入 `static/assets/images/` 或文章同目录 `gallery/`。
+日常运营：在 `content/` 对应目录新增 `index.md`（或 Page Bundle 目录），游记图集优先放入同目录 `gallery/`；通用插图可放 `static/assets/images/`。新增大图后运行 `pnpm run images:compress` 压缩。
 
 ### 媒体写法示例（Blowfish shortcodes）
 
@@ -127,8 +126,8 @@ pnpm run build
 
 ### GitHub Actions
 
-- `.github/workflows/ci-ghcr.yml`：构建 Docker 镜像、导出静态产物并推送到 GHCR
-- `.github/workflows/cd-ghcr.yml`：rsync 静态产物到服务器并重启 nginx
+- `.github/workflows/ci-ghcr.yml`：Hugo 构建静态站点并上传 artifact
+- `.github/workflows/cd-ghcr.yml`：scp 静态产物到服务器并重启 nginx
 - `.github/workflows/pages.yml`：部署到 GitHub Pages
 
 GitHub Actions Secrets（自托管 CD）：

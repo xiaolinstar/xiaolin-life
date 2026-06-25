@@ -1,4 +1,4 @@
-FROM node:20-bookworm-slim AS build-stage
+FROM node:24-bookworm-slim AS build-stage
 ARG HUGO_VERSION=0.158.0
 WORKDIR /app
 

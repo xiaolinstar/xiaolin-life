@@ -23,7 +23,7 @@ categories:
 
 ### 优雅外观、清爽简洁
 
-![黑色主题](/assets/images/img-email-thunderbird/thunderbird-lookup.png)
+![黑色主题](/assets/images/img-email-thunderbird/thunderbird-lookup.jpg)
 ![白色主题](/assets/images/img-email-thunderbird/thunderbird-lookup2.png)
 
 ### 全平台支持
@@ -45,7 +45,7 @@ Thunderbird 由用户自愿捐助，无需收费。人人都是项目贡献者�
 ### 插件扩展
 
 Thunderbird 已经足以满足用户的绝大多数需求，像Chrome浏览器一样，它支持插件扩展，功能更加丰富。
-![插件扩展](/assets/images/img-email-thunderbird/thunderbird-plug.png)
+![插件扩展](/assets/images/img-email-thunderbird/thunderbird-plug.jpg)
 
 ## 马上开始
 
@@ -53,7 +53,7 @@ Thunderbird 已经足以满足用户的绝大多数需求，像Chrome浏览器�
 
 无需「科学上网」，可直接在[官网](https://www.thunderbird.net/zh-CN/thunderbird/all/)下载，根据操作安装指引完成。
 
-![Thunderbird解放收件箱](/assets/images/img-email-thunderbird/thunderbird.png)
+![Thunderbird解放收件箱](/assets/images/img-email-thunderbird/thunderbird.jpg)
 
 ### 邮箱配置
 
@@ -71,16 +71,16 @@ Thunderbird 已经足以满足用户的绝大多数需求，像Chrome浏览器�
 #### 获取 Imap/Pop3 授权码
 
 **QQ 邮箱**
-![QQ邮箱获取imap授权码-1](/assets/images/img-email-thunderbird/mail-qq.png)
-![QQ邮箱获取imap授权码-2](/assets/images/img-email-thunderbird/mail-qq-imap.png)
+![QQ邮箱获取imap授权码-1](/assets/images/img-email-thunderbird/mail-qq.jpg)
+![QQ邮箱获取imap授权码-2](/assets/images/img-email-thunderbird/mail-qq-imap.jpg)
 
 **139邮箱**
-![139邮箱获取imap授权码](/assets/images/img-email-thunderbird/mail-139.png)
+![139邮箱获取imap授权码](/assets/images/img-email-thunderbird/mail-139.jpg)
 
 #### 绑定 Thunderbird 邮箱
 
 Thunderbird 无需手动协议，输入授权码则可自动协议匹配👍
-![设置现有的电子邮件地址](/assets/images/img-email-thunderbird/thunderbird-email.png)
+![设置现有的电子邮件地址](/assets/images/img-email-thunderbird/thunderbird-email.jpg)
 
 ## 最佳实践
 
@@ -133,7 +133,7 @@ Thunderbird 无需手动协议，输入授权码则可自动协议匹配👍
 #### 邮箱签名模板
 
 推荐一个邮箱模板生成器[标小智](https://www.logosc.cn/email-signature-generator#templates)，根据自己的偏好设计专属签名模板。
-![标小智邮箱签名模板](/assets/images/img-email-thunderbird/email-signature-template.png)
+![标小智邮箱签名模板](/assets/images/img-email-thunderbird/email-signature-template.jpg)
 
 根据网站提示定义模板，生成签名 HTML 文件，可以使用「文本编辑器」打开，并全选复制。
 
@@ -153,7 +153,7 @@ Thunderbird 无需手动协议，输入授权码则可自动协议匹配👍
 
 像 Chrome 浏览器一样，Thunderbird 支持扩展插件，可以去插件市场上查看推荐插件、精选插件。
 
-![Thunderbird 插件市场](/assets/images/img-email-thunderbird/thunderbird-plugins.png)
+![Thunderbird 插件市场](/assets/images/img-email-thunderbird/thunderbird-plugins.jpg)
 
 如定时发送、外观主题、语法检查、翻译等。
 
@@ -171,7 +171,7 @@ Thunderbird 无需手动协议，输入授权码则可自动协议匹配👍
 
 设置-常规-网络与磁盘空间-连接-设置...
 
-![不使用代理](/assets/images/img-email-thunderbird/no-proxy.png)
+![不使用代理](/assets/images/img-email-thunderbird/no-proxy.jpg)
 
 ## 参考
 

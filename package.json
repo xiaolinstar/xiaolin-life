@@ -9,9 +9,10 @@
     "site:clean": "rm -rf public resources .hugo_build.lock",
     "featured:setup": "python3 scripts/setup-featured-images.py",
     "photos:generate": "python3 scripts/generate-placeholder-photos.py",
+    "images:compress": "python3 scripts/compress-images.py",
     "search:index": "pnpm exec pagefind --site public",
-    "prebuild": "pnpm run photos:generate && pnpm run featured:setup",
-    "prebuild:github": "pnpm run photos:generate && pnpm run featured:setup",
+    "prebuild": "pnpm run photos:generate && pnpm run images:compress && pnpm run featured:setup",
+    "prebuild:github": "pnpm run photos:generate && pnpm run images:compress && pnpm run featured:setup",
     "build": "pnpm run site:build && pnpm run search:index",
     "build:github": "pnpm run site:build:github && pnpm run search:index"
   },
