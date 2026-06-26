@@ -190,8 +190,8 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 |------|------|------|
 | 1 | 定规范（本文档） | ✅ |
 | 2 | 整理命名、去重（如鼓楼滨江 static vs gallery） | ✅ 鼓楼滨江试点完成（COS URL + carousel-cdn） |
-| 3 | 全量上传 COS，Markdown 改 COS URL | ⬜ |
-| 4 | `git rm --cached` 移出 gallery / static 大图 | ⬜ |
+| 3 | 全量上传 COS，Markdown 改 COS URL | ✅ 7 篇 static 插图 + 鼓楼滨江 |
+| 4 | `git rm --cached` 移出 gallery / static 大图 | ✅ static/assets/images |
 | 5 | 购买 CDN，URL 前缀换为 `media.xiaolin.fun` | ⬜ 待购服务 |
 
 CDN 未配置前，统一使用 COS 直链前缀（见 [MEDIA-OSS.md](MEDIA-OSS.md)）。
@@ -228,3 +228,19 @@ CDN 未配置前，统一使用 COS 直链前缀（见 [MEDIA-OSS.md](MEDIA-OSS.
 - COS 上传：`./scripts/upload-media-cos.sh content/life/entertainment/gulou-riverfront/gallery`
 - 正文：`carousel-cdn` + COS URL；`build.publishResources: false`
 - 构建产物：`public/.../gulou-riverfront/` 仅 ~60KB（无 gallery 副本）
+
+## 附录：static 插图批量迁移（已完成）
+
+已将 `static/assets/images/` 下 7 篇文章共 34 处 `/assets/images/` 引用改为 COS 直链，并自 Git 索引移除 static 大图：
+
+| 文章 | 图片数 | featureimage |
+|------|--------|--------------|
+| `office/email` | 20 | thunderbird-lookup.png |
+| `office/markdown` | 4 | txt-markdown.png（原 deepseek 缺失图已改引用） |
+| `office/mac` | 2 | mac-sliver.jpg |
+| `life/table-game/guandan` | 4 | joker.webp（中文文件名已规范为 ASCII） |
+| `life/table-game/upgrade` | 1 | guandan.jpg |
+| `life/thinks/blogger` | 2 | shenzhen-senior-school.png |
+| `life/thinks/ai-dialectic` | 1 | ai-dialectic-moon-egg.png |
+
+本地 `static/assets/images/` 仍保留作上传源（已 `.gitignore`），COS 键与目录名一致，如 `img-email-thunderbird/thunderbird-lookup.png`。

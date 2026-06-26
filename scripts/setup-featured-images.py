@@ -54,13 +54,7 @@ GALLERY_FEATURED: dict[str, str] = {
 }
 
 REAL_FEATURED: dict[str, str] = {
-    "life/table-game/guandan": "img-table-game-guandan/joker.webp",
-    "life/table-game/upgrade": "img-upgrade/guandan.jpg",
-    "life/thinks/blogger": "img-blogger/shenzhen-senior-school.png",
-    "life/thinks/ai-dialectic": "ai-dialectic-moon-egg.png",
-    "office/email": "img-email-thunderbird/thunderbird-lookup.png",
-    "office/mac": "img-mac/mac-sliver.jpg",
-    "office/markdown": "img-markdown/deepseek-markdown.jpg",
+    # 已全部迁移至 front matter featureimage + COS
 }
 
 GALLERY_COPY: dict[str, str] = {

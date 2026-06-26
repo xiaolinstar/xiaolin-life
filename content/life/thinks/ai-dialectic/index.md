@@ -4,6 +4,9 @@ description: "从辩证思维角度来谈谈对 AI 的理解"
 date: 2025-05-21
 draft: false
 showTableOfContents: true
+featureimage: "https://media-1300240022.cos.ap-nanjing.myqcloud.com/ai-dialectic-moon-egg.png"
+build:
+  publishResources: false
 categories:
   - "生活"
   - "生活感悟"
@@ -30,7 +33,7 @@ DeepSeek R1 模型问世的时候，其一大特点就是深度推理，在回�
 
 在复杂的机关，也是白盒，是人类智慧设计出来的。因此，AI 不是万能的，它学习人类知识，理解人类知识，最多再推理和模仿人类知识。比如，给出我在月球上做西红柿炒蛋的方案：
 
-![月球西红柿炒蛋方案](/assets/images/ai-dialectic-moon-egg.png)
+![月球西红柿炒蛋方案](https://media-1300240022.cos.ap-nanjing.myqcloud.com/ai-dialectic-moon-egg.png)
 
 因此有另外一个非常有意思的话题：AI 到底有没有创造性？
 
