@@ -97,7 +97,7 @@ assets/img/       Hugo 管道资源（头像等）
 scripts/          构建与迁移脚本
 ```
 
-日常运营：在 `content/` 对应目录新增 `index.md`（或 Page Bundle 目录），游记图集优先放入同目录 `gallery/`；通用插图可放 `static/assets/images/`。新增大图后运行 `pnpm run images:compress` 压缩。
+日常运营：在 `content/` 对应目录新增 `index.md`（或 Page Bundle 目录），游记图集优先放入同目录 `gallery/`；通用插图可放 `static/assets/images/`。大图迁移 COS 后 Markdown 使用 CDN URL，见 [docs/MEDIA-OSS.md](docs/MEDIA-OSS.md)。
 
 ### 媒体写法示例（Blowfish shortcodes）
 
@@ -126,9 +126,16 @@ pnpm run build
 
 ### GitHub Actions
 
-- `.github/workflows/ci-ghcr.yml`：Hugo 构建静态站点并上传 artifact
-- `.github/workflows/cd-ghcr.yml`：scp 静态产物到服务器并重启 nginx
+- `.github/workflows/ci-ghcr.yml`：Docker 多阶段构建（Hugo → nginx 镜像）并推送到 GHCR
+- `.github/workflows/cd-ghcr.yml`：两阶段 CD（config-sync → deploy）
 - `.github/workflows/pages.yml`：部署到 GitHub Pages
+
+CD 流程（容器化，无 scp）：
+
+1. **config-sync**：SSH `git pull`，同步 `compose.yaml`、nginx 配置等
+2. **deploy**：`docker compose pull && up -d`，拉取含静态站的新镜像并重启
+
+静态站点由 **Dockerfile** 在 CI 中构建并打入镜像，服务器不挂载 `site/` 目录。
 
 GitHub Actions Secrets（自托管 CD）：
 
@@ -136,17 +143,19 @@ GitHub Actions Secrets（自托管 CD）：
 
 ### Docker Compose
 
-服务器使用 **nginx + 本地静态目录**（`volumes/website/site/`），不再每次拉取 ~260MB 站点镜像：
+服务器使用 **GHCR 镜像 + nginx 配置挂载**：
 
 ```bash
-docker compose up -d
+docker compose pull && docker compose up -d
 ```
-
-CD 流程：CI 导出 `public/` → scp 到服务器 → `docker compose up -d` 重启 nginx。
 
 网站容器暴露宿主机 `8081` 端口，由 `xiaolin-gateway` 反向代理；HTTPS 证书在网关维护。
 
 CD 默认服务器目录：`~/AgentProjects/xiaolin-life`
+
+## 媒体资源（腾讯云 COS + CDN）
+
+游记大图与视频放 COS + CDN 加速，Git/镜像只保留页面。详见 [docs/MEDIA-OSS.md](docs/MEDIA-OSS.md)。
 
 ## 主题升级
 

@@ -50,17 +50,17 @@ PHOTO_FEATURED: dict[str, str] = {
 }
 
 REAL_FEATURED: dict[str, str] = {
+    "life/entertainment/gulou-riverfront": "img-gulou-riverfront/nanjing-marathon.jpg",
     "life/table-game/guandan": "img-table-game-guandan/joker.webp",
     "life/table-game/upgrade": "img-upgrade/guandan.jpg",
     "life/thinks/blogger": "img-blogger/shenzhen-senior-school.png",
     "life/thinks/ai-dialectic": "ai-dialectic-moon-egg.png",
-    "office/email": "img-email-thunderbird/thunderbird-lookup.jpg",
+    "office/email": "img-email-thunderbird/thunderbird-lookup.png",
     "office/mac": "img-mac/mac-sliver.jpg",
     "office/markdown": "img-markdown/deepseek-markdown.jpg",
 }
 
 GALLERY_COPY: dict[str, str] = {
-    "life/entertainment/gulou-riverfront": "nanjing-marathon.jpg",
     "life/places/nanjing-museum": "museum.jpg",
     "life/places/sun-mausoleum": "mausoleum.jpg",
     "life/places/chaotian-palace": "palace.jpg",
@@ -69,11 +69,6 @@ GALLERY_COPY: dict[str, str] = {
     "life/entertainment/carbs": "food.jpg",
     "life/table-game/avalon": "boardgame.jpg",
     "life/table-game/undercover": "friends.jpg",
-}
-
-
-BUNDLE_FEATURED: dict[str, str] = {
-    "life/entertainment/gulou-riverfront": "gallery/nanjing-marathon.jpg",
 }
 
 
@@ -105,11 +100,6 @@ def resolve_featured_source(rel: str, index_file: Path) -> Path:
         if found:
             return found
 
-    if rel in BUNDLE_FEATURED:
-        bundle_path = CONTENT / rel / BUNDLE_FEATURED[rel]
-        if bundle_path.exists():
-            return bundle_path
-
     if rel in REAL_FEATURED:
         image_path = STATIC_IMAGES / REAL_FEATURED[rel]
         if image_path.exists():
@@ -139,12 +129,7 @@ def copy_featured(page_dir: Path, source: Path) -> None:
 
 
 def setup_gallery(page_dir: Path, rel: str) -> None:
-    rel_key = rel
-    gallery = page_dir / "gallery"
-    if gallery.is_dir() and any(gallery.iterdir()):
-        return
-
-    photo_name = GALLERY_COPY.get(rel_key)
+    photo_name = GALLERY_COPY.get(rel)
     if not photo_name:
         return
     source = PHOTOS / photo_name

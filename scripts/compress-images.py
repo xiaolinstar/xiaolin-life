@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""压缩 static/assets/images 下的图片：限制宽度、降低 JPEG/WebP 质量、优化 PNG。"""
+"""可选：手动压缩图片（默认不在 prebuild 中运行，生活类站点优先 OSS 原图）。"""
 
 from __future__ import annotations
 

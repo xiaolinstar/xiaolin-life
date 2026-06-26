@@ -18,7 +18,7 @@ categories:
 
 4名玩家围坐方桌，对家为一组搭档，胜负由"升级"判定，目标是率先打过最高级别"A"。
 
-![4名玩家](/assets/images/img-table-game-guandan/4玩家.jpg)
+![4名玩家](/assets/images/img-table-game-guandan/4玩家.png)
 
 升级顺序：2 → 3 → 4 → … → 10 → J → Q → K → A。
 
@@ -71,7 +71,7 @@ categories:
 - 大小：介于鬼和A之间，鬼 > 主牌 > A
 - **红心**赖子：可变换为鬼牌外的任意牌（值与花色）
 
-![红心牌](/assets/images/img-table-game-guandan/红心J.jpg)
+![红心牌](/assets/images/img-table-game-guandan/红心J.png)
 
 ## 进贡与抗贡
 
@@ -100,7 +100,7 @@ categories:
 
 特别地，双下时头游下家抓牌。
 
-![洗牌，切牌，抓牌](/assets/images/img-table-game-guandan/上家洗牌-头游切牌-末游抓牌.jpg)
+![洗牌，切牌，抓牌](/assets/images/img-table-game-guandan/上家洗牌-头游切牌-末游抓牌.png)
 
 首牌：
 
