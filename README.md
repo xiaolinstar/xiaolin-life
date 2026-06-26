@@ -134,7 +134,9 @@ pnpm run build
 CD 流程（容器化，无 scp）：
 
 1. **config-sync**：SSH `git pull`，同步 `compose.yaml`、nginx 配置等
-2. **deploy**：`docker compose pull && up -d`，拉取含静态站的新镜像并重启
+2. **deploy**：`docker compose pull && up -d`，从 `ghcr.nju.edu.cn` 拉取镜像并重启
+
+CI 仍推送到官方 `ghcr.io`；服务器通过 [南大 GHCR 镜像](https://ghcr.nju.edu.cn) 加速拉取（见 `compose.yaml`）。
 
 静态站点由 **Dockerfile** 在 CI 中构建并打入镜像，服务器不挂载 `site/` 目录。
 
@@ -144,7 +146,12 @@ GitHub Actions Secrets（自托管 CD）：
 
 ### Docker Compose
 
-服务器使用 **GHCR 镜像 + nginx 配置挂载**：
+服务器使用 **GHCR 镜像（南大加速源）+ nginx 配置挂载**：
+
+```yaml
+# compose.yaml
+image: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
+```
 
 ```bash
 docker compose pull && docker compose up -d

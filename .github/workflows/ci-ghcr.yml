@@ -7,6 +7,7 @@ on:
       - main
 
 env:
+  # Actions 推送须用官方 ghcr.io；服务器 pull 见 compose.yaml（ghcr.nju.edu.cn）
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 

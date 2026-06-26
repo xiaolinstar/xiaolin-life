@@ -5,7 +5,7 @@ networks:
 services:
   # Hugo 静态网站（站点内容打包在镜像内，nginx 配置通过本地挂载便于 git pull 更新）
   xiaolin-life-website:
-    image: ghcr.io/xiaolinstar/xiaolin-life:main
+    image: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
     container_name: xiaolin-life-website
     volumes:
       - ./volumes/website/nginx.conf:/etc/nginx/nginx.conf:ro
