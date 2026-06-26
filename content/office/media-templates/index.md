@@ -11,7 +11,7 @@ tags:
   - "媒体"
 ---
 
-本文汇总 Blowfish 主题中常用的图片与视频展示方式，可作为新文章写作模板。
+本文汇总 Blowfish 主题中常用的图片与视频展示方式，可作为新文章写作模板。完整约定见仓库 `docs/MEDIA-STANDARDS.md`。
 
 ## 图片轮播（Carousel）
 

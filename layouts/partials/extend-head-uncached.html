@@ -1,0 +1,17 @@
+{{/* 为 carousel-cdn shortcode 加载 tw-elements（与 Blowfish carousel 相同） */}}
+{{ if .Page.HasShortcode "carousel-cdn" }}
+  {{ $carouselCSS := resources.Get "css/components/carousel.css" }}
+  {{ $carouselCSS = $carouselCSS | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="{{ $carouselCSS.RelPermalink }}"
+    integrity="{{ $carouselCSS.Data.Integrity }}">
+  {{ $twelementsLib := resources.Get "lib/tw-elements/index.min.js" }}
+  {{ $twelementsLib = $twelementsLib | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}
+  <script
+    defer
+    type="text/javascript"
+    src="{{ $twelementsLib.RelPermalink }}"
+    integrity="{{ $twelementsLib.Data.Integrity }}"></script>
+{{ end }}

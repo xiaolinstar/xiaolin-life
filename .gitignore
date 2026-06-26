@@ -29,6 +29,14 @@ cert/
 coscli.log
 coscli_output/
 
+# 文章媒体母本（COS/CDN 分发，不进 Git；见 docs/MEDIA-STANDARDS.md）
+content/**/gallery/**
+!content/**/gallery/.gitkeep
+
+# 历史 static 大图（迁移完成后不再提交）
+static/assets/images/**
+!static/assets/images/.gitkeep
+
 # 本地 Hugo 二进制（可选，体积较大）
 .tools/hugo
 .tools/hugo145

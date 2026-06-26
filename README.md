@@ -90,14 +90,15 @@ content/          全部 Markdown 内容
   life/           生活记录
   office/         轻松办公
   about/          关于页面
-static/assets/    图片等静态资源（保持 /assets/images/ URL 不变）
+static/assets/    站点级小资源（SVG 等；大图见 content/.../gallery/）
 themes/blowfish/  Blowfish 主题
 layouts/          自定义布局（ICP 备案、llms.txt）
-assets/img/       Hugo 管道资源（头像等）
+assets/img/       Hugo 管道资源（占位图、SVG 封面）
 scripts/          构建与迁移脚本
+docs/             MEDIA-OSS.md（COS 部署）、MEDIA-STANDARDS.md（作者规范）
 ```
 
-日常运营：在 `content/` 对应目录新增 `index.md`（或 Page Bundle 目录），游记图集优先放入同目录 `gallery/`；通用插图可放 `static/assets/images/`。大图迁移 COS 后 Markdown 使用 CDN URL，见 [docs/MEDIA-OSS.md](docs/MEDIA-OSS.md)。
+日常运营：在 `content/` 新建 Page Bundle，**原图 / 原视频放同目录 `gallery/`**，上传 COS 后 Markdown 用 COS/CDN URL；`gallery/` 不进 Git。详见 [docs/MEDIA-STANDARDS.md](docs/MEDIA-STANDARDS.md) 与 [docs/MEDIA-OSS.md](docs/MEDIA-OSS.md)。
 
 ### 媒体写法示例（Blowfish shortcodes）
 

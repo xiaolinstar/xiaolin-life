@@ -49,8 +49,11 @@ PHOTO_FEATURED: dict[str, str] = {
     "life/table-game/undercover": "friends.jpg",
 }
 
+GALLERY_FEATURED: dict[str, str] = {
+    # gulou-riverfront 已用 front matter featureimage + COS carousel
+}
+
 REAL_FEATURED: dict[str, str] = {
-    "life/entertainment/gulou-riverfront": "img-gulou-riverfront/nanjing-marathon.jpg",
     "life/table-game/guandan": "img-table-game-guandan/joker.webp",
     "life/table-game/upgrade": "img-upgrade/guandan.jpg",
     "life/thinks/blogger": "img-blogger/shenzhen-senior-school.png",
@@ -100,6 +103,11 @@ def resolve_featured_source(rel: str, index_file: Path) -> Path:
         if found:
             return found
 
+    if rel in GALLERY_FEATURED:
+        gallery_path = index_file.parent / "gallery" / GALLERY_FEATURED[rel]
+        if gallery_path.exists():
+            return gallery_path
+
     if rel in REAL_FEATURED:
         image_path = STATIC_IMAGES / REAL_FEATURED[rel]
         if image_path.exists():
@@ -142,10 +150,28 @@ def setup_gallery(page_dir: Path, rel: str) -> None:
     print(f"  gallery: {dest.relative_to(ROOT)}")
 
 
+def has_remote_featureimage(index_file: Path) -> bool:
+    text = index_file.read_text(encoding="utf-8")
+    if not text.startswith("---"):
+        return False
+    end = text.find("\n---", 3)
+    if end == -1:
+        return False
+    fm = text[3:end]
+    for line in fm.splitlines():
+        if line.strip().startswith("featureimage:") and "http" in line:
+            return True
+    return False
+
+
 def setup_page(page_dir: Path, index_file: Path) -> None:
     rel = rel_from_content(page_dir)
-    source = resolve_featured_source(rel, index_file)
-    copy_featured(page_dir, source)
+    if has_remote_featureimage(index_file):
+        clear_featured(page_dir)
+        print(f"  skip featured (COS featureimage): {page_dir.relative_to(ROOT)}")
+    else:
+        source = resolve_featured_source(rel, index_file)
+        copy_featured(page_dir, source)
     setup_gallery(page_dir, rel)
 
 

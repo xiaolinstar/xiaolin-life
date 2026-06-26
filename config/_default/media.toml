@@ -1,6 +1,6 @@
 # 媒体 CDN 配置（可选）
-# 启用后：图片上传腾讯云 COS + CDN，构建/部署包不再包含 static/assets/images 与 gallery 大图。
-# 在 GitHub repo Variables 设置 MEDIA_CDN_BASE，或在本地 export 后构建。
+# 启用后：媒体走腾讯云 COS + CDN；gallery / static 大图不进 Git（见 docs/MEDIA-STANDARDS.md）。
+# GitHub Variables：MEDIA_CDN_BASE；CDN 未配前可用 COS 直链。
 
 [media]
   # 例：https://media.xiaolin.fun；留空则仍从站点同源加载

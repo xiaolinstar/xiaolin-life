@@ -14,7 +14,7 @@ disableImageOptimizationMD = false
 defaultFeaturedImage = "img/covers/default.svg"
 defaultBackgroundImage = "img/photos/home-bg.jpg"
 defaultSocialImage = "img/photos/cityscape.jpg"
-hotlinkFeatureImage = false
+hotlinkFeatureImage = true
 
 fingerprintAlgorithm = "sha512"
 

@@ -2,6 +2,8 @@
 
 个人生活站以图片/视频为主，**源文件保持原画质**，通过对象存储 + CDN 加速分发；Git 与 Docker 镜像只保留页面与轻量资源。
 
+**作者写作与目录规范** → [MEDIA-STANDARDS.md](MEDIA-STANDARDS.md)
+
 ## 架构
 
 ```
@@ -21,13 +23,13 @@
 
 | 存放位置 | 内容 | 进 Git | 进镜像 |
 |----------|------|--------|--------|
-| Git | Markdown、Hugo 配置、SVG 封面 | ✅ | — |
+| Git | Markdown、Hugo 配置、小 SVG / 占位图 | ✅ | — |
 | COS | 游记图集、截图、视频 | ❌ | ❌ |
 | 镜像 | 构建后的 HTML/CSS/JS | — | ✅ |
 
 ## 下一步清单（按顺序执行）
 
-**当前进度**：步骤 1–2、迁移脚本已完成；COS 试点上传已验证（直链可用）。**下一步：步骤 3 绑定 CDN**，完成后继续 4–6。
+**当前进度**：COS 与 coscli 已就绪；媒体目录规范见 [MEDIA-STANDARDS.md](MEDIA-STANDARDS.md)。**下一步：整理命名与去重 → 全量上传 COS → Markdown 改 URL → 从 Git 移出 gallery**；CDN 待购服务后再配置。
 
 ### 1. 创建 COS 存储桶 ✅
 
@@ -63,7 +65,7 @@ coscli config add -b media-1300240022 -r ap-nanjing -a media-1300240022
 
 </details>
 
-### 3. 绑定 CDN 加速域名 ⬜ **← 当前**
+### 3. 绑定 CDN 加速域名 ⬜（待购服务后配置）
 
 1. [CDN 控制台](https://console.cloud.tencent.com/cdn) → **域名管理** → **添加域名**
 2. **加速域名**：`media.xiaolin.fun`
@@ -230,7 +232,9 @@ export COS_REGION=ap-nanjing
 | coscli config + 创建 Bucket | ✅ | `media-1300240022` / ap-nanjing |
 | 迁移脚本与工具链 | ✅ | upload / rewrite / check / cos-config |
 | `media.toml` `cdnBaseURL` | ✅ | `https://media.xiaolin.fun` |
-| CDN 绑定 + DNS CNAME | ⬜ | **当前待做** |
+| CDN 绑定 + DNS CNAME | ⬜ | 待购 CDN 服务 |
+| 媒体目录规范 | ✅ | [MEDIA-STANDARDS.md](MEDIA-STANDARDS.md) |
+| gallery / static 大图 gitignore | ✅ | 已写入；已跟踪文件待迁移后 `git rm --cached` |
 | COS 试点上传 | 🟡 | 已传 `img-table-game-guandan`；COS 直链 200 OK |
 | 全量上传 static | ⬜ | 64 文件 / ~218MB |
 | 单篇 Markdown + CDN 验证 | ⬜ | 依赖 CDN |

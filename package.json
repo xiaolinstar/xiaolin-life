@@ -13,6 +13,7 @@
     "media:inventory": "bash scripts/media-inventory.sh",
     "media:check": "bash scripts/cos-check.sh",
     "media:upload": "bash scripts/upload-media-cos.sh static/assets/images",
+    "media:publish": "bash scripts/media-publish.sh",
     "media:rewrite": "python3 scripts/rewrite-media-urls.py",
     "media:rewrite:apply": "python3 scripts/rewrite-media-urls.py --apply",
     "search:index": "pnpm exec pagefind --site public",

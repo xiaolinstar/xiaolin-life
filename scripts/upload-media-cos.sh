@@ -61,12 +61,13 @@ upload_static_images() {
   fi
 }
 
-upload_gallery() {
+upload_page_gallery() {
   local src="$1"
-  local article
-  article="$(basename "$(dirname "$src")")"
-  echo "→ sync gallery: ${src#"$ROOT"/} → $(cos_dest "gallery/$article")/"
-  coscli sync "$src/" "$(cos_dest "gallery/$article")/" -r
+  local page_dir
+  page_dir="$(dirname "$src")"
+  local cos_key="${page_dir#"$ROOT/content/"}"
+  echo "→ sync ${src#"$ROOT"/} → $(cos_dest "$cos_key")/"
+  coscli sync "$src/" "$(cos_dest "$cos_key")/" -r
 }
 
 for arg in "$@"; do
@@ -89,12 +90,12 @@ for arg in "$@"; do
     */gallery|*/gallery/*)
       if [[ -d "$target" ]]; then
         if [[ "$(basename "$target")" == "gallery" ]]; then
-          upload_gallery "$target"
+          upload_page_gallery "$target"
         else
-          upload_gallery "$(dirname "$target")"
+          upload_page_gallery "$(dirname "$target")"
         fi
       else
-        upload_gallery "$(dirname "$(dirname "$target")")"
+        upload_page_gallery "$(dirname "$(dirname "$target")")"
       fi
       ;;
     *)

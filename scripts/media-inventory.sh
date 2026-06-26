@@ -38,14 +38,13 @@ echo "## Markdown 中的 /assets/images/ 引用"
 rg -c '/assets/images/' "$ROOT/content" --glob '*.md' 2>/dev/null | sort -t: -k2 -nr || true
 
 echo
-echo "## 鼓楼滨江重复（static vs gallery）"
-S="$ROOT/static/assets/images/img-gulou-riverfront"
+echo "## 鼓楼滨江（试点）"
 G="$ROOT/content/life/entertainment/gulou-riverfront/gallery"
-if [[ -d "$S" && -d "$G" ]]; then
-  comm -12 <(ls "$S" | sort) <(ls "$G" | sort) | wc -l | xargs echo "同名文件数:"
-  echo "迁移后保留 COS 一份，可删除 gallery 或 static 重复目录"
+if [[ -d "$G" ]]; then
+  du -sh "$G"
+  ls "$G" 2>/dev/null | wc -l | xargs echo "文件数:"
+  echo "  COS 键前缀: life/entertainment/gulou-riverfront/"
 fi
-
 echo
 echo "## 建议上传命令（coscli 配置完成后）"
 echo "./scripts/upload-media-cos.sh static/assets/images"
