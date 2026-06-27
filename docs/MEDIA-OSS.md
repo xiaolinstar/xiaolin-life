@@ -29,7 +29,7 @@
 
 ## 下一步清单（按顺序执行）
 
-**当前进度**：COS 与 coscli 已就绪；媒体目录规范见 [MEDIA-STANDARDS.md](MEDIA-STANDARDS.md)。**下一步：整理命名与去重 → 全量上传 COS → Markdown 改 URL → 从 Git 移出 gallery**；CDN 待购服务后再配置。
+**当前进度**：COS 媒体已全量上传；Markdown 暂用 COS 直链。**下一步：按 [CDN-SETUP.md](CDN-SETUP.md) 配置 CDN → DNS → HTTPS → `media:cdn-migrate:apply`**。
 
 ### 1. 创建 COS 存储桶 ✅
 
@@ -65,16 +65,18 @@ coscli config add -b media-1300240022 -r ap-nanjing -a media-1300240022
 
 </details>
 
-### 3. 绑定 CDN 加速域名 ⬜（待购服务后配置）
+### 3. 绑定 CDN 加速域名 🟡（进行中）
 
-1. [CDN 控制台](https://console.cloud.tencent.com/cdn) → **域名管理** → **添加域名**
-2. **加速域名**：`media.xiaolin.fun`
-3. **加速区域**：中国境内（与已购资源包一致）
-4. **源站类型**：COS 源 → 选择上一步 Bucket
-5. **回源 HOST**：默认 Bucket 域名即可
-6. **HTTPS**：申请免费证书或上传已有证书（与主站一致体验更好）
-7. 控制台给出 **CNAME**（如 `media.xiaolin.fun.cdn.dnsv1.com`）
-8. 在 DNS（`xiaolin.fun`）添加：`media` → CNAME 指向上述地址
+**详细步骤** → [CDN-SETUP.md](CDN-SETUP.md)
+
+概要：
+
+1. [CDN 控制台](https://console.cloud.tencent.com/cdn/domains) → **添加域名** → `media.xiaolin.fun`
+2. **源站**：COS 源 → `media-1300240022`（南京）；回源 HOST 默认 Bucket 域名
+3. **HTTPS**：托管免费证书或上传证书
+4. DNS：`media` → CNAME 指向控制台分配的地址
+5. 验证：`pnpm run media:cdn-check`
+6. 切换 Markdown URL：`pnpm run media:cdn-migrate:apply`
 
 **路径约定（与 Markdown 一致）**
 
@@ -184,7 +186,9 @@ export COS_REGION=ap-nanjing
 | `pnpm run media:check` | 验证 coscli 配置与 Bucket 连通 |
 | `pnpm run media:upload` | 同步 `static/assets/images` 到 COS |
 | `pnpm run media:rewrite` | 预览 Markdown CDN URL 替换 |
-| `pnpm run media:rewrite:apply` | 写入 CDN URL（**上传并验证 CDN 后再执行**） |
+| `pnpm run media:cdn-check` | 校验 CDN 解析与抽样 URL |
+| `pnpm run media:cdn-migrate` | 预览 COS 直链 → CDN 域名 |
+| `pnpm run media:cdn-migrate:apply` | 写入 CDN URL（**CDN 验证通过后再执行**） |
 
 本地凭证模板：复制 `.env.example` 为 `.env`（已 gitignore）。
 
@@ -232,15 +236,9 @@ export COS_REGION=ap-nanjing
 | coscli config + 创建 Bucket | ✅ | `media-1300240022` / ap-nanjing |
 | 迁移脚本与工具链 | ✅ | upload / rewrite / check / cos-config |
 | `media.toml` `cdnBaseURL` | ✅ | `https://media.xiaolin.fun` |
-| CDN 绑定 + DNS CNAME | ⬜ | 待购 CDN 服务 |
-| 媒体目录规范 | ✅ | [MEDIA-STANDARDS.md](MEDIA-STANDARDS.md) |
-| gallery / static 大图 gitignore | ✅ | 已写入；已跟踪文件待迁移后 `git rm --cached` |
-| COS 试点上传 | 🟡 | 已传 `img-table-game-guandan`；COS 直链 200 OK |
-| 全量上传 static | ⬜ | 64 文件 / ~218MB |
-| 单篇 Markdown + CDN 验证 | ⬜ | 依赖 CDN |
-| 批量替换 Markdown | ⬜ | 7 篇 34 处，脚本已就绪 |
-| GitHub `MEDIA_CDN_BASE` | ⬜ | |
-| 从 Git 移除大图 | ⬜ | 含鼓楼滨江 gallery 去重（22 个同名） |
+| CDN 绑定 + DNS + HTTPS | ✅ | `media.xiaolin.fun` |
+| Markdown 切换 CDN 域名 | ✅ | 8 篇 64 处 |
+| GitHub `MEDIA_CDN_BASE` | ✅ | `https://media.xiaolin.fun` |
 
 **COS 直链前缀**（CDN 未配前）：`https://media-1300240022.cos.ap-nanjing.myqcloud.com`
 

@@ -72,7 +72,7 @@ gallery/（gitignore）
 https://media-1300240022.cos.ap-nanjing.myqcloud.com/life/entertainment/gulou-riverfront/01-nanjing-marathon.jpg
 ```
 
-CDN 购买后只换域名前缀为 `https://media.xiaolin.fun/`，路径不变。
+CDN 购买后只换域名前缀为 `https://media.xiaolin.fun/`，路径不变。批量切换见 `docs/CDN-SETUP.md` 与 `pnpm run media:cdn-migrate:apply`。
 
 ### 3. 提交并推送（仅 Markdown）
 

@@ -192,7 +192,7 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 | 2 | 整理命名、去重（如鼓楼滨江 static vs gallery） | ✅ 鼓楼滨江试点完成（COS URL + carousel-cdn） |
 | 3 | 全量上传 COS，Markdown 改 COS URL | ✅ 7 篇 static 插图 + 鼓楼滨江 |
 | 4 | `git rm --cached` 移出 gallery / static 大图 | ✅ static/assets/images |
-| 5 | 购买 CDN，URL 前缀换为 `media.xiaolin.fun` | ⬜ 待购服务 |
+| 5 | 购买 CDN，URL 前缀换为 `media.xiaolin.fun` | ✅ |
 
 CDN 未配置前，统一使用 COS 直链前缀（见 [MEDIA-OSS.md](MEDIA-OSS.md)）。
 

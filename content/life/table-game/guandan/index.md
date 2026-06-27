@@ -4,7 +4,7 @@ description: "起源于江苏的扑克牌游戏"
 date: 2025-05-21
 draft: false
 showTableOfContents: true
-featureimage: "https://media-1300240022.cos.ap-nanjing.myqcloud.com/img-table-game-guandan/joker.webp"
+featureimage: "https://media.xiaolin.fun/img-table-game-guandan/joker.webp"
 build:
   publishResources: false
 categories:
@@ -13,7 +13,7 @@ categories:
 ---
 > 由斗地主和双升演化而来
 
-![鬼牌](https://media-1300240022.cos.ap-nanjing.myqcloud.com/img-table-game-guandan/joker.webp)
+![鬼牌](https://media.xiaolin.fun/img-table-game-guandan/joker.webp)
 
 掼蛋是一款起源于中国江苏的扑克牌游戏，由4人参与采用**对家搭档**的协作对抗模式。游戏通过升级、炸弹与牌型组合，将策略规划、记忆推算与团队配合融为一体，兼具竞技性与社交性，牌局节奏明快，深受大众喜爱。
 
@@ -21,7 +21,7 @@ categories:
 
 4名玩家围坐方桌，对家为一组搭档，胜负由"升级"判定，目标是率先打过最高级别"A"。
 
-![4名玩家](https://media-1300240022.cos.ap-nanjing.myqcloud.com/img-table-game-guandan/04-players.png)
+![4名玩家](https://media.xiaolin.fun/img-table-game-guandan/04-players.png)
 
 升级顺序：2 → 3 → 4 → … → 10 → J → Q → K → A。
 
@@ -74,7 +74,7 @@ categories:
 - 大小：介于鬼和A之间，鬼 > 主牌 > A
 - **红心**赖子：可变换为鬼牌外的任意牌（值与花色）
 
-![红心牌](https://media-1300240022.cos.ap-nanjing.myqcloud.com/img-table-game-guandan/red-heart-j.png)
+![红心牌](https://media.xiaolin.fun/img-table-game-guandan/red-heart-j.png)
 
 ## 进贡与抗贡
 
@@ -103,7 +103,7 @@ categories:
 
 特别地，双下时头游下家抓牌。
 
-![洗牌，切牌，抓牌](https://media-1300240022.cos.ap-nanjing.myqcloud.com/img-table-game-guandan/shuffle-deal-draw.png)
+![洗牌，切牌，抓牌](https://media.xiaolin.fun/img-table-game-guandan/shuffle-deal-draw.png)
 
 首牌：
 

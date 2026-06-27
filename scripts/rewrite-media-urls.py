@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "content"
-DEFAULT_CDN = "https://media-1300240022.cos.ap-nanjing.myqcloud.com"
+DEFAULT_CDN = "https://media.xiaolin.fun"
 LOCAL_PREFIX = "/assets/images/"
 
 # ![alt](/assets/images/foo/bar.png) 或裸路径
