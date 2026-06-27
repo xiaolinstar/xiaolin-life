@@ -5,6 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 # shellcheck source=lib/cos-config.sh
 source "$ROOT/scripts/lib/cos-config.sh"
+cos_load_dotenv "$ROOT"
 
 CONFIG="$(cos_config_path)"
 
@@ -25,6 +26,7 @@ fi
 echo "✓ $CONFIG 存在"
 
 cos_load_config
+echo "  对象键前缀: ${COS_PREFIX:-（未设）}"
 echo "  Bucket: ${COS_BUCKET_NAME} (alias: ${COS_BUCKET_ALIAS})"
 echo "  Endpoint: ${COS_ENDPOINT}"
 if [[ -n "${COS_PUBLIC_BASE_URL:-}" ]]; then

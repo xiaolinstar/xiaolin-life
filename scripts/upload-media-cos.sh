@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # 使用 coscli 将本地媒体同步到腾讯云 COS，供 CDN 加速。
 #
-# 前置：coscli config init / config add（见 docs/MEDIA-OSS.md）
-#
-# 环境变量（均可选，未设置时从 ~/.cos.yaml 读取）：
+# 环境变量（均可选，未设置时从 ~/.cos.yaml / .env 读取）：
 #   COS_BUCKET_ALIAS  coscli bucket alias
-#   COS_PREFIX        可选对象键前缀，默认空（与 CDN URL 路径一致）
+#   COS_PREFIX        对象键前缀，本仓库默认 life（见 scripts/lib/cos-config.sh）
 #
 # 用法：
 #   ./scripts/upload-media-cos.sh static/assets/images
@@ -16,10 +14,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 # shellcheck source=lib/cos-config.sh
 source "$ROOT/scripts/lib/cos-config.sh"
+cos_load_dotenv "$ROOT"
 cos_load_config
 
 ALIAS="$COS_BUCKET_ALIAS"
-PREFIX="${COS_PREFIX:-}"
+PREFIX="${COS_PREFIX}"
 PREFIX="${PREFIX#/}"
 PREFIX="${PREFIX%/}"
 
@@ -33,18 +32,40 @@ if [[ $# -lt 1 ]]; then
   exit 1
 fi
 
-cos_dest() {
+cos_key_with_prefix() {
   local key="$1"
   key="${key#/}"
-  if [[ -n "$PREFIX" && -n "$key" ]]; then
-    echo "cos://${ALIAS}/${PREFIX}/${key}"
-  elif [[ -n "$PREFIX" ]]; then
-    echo "cos://${ALIAS}/${PREFIX}/"
-  elif [[ -n "$key" ]]; then
+  if [[ -z "$PREFIX" ]]; then
+    printf '%s' "$key"
+    return
+  fi
+  if [[ -n "$key" && ( "$key" == "$PREFIX" || "$key" == "$PREFIX/"* ) ]]; then
+    printf '%s' "$key"
+    return
+  fi
+  if [[ -z "$key" ]]; then
+    printf '%s' "$PREFIX"
+  else
+    printf '%s' "${PREFIX}/${key}"
+  fi
+}
+
+cos_dest() {
+  local key="$1"
+  key="$(cos_key_with_prefix "$key")"
+  key="${key#/}"
+  if [[ -n "$key" ]]; then
     echo "cos://${ALIAS}/${key}"
   else
     echo "cos://${ALIAS}/"
   fi
+}
+
+cos_dest_dir() {
+  local dest
+  dest="$(cos_dest "$1")"
+  [[ "$dest" == */ ]] || dest="${dest}/"
+  echo "$dest"
 }
 
 upload_static_images() {
@@ -52,12 +73,12 @@ upload_static_images() {
   local images_root="$ROOT/static/assets/images"
   if [[ "$src" == "$images_root" ]]; then
     echo "→ sync static/assets/images → $(cos_dest "")"
-    coscli sync "$src/" "$(cos_dest "")" -r
+    coscli sync "$src/" "$(cos_dest_dir "")" -r
   else
     local name
     name="$(basename "$src")"
     echo "→ sync ${src#"$ROOT"/} → $(cos_dest "$name")/"
-    coscli sync "$src/" "$(cos_dest "$name")/" -r
+    coscli sync "$src/" "$(cos_dest_dir "$name")" -r
   fi
 }
 
@@ -67,7 +88,7 @@ upload_page_gallery() {
   page_dir="$(dirname "$src")"
   local cos_key="${page_dir#"$ROOT/content/"}"
   echo "→ sync ${src#"$ROOT"/} → $(cos_dest "$cos_key")/"
-  coscli sync "$src/" "$(cos_dest "$cos_key")/" -r
+  coscli sync "$src/" "$(cos_dest_dir "$cos_key")" -r
 }
 
 for arg in "$@"; do
@@ -102,7 +123,7 @@ for arg in "$@"; do
       name="$(basename "$target")"
       if [[ -d "$target" ]]; then
         echo "→ sync: ${rel} → $(cos_dest "$name")/"
-        coscli sync "$target/" "$(cos_dest "$name")/" -r
+        coscli sync "$target/" "$(cos_dest_dir "$name")" -r
       else
         parent="$(dirname "$target")"
         pname="$(basename "$parent")"

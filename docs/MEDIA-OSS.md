@@ -29,7 +29,7 @@
 
 ## 下一步清单（按顺序执行）
 
-**当前进度**：COS 媒体已全量上传；Markdown 暂用 COS 直链。**下一步：按 [CDN-SETUP.md](CDN-SETUP.md) 配置 CDN → DNS → HTTPS → `media:cdn-migrate:apply`**。
+**当前进度**：CDN 已上线。**共享 Bucket 命名空间**见 [MEDIA-NAMESPACE.md](MEDIA-NAMESPACE.md)（`life/` / `dcos/` 前缀迁移）。
 
 ### 1. 创建 COS 存储桶 ✅
 

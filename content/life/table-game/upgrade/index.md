@@ -4,7 +4,7 @@ description: "经典扑克牌升级游戏"
 date: 2025-05-21
 draft: false
 showTableOfContents: true
-featureimage: "https://media.xiaolin.fun/img-upgrade/guandan.jpg"
+featureimage: "https://media.xiaolin.fun/life/img-upgrade/guandan.jpg"
 build:
   publishResources: false
 categories:
@@ -13,7 +13,7 @@ categories:
 ---
 江浙沪地区尤其是江苏人喜欢玩「掼蛋」。
 
-![南京街头大爷掼蛋](https://media.xiaolin.fun/img-upgrade/guandan.jpg)
+![南京街头大爷掼蛋](https://media.xiaolin.fun/life/img-upgrade/guandan.jpg)
 
 首次了解「掼蛋」的规则，让我想起来小时候玩的「双升」（也叫「升级」），同样好玩，具有较强的趣味性和智力博弈。在我看来，「掼蛋」就是「升级」基于「斗地主」规则的变体。
 

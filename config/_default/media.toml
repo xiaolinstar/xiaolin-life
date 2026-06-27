@@ -5,6 +5,8 @@
 [media]
   # 例：https://media.xiaolin.fun；留空则仍从站点同源加载
   cdnBaseURL = "https://media.xiaolin.fun"
+  # 共享 Bucket 对象键前缀；与 shell 环境变量 COS_PREFIX 一致（本仓库默认 life）
+  cosPrefix = "life"
 
   # Markdown / 短代码中的相对媒体路径前缀（迁移完成后统一改引用）
   localPrefix = "/assets/images/"
