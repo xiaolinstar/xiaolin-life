@@ -87,6 +87,9 @@ mainSections = ["life", "office"]
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
 
+[baiduAnalytics]
+  siteId = "7108ccadd9c5e013829dbb193f5b1d0d"
+
 [icp]
   display = true
   icpNumber = "苏ICP备2026011017号-5"
