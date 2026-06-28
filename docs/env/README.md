@@ -9,12 +9,14 @@
 | 层 | 放什么 | 路径 |
 |----|--------|------|
 | L0 模板 | `COS_PREFIX`、`MEDIA_CDN_BASE` 等 | `.env.example` |
+| L2 CD | SSH 部署 | 仓库 **Secrets**：`SERVER_*`（无 CI Variables） |
 | L3 凭证 | SecretId / SecretKey | **`~/.cos.yaml`**（coscli） |
 | L3 本机 | 前缀、CDN、可选 bucket 覆盖 | 仓库根 `.env` |
 | L3 VPS | 无 | `compose.yaml` 仅 `TZ`，upstream **8081** |
+| L3 备份 | 本机 `.env` 快照 | `~/.config/xiaolinstar/xiaolin-life/local.env` |
+| L2 备份 | GitHub 清单 | `~/.config/xiaolinstar/xiaolin-life/github-production.env` |
 
 **VPS 上不应存在 `.env`**（已确认无文件即达标）。COS 凭证仅本机 `~/.cos.yaml`。
-| L3 备份 | 本机 `.env` 快照 | `~/.config/xiaolinstar/xiaolin-life/local.env` |
 
 **不要**把 `COS_SECRET_ID` / `COS_SECRET_KEY` 写进 `.env` 或 commit。
 
@@ -48,6 +50,18 @@ pnpm run media:cdn-check   # 若已配置
 cp .env ~/.config/xiaolinstar/xiaolin-life/local.env
 chmod 600 ~/.config/xiaolinstar/xiaolin-life/local.env
 # COS 凭证仍在 ~/.cos.yaml，需单独备份 coscli 配置
+```
+
+## GitHub L2 同步（party-helper 模式）
+
+与 **party-helper** 相比，life 的 L2 **更简单**：只有 3 个仓库级 SSH Secrets，无 GitHub Environment、无构建 Variables、无邮件 Secrets。详见 `docs/env/github-environments.example.env`。
+
+```bash
+mkdir -p ~/.config/xiaolinstar/xiaolin-life
+cp docs/env/github-production.env ~/.config/xiaolinstar/xiaolin-life/github-production.env
+chmod 600 ~/.config/xiaolinstar/xiaolin-life/github-production.env
+pnpm sync:github-env -- --dry-run
+pnpm sync:github-env
 ```
 
 ## Agent 禁区

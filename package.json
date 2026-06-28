@@ -26,7 +26,8 @@
     "prebuild": "pnpm run photos:generate && pnpm run featured:setup",
     "prebuild:github": "pnpm run photos:generate && pnpm run featured:setup",
     "build": "pnpm run site:build && pnpm run search:index",
-    "build:github": "pnpm run site:build:github && pnpm run search:index"
+    "build:github": "pnpm run site:build:github && pnpm run search:index",
+    "sync:github-env": "node scripts/cd/sync-github-env.mjs"
   },
   "devDependencies": {
     "pagefind": "^1.4.0"
