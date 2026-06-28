@@ -20,6 +20,16 @@
 
 **不要**把 `COS_SECRET_ID` / `COS_SECRET_KEY` 写进 `.env` 或 commit。
 
+## 健康检查（/healthz）
+
+容器 nginx 提供 **`GET /healthz` → 204**（见 `volumes/website/default.conf`）。gateway [uptime.yml](https://github.com/xiaolinstar/xiaolin-gateway/blob/main/.github/workflows/uptime.yml) 探测：
+
+```text
+https://www.xiaolin.fun/healthz
+```
+
+规范：[healthz-probe-standard.md](https://github.com/xiaolinstar/xiaolin-gateway/blob/main/docs/healthz-probe-standard.md)
+
 ## 脚本加载顺序
 
 `scripts/lib/cos-config.sh`：
