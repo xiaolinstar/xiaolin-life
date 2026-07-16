@@ -2,10 +2,9 @@
   "version": "1.1.0",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "hugo": "bash scripts/hugo.sh",
-    "site:dev": "bash scripts/hugo.sh server -D --disableFastRender",
-    "site:build": "bash scripts/hugo.sh --minify --gc --environment production",
-    "site:build:github": "bash scripts/hugo.sh --minify --gc --environment github-pages",
+    "site:dev": "hugo server -D --disableFastRender",
+    "site:build": "hugo --minify --gc --environment production",
+    "site:build:github": "hugo --minify --gc --environment github-pages",
     "site:clean": "rm -rf public resources .hugo_build.lock",
     "featured:setup": "python3 scripts/setup-featured-images.py",
     "photos:generate": "python3 scripts/generate-placeholder-photos.py",

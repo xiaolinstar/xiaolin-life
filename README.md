@@ -78,9 +78,10 @@ pnpm install
 
 # 启动开发服务器（热更新）
 pnpm run site:dev
-```
 
-若未全局安装 Hugo，项目已提供 `.tools/hugo158` 作为本地 fallback（`scripts/hugo.sh` 会自动选择）。
+# 或直接使用 Hugo
+hugo server -D
+```
 
 ## 目录结构
 
