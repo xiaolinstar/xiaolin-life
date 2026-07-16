@@ -78,6 +78,7 @@ pnpm sync:github-env
 
 禁止 Agent 修改 `.env`、`~/.cos.yaml` 与 `~/.config/xiaolinstar/**`。
 
-注册表：[env-registry.yaml](https://github.com/xiaolinstar/dev-standards/blob/main/playbook/env-registry.yaml) §xiaolin-life。
+注册表：[env-registry.yaml](https://github.com/xiaolinstar/dev-standards/blob/main/playbook/env-registry.yaml) §xiaolin-life。  
+L2 标准：[ADR-0009](https://github.com/xiaolinstar/dev-standards/blob/main/playbook/adr/0009-l2-github-env-by-category.md)（category: **content**）。
 
 更多媒体流程见 [docs/MEDIA-NAMESPACE.md](../MEDIA-NAMESPACE.md)。
