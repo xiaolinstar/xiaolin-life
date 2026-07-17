@@ -12,7 +12,7 @@ disableImageOptimization = false
 disableImageOptimizationMD = false
 
 defaultFeaturedImage = "img/covers/default.svg"
-defaultBackgroundImage = "img/photos/home-bg.jpg"
+defaultBackgroundImage = "img/photos/home-hero.jpg"
 defaultSocialImage = "img/photos/cityscape.jpg"
 hotlinkFeatureImage = true
 
@@ -31,8 +31,8 @@ mainSections = ["life", "office"]
   showScrollToTop = true
 
 [homepage]
-  layout = "background"
-  homepageImage = "img/photos/home-bg.jpg"
+  layout = "hero"
+  homepageImage = "img/photos/home-hero.jpg"
   showRecent = true
   showRecentItems = 12
   showMoreLink = true

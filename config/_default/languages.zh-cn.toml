@@ -11,6 +11,7 @@ title = "今天不上班"
   dateFormat = "2006年1月2日"
   description = "南京生活、轻松办公、城市探索，记录生活中的美好与成长。"
   copyright = "© { year } 邢小林. All rights reserved."
+  logo = "img/logo.svg"
 
 [params.author]
   name = "邢小林"

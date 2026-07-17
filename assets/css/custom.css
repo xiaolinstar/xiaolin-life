@@ -1,52 +1,225 @@
-/* 首页 Hero 背景微动效 */
+/* ========== Motion tokens ========== */
 @keyframes hero-drift {
   0%,
   100% {
-    transform: translateX(0);
+    transform: scale(1.04) translate3d(0, 0, 0);
   }
   50% {
-    transform: translateX(-12px);
+    transform: scale(1.08) translate3d(-12px, -6px, 0);
   }
 }
 
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translate3d(0, 18px, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-/* 卡片悬停提升 */
-article.group:hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* 首页 recent 卡片入场 */
-.home-recent-card {
-  animation: fade-up 0.6s ease both;
+@keyframes soft-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.home-recent-card:nth-child(2) {
+@keyframes gradient-shift {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ========== Homepage Hero ========== */
+
+/* Hero 卡片入场 */
+main article .relative.shadow-xl.sm\:overflow-hidden,
+main article .relative.shadow-xl {
+  animation: soft-pop 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 背景图缓慢漂移 */
+main article .relative.shadow-xl .absolute.inset-0 > img {
+  animation: hero-drift 32s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* 渐变滤镜轻微呼吸 */
+main article .relative.shadow-xl .absolute.inset-0 > div.absolute.inset-0 {
+  animation: gradient-shift 10s ease-in-out infinite;
+}
+
+/* Hero 内容错落入场 */
+main article .relative.shadow-xl .relative.flex.flex-col > img.rounded-full {
+  animation: soft-pop 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+main article .relative.shadow-xl .relative.flex.flex-col > h1 {
+  animation: fade-up 0.6s ease 0.28s both;
+}
+
+main article .relative.shadow-xl .relative.flex.flex-col > h2 {
+  animation: fade-up 0.6s ease 0.38s both;
+}
+
+main article .relative.shadow-xl .relative.flex.flex-col > .mt-3 {
+  animation: fade-up 0.6s ease 0.48s both;
+}
+
+main article .relative.shadow-xl .relative.flex.flex-col > section.prose {
+  animation: fade-up 0.65s ease 0.58s both;
+}
+
+/* 头像悬停轻浮 */
+main article .relative.shadow-xl img.rounded-full {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+main article .relative.shadow-xl img.rounded-full:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* ========== Header logo ========== */
+span.logo svg {
+  height: 2.25rem;
+  width: auto;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+a:hover span.logo svg {
+  transform: rotate(-6deg) scale(1.06);
+}
+
+/* ========== CTA buttons ========== */
+main article .prose a[role="button"] {
+  margin-inline-end: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+main article .prose a[role="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+main article .prose a[role="button"]:active {
+  transform: translateY(0);
+}
+
+/* ========== Recent article cards ========== */
+main > section .grid > article,
+main > section article.article-link--card,
+main > section article.group {
+  animation: fade-up 0.55s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+main > section .grid > article:nth-child(1),
+main > section article.article-link--card:nth-child(1) {
   animation-delay: 0.05s;
 }
-.home-recent-card:nth-child(3) {
+main > section .grid > article:nth-child(2),
+main > section article.article-link--card:nth-child(2) {
   animation-delay: 0.1s;
 }
-.home-recent-card:nth-child(4) {
+main > section .grid > article:nth-child(3),
+main > section article.article-link--card:nth-child(3) {
   animation-delay: 0.15s;
 }
-.home-recent-card:nth-child(5) {
+main > section .grid > article:nth-child(4),
+main > section article.article-link--card:nth-child(4) {
   animation-delay: 0.2s;
 }
-.home-recent-card:nth-child(6) {
+main > section .grid > article:nth-child(5),
+main > section article.article-link--card:nth-child(5) {
   animation-delay: 0.25s;
 }
+main > section .grid > article:nth-child(6),
+main > section article.article-link--card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+main > section .grid > article:nth-child(7) {
+  animation-delay: 0.35s;
+}
+main > section .grid > article:nth-child(8) {
+  animation-delay: 0.4s;
+}
+main > section .grid > article:nth-child(9) {
+  animation-delay: 0.45s;
+}
+main > section .grid > article:nth-child(n + 10) {
+  animation-delay: 0.5s;
+}
 
-/* 占位封面统一圆角 */
+main > section .grid > article:hover,
+main > section article.article-link--card:hover,
+main > section article.group:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* 卡片封面轻微 zoom */
+main > section .grid > article .thumbnail_card img,
+main > section article.article-link--card .thumbnail_card img {
+  transition: transform 0.5s ease;
+}
+
+main > section .grid > article:hover .thumbnail_card img,
+main > section article.article-link--card:hover .thumbnail_card img {
+  transform: scale(1.05);
+}
+
+/* 「显示更多」按钮 */
+main > section a button,
+main > section a > button {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+main > section a:hover > button,
+main > section a:hover button {
+  transform: translateY(-1px);
+}
+
+/* ========== Reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  main article .relative.shadow-xl .absolute.inset-0 > img {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ========== Misc ========== */
 img[src*="covers/"],
 img[src*="featured"] {
   object-fit: cover;
