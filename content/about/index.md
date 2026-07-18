@@ -1,6 +1,6 @@
 ---
 title: "关于"
-description: "关于邢小林"
+description: "关于 xiaolinstar"
 date: 2025-05-21
 draft: false
 showTableOfContents: true

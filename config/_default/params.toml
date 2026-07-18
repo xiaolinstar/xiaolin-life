@@ -32,14 +32,13 @@ mainSections = ["life", "office"]
 
 [homepage]
   layout = "background"
-  homepageImage = "img/photos/home-hero.jpg"
-  showRecent = true
+  showRecent = false
   showRecentItems = 12
   showMoreLink = true
   showMoreLinkDest = "/life/"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true
+  layoutBackgroundBlur = false
   disableHeroImageFilter = false
 
 [article]

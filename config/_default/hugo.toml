@@ -2,7 +2,7 @@ theme = "blowfish"
 baseURL = "https://xiaolin.fun/"
 defaultContentLanguage = "zh-cn"
 locale = "zh-CN"
-title = "今天不上班"
+title = "好好生活"
 timeZone = "Asia/Shanghai"
 hasCJKLanguage = true
 
