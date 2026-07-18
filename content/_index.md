@@ -6,9 +6,9 @@ draft: false
 showTableOfContents: false
 ---
 
-{{< alert icon="circle-info" >}}
-**生活频道已上线。** 南京的风景、美食、桌游与办公技巧 —— 图文为主，持续更新。
-{{< /alert >}}
+{{< lead >}}
+南京生活 · 轻松办公 · 城市探索。用图文记录这座城市的风景、美食、桌游与日常思考。
+{{< /lead >}}
 
 {{< button href="/life/" >}}
 {{< icon "globe" >}} 生活记录
@@ -16,5 +16,3 @@ showTableOfContents: false
 {{< button href="/office/" >}}
 {{< icon "code" >}} 轻松办公
 {{< /button >}}
-
-南京生活 · 轻松办公 · 城市探索。从下方最近文章开始逛，或进入频道翻阅。

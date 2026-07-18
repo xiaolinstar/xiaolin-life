@@ -120,6 +120,10 @@ def ensure_default_photo() -> None:
 def main() -> None:
     ensure_default_photo()
     for name, (c1, c2, c3, title, subtitle) in PALETTES.items():
+        # 仓库中已提交真实照片时不覆盖，仅补齐缺失的占位图
+        if (OUT / f"{name}.jpg").exists():
+            print(f"skip existing {name}.jpg")
+            continue
         size = (1920, 1080) if name == "home-bg" else (1200, 630)
         draw_photo(name, size, title, subtitle, (c1, c2, c3))
 

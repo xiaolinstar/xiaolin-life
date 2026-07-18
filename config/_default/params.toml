@@ -11,7 +11,7 @@ smartTOC = true
 disableImageOptimization = false
 disableImageOptimizationMD = false
 
-defaultFeaturedImage = "img/covers/default.svg"
+defaultFeaturedImage = "img/photos/article-default.jpg"
 defaultBackgroundImage = "img/photos/home-hero.jpg"
 defaultSocialImage = "img/photos/cityscape.jpg"
 hotlinkFeatureImage = true
@@ -31,7 +31,7 @@ mainSections = ["life", "office"]
   showScrollToTop = true
 
 [homepage]
-  layout = "hero"
+  layout = "background"
   homepageImage = "img/photos/home-hero.jpg"
   showRecent = true
   showRecentItems = 12
@@ -58,6 +58,8 @@ mainSections = ["life", "office"]
   showTags = true
   showWordCount = false
   showZenMode = true
+  showRelatedContent = true
+  relatedContentLimit = 3
 
 [list]
   showHero = true
@@ -67,7 +69,7 @@ mainSections = ["life", "office"]
   showBreadcrumbs = true
   showTableOfContents = false
   showCards = true
-  groupByYear = true
+  groupByYear = false
   cardView = true
   cardViewScreenWidth = false
 
