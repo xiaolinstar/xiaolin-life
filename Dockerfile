@@ -1,5 +1,5 @@
 FROM node:24-bookworm-slim AS build-stage
-ARG HUGO_VERSION=0.158.0
+ARG HUGO_VERSION=0.164.0
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
