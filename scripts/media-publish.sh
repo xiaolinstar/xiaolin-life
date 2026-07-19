@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # 本地媒体发布：上传 COS → 校验直链 →（可选）改写 Markdown URL
 #
-# gallery/ 不进 Git，此脚本必须在作者本机执行（需 coscli + ~/.cos.yaml）。
+# gallery/ 不进 Git，此脚本必须在持有 gallery 与 COS 凭证的机器上执行
+# （当前：作者本机；接入 Hermes 后：腾讯轻量 VPS）。需 coscli + ~/.cos.yaml。
 #
 # 用法：
 #   ./scripts/media-publish.sh content/life/entertainment/gulou-riverfront

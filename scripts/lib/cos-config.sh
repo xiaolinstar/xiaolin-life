@@ -5,13 +5,17 @@
 cos_load_dotenv() {
   local root="${1:-}"
   if [[ -z "$root" ]]; then
-    root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+    root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
   fi
   if [[ -f "$root/.env" ]]; then
-    set -a
-    # shellcheck disable=SC1091
-    source "$root/.env"
-    set +a
+    # 只填充未设置的变量，保证「环境变量优先」
+    local key value
+    while IFS='=' read -r key value; do
+      [[ "$key" =~ ^[A-Za-z_][A-Za-z0-9_]*$ ]] || continue
+      if [[ -z "${!key:-}" ]]; then
+        export "$key=$value"
+      fi
+    done < <(grep -E '^[A-Za-z_][A-Za-z0-9_]*=' "$root/.env")
   fi
 }
 
@@ -40,6 +44,7 @@ _cos_yaml_first_field() {
 # 加载 COS_BUCKET_ALIAS、COS_BUCKET_NAME、COS_ENDPOINT、COS_REGION、COS_PUBLIC_BASE_URL
 cos_load_config() {
   local config
+  cos_load_dotenv
   config="$(cos_config_path)"
 
   if [[ -z "${COS_BUCKET_NAME:-}" || -z "${COS_BUCKET_ALIAS:-}" || -z "${COS_ENDPOINT:-}" ]]; then

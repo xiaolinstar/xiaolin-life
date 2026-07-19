@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""将 content/ 下 Markdown 中的 /assets/images/ 路径替换为 CDN 绝对 URL。
+"""将 content/ 下 Markdown 中的本地媒体引用替换为 CDN 绝对 URL。
+
+处理两类引用：
+  1. /assets/images/ 路径 → CDN 绝对 URL
+  2. {{< carousel images="gallery/*" ... >}} → {{< carousel-cdn images="{url,...}" ... >}}
+     （按文章目录下 gallery/ 实际文件展开；需先上传 COS）
 
 环境变量：
   MEDIA_CDN_BASE  默认 https://media.xiaolin.fun
@@ -29,6 +34,57 @@ LOCAL_PREFIX = "/assets/images/"
 PATTERN = re.compile(
     r"(?<!\w)" + re.escape(LOCAL_PREFIX) + r"([^\s\)\"'<>]+)"
 )
+
+# {{< carousel images="gallery/*" interval="4500" ... >}}
+CAROUSEL_PATTERN = re.compile(r"\{\{<\s*carousel\s+([^>]*?)\s*>\}\}")
+CAROUSEL_ATTR_PATTERN = re.compile(r'(\w+)="([^"]*)"')
+IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+
+
+def rewrite_carousel(
+    text: str, md_path: Path, cdn_base: str
+) -> tuple[str, int]:
+    """把本地 gallery 轮播改写为 carousel-cdn（CDN URL 列表）。
+
+    对象键与 media-publish.sh 保持一致：文章路径去掉 content/ 前缀。
+    仅当 images 指向本地 gallery 且文件存在时改写。
+    """
+    article_dir = md_path.parent
+    try:
+        rel = article_dir.relative_to(CONTENT)
+    except ValueError:
+        return text, 0
+    url_prefix = f"{cdn_base.rstrip('/')}/{rel.as_posix()}"
+    count = 0
+
+    def repl(match: re.Match[str]) -> str:
+        nonlocal count
+        attrs = dict(CAROUSEL_ATTR_PATTERN.findall(match.group(1)))
+        images_glob = attrs.get("images", "")
+        if not images_glob.startswith("gallery/"):
+            return match.group(0)
+
+        files = sorted(
+            p
+            for p in article_dir.glob(images_glob)
+            if p.is_file() and p.suffix.lower() in IMAGE_EXTS
+        )
+        if not files:
+            print(
+                f"  Skip carousel（gallery 无匹配图片）: {md_path.relative_to(ROOT)}",
+                file=sys.stderr,
+            )
+            return match.group(0)
+
+        urls = ",".join(f"{url_prefix}/{p.name}" for p in files)
+        parts = [f'images="{{{urls}}}"']
+        for key in ("interval", "aspectRatio", "captions"):
+            if key in attrs:
+                parts.append(f'{key}="{attrs[key]}"')
+        count += 1
+        return "{{< carousel-cdn " + " ".join(parts) + " >}}"
+
+    return CAROUSEL_PATTERN.sub(repl, text), count
 
 
 def rewrite_text(text: str, cdn_base: str, prefix: str = "") -> tuple[str, int]:
@@ -95,6 +151,8 @@ def main() -> None:
     for path in targets:
         original = path.read_text(encoding="utf-8")
         updated, n = rewrite_text(original, args.cdn_base, args.prefix)
+        updated, n_carousel = rewrite_carousel(updated, path, args.cdn_base)
+        n += n_carousel
         if n == 0:
             continue
         total_files += 1
@@ -104,12 +162,12 @@ def main() -> None:
         if args.apply:
             path.write_text(updated, encoding="utf-8")
         else:
-            for line_no, line in enumerate(original.splitlines(), 1):
-                if LOCAL_PREFIX in line:
-                    new_line, _ = rewrite_text(line, args.cdn_base, args.prefix)
-                    if new_line != line:
-                        print(f"  L{line_no}: {line.strip()}")
-                        print(f"     → {new_line.strip()}")
+            old_lines = original.splitlines()
+            new_lines = updated.splitlines()
+            for line_no, (old, new) in enumerate(zip(old_lines, new_lines), 1):
+                if old != new:
+                    print(f"  L{line_no}: {old.strip()}")
+                    print(f"     → {new.strip()}")
 
     mode = "已写入" if args.apply else "预览"
     print(f"\n{mode}: {total_files} 个文件，共 {total_refs} 处引用")

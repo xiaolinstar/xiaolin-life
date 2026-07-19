@@ -46,7 +46,7 @@ gallery/（gitignore）
 # 单篇文章
 ./scripts/media-publish.sh content/life/entertainment/gulou-riverfront
 
-# 上传 + 改写 index.md 中的 /assets/images/ 路径（不含 carousel gallery/*）
+# 上传 + 改写 index.md：/assets/images/ 路径与 carousel gallery/* → CDN URL
 ./scripts/media-publish.sh content/life/entertainment/gulou-riverfront --rewrite
 ```
 
@@ -56,7 +56,7 @@ gallery/（gitignore）
 
 1. `upload-media-cos.sh` 同步到 `life/entertainment/gulou-riverfront/`
 2. `curl` 校验至少一个直链 200
-3. `--rewrite` 时调用 `rewrite-media-urls.py`（仅 `/assets/images/`）
+3. `--rewrite` 时调用 `rewrite-media-urls.py`（`/assets/images/` 路径 + `carousel gallery/*` → `carousel-cdn`，按 gallery 实际文件展开）
 
 ### 2. 替换正文引用（手动或 agent 协助）
 
@@ -109,7 +109,7 @@ git push
 - `docs/MEDIA-OSS.md` — COS/CDN 部署
 - `scripts/media-publish.sh` — 本地发布入口
 - `scripts/upload-media-cos.sh` — coscli sync
-- `scripts/rewrite-media-urls.py` — `/assets/images/` → URL
+- `scripts/rewrite-media-urls.py` — `/assets/images/` → URL；`carousel` → `carousel-cdn`
 - `.github/workflows/media-verify.yml` — 远程 URL 校验
 
 ## Agent 执行清单
