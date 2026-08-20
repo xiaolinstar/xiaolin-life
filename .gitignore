@@ -29,6 +29,9 @@ cert/
 coscli.log
 coscli_output/
 
+# pnpm 全局缓存（不应进 Git；CI 用 --frozen-lockfile 独立安装）
+.pnpm-store/
+
 # 文章媒体母本（COS/CDN 分发，不进 Git；见 docs/MEDIA-STANDARDS.md）
 content/**/gallery/**
 !content/**/gallery/.gitkeep
