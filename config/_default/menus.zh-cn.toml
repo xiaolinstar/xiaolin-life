@@ -9,6 +9,11 @@
   weight = 20
 
 [[main]]
+  name = "奶茶仙人"
+  pageRef = "life/drinkzen"
+  weight = 25
+
+[[main]]
   name = "办公"
   pageRef = "office"
   weight = 30
