@@ -8,3 +8,9 @@ summary: "中山陵、南京博物院、朝天宫等城市地标探索。"
 ---
 
 南京拥有众多著名的风景名胜，是一座值得深度探索的城市。
+
+## 景点列表
+
+- [朝天宫](/life/places/chaotian-palace/)
+- [南京博物院](/life/places/nanjing-museum/)
+- [中山陵](/life/places/sun-mausoleum/)
