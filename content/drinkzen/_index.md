@@ -18,6 +18,10 @@ summary: "每一口饮品，都有迹可循。全网品牌数据，A-D 级科学
 - [瑞幸咖啡](/drinkzen/luckincoffee/) · 生椰拿铁、泰奶鸳鸯拿铁等产品测评
 - 更多品牌持续更新中...
 
+## 健康科普
+
+- [饮品健康评级：从新加坡 ABCD 到全球标准](/drinkzen/nutri-grade/) · Nutri-Grade 及国际主流评级体系
+
 ## 运营文档
 
 - [推广运营方案](/drinkzen/operation-plan/) · 栏目入口与 30 天排期
