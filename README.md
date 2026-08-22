@@ -49,7 +49,6 @@
 
 [![Hugo](https://img.shields.io/badge/Hugo-0.158%2B%20extended-FF4088?style=flat-square&logo=hugo&logoColor=white)](https://gohugo.io/)
 [![Blowfish](https://img.shields.io/badge/Blowfish-v2.103+-0891B2?style=flat-square)](https://blowfish.page/zh-cn/)
-[![Pagefind](https://img.shields.io/badge/Pagefind-搜索索引-6366F1?style=flat-square)](https://pagefind.app/)
 [![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?style=flat-square&logo=nginx&logoColor=white)](https://nginx.org/)
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/xiaolinstar/xiaolin-life/actions)
 
@@ -57,7 +56,7 @@
 | --- | --- |
 | 静态站点 | Hugo 0.158+（extended） |
 | 主题 | [Blowfish](https://blowfish.page/zh-cn/)（git submodule） |
-| 搜索 | Fuse.js（主题内置）+ Pagefind（构建后索引） |
+| 搜索 | Fuse.js（主题内置） |
 | LLM | 构建时自动生成 `llms.txt` / `llms-full.txt` |
 | 部署 | GitHub Actions · rsync · Docker Compose（nginx） |
 

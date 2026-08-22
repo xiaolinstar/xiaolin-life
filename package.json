@@ -23,14 +23,11 @@
     "media:prefix-migrate": "python3 scripts/rewrite-cdn-prefix.py",
     "media:prefix-migrate:apply": "python3 scripts/rewrite-cdn-prefix.py --apply",
     "media:cos-prefix-copy": "bash scripts/migrate-cos-prefix.sh",
-    "search:index": "pnpm exec pagefind --site public",
     "prebuild": "pnpm run photos:generate && pnpm run featured:setup",
     "prebuild:github": "pnpm run photos:generate && pnpm run featured:setup",
-    "build": "pnpm run site:build && pnpm run search:index",
-    "build:github": "pnpm run site:build:github && pnpm run search:index",
+    "build": "pnpm run site:build",
+    "build:github": "pnpm run site:build:github",
     "sync:github-env": "node scripts/cd/sync-github-env.mjs"
   },
-  "devDependencies": {
-    "pagefind": "^1.4.0"
-  }
+  "devDependencies": {}
 }
