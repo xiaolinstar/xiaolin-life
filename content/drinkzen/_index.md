@@ -1,10 +1,10 @@
 ---
 title: "奶茶仙人"
-description: "DrinkZen 小程序的运营起点：每日一杯饮品，量化热量，分享健康感悟"
+description: "每一口饮品，都有迹可循。聚合全网品牌数据，参照科学标准进行 A-D 级分级。"
 date: 2026-08-20
 draft: false
 showTableOfContents: false
-summary: "DrinkZen · 奶茶仙人：把每一杯奶茶、咖啡、果茶都喝得清清楚楚。"
+summary: "每一口饮品，都有迹可循。全网品牌数据，A-D 级科学分级。"
 ---
 
 饮品是日常里最容易被忽略的小事：随手买、随手喝、口味随机、热量未知。
@@ -13,7 +13,11 @@ summary: "DrinkZen · 奶茶仙人：把每一杯奶茶、咖啡、果茶都喝�
 
 这里的文章是推广运营的工作台：人设、内容、排期、拍摄规范都在这里持续更新。
 
-## 文章列表
+## 品牌分类
 
-- [推广运营方案](/life/drinkzen/operation-plan/) · 栏目入口与 30 天排期
-- [瑞幸生椰拿铁 · D 级预警](/life/drinkzen/coconut-latte/) · Day 1 小红书推文样例
+- [瑞幸咖啡](/drinkzen/luckincoffee/) · 生椰拿铁、泰奶鸳鸯拿铁等产品测评
+- 更多品牌持续更新中...
+
+## 运营文档
+
+- [推广运营方案](/drinkzen/operation-plan/) · 栏目入口与 30 天排期

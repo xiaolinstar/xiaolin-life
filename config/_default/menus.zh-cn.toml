@@ -10,7 +10,7 @@
 
 [[main]]
   name = "奶茶仙人"
-  pageRef = "life/drinkzen"
+  pageRef = "drinkzen"
   weight = 25
 
 [[main]]
