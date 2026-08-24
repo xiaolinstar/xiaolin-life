@@ -235,6 +235,24 @@ summary: "霸王茶姬：原叶鲜奶茶开创者，7000+ 门店，纳斯达克�
 
 ## 产品列表
 
+**招牌原叶鲜奶茶系列**：
+
+- [伯牙绝弦](/drinkzen/chagee/bo-ya-jue-xian/) · B 级 · 130kcal · 茉莉雪芽茶底，累计销量超 6 亿杯
+- [花田乌龙](/drinkzen/chagee/hua-tian-wu-long/) · B 级 · 118kcal · 蜜桃乌龙茶底，果香清新
+- [桂馥兰香](/drinkzen/chagee/gui-fu-lan-xiang/) · B 级 · 123kcal · 桂花乌龙茶底，香气馥郁
+- [青沫观音](/drinkzen/chagee/qing-mo-guan-yin/) · B 级 · 101kcal · 铁观音茶底，茶香浓郁，减脂首选
+- [寻香山茶](/drinkzen/chagee/xun-xiang-shan-cha/) · B 级 · 100kcal · 山茶花乌龙茶底，清爽自然
+- [去云南·玫瑰普洱](/drinkzen/chagee/qu-yun-nan-mei-gui-pu-er/) · B 级 · 110kcal · 陈香普洱与云南墨红玫瑰
+- [青青糯山](/drinkzen/chagee/qing-qing-nuo-shan/) · B 级 · 143kcal · 糯米香叶窨制绿茶底，谷物香交织
+- [万山红·金丝小种](/drinkzen/chagee/wan-shan-hong/) · B 级 · 135kcal · 云南金丝滇红与福建正山小种
+- [醒时春山](/drinkzen/chagee/xing-shi-chun-shan/) · B 级 · 128kcal · 龙井茶底，GI 值仅 11
+
+**青云雪顶集系列**：
+
+- [白雾红尘](/drinkzen/chagee/bai-wu-hong-chen/) · B 级 · 163kcal · 大红袍茶底，茶韵悠长，综合评分最高
+
+**更多产品**：
+
 - 更多产品测评持续更新中...
 
 ## 参考
