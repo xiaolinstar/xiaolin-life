@@ -18,6 +18,7 @@ summary: "每一口饮品，都有迹可循。全网品牌数据，A-D 级科学
 - [瑞幸咖啡](/drinkzen/luckincoffee/) · 生椰拿铁、泰奶鸳鸯拿铁等产品测评
 - [霸王茶姬 CHAGEE](/drinkzen/chagee/) · 原叶鲜奶茶开创者，7000+ 门店
 - [喜茶 HEYTEA](/drinkzen/heytea/) · 新式茶饮开创者，原创芝士茶发明者
+- [一点点](/drinkzen/alittle-tea/) · 台式手摇茶代表，客制化体验
 - 更多品牌持续更新中...
 
 ## 健康科普
