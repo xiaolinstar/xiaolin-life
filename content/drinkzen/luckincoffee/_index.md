@@ -4,7 +4,7 @@ description: "瑞幸咖啡产品测评与热量记录"
 date: 2026-08-22
 draft: false
 showTableOfContents: false
-summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评。"
+summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含新加坡 25 款门店菜单及 Nutri-Grade 健康评级。"
 ---
 
 瑞幸咖啡是中国最大的连锁咖啡品牌之一，以高性价比和快速扩张著称。
@@ -143,16 +143,126 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评。"
 - 厚奶、奶酪：基底自带糖分
 - 果汁：含天然果糖
 
-**新加坡 Nutri-Grade 参考**：
+**新加坡 Nutri-Grade 参考**（详见上方「新加坡门店菜单」章节）：
 
-- 美式咖啡：A 级（近乎无糖）
-- 拿铁类：C 级
-- 生椰 / 丝绒类：D 级（基底含糖高）
+- A 级：美式、特浓美式、耶加雪菲美式
+- B 级：拿铁、澳白、卡布奇诺、耶加雪菲拿铁/澳白
+- C 级：生椰拿铁、椰椰抹茶、葡萄气泡美式
+- D 级：生酪拿铁、香草生酪、小黄油拿铁
 
 ## 产品列表
 
 - [瑞幸生椰拿铁 · D 级预警](/drinkzen/luckincoffee/coconut-latte/) · Day 1 小红书推文样例
 - [泰奶鸳鸯拿铁](/drinkzen/luckincoffee/thai-milk-tea-latte/) · 待评级
+
+## 新加坡门店菜单
+
+> 数据来源：[Luckin Coffee Singapore 官网](https://www.luckincoffee.com.sg/menu)，2026 年 8 月采集。截至 2026 年 3 月 31 日，新加坡共有 82 家门店。健康评级基于产品类型和原料成分预估，非官方实测数据。
+
+### Barista Coffee（大师咖啡系列）— 7 款
+
+| 产品 | 中文名 | 预估等级 | 说明 |
+| :--- | :--- | :--- | :--- |
+| Americano | 美式咖啡 | **A** | 纯咖啡，无糖无脂 |
+| Extra Strong Americano | 特浓美式 | **A** | 同上 |
+| Latte | 拿铁 | **B** | 牛奶带来少量饱和脂肪 |
+| Flat White | 澳白 | **B** | 咖啡比例更高，脂肪略低于拿铁 |
+| Cappuccino | 卡布奇诺 | **B** | 奶泡为主，脂肪适中 |
+| Caramel Macchiato | 焦糖玛奇朵 | **C-D** | 焦糖糖浆含糖量高 |
+| Cafe Mocha | 摩卡咖啡 | **C-D** | 巧克力酱 + 牛奶，高糖高脂 |
+
+### Signature Lattes（招牌拿铁系列）— 6 款
+
+| 产品 | 中文名 | 预估等级 | 说明 |
+| :--- | :--- | :--- | :--- |
+| Coconut Latte | 生椰拿铁 | **C** | 椰奶含饱和脂肪，不另外加糖时约 C 级 |
+| Velvet Latte | 丝绒拿铁 | **C-D** | 丝绒厚奶含植物油和饱和脂肪 |
+| Coconut Velvet Latte | 椰云丝绒拿铁 | **C-D** | 椰奶 + 丝绒双重脂肪来源 |
+| Creamy Dreamy Latte | 生酪拿铁 | **D** | 奶酪制品高饱和脂肪 |
+| Vanilla Flavored Creamy Latte | 香草风味生酪拿铁 | **D** | 奶酪 + 香草糖浆 |
+| Little Butter Latte | 小黄油拿铁 | **D** | 黄油高饱和脂肪 |
+
+### Fruity Americano（果味美式系列）— 4 款
+
+| 产品 | 中文名 | 预估等级 | 说明 |
+| :--- | :--- | :--- | :--- |
+| Orange Americano | 橙子美式 | **B-C** | 橙汁天然糖分，不含脂肪 |
+| Pomelo Americano | 西柚美式 | **B-C** | 西柚汁天然糖分 |
+| Apple Fizzy Americano | 苹果气泡美式 | **B-C** | 苹果汁天然糖分，官方标注"Fat-free" |
+| Grape Fizzy Americano | 葡萄气泡美式 | **C** | 葡萄汁含糖量较高 |
+
+### Single Origin Espresso（单一产地系列）— 3 款
+
+| 产品 | 中文名 | 预估等级 | 说明 |
+| :--- | :--- | :--- | :--- |
+| Yirgacheffe Americano | 耶加雪菲美式 | **A** | 单一产地黑咖啡，柑橘风味 |
+| Yirgacheffe Latte | 耶加雪菲拿铁 | **B** | 精品豆 + 牛奶，太妃糖与牛奶巧克力风味 |
+| Yirgacheffe Flat White | 耶加雪菲澳白 | **B** | 精品豆 + 牛奶，丝滑口感 |
+
+### Matcha（抹茶系列）— 5 款
+
+| 产品 | 中文名 | 预估等级 | 说明 |
+| :--- | :--- | :--- | :--- |
+| Matcha Latte | 抹茶拿铁 | **B-C** | 牛奶 + 抹茶粉，取决于是否加糖 |
+| Matcha Oat Latte | 抹茶燕麦拿铁 | **B-C** | OATLY 燕麦奶，植物基脂肪较低 |
+| Coconut Matcha Latte | 椰椰抹茶拿铁 | **C** | 椰奶含饱和脂肪 |
+| Matcha Frappe | 抹茶瑞纳冰 | **C-D** | 含厚奶油，高饱和脂肪 |
+| Matcha Jasmine Frappe | 抹茶茉香瑞纳冰 | **C-D** | 厚奶油 + 可能含糖浆 |
+
+### 新加坡门店评级汇总
+
+| 等级 | 产品数 | 占比 | 代表产品 |
+| :--- | :--- | :--- | :--- |
+| **A** 🟢 | 3 | 12% | 美式、特浓美式、耶加雪菲美式 |
+| **B** 🟩 | 5 | 20% | 拿铁、澳白、卡布奇诺、耶加雪菲拿铁/澳白 |
+| **B-C** 🟩🟡 | 5 | 20% | 果味美式系列、抹茶拿铁、抹茶燕麦拿铁 |
+| **C** 🟡 | 3 | 12% | 生椰拿铁、椰椰抹茶、葡萄气泡美式 |
+| **C-D** 🟡🔴 | 5 | 20% | 丝绒拿铁、椰云丝绒、抹茶瑞纳冰、焦糖玛奇朵、摩卡 |
+| **D** 🔴 | 4 | 16% | 生酪拿铁、香草生酪、小黄油拿铁 |
+
+> 💡 **降低等级技巧**：选择「不另外加糖」可有效降低 1-2 个等级，尤其是果味美式和抹茶系列。
+
+### 新加坡产品详情页
+
+**Barista Coffee（大师咖啡系列）**
+
+- [美式咖啡（新加坡） · A 级](/drinkzen/luckincoffee/americano/)
+- [特浓美式（新加坡） · A 级](/drinkzen/luckincoffee/extra-strong-americano/)
+- [拿铁（新加坡） · B 级](/drinkzen/luckincoffee/latte/)
+- [澳白（新加坡） · B 级](/drinkzen/luckincoffee/flat-white/)
+- [卡布奇诺（新加坡） · B 级](/drinkzen/luckincoffee/cappuccino/)
+- [焦糖玛奇朵（新加坡） · C-D 级](/drinkzen/luckincoffee/caramel-macchiato/)
+- [摩卡咖啡（新加坡） · C-D 级](/drinkzen/luckincoffee/cafe-mocha/)
+
+**Signature Lattes（招牌拿铁系列）**
+
+- [生椰拿铁（新加坡） · C 级](/drinkzen/luckincoffee/sg-coconut-latte/)
+- [丝绒拿铁（新加坡） · C-D 级](/drinkzen/luckincoffee/velvet-latte/)
+- [椰云丝绒拿铁（新加坡） · C-D 级](/drinkzen/luckincoffee/coconut-velvet-latte/)
+- [生酪拿铁（新加坡） · D 级](/drinkzen/luckincoffee/creamy-dreamy-latte/)
+- [香草风味生酪拿铁（新加坡） · D 级](/drinkzen/luckincoffee/vanilla-creamy-latte/)
+- [小黄油拿铁（新加坡） · D 级](/drinkzen/luckincoffee/little-butter-latte/)
+
+**Fruity Americano（果味美式系列）**
+
+- [橙子美式（新加坡） · B-C 级](/drinkzen/luckincoffee/orange-americano/)
+- [西柚美式（新加坡） · B-C 级](/drinkzen/luckincoffee/pomelo-americano/)
+- [苹果气泡美式（新加坡） · B-C 级](/drinkzen/luckincoffee/apple-fizzy-americano/)
+- [葡萄气泡美式（新加坡） · C 级](/drinkzen/luckincoffee/grape-fizzy-americano/)
+
+**Single Origin Espresso（单一产地系列）**
+
+- [耶加雪菲美式（新加坡） · A 级](/drinkzen/luckincoffee/yirgacheffe-americano/)
+- [耶加雪菲拿铁（新加坡） · B 级](/drinkzen/luckincoffee/yirgacheffe-latte/)
+- [耶加雪菲澳白（新加坡） · B 级](/drinkzen/luckincoffee/yirgacheffe-flat-white/)
+
+**Matcha（抹茶系列）**
+
+- [抹茶拿铁（新加坡） · B-C 级](/drinkzen/luckincoffee/matcha-latte/)
+- [抹茶燕麦拿铁（新加坡） · B-C 级](/drinkzen/luckincoffee/matcha-oat-latte/)
+- [椰椰抹茶拿铁（新加坡） · C 级](/drinkzen/luckincoffee/coconut-matcha-latte/)
+- [抹茶瑞纳冰（新加坡） · C-D 级](/drinkzen/luckincoffee/matcha-frappe/)
+- [抹茶茉香瑞纳冰（新加坡） · C-D 级](/drinkzen/luckincoffee/matcha-jasmine-frappe/)
 
 ## 参考
 
