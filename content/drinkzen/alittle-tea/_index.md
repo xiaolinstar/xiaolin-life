@@ -149,28 +149,72 @@ summary: "一点点：源自台湾的手摇茶饮品牌，坚持现煮现做，�
 
 ## 产品列表
 
-**点好茶系列**：
+**点好茶系列**（纯茶/茶饮）：
 
 - [红茶玛奇朵](/drinkzen/alittle-tea/hong-cha-ma-qi-duo/) · 人气之冠 · 约 250kcal · 咸甜奶盖 + 红茶
+- [乌龙玛奇朵](/drinkzen/alittle-tea/wu-long-ma-qi-duo/) · 醇厚回甘 · 约 220kcal · 乌龙茶底 + 奶霜
 - [冰淇淋红茶](/drinkzen/alittle-tea/bing-qi-lin-hong-cha/) · 夏日爆款 · 约 300kcal · 三球冰淇淋 + 冷红茶
 - [纯抹茶](/drinkzen/alittle-tea/chun-mo-cha/) · 减脂友好 · 约 120kcal · 浓郁不涩
 - [四季春茶](/drinkzen/alittle-tea/si-ji-chun-cha/) · 清爽入门 · 约 10kcal · 栀子花香
+- [茉莉绿茶](/drinkzen/alittle-tea/mo-li-lv-cha/) · 清新怡人 · 约 5kcal · 茉莉花香
+- [清香乌龙茶](/drinkzen/alittle-tea/qing-xiang-wu-long-cha/) · 喉韵十足 · 约 5kcal · 轻焙乌龙
+- [锦鲤红茶](/drinkzen/alittle-tea/jin-li-hong-cha/) · 纯茶首选 · 约 5kcal · 红茶醇厚
+- [蜂蜜绿](/drinkzen/alittle-tea/feng-mi-lv/) · 清甜解渴 · 约 150kcal · 绿茶 + 蜂蜜
+- [养乐多绿](/drinkzen/alittle-tea/yang-le-duo-lv/) · 酸甜开胃 · 约 200kcal · 绿茶 + 养乐多
+- [8冰绿](/drinkzen/alittle-tea/8-bing-lv/) · 清爽美味 · 约 120kcal · 绿茶 + 金桔 + 青梅
 
-**点奶茶系列**：
+**点奶茶系列**（经典奶茶）：
 
-- [波霸奶茶](/drinkzen/alittle-tea/bo-ba-nai-cha/) · 经典永不过时 · 约 280kcal · Q 弹波霸
+- [奶茶](/drinkzen/alittle-tea/nai-cha/) · 经典基础 · 约 250kcal · 阿萨姆红茶 + 奶
+- [奶绿](/drinkzen/alittle-tea/nai-lv/) · 清爽奶茶 · 约 220kcal · 茉莉绿茶 + 奶
 - [四季奶青](/drinkzen/alittle-tea/si-ji-nai-qing/) · 清爽天花板 · 约 200kcal · 四季春茶底
+- [乌龙奶茶](/drinkzen/alittle-tea/wu-long-nai-cha/) · 醇厚回甘 · 约 230kcal · 乌龙茶底
+- [茉香奶绿](/drinkzen/alittle-tea/mo-xiang-nai-lv/) · 花香奶香 · 约 220kcal · 茉莉绿茶 + 奶
+- [焦糖奶茶](/drinkzen/alittle-tea/jiao-tang-nai-cha/) · 香甜浓郁 · 约 280kcal · 奶茶 + 焦糖
+- [抹茶奶茶](/drinkzen/alittle-tea/mo-cha-nai-cha/) · 浓郁不涩 · 约 260kcal · 抹茶 + 奶
 - [阿华田](/drinkzen/alittle-tea/a-hua-tian/) · 童年味道 · 约 350kcal · 麦香浓郁
 - [可可芭蕾](/drinkzen/alittle-tea/ke-ke-ba-lei/) · 巧克力控 · 约 320kcal · 香浓滑口
+- [珍珠奶茶](/drinkzen/alittle-tea/zhen-zhu-nai-cha/) · 经典搭配 · 约 280kcal · 奶茶 + 珍珠
+- [椰果奶茶](/drinkzen/alittle-tea/ye-guo-nai-cha/) · Q 弹清爽 · 约 260kcal · 奶茶 + 椰果
+- [咖啡冻奶茶](/drinkzen/alittle-tea/ka-fei-dong-nai-cha/) · 独特口感 · 约 270kcal · 奶茶 + 咖啡冻
+- [仙草奶冻](/drinkzen/alittle-tea/xian-cao-nai-dong/) · 清凉解暑 · 约 200kcal · 仙草 + 奶冻
 
-**点果茶系列**：
+**点牛乳系列**（鲜牛奶）：
 
+- [牛乳红茶](/drinkzen/alittle-tea/niu-ru-hong-cha/) · 丝滑拿铁 · 约 180kcal · 鲜牛奶 + 锡兰红茶
+- [牛乳乌龙茶](/drinkzen/alittle-tea/niu-ru-wu-long-cha/) · 醇厚回甘 · 约 170kcal · 鲜牛奶 + 乌龙茶
+- [牛乳抹茶](/drinkzen/alittle-tea/niu-ru-mo-cha/) · 浓郁丝滑 · 约 190kcal · 鲜牛奶 + 抹茶
+- [燕麦牛乳四季春茶](/drinkzen/alittle-tea/yan-mai-niu-ru-si-ji-chun-cha/) · 植物基 · 约 160kcal · 燕麦奶 + 四季春茶
+
+**点果茶系列**（水果茶）：
+
+- [奶绿装芒](/drinkzen/alittle-tea/nai-lv-zhuang-mang/) · 芒果控最爱 · 约 250kcal · 芒果 + 奶绿
 - [葡萄柚绿](/drinkzen/alittle-tea/pu-tao-you-lv/) · 减脂友好 · 约 180kcal · 清爽酸甜
-- [奶绿装芒](/drinkzen/alittle-tea/nai-lv-zhuang-mang/) · 芒果控最爱 · 约 250kcal · 果香茶香
+- [翡翠柠檬](/drinkzen/alittle-tea/fei-cui-ning-meng/) · 清爽解腻 · 约 120kcal · 绿茶 + 柠檬
+- [百香三重奏](/drinkzen/alittle-tea/bai-xiang-san-chong-zou/) · 酸甜丰富 · 约 180kcal · 百香果 + 多种配料
+- [柚心动了](/drinkzen/alittle-tea/you-xin-dong-le/) · 清新微苦 · 约 160kcal · 葡萄柚 + 茶底
+- [金桔柠檬](/drinkzen/alittle-tea/jin-ju-ning-meng/) · 酸甜开胃 · 约 130kcal · 金桔 + 柠檬
+- [柠檬多多](/drinkzen/alittle-tea/ning-meng-duo-duo/) · 酸甜爽口 · 约 180kcal · 柠檬 + 养乐多
+- [茶冻芒果青](/drinkzen/alittle-tea/cha-dong-mang-guo-qing/) · 果香茶香 · 约 200kcal · 芒果 + 绿茶 + 茶冻
+- [柚子青](/drinkzen/alittle-tea/you-zi-qing/) · 清新解暑 · 约 150kcal · 柚子 + 绿茶
+- [茶冻柠檬芭乐绿](/drinkzen/alittle-tea/cha-dong-ning-meng-ba-le-lv/) · 热带风味 · 约 170kcal · 柠檬 + 芭乐 + 绿茶
+- [海盐柠檬柚子乌](/drinkzen/alittle-tea/hai-yan-ning-meng-you-zi-wu/) · 咸甜清爽 · 约 160kcal · 海盐 + 柠檬 + 柚子 + 乌龙
+- [杨枝甘露](/drinkzen/alittle-tea/yang-zhi-gan-lu/) · 经典甜品 · 约 250kcal · 芒果 + 椰奶 + 西米
 
-**更多产品**：
+**点口感系列**（配料特色）：
 
-- 更多产品测评持续更新中...
+- [波霸奶茶](/drinkzen/alittle-tea/bo-ba-nai-cha/) · 经典永不过时 · 约 280kcal · Q 弹波霸
+- [波霸奶绿](/drinkzen/alittle-tea/bo-ba-nai-lv/) · Q 弹清爽 · 约 250kcal · 奶绿 + 波霸
+- [布丁奶茶](/drinkzen/alittle-tea/bu-ding-nai-cha/) · 嫩滑香甜 · 约 320kcal · 奶茶 + 布丁
+
+**红茶拿铁系列**（鲜牛奶拿铁）：
+
+- [红茶拿铁](/drinkzen/alittle-tea/hong-cha-na-tie/) · 经典拿铁 · 约 180kcal · 鲜牛奶 + 锡兰红茶
+- [乌龙拿铁](/drinkzen/alittle-tea/wu-long-na-tie/) · 醇厚回甘 · 约 170kcal · 鲜牛奶 + 乌龙茶
+- [焦糖红茶拿铁](/drinkzen/alittle-tea/jiao-tang-hong-cha-na-tie/) · 香甜浓郁 · 约 210kcal · 鲜牛奶 + 红茶 + 焦糖
+- [可可芭蕾拿铁](/drinkzen/alittle-tea/ke-ke-ba-lei-na-tie/) · 巧克力拿铁 · 约 250kcal · 鲜牛奶 + 可可
+- [抹茶拿铁](/drinkzen/alittle-tea/mo-cha-na-tie/) · 丝滑浓郁 · 约 200kcal · 鲜牛奶 + 抹茶
+- [阿华田拿铁](/drinkzen/alittle-tea/a-hua-tian-na-tie/) · 麦香浓郁 · 约 230kcal · 鲜牛奶 + 阿华田
 
 ## 数据来源
 
