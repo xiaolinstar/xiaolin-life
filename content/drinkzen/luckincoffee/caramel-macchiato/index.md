@@ -1,6 +1,6 @@
 ---
-title: "瑞幸焦糖玛奇朵（新加坡） · C-D 级"
-description: "焦糖糖浆含糖量高"
+title: "瑞幸焦糖玛奇朵（新加坡） · C 级"
+description: "焦糖糖浆含糖量高，触发 C 级"
 date: 2026-08-24
 draft: true
 showTableOfContents: false
@@ -11,7 +11,7 @@ tags:
   - "瑞幸"
   - "新加坡"
   - "焦糖玛奇朵"
-summary: "新加坡瑞幸 Caramel Macchiato：Nutri-Grade 预估 C-D 级。焦糖糖浆含糖量高。"
+summary: "新加坡瑞幸 Caramel Macchiato：Nutri-Grade 预估 C 级。焦糖糖浆含糖量高。"
 ---
 
 > **饮品信息**
@@ -22,8 +22,8 @@ summary: "新加坡瑞幸 Caramel Macchiato：Nutri-Grade 预估 C-D 级。焦�
 瑞幸咖啡（新加坡） · Caramel Macchiato · 焦糖玛奇朵
 
 - **系列**：Barista Coffee（大师咖啡系列）
-- **Nutri-Grade 预估**：C-D 级
-- **评级说明**：焦糖糖浆含糖量高
+- **Nutri-Grade 预估**：**C 级** ⚠️
+- **评级说明**：焦糖糖浆 + 香草糖浆含糖量高（约 15-18g 非乳糖糖），新加坡使用脱脂奶（饱和脂肪极低）
 
 ## 制作方式调查
 
@@ -32,7 +32,7 @@ summary: "新加坡瑞幸 Caramel Macchiato：Nutri-Grade 预估 C-D 级。焦�
 **已知信息**：
 
 - 产品系列：Barista Coffee
-- 预估等级：C-D 级
+- 预估等级：C 级
 
 **待补充**：
 

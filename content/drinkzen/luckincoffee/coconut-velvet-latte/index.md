@@ -1,6 +1,6 @@
 ---
-title: "瑞幸椰云丝绒拿铁（新加坡） · C-D 级"
-description: "椰奶 + 丝绒双重脂肪来源"
+title: "瑞幸椰云丝绒拿铁（新加坡） · D 级"
+description: "椰奶 + 丝绒双重脂肪来源，饱和脂肪极高"
 date: 2026-08-24
 draft: true
 showTableOfContents: false
@@ -11,7 +11,7 @@ tags:
   - "瑞幸"
   - "新加坡"
   - "椰云丝绒拿铁"
-summary: "新加坡瑞幸 Coconut Velvet Latte：Nutri-Grade 预估 C-D 级。椰奶 + 丝绒双重脂肪来源。"
+summary: "新加坡瑞幸 Coconut Velvet Latte：Nutri-Grade 预估 D 级。椰奶 + 丝绒双重脂肪来源。"
 ---
 
 > **饮品信息**
@@ -22,8 +22,8 @@ summary: "新加坡瑞幸 Coconut Velvet Latte：Nutri-Grade 预估 C-D 级。�
 瑞幸咖啡（新加坡） · Coconut Velvet Latte · 椰云丝绒拿铁
 
 - **系列**：Signature Lattes（招牌拿铁系列）
-- **Nutri-Grade 预估**：C-D 级
-- **评级说明**：椰奶 + 丝绒双重脂肪来源
+- **Nutri-Grade 预估**：**D 级** ⚠️
+- **评级说明**：椰奶（饱和脂肪约 5.2g/100ml）+ 丝绒厚奶双重脂肪来源，远超 D 级阈值
 
 ## 制作方式调查
 
@@ -32,7 +32,7 @@ summary: "新加坡瑞幸 Coconut Velvet Latte：Nutri-Grade 预估 C-D 级。�
 **已知信息**：
 
 - 产品系列：Signature Lattes
-- 预估等级：C-D 级
+- 预估等级：D 级
 
 **待补充**：
 

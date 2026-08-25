@@ -1,6 +1,6 @@
 ---
-title: "瑞幸丝绒拿铁（新加坡） · C-D 级"
-description: "丝绒厚奶含植物油和饱和脂肪"
+title: "瑞幸丝绒拿铁（新加坡） · D 级"
+description: "丝绒厚奶饱和脂肪高，触发 D 级"
 date: 2026-08-24
 draft: true
 showTableOfContents: false
@@ -11,7 +11,7 @@ tags:
   - "瑞幸"
   - "新加坡"
   - "丝绒拿铁"
-summary: "新加坡瑞幸 Velvet Latte：Nutri-Grade 预估 C-D 级。丝绒厚奶含植物油和饱和脂肪。"
+summary: "新加坡瑞幸 Velvet Latte：Nutri-Grade 预估 D 级。丝绒厚奶饱和脂肪高。"
 ---
 
 > **饮品信息**
@@ -22,8 +22,8 @@ summary: "新加坡瑞幸 Velvet Latte：Nutri-Grade 预估 C-D 级。丝绒厚�
 瑞幸咖啡（新加坡） · Velvet Latte · 丝绒拿铁
 
 - **系列**：Signature Lattes（招牌拿铁系列）
-- **Nutri-Grade 预估**：C-D 级
-- **评级说明**：丝绒厚奶含植物油和饱和脂肪
+- **Nutri-Grade 预估**：**D 级** ⚠️
+- **评级说明**：丝绒厚奶含无水奶油+稀奶油，饱和脂肪约 4-5g/100ml，远超 D 级阈值（>2.8g）
 
 ## 制作方式调查
 
@@ -32,7 +32,7 @@ summary: "新加坡瑞幸 Velvet Latte：Nutri-Grade 预估 C-D 级。丝绒厚�
 **已知信息**：
 
 - 产品系列：Signature Lattes
-- 预估等级：C-D 级
+- 预估等级：D 级
 
 **待补充**：
 

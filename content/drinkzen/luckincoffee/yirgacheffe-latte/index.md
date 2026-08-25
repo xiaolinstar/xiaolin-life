@@ -1,6 +1,6 @@
 ---
-title: "瑞幸耶加雪菲拿铁（新加坡） · B 级"
-description: "精品豆 + 牛奶，太妃糖与牛奶巧克力风味"
+title: "瑞幸耶加雪菲拿铁（新加坡） · A 级"
+description: "精品豆 + 脱脂奶，太妃糖与牛奶巧克力风味"
 date: 2026-08-24
 draft: true
 showTableOfContents: false
@@ -11,7 +11,7 @@ tags:
   - "瑞幸"
   - "新加坡"
   - "耶加雪菲拿铁"
-summary: "新加坡瑞幸 Yirgacheffe Latte：Nutri-Grade 预估 B 级。精品豆 + 牛奶，太妃糖与牛奶巧克力风味。"
+summary: "新加坡瑞幸 Yirgacheffe Latte：Nutri-Grade 预估 A 级。精品豆 + 脱脂奶，太妃糖与牛奶巧克力风味。"
 ---
 
 > **饮品信息**
@@ -22,8 +22,8 @@ summary: "新加坡瑞幸 Yirgacheffe Latte：Nutri-Grade 预估 B 级。精品�
 瑞幸咖啡（新加坡） · Yirgacheffe Latte · 耶加雪菲拿铁
 
 - **系列**：Single Origin Espresso（单一产地系列）
-- **Nutri-Grade 预估**：B 级
-- **评级说明**：精品豆 + 牛奶，太妃糖与牛奶巧克力风味
+- **Nutri-Grade 预估**：**A 级** ✅
+- **评级说明**：新加坡使用脱脂奶（饱和脂肪 0.05g/100ml），与拿铁同为 A 级
 
 ## 制作方式调查
 
@@ -32,7 +32,7 @@ summary: "新加坡瑞幸 Yirgacheffe Latte：Nutri-Grade 预估 B 级。精品�
 **已知信息**：
 
 - 产品系列：Single Origin Espresso
-- 预估等级：B 级
+- 预估等级：A 级
 
 **待补充**：
 

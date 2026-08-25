@@ -22,6 +22,17 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 | 大杯 | 450ml |
 | 超大杯 | 596ml |
 
+**冰饮制作标准**（大杯 450ml）：
+
+| 标记线 | 容量 | 说明 |
+| :--- | :--- | :--- |
+| 冰标签线（上杯线） | **210ml** | 液体基底（厚椰乳/牛奶等）倒至此线 |
+| 400ml 线 | 400ml | 冰块加至此线后，加入浓缩咖啡，再补满冰块 |
+
+> 数据来源：[下厨房 · 生椰拿铁](https://m.xiachufang.com/recipe/106877195)（用户复刻门店配方）
+
+**默认配置**：不另外加糖 / 1 份浓缩（大杯）
+
 ## 数据来源
 
 **一级数据源（可信度最高）**：
@@ -180,16 +191,16 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 | Latte | 拿铁 | **A** | 新加坡仅提供脱脂奶，饱和脂肪极低 |
 | Flat White | 澳白 | **B** | 咖啡比例更高，脂肪略低于拿铁 |
 | Cappuccino | 卡布奇诺 | **B** | 奶泡为主，脂肪适中 |
-| Caramel Macchiato | 焦糖玛奇朵 | **C-D** | 焦糖糖浆含糖量高 |
-| Cafe Mocha | 摩卡咖啡 | **C-D** | 巧克力酱 + 牛奶，高糖高脂 |
+| Caramel Macchiato | 焦糖玛奇朵 | **C** | 焦糖糖浆含糖量高，新加坡使用脱脂奶 |
+| Cafe Mocha | 摩卡咖啡 | **C** | 巧克力酱含糖量高，新加坡使用脱脂奶 |
 
 ### Signature Lattes（招牌拿铁系列）— 6 款
 
 | 产品 | 中文名 | 预估等级 | 说明 |
 | :--- | :--- | :--- | :--- |
 | Coconut Latte | 生椰拿铁 | **C** | 椰奶含饱和脂肪，不另外加糖时约 C 级 |
-| Velvet Latte | 丝绒拿铁 | **C-D** | 丝绒厚奶含植物油和饱和脂肪 |
-| Coconut Velvet Latte | 椰云丝绒拿铁 | **C-D** | 椰奶 + 丝绒双重脂肪来源 |
+| Velvet Latte | 丝绒拿铁 | **D** | 丝绒厚奶饱和脂肪高（约 4-5g/100ml） |
+| Coconut Velvet Latte | 椰云丝绒拿铁 | **D** | 椰奶 + 丝绒双重脂肪来源，饱和脂肪极高 |
 | Creamy Dreamy Latte | 生酪拿铁 | **D** | 奶酪制品高饱和脂肪 |
 | Vanilla Flavored Creamy Latte | 香草风味生酪拿铁 | **D** | 奶酪 + 香草糖浆 |
 | Little Butter Latte | 小黄油拿铁 | **D** | 黄油高饱和脂肪 |
@@ -208,8 +219,8 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 | 产品 | 中文名 | 预估等级 | 说明 |
 | :--- | :--- | :--- | :--- |
 | Yirgacheffe Americano | 耶加雪菲美式 | **A** | 单一产地黑咖啡，柑橘风味 |
-| Yirgacheffe Latte | 耶加雪菲拿铁 | **B** | 精品豆 + 牛奶，太妃糖与牛奶巧克力风味 |
-| Yirgacheffe Flat White | 耶加雪菲澳白 | **B** | 精品豆 + 牛奶，丝滑口感 |
+| Yirgacheffe Latte | 耶加雪菲拿铁 | **A** | 精品豆 + 脱脂奶，太妃糖与牛奶巧克力风味 |
+| Yirgacheffe Flat White | 耶加雪菲澳白 | **A** | 精品豆 + 脱脂奶，丝滑口感 |
 
 ### Matcha（抹茶系列）— 5 款
 
@@ -225,12 +236,12 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 
 | 等级 | 产品数 | 占比 | 代表产品 |
 | :--- | :--- | :--- | :--- |
-| **A** 🟢 | 4 | 16% | 美式、特浓美式、拿铁、耶加雪菲美式 |
-| **B** 🟩 | 4 | 16% | 澳白、卡布奇诺、耶加雪菲拿铁/澳白 |
+| **A** 🟢 | 6 | 24% | 美式、特浓美式、拿铁、耶加雪菲美式、耶加雪菲拿铁、耶加雪菲澳白 |
+| **B** 🟩 | 2 | 8% | 澳白、卡布奇诺 |
 | **B-C** 🟩🟡 | 5 | 20% | 果味美式系列、抹茶拿铁、抹茶燕麦拿铁 |
-| **C** 🟡 | 3 | 12% | 生椰拿铁、椰椰抹茶、葡萄气泡美式 |
-| **C-D** 🟡🔴 | 5 | 20% | 丝绒拿铁、椰云丝绒、抹茶瑞纳冰、焦糖玛奇朵、摩卡 |
-| **D** 🔴 | 4 | 16% | 生酪拿铁、香草生酪、小黄油拿铁 |
+| **C** 🟡 | 5 | 20% | 生椰拿铁、椰椰抹茶、葡萄气泡美式、焦糖玛奇朵、摩卡 |
+| **C-D** 🟡🔴 | 2 | 8% | 抹茶瑞纳冰、抹茶茉香瑞纳冰 |
+| **D** 🔴 | 5 | 20% | 丝绒拿铁、椰云丝绒、生酪拿铁、香草生酪、小黄油拿铁 |
 
 > 💡 **降低等级技巧**：选择「不另外加糖」可有效降低 1-2 个等级，尤其是果味美式和抹茶系列。
 
@@ -243,14 +254,14 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 - [拿铁 · C 级（中国）/ A 级（新加坡）](/drinkzen/luckincoffee/latte/)
 - [澳白（新加坡） · B 级](/drinkzen/luckincoffee/flat-white/)
 - [卡布奇诺（新加坡） · B 级](/drinkzen/luckincoffee/cappuccino/)
-- [焦糖玛奇朵（新加坡） · C-D 级](/drinkzen/luckincoffee/caramel-macchiato/)
-- [摩卡咖啡（新加坡） · C-D 级](/drinkzen/luckincoffee/cafe-mocha/)
+- [焦糖玛奇朵（新加坡） · C 级](/drinkzen/luckincoffee/caramel-macchiato/)
+- [摩卡咖啡（新加坡） · C 级](/drinkzen/luckincoffee/cafe-mocha/)
 
 **Signature Lattes（招牌拿铁系列）**
 
 - [生椰拿铁（新加坡） · C 级](/drinkzen/luckincoffee/sg-coconut-latte/)
-- [丝绒拿铁（新加坡） · C-D 级](/drinkzen/luckincoffee/velvet-latte/)
-- [椰云丝绒拿铁（新加坡） · C-D 级](/drinkzen/luckincoffee/coconut-velvet-latte/)
+- [丝绒拿铁（新加坡） · D 级](/drinkzen/luckincoffee/velvet-latte/)
+- [椰云丝绒拿铁（新加坡） · D 级](/drinkzen/luckincoffee/coconut-velvet-latte/)
 - [生酪拿铁（新加坡） · D 级](/drinkzen/luckincoffee/creamy-dreamy-latte/)
 - [香草风味生酪拿铁（新加坡） · D 级](/drinkzen/luckincoffee/vanilla-creamy-latte/)
 - [小黄油拿铁（新加坡） · D 级](/drinkzen/luckincoffee/little-butter-latte/)
@@ -265,8 +276,8 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 **Single Origin Espresso（单一产地系列）**
 
 - [耶加雪菲美式（新加坡） · A 级](/drinkzen/luckincoffee/yirgacheffe-americano/)
-- [耶加雪菲拿铁（新加坡） · B 级](/drinkzen/luckincoffee/yirgacheffe-latte/)
-- [耶加雪菲澳白（新加坡） · B 级](/drinkzen/luckincoffee/yirgacheffe-flat-white/)
+- [耶加雪菲拿铁（新加坡） · A 级](/drinkzen/luckincoffee/yirgacheffe-latte/)
+- [耶加雪菲澳白（新加坡） · A 级](/drinkzen/luckincoffee/yirgacheffe-flat-white/)
 
 **Matcha（抹茶系列）**
 
@@ -347,13 +358,14 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 
 | 项目 | 含量 | 备注 |
 | :--- | :--- | :--- |
-| 热量 | 约 70-80 kcal | |
+| 热量 | 约 75 kcal | |
 | 蛋白质 | 约 0.5g | |
-| 脂肪 | 约 6-7g | |
-| 碳水化合物 | 约 3-4g | |
-| 非乳糖糖 | 约 3-4g | 计入分级（天然果糖） |
+| 脂肪 | 约 6.5g | |
+| 饱和脂肪 | 约 5.2g | 椰子脂肪约 80% 为饱和脂肪 |
+| 碳水化合物 | 约 3.5g | |
+| 非乳糖糖 | 约 3.5g | 计入分级（天然果糖） |
 
-数据来源：菲诺厚椰乳产品营养成分表。椰浆含天然糖分（非乳糖糖），计入上海标准分级。
+数据来源：菲诺厚椰乳产品营养成分表。饱和脂肪基于椰子脂肪约 80% 为饱和脂肪估算（USDA 食品数据库）。
 
 **燕麦奶营养参考**（OATLY 原味燕麦奶，每 100ml）：
 

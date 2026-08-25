@@ -1,6 +1,6 @@
 ---
-title: "瑞幸摩卡咖啡（新加坡） · C-D 级"
-description: "巧克力酱 + 牛奶，高糖高脂"
+title: "瑞幸摩卡咖啡（新加坡） · C 级"
+description: "巧克力酱含糖量高，触发 C 级"
 date: 2026-08-24
 draft: true
 showTableOfContents: false
@@ -11,7 +11,7 @@ tags:
   - "瑞幸"
   - "新加坡"
   - "摩卡咖啡"
-summary: "新加坡瑞幸 Cafe Mocha：Nutri-Grade 预估 C-D 级。巧克力酱 + 牛奶，高糖高脂。"
+summary: "新加坡瑞幸 Cafe Mocha：Nutri-Grade 预估 C 级。巧克力酱含糖量高。"
 ---
 
 > **饮品信息**
@@ -22,8 +22,8 @@ summary: "新加坡瑞幸 Cafe Mocha：Nutri-Grade 预估 C-D 级。巧克力酱
 瑞幸咖啡（新加坡） · Cafe Mocha · 摩卡咖啡
 
 - **系列**：Barista Coffee（大师咖啡系列）
-- **Nutri-Grade 预估**：C-D 级
-- **评级说明**：巧克力酱 + 牛奶，高糖高脂
+- **Nutri-Grade 预估**：**C 级** ⚠️
+- **评级说明**：巧克力酱含糖约 12-18g，新加坡使用脱脂奶（饱和脂肪极低），评级由糖分触发
 
 ## 制作方式调查
 
@@ -32,7 +32,7 @@ summary: "新加坡瑞幸 Cafe Mocha：Nutri-Grade 预估 C-D 级。巧克力酱
 **已知信息**：
 
 - 产品系列：Barista Coffee
-- 预估等级：C-D 级
+- 预估等级：C 级
 
 **待补充**：
 
