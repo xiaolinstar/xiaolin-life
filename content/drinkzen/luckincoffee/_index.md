@@ -177,7 +177,7 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 | :--- | :--- | :--- | :--- |
 | Americano | 美式咖啡 | **A** | 纯咖啡，无糖无脂 |
 | Extra Strong Americano | 特浓美式 | **A** | 同上 |
-| Latte | 拿铁 | **B** | 牛奶带来少量饱和脂肪 |
+| Latte | 拿铁 | **A** | 新加坡仅提供脱脂奶，饱和脂肪极低 |
 | Flat White | 澳白 | **B** | 咖啡比例更高，脂肪略低于拿铁 |
 | Cappuccino | 卡布奇诺 | **B** | 奶泡为主，脂肪适中 |
 | Caramel Macchiato | 焦糖玛奇朵 | **C-D** | 焦糖糖浆含糖量高 |
@@ -225,8 +225,8 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 
 | 等级 | 产品数 | 占比 | 代表产品 |
 | :--- | :--- | :--- | :--- |
-| **A** 🟢 | 3 | 12% | 美式、特浓美式、耶加雪菲美式 |
-| **B** 🟩 | 5 | 20% | 拿铁、澳白、卡布奇诺、耶加雪菲拿铁/澳白 |
+| **A** 🟢 | 4 | 16% | 美式、特浓美式、拿铁、耶加雪菲美式 |
+| **B** 🟩 | 4 | 16% | 澳白、卡布奇诺、耶加雪菲拿铁/澳白 |
 | **B-C** 🟩🟡 | 5 | 20% | 果味美式系列、抹茶拿铁、抹茶燕麦拿铁 |
 | **C** 🟡 | 3 | 12% | 生椰拿铁、椰椰抹茶、葡萄气泡美式 |
 | **C-D** 🟡🔴 | 5 | 20% | 丝绒拿铁、椰云丝绒、抹茶瑞纳冰、焦糖玛奇朵、摩卡 |
@@ -240,7 +240,7 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 
 - [美式咖啡（新加坡） · A 级](/drinkzen/luckincoffee/americano/)
 - [特浓美式（新加坡） · A 级](/drinkzen/luckincoffee/extra-strong-americano/)
-- [拿铁（新加坡） · B 级](/drinkzen/luckincoffee/latte/)
+- [拿铁 · C 级（中国）/ A 级（新加坡）](/drinkzen/luckincoffee/latte/)
 - [澳白（新加坡） · B 级](/drinkzen/luckincoffee/flat-white/)
 - [卡布奇诺（新加坡） · B 级](/drinkzen/luckincoffee/cappuccino/)
 - [焦糖玛奇朵（新加坡） · C-D 级](/drinkzen/luckincoffee/caramel-macchiato/)
