@@ -227,7 +227,39 @@ summary: "喜茶：新式茶饮开创者，全球近 4000 家门店，估值 260
 
 ## 产品列表
 
-- 更多产品测评持续更新中...
+**芝士茶系列**（喜茶首创）：
+
+- [芝芝莓莓](/drinkzen/heytea/zhi-zhi-mei-mei/) · 经典爆款 · 约 245kcal · 草莓 + 芝士奶盖
+- [芝芝芒芒](/drinkzen/heytea/zhi-zhi-mang-mang/) · 芒果控最爱 · 约 291kcal · 芒果 + 芝士奶盖
+
+**水果茶系列**：
+
+- [多肉葡萄](/drinkzen/heytea/duo-rou-putao/) · 人气之王 · 约 140-160kcal · 巨峰葡萄 + 绿妍茶底
+- [多肉葡萄冻](/drinkzen/heytea/duo-rou-putao-dong/) · 清爽版 · 约 140kcal · 葡萄 + 茶冻
+- [满杯红柚](/drinkzen/heytea/man-bei-hong-you/) · 低卡首选 · 约 90kcal · 新鲜红柚果肉
+- [多肉青提](/drinkzen/heytea/duo-rou-qing-ti/) · 清新果香 · 约 145kcal · 青提果肉
+- [多肉桃李](/drinkzen/heytea/duo-rou-tao-li/) · 季节限定 · 约 75-152kcal · 桃 + 李子
+
+**波波奶茶系列**：
+
+- [烤黑糖波波牛乳茶](/drinkzen/heytea/ka-hei-tang-bo-bo-niu-ru-cha/) · 冬日热饮 · 约 410-430kcal · 黑糖波波 + 全脂牛乳
+
+**抹茶系列**：
+
+- [抹茶拿铁](/drinkzen/heytea/mo-cha-na-tie/) · 千目抹茶 · 约 250kcal · 抹茶 + 鲜奶
+
+**茶特调系列**（2025 年新品）：
+
+- [奇兰苹果杏](/drinkzen/heytea/qi-lan-ping-guo-xing/) · 年度断货王 · 约 65kcal · 低 GI 新品
+- [青提柠打茶](/drinkzen/heytea/qing-ti-da-ning-cha/) · 清爽解腻 · 约 70kcal · 青提 + 柠檬
+- [绿妍打柠茶](/drinkzen/heytea/lv-yan-da-ning-cha/) · 超低卡 · 约 20kcal · 绿妍 + 柠檬
+- [鸭喜香柠打茶](/drinkzen/heytea/ya-xi-xiang-qing-ning-cha/) · 鸭屎香茶底 · 约 33kcal · 独特香气
+- [茶特调系列](/drinkzen/heytea/cha-te-diao/) · 创新品类 · 以茶为主角
+
+**纯茶系列**：
+
+- [纯绿妍](/drinkzen/heytea/chun-lv-yan/) · 0 热量 · 约 0kcal · 绿妍茶底
+- [月观（清兰香）](/drinkzen/heytea/yue-guan/) · 清兰香乌龙 · 约 103kcal · 纯茶之选
 
 ## 参考
 
