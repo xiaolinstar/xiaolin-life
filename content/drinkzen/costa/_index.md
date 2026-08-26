@@ -92,11 +92,24 @@ Costa 官方产品页**不公布**完整的健康评级数据（热量、糖分�
 - [美式咖啡 · A 级](/drinkzen/costa/americano/)
 - [拿铁 · B-C 级](/drinkzen/costa/latte/)
 - [卡布奇诺 · B-C 级](/drinkzen/costa/cappuccino/)
+- [摩卡 · C-D 级](/drinkzen/costa/mocha/)
 - [Flat White · A-B 级](/drinkzen/costa/flat-white/)
+- [Cortado · A-B 级](/drinkzen/costa/cortado/)
+- [意式浓缩 · A 级](/drinkzen/costa/espresso/)
 
 **Flavored Lattes（风味拿铁系列）**
 
 - [香草拿铁 · C-D 级](/drinkzen/costa/vanilla-latte/)
+- [焦糖拿铁 · C-D 级](/drinkzen/costa/caramel-latte/)
+- [榛果拿铁 · C-D 级](/drinkzen/costa/hazelnut-latte/)
+
+**Cold Drinks（冰饮系列）**
+
+- [冷萃咖啡 · A 级](/drinkzen/costa/cold-brew/)
+
+**Non-Coffee（非咖啡系列）**
+
+- [热巧克力 · C-D 级](/drinkzen/costa/hot-chocolate/)
 
 > 💡 以上等级为基于同类产品的预估值，非 Costa 官方数据。实际等级需通过配方调查确认。
 
