@@ -14,6 +14,11 @@
   weight = 25
 
 [[main]]
+  name = "电影人生"
+  pageRef = "movies"
+  weight = 28
+
+[[main]]
   name = "办公"
   pageRef = "office"
   weight = 30
