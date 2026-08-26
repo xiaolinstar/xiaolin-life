@@ -318,3 +318,14 @@ img[src*="covers/"],
 img[src*="featured"] {
   object-fit: cover;
 }
+
+/* ========== 正文宽度扩展：65ch → 896px ========== */
+/* 覆盖 single.html / list.html / term.html / terms.html 中的 max-w-prose 限制 */
+#single_header,
+.article-content,
+footer.max-w-prose,
+main .prose > div.min-w-0,
+main .prose > section.flex > div.min-w-0,
+main section.flex.flex-wrap.max-w-prose {
+  max-width: 56rem; /* 896px */
+}

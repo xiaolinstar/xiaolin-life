@@ -170,7 +170,7 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 
 - A 级：美式、特浓美式、耶加雪菲美式
 - B 级：拿铁、澳白、卡布奇诺、耶加雪菲拿铁/澳白
-- C 级：生椰拿铁、椰椰抹茶、葡萄气泡美式
+- C 级：生椰拿铁、椰椰抹茶、葡萄气泡美式、焦糖玛奇朵、摩卡
 - D 级：生酪拿铁、香草生酪、小黄油拿铁
 
 ## 产品列表
@@ -254,7 +254,7 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 - [拿铁 · C 级（中国）/ A 级（新加坡）](/drinkzen/luckincoffee/latte/)
 - [澳白（新加坡） · B 级](/drinkzen/luckincoffee/flat-white/)
 - [卡布奇诺（新加坡） · B 级](/drinkzen/luckincoffee/cappuccino/)
-- [焦糖玛奇朵（新加坡） · C 级](/drinkzen/luckincoffee/caramel-macchiato/)
+- [焦糖玛奇朵 · C 级（中国）/ C 级（新加坡）](/drinkzen/luckincoffee/caramel-macchiato/)
 - [摩卡咖啡（新加坡） · C 级](/drinkzen/luckincoffee/cafe-mocha/)
 
 **Signature Lattes（招牌拿铁系列）**
