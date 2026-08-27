@@ -17,6 +17,8 @@ summary: "瑞幸泰奶鸳鸯拿铁：C 级预警，不另外加糖约 273kcal/45
 > **饮品信息**
 > 品牌：瑞幸咖啡（Luckin Coffee） · 系列：茶咖系列 · 上市日期：2026-08-17
 
+{{< carousel images="gallery/*" aspectRatio="4-5" interval="3500" captions="{01-thai-overview.jpeg:整杯概览,02-thai-overview-live.webp:Live Photo 实况,03-thai-front.jpeg:杯身正面,04-thai-amber.jpeg:琥珀茶色,05-thai-label.jpeg:产品标签}" >}}
+
 ## 产品速览
 
 瑞幸咖啡 · 泰奶鸳鸯拿铁 · 茶咖拿铁

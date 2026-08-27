@@ -1,6 +1,6 @@
 ---
 title: "书亦烧仙草 招牌烧仙草 · C-D 级"
-description: ""半杯都是料"的经典烧仙草，红豆花生葡萄干满满一杯"
+description: "“半杯都是料”的经典烧仙草，红豆花生葡萄干满满一杯"
 date: 2026-08-26
 draft: true
 showTableOfContents: false

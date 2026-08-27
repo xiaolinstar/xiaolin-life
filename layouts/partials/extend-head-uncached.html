@@ -15,3 +15,19 @@
     src="{{ $twelementsLib.RelPermalink }}"
     integrity="{{ $twelementsLib.Data.Integrity }}"></script>
 {{ end }}
+
+{{/* 补全 tw-elements FREE 2.0.0 carousel 缺失的 click handler。
+    tw-elements FREE 2.0.0 carousel 类仅靠构造函数里的 cycle() 定时器实现自动轮播，
+    没有注册 click / pointerdown 等事件监听，prev/next button 点击完全不响应。
+    这个脚本桥接 button click 到 Carousel 实例的 prev/next/to method。
+    依赖 window.twe.Carousel（由上方 tw-elements 或主题 vendor.html 提供）。
+    必须 defer 且在 tw-elements 之后加载。 */}}
+{{ if or (.Page.HasShortcode "carousel") (.Page.HasShortcode "carousel-cdn") (.Page.HasShortcode "timeline") }}
+  {{ $carouselClick := resources.Get "js/carousel-click.js" }}
+  {{ $carouselClick = $carouselClick | resources.Minify | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}
+  <script
+    defer
+    type="text/javascript"
+    src="{{ $carouselClick.RelPermalink }}"
+    integrity="{{ $carouselClick.Data.Integrity }}"></script>
+{{ end }}

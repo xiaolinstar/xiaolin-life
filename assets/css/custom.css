@@ -329,3 +329,13 @@ main .prose > section.flex > div.min-w-0,
 main section.flex.flex-wrap.max-w-prose {
   max-width: 56rem; /* 896px */
 }
+
+/* ========== Carousel 框宽限制：饮品测评图避免竖向过高 ========== */
+/* blowfish 默认 .width-patch 在桌面端是 65ch（≈520px）、移动端 80vw，
+   对 3:4/4:5 竖图会渲染出 650~900px 高的图片框；
+   用 max-width 22rem 限制为约 352px 宽、高 440px，框内留黑边由 object-cover 居中显示 */
+.article-content .width-patch {
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+}

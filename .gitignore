@@ -46,3 +46,6 @@ static/assets/images/**
 .tools/hugo158
 .tools/*.tar.gz
 .tools/
+
+# Claude Code Settings
+.claude/settings.json
