@@ -175,7 +175,7 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 
 ## 产品列表
 
-- [瑞幸生椰拿铁 · D 级预警](/drinkzen/luckincoffee/coconut-latte/) · Day 1 小红书推文样例
+- [瑞幸生椰拿铁 · C 级预警](/drinkzen/luckincoffee/coconut-latte/) · Day 1 小红书推文样例
 - [泰奶鸳鸯拿铁 · C 级预警](/drinkzen/luckincoffee/thai-milk-tea-latte/) · 茶咖奶酪三重碰撞
 
 ## 新加坡门店菜单
