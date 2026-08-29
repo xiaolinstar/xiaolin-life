@@ -29,15 +29,16 @@ jobs:
           hugo-version: "0.163.3"
           extended: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: "24"
-
       - name: Enable pnpm via corepack
         run: |
           corepack enable
           corepack prepare pnpm@9.15.0 --activate
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: "pnpm"
 
       - name: Install Python dependencies
         run: pip install pillow
