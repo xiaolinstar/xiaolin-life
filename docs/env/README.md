@@ -7,7 +7,7 @@
 站点容器 **不读** `.env`；`.env` 供本机 **COS 上传 / CDN 校验脚本** 使用。COS 凭证在 **`~/.cos.yaml`**（方案 A），不进入 `.env`。
 
 | 层 | 放什么 | 路径 |
-|----|--------|------|
+| ---- | -------- | ------ |
 | L0 模板 | `COS_PREFIX`、`MEDIA_CDN_BASE` 等 | `.env.example` |
 | L2 CD | SSH 部署 | 仓库 **Secrets**：`SERVER_*`（无 CI Variables） |
 | L3 凭证 | SecretId / SecretKey | **`~/.cos.yaml`**（coscli） |

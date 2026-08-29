@@ -67,6 +67,7 @@ Starbucks · Caffè Latte · 拿铁
 | 换燕麦奶 | 燕麦奶 | -30kcal | +3g | B-C 级 |
 
 > **说明**：
+>
 > - 每泵糖浆约 5g 非乳源性糖（星巴克标准泵）
 > - 脱脂奶可显著降低饱和脂肪，提升评级
 > - 杯型容量：Tall 360ml、Grande 480ml、Venti 600ml

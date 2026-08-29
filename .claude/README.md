@@ -4,7 +4,7 @@
 
 本项目统一使用 `.claude/` 目录管理所有技能：
 
-```
+```css
 .claude/
 ├── rules/          # 规则文件
 │   └── core.md
@@ -20,6 +20,7 @@
 ## 技能来源
 
 ### 1. GitHub 技能
+
 通过 GitHub 仓库安装的技能，记录在 `skills-lock.json`：
 
 ```json
@@ -31,6 +32,7 @@
 ```
 
 ### 2. SkillHub 技能
+
 通过 SkillHub 安装的技能，记录在 `skills-lock.json`：
 
 ```json
@@ -54,7 +56,7 @@
 cp -r /path/to/skill .claude/skills/skill-name
 ```
 
-3. 在 `skills-lock.json` 中添加记录：
+1. 在 `skills-lock.json` 中添加记录：
 
 ```json
 {
@@ -100,7 +102,7 @@ cp -r /path/to/skill .claude/skills/skill-name
 ## 当前技能列表
 
 | 技能名称 | 来源 | 版本 |
-|---------|------|------|
+| --------- | ------ | ------ |
 | find-skills | GitHub | - |
 | gh-cli | GitHub | - |
 | markdown-formatter | GitHub | - |

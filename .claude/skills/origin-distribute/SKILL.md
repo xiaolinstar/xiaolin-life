@@ -22,6 +22,7 @@ description: 将 xiaolin-life 站点（origin）的文章/饮品测评同步为�
 | 「origin 怎么适配」 | 询问工作流 |
 
 **不应使用**：
+
 - 用户原创社媒内容（origin 不存在）→ 走通用写作
 - 仅修改单张图或单段文案 → 用 Edit 工具，不走 skill
 
@@ -75,7 +76,7 @@ description: 将 xiaolin-life 站点（origin）的文章/饮品测评同步为�
 **正文扩展素材来源**（仅 origin 内）：
 
 | origin 章节 | 可压缩为分发版 |
-|---|---|
+| --- | --- |
 | `## 口感体验` | "前调 / 中段 / 尾调"个人体验 |
 | `## 饮用建议` | "最佳温度 / 适宜场景 / 不建议" |
 | `## Nutri-Grade 评级` / `## 配方营养计算` | "为什么 C 级"知识科普 |
@@ -87,7 +88,7 @@ description: 将 xiaolin-life 站点（origin）的文章/饮品测评同步为�
 
 **A. 落盘 staging 目录**：
 
-```
+```html
 content/social-publish/drafts/
 └── <origin-slug>-xhs.md
 ```

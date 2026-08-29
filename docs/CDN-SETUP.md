@@ -25,7 +25,7 @@
 3. 填写：
 
 | 项 | 值 |
-|----|-----|
+| ---- | ----- |
 | 加速域名 | `media.xiaolin.fun` |
 | 加速区域 | **中国境内**（与资源包一致） |
 | 加速类型 | **CDN 网页小文件**（或「静态加速」） |
@@ -34,8 +34,8 @@
 | 回源协议 | **HTTPS**（推荐）或协议跟随 |
 | 回源 HOST | `media-1300240022.cos.ap-nanjing.myqcloud.com`（默认即可） |
 
-4. **源站路径**：留空（对象在 Bucket 根目录，与 Markdown 路径一致）
-5. 提交后，记录控制台分配的 **CNAME**，形如：  
+1. **源站路径**：留空（对象在 Bucket 根目录，与 Markdown 路径一致）
+2. 提交后，记录控制台分配的 **CNAME**，形如：  
    `media.xiaolin.fun.cdn.dnsv1.com`
 
 > 勿在 COS 控制台单独再绑一次自定义域名，避免与 CDN 控制台配置冲突；统一在 **CDN 域名管理** 完成。
@@ -94,7 +94,7 @@ pnpm run media:cdn-check
 
 **跨域（可选）**：若未来前端直连 CDN 资源，在 CDN **HTTP 响应头** 添加：
 
-```
+```text
 Access-Control-Allow-Origin: https://xiaolin.fun
 ```
 

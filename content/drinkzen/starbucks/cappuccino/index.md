@@ -68,6 +68,7 @@ Starbucks · Cappuccino · 卡布奇诺
 | +1 泵糖浆 | 标准甜 | +20kcal | +5g | C 级 |
 
 > **说明**：
+>
 > - 卡布奇诺奶泡比例高，实际牛奶用量比拿铁少约 70ml
 > - 经典搭配：撒可可粉或肉桂粉
 > - 杯型容量：Tall 360ml、Grande 480ml、Venti 600ml

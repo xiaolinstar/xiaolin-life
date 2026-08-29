@@ -42,8 +42,8 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 
 **瑞幸官网产品页面示例**：
 
-- 泰奶鸳鸯拿铁：https://lkcoffee.com/products/lattes/thai-yuen-yeung-latte
-- 经典泰奶：https://lkcoffee.com/products/non-coffee/classic-thai-milk-tea
+- 泰奶鸳鸯拿铁：<https://lkcoffee.com/products/lattes/thai-yuen-yeung-latte>
+- 经典泰奶：<https://lkcoffee.com/products/non-coffee/classic-thai-milk-tea>
 
 **二级数据源（参考价值）**：
 
@@ -157,10 +157,12 @@ summary: "瑞幸咖啡：生椰拿铁、泰奶鸳鸯拿铁等产品测评，含�
 **上海含糖饮料分级标准**：
 
 上海标准将糖分为两类：
+
 - **乳糖**（豁免）：天然存在于牛奶、奶酪中的糖分，不计入含糖量
 - **非乳源性糖**（计入分级）：果糖（果汁等天然来源）+ 添加糖（白砂糖、果葡糖浆等），一视同仁
 
 分级标准（基于非乳源性糖含量）：
+
 - A 级：≤ 5g/100ml
 - B 级：5-10g/100ml
 - C 级：10-15g/100ml

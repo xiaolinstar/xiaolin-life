@@ -64,7 +64,7 @@ tags:
 ## 分类占位封面
 
 | 分类 | 占位图 |
-|------|--------|
+| ------ | -------- |
 | 风景名胜 | `assets/img/covers/places.svg` |
 | 知名高校 | `assets/img/covers/university.svg` |
 | 桌游时光 | `assets/img/covers/table-game.svg` |

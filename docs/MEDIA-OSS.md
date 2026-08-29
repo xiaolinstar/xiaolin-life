@@ -6,7 +6,7 @@
 
 ## 架构
 
-```
+```text
 ┌─────────────┐     构建      ┌──────────────┐
 │ Git 仓库     │ ──────────► │ Docker 镜像   │  HTML/CSS/JS（无大图）
 │ Markdown    │             │ ~10–20MB     │
@@ -22,7 +22,7 @@
 ```
 
 | 存放位置 | 内容 | 进 Git | 进镜像 |
-|----------|------|--------|--------|
+| ---------- | ------ | -------- | -------- |
 | Git | Markdown、Hugo 配置、小 SVG / 占位图 | ✅ | — |
 | COS | 游记图集、截图、视频 | ❌ | ❌ |
 | 镜像 | 构建后的 HTML/CSS/JS | — | ✅ |
@@ -168,7 +168,7 @@ export COS_REGION=ap-nanjing
 ```
 
 | 变量 | 用途 |
-|------|------|
+| ------ | ------ |
 | `~/.cos.yaml` | 本地默认配置源（`scripts/lib/cos-config.sh` 解析） |
 | `COS_BUCKET_ALIAS` | 可选覆盖；未设时从配置文件读取 |
 | `MEDIA_CDN_BASE` | Markdown/CDN 根 URL |
@@ -181,7 +181,7 @@ export COS_REGION=ap-nanjing
 ## 辅助脚本
 
 | 命令 | 说明 |
-|------|------|
+| ------ | ------ |
 | `pnpm run media:inventory` | 统计待上传体量与 Markdown 引用 |
 | `pnpm run media:check` | 验证 coscli 配置与 Bucket 连通 |
 | `pnpm run media:upload` | 同步 `static/assets/images` 到 COS |
@@ -229,7 +229,7 @@ export COS_REGION=ap-nanjing
 ## 迁移进度
 
 | 步骤 | 状态 | 备注 |
-|------|------|------|
+| ------ | ------ | ------ |
 | 停止构建时 lossy 压缩 | ✅ | |
 | 恢复原图 | ✅ | static ~218MB |
 | 购买 COS + CDN、安装 coscli | ✅ | coscli v1.0.8 |

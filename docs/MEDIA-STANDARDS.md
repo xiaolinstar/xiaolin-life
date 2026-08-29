@@ -14,12 +14,12 @@
 ## 三层存储
 
 | 层级 | 位置 | 作用 | 进 Git |
-|------|------|------|--------|
+| ------ | ------ | ------ | -------- |
 | 作者母本 | 本机 `gallery/` 或归档目录 | 写作、coscli 上传、个人备份 | ❌ |
 | 仓库 | `content/**/*.md`、配置、小 SVG | 版本管理、CI 构建 | ✅ |
 | 线上 | 腾讯云 COS（后期 CDN） | 读者访问 | — |
 
-```
+```text
 写作 ──► content/.../gallery/（本地）
               │
               ├── coscli sync ──► COS（线上原文件）
@@ -33,7 +33,7 @@
 
 每篇文章使用 **Page Bundle**：
 
-```
+```text
 content/life/entertainment/gulou-riverfront/
 ├── index.md                 # 文章正文与 front matter
 ├── featured.jpg             # 列表 / 分享封面（可选，建议 ≤500KB 或改用 COS URL）
@@ -58,7 +58,7 @@ content/life/entertainment/gulou-riverfront/
 ## 命名规范
 
 | 规则 | 说明 | 示例 |
-|------|------|------|
+| ------ | ------ | ------ |
 | 小写 ASCII + 数字 + 连字符 | 便于 URL、COS、跨平台 | `nanjing-marathon.jpg` |
 | 轮播 / 图集可加序号前缀 | 控制展示顺序 | `01-bridge-entry.jpg` |
 | 禁止中文、空格、下划线 | 避免 URL 编码与脚本问题 | ❌ `4玩家.png` → ✅ `04-players.png` |
@@ -73,7 +73,7 @@ content/life/entertainment/gulou-riverfront/
 ### 用法与引用
 
 | 场景 | 写作期（本地预览） | 上线后（COS/CDN） |
-|------|-------------------|-------------------|
+| ------ | ------------------- | ------------------- |
 | 轮播 | `{{< carousel images="gallery/*" ... >}}` | `{{< carousel-cdn images="{https://.../01.jpg,...}" ... >}}` |
 | 正文插图 | `![说明](gallery/02-bridge-entry.jpg)` | `![说明](https://media.xiaolin.fun/life/.../02-bridge-entry.jpg)` |
 | 列表封面 | 同目录 `featured.jpg` | 可保留小文件，或 front matter 指定 COS URL |
@@ -99,7 +99,7 @@ content/life/entertainment/gulou-riverfront/
 ## 与 `assets/`、`static/` 的区别
 
 | 路径 | 用途 | 谁维护 | 进 Git |
-|------|------|--------|--------|
+| ------ | ------ | -------- | -------- |
 | **`content/.../gallery/`** | 文章原图 / 原视频 | 作者 | ❌（见下节） |
 | **`assets/img/photos/`** | 分类占位小图（~28KB） | 项目脚本 | ✅ |
 | **`assets/img/covers/`** | 分类 SVG 封面 | 项目 | ✅ |
@@ -144,10 +144,12 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 2. 原图 / 原视频放入同目录 `gallery/`，按命名规范重命名。
 3. 本地预览：`pnpm run site:dev`（写作期 shortcode 读本地 `gallery/`）。
 4. 上传 COS：
+
    ```bash
    ./scripts/media-publish.sh content/<分区>/<slug>
    # 或 pnpm run media:publish -- content/<分区>/<slug>
    ```
+
 5. 将 Markdown / shortcode 中的路径改为 COS（或 CDN）绝对 URL。
 6. 确认线上可访问；`git commit` 仅 `index.md`，push 后 CI 校验 URL 并构建。
 
@@ -161,7 +163,7 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 
 除仓库与 COS 外，作者本机或 NAS 保留一份母本目录，例如：
 
-```
+```text
 ~/Archive/xiaolin-life-media/
 └── life/entertainment/gulou-riverfront/
     └── ...
@@ -174,7 +176,7 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 ## 辅助命令
 
 | 命令 | 说明 |
-|------|------|
+| ------ | ------ |
 | `pnpm run media:inventory` | 统计本地媒体与 Markdown 引用 |
 | `pnpm run media:check` | 验证 coscli / Bucket |
 | `pnpm run media:upload` | 上传 `static/assets/images`（迁移期） |
@@ -187,7 +189,7 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 ## 迁移路线图
 
 | 阶段 | 内容 | 状态 |
-|------|------|------|
+| ------ | ------ | ------ |
 | 1 | 定规范（本文档） | ✅ |
 | 2 | 整理命名、去重（如鼓楼滨江 static vs gallery） | ✅ 鼓楼滨江试点完成（COS URL + carousel-cdn） |
 | 3 | 全量上传 COS，Markdown 改 COS URL | ✅ 7 篇 static 插图 + 鼓楼滨江 |
@@ -204,7 +206,7 @@ CDN 未配置前，统一使用 COS 直链前缀（见 [MEDIA-OSS.md](MEDIA-OSS.
 路径：`content/life/entertainment/gulou-riverfront/gallery/`
 
 | 原文件名 | 规范文件名 |
-|----------|------------|
+| ---------- | ------------ |
 | `nanjing-marathon.jpg` | `01-nanjing-marathon.jpg` |
 | `fangjiaying.jpg` | `02-fangjiaying.jpg` |
 | `bridge-entry.jpg` | `03-bridge-entry.jpg` |
@@ -235,7 +237,7 @@ CDN 未配置前，统一使用 COS 直链前缀（见 [MEDIA-OSS.md](MEDIA-OSS.
 已将 `static/assets/images/` 下 7 篇文章共 34 处 `/assets/images/` 引用改为 COS 直链，并自 Git 索引移除 static 大图：
 
 | 文章 | 图片数 | featureimage |
-|------|--------|--------------|
+| ------ | -------- | -------------- |
 | `office/email` | 20 | thunderbird-lookup.png |
 | `office/markdown` | 4 | txt-markdown.png（原 deepseek 缺失图已改引用） |
 | `office/mac` | 2 | mac-sliver.jpg |

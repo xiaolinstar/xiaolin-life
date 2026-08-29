@@ -20,11 +20,13 @@
 ### Task 1: 新增 logo 与 Hero 图素材
 
 **Files:**
+
 - Create: `assets/img/logo.svg`
 - Create: `assets/img/photos/home-hero.jpg`
 - Optional reference: `assets/img/home-hero.svg`（可作构图参考，不必删除）
 
 **Interfaces:**
+
 - Produces: Hugo 可加载路径 `img/logo.svg`、`img/photos/home-hero.jpg`
 
 - [ ] **Step 1: 创建 Header logo SVG**
@@ -45,10 +47,12 @@ Expected: 两文件存在且非空
 ### Task 2: 切换 homepage 为 hero 并配置 logo
 
 **Files:**
+
 - Modify: `config/_default/params.toml`
 - Modify: `config/_default/languages.zh-cn.toml`
 
 **Interfaces:**
+
 - Consumes: Task 1 素材路径
 - Produces: `homepage.layout = "hero"`，`params.logo` 生效
 
@@ -79,6 +83,7 @@ logo = "img/logo.svg"
 ### Task 3: 首页正文改为 alert + 双 CTA
 
 **Files:**
+
 - Modify: `content/_index.md`
 
 - [ ] **Step 1: 按 spec 重写 `_index.md` 正文**
@@ -90,6 +95,7 @@ logo = "img/logo.svg"
 ### Task 4: 接线 custom.css 动效
 
 **Files:**
+
 - Modify: `assets/css/custom.css`
 
 - [ ] **Step 1: 将 `hero-drift` 绑到 Hero 背景图选择器**
@@ -150,7 +156,7 @@ Run: `hugo server -D` 或 `pnpm run site:dev`
 ## Spec coverage
 
 | Spec 项 | Task |
-|---------|------|
+| --------- | ------ |
 | layout=hero | Task 2 |
 | homepageImage | Task 1 + 2 |
 | logo | Task 1 + 2 |

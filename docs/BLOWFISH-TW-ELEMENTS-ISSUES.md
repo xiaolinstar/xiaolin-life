@@ -9,7 +9,7 @@
 
 **症状**：本地或 CI 用 `hugo v0.164.0+` 构建时出现：
 
-```
+```text
 WARN  Module "blowfish" is not compatible with this Hugo version: 0.158.0/0.163.3 extended
 ```
 
@@ -41,12 +41,12 @@ WARN  Module "blowfish" is not compatible with this Hugo version: 0.158.0/0.163.
 `themes/blowfish/assets/lib/tw-elements/index.min.js` 是 **TW Elements FREE 2.0.0**（113KB 精简版）。
 
 | 期望能力 | 实际状态 |
-|---|---|
+| --- | --- |
 | Carousel 类定义 | ✓ 存在（cycle / next / prev / to / getOrCreateInstance） |
-| 自动轮播（cycle 定时器）| ✓ 构造函数里 `cycle()` 启动 |
+| 自动轮播（cycle 定时器） | ✓ 构造函数里 `cycle()` 启动 |
 | **click / pointerdown / mousedown 事件监听** | **✗ 0 处** |
 
-```
+```bash
 $ grep -oE 'addEventListener\s*\(\s*["'\'']' themes/blowfish/assets/lib/tw-elements/index.min.js
 DOMContentLoaded / scroll / resize / keydown / animationstart / input
 （无 click / pointerdown / touchstart 等鼠标/触摸事件）
@@ -72,7 +72,7 @@ DOMContentLoaded / scroll / resize / keydown / animationstart / input
 ## 问题 4（次要）：blowfish 主题维护性与健壮性评估
 
 | 维度 | 评价 | 证据 |
-|---|---|---|
+| --- | --- | --- |
 | Hugo 兼容性声明 | ⚠️ 落后 | 声明 max 0.163.3，但 Hugo 已发到 0.164+；兼容性 PR 卡在 `hugo-new-version` 分支未合并 |
 | 第三方库选型 | ⚠️ 不一致 | TW Elements FREE 2.0.0 在 2023 末停更，新组件实现不完整；项目实际只用其 carousel 一项 |
 | 短代码/Partial 健壮性 | ⚠️ 依赖 shortcode 文本检测 | `vendor.html` 用 `HasShortcode` 决定资源加载，越界 Hugo 版本下可能整体失效，无 fallback |
@@ -93,7 +93,7 @@ DOMContentLoaded / scroll / resize / keydown / animationstart / input
 使用吹气式 `{{< carousel >}}` 的页面（都依赖 carousel-click.js + Hugo ≤ 0.163.3）：
 
 | 页面 | 类型 |
-|---|---|
+| --- | --- |
 | `content/drinkzen/luckincoffee/thai-milk-tea-latte/` | drinkzen |
 | `content/life/entertainment/carbs/` | life |
 | `content/life/table-game/undercover/` | life |

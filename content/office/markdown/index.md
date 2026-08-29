@@ -25,16 +25,16 @@ Txt 方便快速笔记，但结构性差，不方便阅读；Word 功能丰富�
 笔者认为 Markdown 完全可以替代 Txt 和 Word，为文本编辑和阅读带来便利。本文将探讨为什么推荐你使用 Markdown？
 
 | 文本编辑工具 | Txt | Word | Markdown | Latex |
-|--------| -- | ---- | -------- | --- |
-| 编辑     | 👍 | ❎   | 👍       | ❎   |
-| 阅读     | ❎ | 👍   | 👍       | 👍  |
-| 学习成本   | 👍  | ❎   | 👍       | ❎   |
-| 功能丰富   | ❎ | 👍   | 👍       | 👍   |
-| 版本控制   | 👍 | ❎   | 👍       | 👍   |
-| 轻量性    | 👍 | ❎   | 👍       | 👍   |
-| 兼容性    | 👍 | ❎   | 👍       | ❎   |
-| 代码友好   | ❎ | ❎ | 👍       |  👍   |
-| 用户基础   | 👍 | 👍👍 | 👍       | ❎   |
+| -------- | -- | ---- | -------- | --- |
+| 编辑 | 👍 | ❎ | 👍 | ❎ |
+| 阅读 | ❎ | 👍 | 👍 | 👍 |
+| 学习成本 | 👍 | ❎ | 👍 | ❎ |
+| 功能丰富 | ❎ | 👍 | 👍 | 👍 |
+| 版本控制 | 👍 | ❎ | 👍 | 👍 |
+| 轻量性 | 👍 | ❎ | 👍 | 👍 |
+| 兼容性 | 👍 | ❎ | 👍 | ❎ |
+| 代码友好 | ❎ | ❎ | 👍 | 👍 |
+| 用户基础 | 👍 | 👍👍 | 👍 | ❎ |
 
 ## 一、Markdown 简介
 
@@ -171,11 +171,11 @@ Markdown作为轻量级的标记语言，很容易实现编程扩展
 
 ![markmap](https://media.xiaolin.fun/life/img-markdown/markmap.png)
 
-2. [aippt](https://www.aippt.cn) 基于 Markdown 文本大纲格式快速生成PPT。
+1. [aippt](https://www.aippt.cn) 基于 Markdown 文本大纲格式快速生成PPT。
 
 ![aippt](https://media.xiaolin.fun/life/img-markdown/aippt.png)
 
-3. [mermaid](https://mermaid.nodejs.cn/) 基于 JavaScript 的图标工具，支持流程图、时序图、类图、状态图、实体关系图、甘特图等。
+1. [mermaid](https://mermaid.nodejs.cn/) 基于 JavaScript 的图标工具，支持流程图、时序图、类图、状态图、实体关系图、甘特图等。
 
 ```mermaid
 gantt
@@ -189,7 +189,7 @@ gantt
         another task    :10d
 ```
 
-4. [Jekyll](https://jekyllrb.com/) 使用 Markdown 快速创建个人博客；[Hugo](https://gohugo.io/) 是另一款流行的静态站点生成器，本站点使用 **Hugo + Blowfish** 搭建。
+1. [Jekyll](https://jekyllrb.com/) 使用 Markdown 快速创建个人博客；[Hugo](https://gohugo.io/) 是另一款流行的静态站点生成器，本站点使用 **Hugo + Blowfish** 搭建。
 
 ## 三、快速体验
 
@@ -231,18 +231,18 @@ gantt
 
 ## 参考
 
-1. markmap, https://markmap.js.org/
-2. git, https://git-scm.com/
-3. aippt, https://www.aippt.cn
-4. mermaid, https://mermaid.nodejs.cn/
-5. Jekyll, https://jekyllrb.com/
-6. Arya 在线 Markdown 编辑器, https://markdown.lovejade.cn/
-7. Editor.md, https://pandao.github.io/editor.md/
-8. 在线工具 HTML2MD, https://tool.lu/markdown/
-9. Markdown edictor, https://markdown.com.cn/editor/
-10. 飞书文档, https://www.feishu.cn/product/docs
-11. MarkText, https://www.marktext.cc/
-12. Notable, https://notable.app/
-13. Typora, https://typoraio.cn/
-14. 菜鸟编程，Markdown 教程, https://www.runoob.com/markdown/md-tutorial.html
-15. Markdown Guide, https://www.markdownguide.org/getting-started/
+1. markmap, <https://markmap.js.org/>
+2. git, <https://git-scm.com/>
+3. aippt, <https://www.aippt.cn>
+4. mermaid, <https://mermaid.nodejs.cn/>
+5. Jekyll, <https://jekyllrb.com/>
+6. Arya 在线 Markdown 编辑器, <https://markdown.lovejade.cn/>
+7. Editor.md, <https://pandao.github.io/editor.md/>
+8. 在线工具 HTML2MD, <https://tool.lu/markdown/>
+9. Markdown edictor, <https://markdown.com.cn/editor/>
+10. 飞书文档, <https://www.feishu.cn/product/docs>
+11. MarkText, <https://www.marktext.cc/>
+12. Notable, <https://notable.app/>
+13. Typora, <https://typoraio.cn/>
+14. 菜鸟编程，Markdown 教程, <https://www.runoob.com/markdown/md-tutorial.html>
+15. Markdown Guide, <https://www.markdownguide.org/getting-started/>

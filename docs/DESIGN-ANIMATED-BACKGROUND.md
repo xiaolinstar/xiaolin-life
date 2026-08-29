@@ -11,7 +11,7 @@
 ### 相关文件
 
 | 文件 | 作用 |
-|---|---|
+| --- | --- |
 | `layouts/partials/home/background.html` | 首页全屏 hero 覆写模板，挂载 `#home-vanta` 容器与脚本 |
 | `assets/js/home-vanta.js` | Vanta Birds 初始化参数 |
 | `assets/js/vendor/three.min.js` | three.js r134（Vanta 依赖，自托管） |
@@ -25,7 +25,7 @@ Vanta.js 与 three.js 均为 **MIT 协议**，个人与商业站点免费使用�
 ## 参考网站（后期选型）
 
 | 网站 | 看什么 |
-|---|---|
+| --- | --- |
 | [Awwwards](https://www.awwwards.com/) | 获奖站点，整体设计感标杆 |
 | [Codrops](https://tympanus.net/codrops/) | 前端动效教程 + 可直接用的 Demo |
 | [Vanta.js](https://www.vantajs.com/) | 开箱即用的 WebGL 背景：BIRDS、WAVES（流动感）、FOG、CLOUDS |
@@ -37,7 +37,7 @@ Vanta.js 与 three.js 均为 **MIT 协议**，个人与商业站点免费使用�
 ## 备选方案对比
 
 | 方案 | 体积 | 风格 | 适用场景 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 纯 CSS 极光（保底） | 0 KB | 流动渐变，克制高级 | 任何页面，性能敏感场景 |
 | Vanta Birds（当前） | ~630 KB（three.js 601K + birds 28K） | 灵动鸟群，有生命力 | 内容较少的展示型主页 |
 | Vanta Waves / Fog | 同上 | 流动感 / 雾气弥漫 | 想换氛围时一行参数切换 |

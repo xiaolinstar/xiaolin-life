@@ -29,5 +29,7 @@
     "build:github": "pnpm run site:build:github",
     "sync:github-env": "node scripts/cd/sync-github-env.mjs"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "markdownlint-cli2": "^0.23.2"
+  }
 }

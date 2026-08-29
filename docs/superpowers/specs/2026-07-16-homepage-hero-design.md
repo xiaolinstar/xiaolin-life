@@ -23,7 +23,7 @@
 
 ## 整体结构
 
-```
+```text
 Header（新增 logo）
 └─ Hero 圆角卡片
    ├─ homepageImage + 主题色渐变滤镜
@@ -40,7 +40,7 @@ Header（新增 logo）
 ## 视觉方向
 
 | 项 | 决策 |
-|----|------|
+| ---- | ------ |
 | 配色 | 保持 `colorScheme = "blowfish"`，不整站换肤 |
 | 氛围 | 南京城市气质（天际线 / 江景感），避免抽象紫渐变 |
 | 头像 | 保留 `img/orange-cat.svg` |
@@ -77,7 +77,7 @@ Header（新增 logo）
 ## 素材清单
 
 | 资产 | 动作 | 说明 |
-|------|------|------|
+| ------ | ------ | ------ |
 | `assets/img/photos/home-hero.jpg`（或复用/升级现有图） | 新增或替换 | Hero 宽图；可用现有摄影气质图、`home-hero.svg` 导出、或 Nano Banana / 脚本生成城市插画 JPG |
 | `assets/img/logo.svg` | 新增 | Header 品牌标，浅/深色可读 |
 | `assets/icons/*.svg` | 按需 | 若主题缺语义图标再补；优先用内置 `globe` / `code` / `file-lines` 等 |

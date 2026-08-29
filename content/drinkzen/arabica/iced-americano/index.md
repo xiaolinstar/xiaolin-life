@@ -68,6 +68,7 @@ summary: "% Arabica Iced Americano：Nutri-Grade A 级，热量约 5-10kcal/杯�
 | +奶+糖 | 加奶加糖浆 | +44kcal | +6g | B-C 级 |
 
 > **说明**：
+>
 > - 冰美式是咖啡馆最基础的产品，品质取决于豆子和萃取
 > - % Arabica 的拼配豆带来干净清爽的口感
 > - 杯型容量：中杯 360ml、大杯 480ml

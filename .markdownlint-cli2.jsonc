@@ -1,0 +1,32 @@
+{
+  "globs": [
+    "CLAUDE.md",
+    "README.md",
+    ".tools/README.md",
+    "docs/**/*.md",
+    ".claude/README.md",
+    ".claude/skills/origin-distribute/**/*.md",
+    ".claude/rules/**/*.md",
+    "content/**/*.md",
+    "sre/**/*.md"
+  ],
+  "ignores": [
+    "node_modules/**",
+    "_site/**",
+    "resources/**",
+    "themes/**",
+    "volumes/**",
+    ".claude/skills/drinkzen-admin/**",
+    ".tools/**"
+  ],
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD024": false,
+    "MD028": false,
+    "MD033": false,
+    "MD036": false,
+    "MD041": false,
+    "MD060": false
+  }
+}

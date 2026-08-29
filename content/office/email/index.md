@@ -178,5 +178,5 @@ Thunderbird 无需手动协议，输入授权码则可自动协议匹配👍
 
 ## 参考
 
-1. Thunderbird 中文官网 https://www.thunderbird.net/zh-CN/
-2. 标小智，邮箱签名生成 https://www.logosc.cn/email-signature-generator#templates
+1. Thunderbird 中文官网 <https://www.thunderbird.net/zh-CN/>
+2. 标小智，邮箱签名生成 <https://www.logosc.cn/email-signature-generator#templates>

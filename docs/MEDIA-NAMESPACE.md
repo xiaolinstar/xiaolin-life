@@ -3,7 +3,7 @@
 `xiaolin-life` 与 `xiaolin-dcos` 共用：
 
 | 资源 | 值 |
-|------|-----|
+| ------ | ----- |
 | Bucket | `media-1300240022`（南京） |
 | CDN | `https://media.xiaolin.fun` |
 
@@ -15,7 +15,7 @@
 
 ## 目标结构
 
-```
+```text
 media.xiaolin.fun/
 ├── life/                          # xiaolin-life（个人生活站）
 │   ├── entertainment/gulou-riverfront/   # Page Bundle 图集
@@ -31,7 +31,7 @@ media.xiaolin.fun/
 
 **URL 规则**（两项目统一）：
 
-```
+```text
 https://media.xiaolin.fun/{项目前缀}/{相对路径}/{文件名}
 ```
 
@@ -70,7 +70,7 @@ Bucket 中已有 `docs/img-*`、`docs/gitops/` 等，**保持 `docs/` 前缀不�
 脚本**不会自动读取** `.env` 文件，需在运行前 `export`，或在命令前一行内联。凭证与项目前缀分开配置。
 
 | 变量 | 作用 | xiaolin-life | xiaolin-dcos |
-|------|------|--------------|--------------|
+| ------ | ------ | -------------- | -------------- |
 | `COS_PREFIX` | 上传到 Bucket 的对象键前缀 | `life` | `docs` |
 | `MEDIA_CDN_BASE` | Markdown / 校验用的 CDN 根 URL | `https://media.xiaolin.fun` | 同左 |
 | `COS_BUCKET_ALIAS` | coscli 桶别名（可选） | `media-1300240022` | 同左 |
@@ -146,7 +146,7 @@ COS_PREFIX=life          # xiaolin-life
 ### xiaolin-life Markdown URL 现状
 
 | 类型 | 当前 URL 路径 | 目标 |
-|------|---------------|------|
+| ------ | --------------- | ------ |
 | 鼓楼滨江 carousel | `/life/entertainment/gulou-riverfront/` | ✅ 已正确 |
 | static 插图 7 篇 | `/img-email-thunderbird/` 等（缺 `life/`） | `/life/img-*` |
 | 根级单图 | `/ai-dialectic-moon-egg.png` | `/life/ai-dialectic-moon-egg.png` |
@@ -154,7 +154,7 @@ COS_PREFIX=life          # xiaolin-life
 ### 对象键推导
 
 | 本地路径 | COS 键 |
-|----------|--------|
+| ---------- | -------- |
 | `content/life/entertainment/foo/gallery/01.jpg` | `life/entertainment/foo/01.jpg` |
 | `content/office/email/gallery/…` | `life/office/email/01.jpg` |
 | `static/assets/images/img-mac/…` | `life/img-mac/…`（需 `COS_PREFIX=life`） |
@@ -212,7 +212,7 @@ pnpm run media:prefix-migrate:apply
 
 规则：
 
-```
+```text
 https://media.xiaolin.fun/img-*     → https://media.xiaolin.fun/life/img-*
 https://media.xiaolin.fun/ai-*      → https://media.xiaolin.fun/life/ai-*
 # 已是 …/life/entertainment/… 的不改
@@ -246,7 +246,7 @@ https://media.xiaolin.fun/ai-*      → https://media.xiaolin.fun/life/ai-*
 ## 脚本改造要点（xiaolin-life）
 
 | 文件 | 改动 |
-|------|------|
+| ------ | ------ |
 | `scripts/upload-media-cos.sh` | 读 `COS_PREFIX`；static → `{prefix}/`；gallery 去重前缀 |
 | `scripts/lib/cos-config.sh` | 可选：本仓库默认 `COS_PREFIX=life` |
 | `scripts/cdn-check.sh` | 抽样 URL 改用 `life/` 路径 |
@@ -270,7 +270,7 @@ xiaolin-dcos 复制同一套脚本，`.env` 中设 **`COS_PREFIX=docs`**。
 ## 风险与回滚
 
 | 风险 | 缓解 |
-|------|------|
+| ------ | ------ |
 | 旧 URL 404（书签、搜索引擎） | 阶段 1 保留旧对象；CDN 可配置 **回源路径重写** 或短期双写 |
 | `life/life/` 双前缀 | gallery 上传逻辑检测首段是否已等于 `COS_PROJECT` |
 | 两项目误传同一键 | 代码 review + `COS_PROJECT` 必填 |

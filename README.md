@@ -84,7 +84,7 @@ hugo server -D
 
 ## 目录结构
 
-```
+```text
 config/           Hugo 配置（站点、主题、菜单、中文语言）
 content/          全部 Markdown 内容
   life/           生活记录

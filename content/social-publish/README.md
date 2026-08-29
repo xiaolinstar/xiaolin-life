@@ -4,7 +4,7 @@ origin 内容的小红书/微博/大众点评等社媒版本。**由 [`origin-di
 
 ## 目录
 
-```
+```html
 content/social-publish/
 ├── README.md           本文件
 ├── drafts/             分发草稿（staging）
@@ -14,7 +14,7 @@ content/social-publish/
 
 ## 状态机
 
-```
+```html
 origin（content/.../index.md）
   ↓ origin-distribute skill
 drafts/<slug>-xhs.md（草稿）
