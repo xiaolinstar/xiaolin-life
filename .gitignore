@@ -49,3 +49,7 @@ static/assets/images/**
 
 # Claude Code Settings
 .claude/settings.json
+
+# 外部安装的 skill（由 drinkzen-admin-cli skill install 自动生成，
+# 已通过 skills-lock.json 注册追踪，不入仓）
+.claude/skills/drinkzen-admin/
