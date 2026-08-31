@@ -1,5 +1,5 @@
 ---
-title: "Costa 卡布奇诺 · B-C 级"
+title: "Costa 卡布奇诺 · C 级"
 description: "经典意式卡布奇诺，浓缩咖啡、蒸汽牛奶与绵密奶泡的三层艺术"
 date: 2026-08-25
 draft: true
@@ -11,7 +11,7 @@ tags:
   - "Costa"
   - "卡布奇诺"
   - "经典咖啡"
-summary: "Costa Cappuccino：Nutri-Grade B-C 级，热量约 120-150kcal/杯，咖啡因约 75mg。"
+summary: "Costa Cappuccino：Nutri-Grade C 级（中杯/不加糖/全脂奶默认配置），热量约 191kcal/杯。"
 ---
 
 > **饮品信息**
@@ -22,10 +22,9 @@ summary: "Costa Cappuccino：Nutri-Grade B-C 级，热量约 120-150kcal/杯，�
 Costa Coffee · Cappuccino · 卡布奇诺
 
 - **系列**：Classic Coffee（经典咖啡系列）
-- **Nutri-Grade**：B-C 级（取决于奶类型和糖度）
-- **热量**：约 120-150kcal/杯（中杯/不加糖/全脂奶）
-- **咖啡因**：约 75mg（双份浓缩）
-- **推荐点单**：不加糖 / 可撒可可粉或肉桂粉
+- **Nutri-Grade（默认配置：中杯 360ml + 全脂奶 + 不加糖）**：C 级（饱和脂肪 1.93g/100ml 触发）
+- **热量**：约 191kcal/杯（中杯/不加糖/全脂奶）
+- **推荐点单**：不加糖 / 换脱脂奶可降至 A 级
 
 ## 制作方式调查
 
@@ -61,10 +60,10 @@ Costa Coffee · Cappuccino · 卡布奇诺
 
 | 参数 | 配置 | 热量 | 非乳源性糖 | 评级 |
 | :--- | :--- | :--- | :--- | :--- |
-| 默认 | 不加糖/全脂奶 | 130kcal | 0.2g | B-C 级 |
-| +可可粉 | 撒可可粉 | +10kcal | +1g | B-C 级 |
-| +肉桂粉 | 撒肉桂粉 | +5kcal | — | B-C 级 |
-| 换脱脂奶 | 脱脂奶 | -50kcal | — | A-B 级 |
+| 默认 | 不加糖/全脂奶 | 191kcal | 0.2g | C 级 |
+| +可可粉 | 撒可可粉 | +10kcal | +1g | C 级 |
+| +肉桂粉 | 撒肉桂粉 | +5kcal | — | C 级 |
+| 换脱脂奶 | 脱脂奶 | -50kcal | — | A 级 |
 
 > **说明**：
 >
@@ -112,8 +111,8 @@ Costa Coffee · Cappuccino · 卡布奇诺
 
 ```text
 🥤 DrinkZen 小程序搜「Costa 卡布奇诺」，看完整评估
-📍 全脂奶：B-C 级
-📍 脱脂奶：A-B 级
+📍 全脂奶：C 级
+📍 脱脂奶：A 级
 💡 控糖推荐：不加糖，撒可可粉
 ```
 

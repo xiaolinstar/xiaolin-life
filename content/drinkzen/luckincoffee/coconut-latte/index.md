@@ -4,6 +4,7 @@ description: "椰香浓郁，但饱和脂肪偏高，控量饮用"
 date: 2026-08-20
 draft: false
 showTableOfContents: false
+featureimage: "gallery/01-cover.jpg"
 categories:
   - "饮品记录"
   - "奶茶仙人"

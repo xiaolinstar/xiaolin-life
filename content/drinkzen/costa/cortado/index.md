@@ -1,5 +1,5 @@
 ---
-title: "Costa Cortado · A-B 级"
+title: "Costa Cortado · C 级"
 description: "双份 Ristretto 与少量牛奶的精致平衡，咖啡爱好者的进阶之选"
 date: 2026-08-25
 draft: true
@@ -11,7 +11,7 @@ tags:
   - "Costa"
   - "Cortado"
   - "经典咖啡"
-summary: "Costa Cortado：Nutri-Grade A-B 级，热量约 50-70kcal/杯，咖啡因约 130mg。"
+summary: "Costa Cortado：Nutri-Grade C 级（120ml/不加糖/全脂奶默认配置），热量约 53kcal/杯。"
 ---
 
 > **饮品信息**
@@ -22,10 +22,9 @@ summary: "Costa Cortado：Nutri-Grade A-B 级，热量约 50-70kcal/杯，咖啡
 Costa Coffee · Cortado · 可塔朵
 
 - **系列**：Classic Coffee（经典咖啡系列）
-- **Nutri-Grade**：A-B 级（咖啡比例高，奶量极少）
-- **热量**：约 50-70kcal/杯（不加糖/全脂奶）
-- **咖啡因**：约 130mg（双份 Ristretto）
-- **推荐点单**：不加糖 / 体验纯粹咖啡风味
+- **Nutri-Grade（默认配置：120ml + 全脂奶 + 不加糖）**：C 级（饱和脂肪 1.53g/100ml 触发）
+- **热量**：约 53kcal/杯（不加糖/全脂奶）
+- **推荐点单**：不加糖 / 换脱脂奶可降至 A 级
 
 ## 制作方式调查
 
@@ -59,8 +58,8 @@ Costa Coffee · Cortado · 可塔朵
 
 | 参数 | 配置 | 热量 | 非乳源性糖 | 评级 |
 | :--- | :--- | :--- | :--- | :--- |
-| 默认 | 不加糖/全脂奶 | 53kcal | 0.1g | A-B 级 |
-| +1 泵糖浆 | 微甜 | +15kcal | +3g | B 级 |
+| 默认 | 不加糖/全脂奶 | 53kcal | 0.1g | C 级 |
+| +1 泵糖浆 | 微甜 | +15kcal | +3g | C 级 |
 | 换脱脂奶 | 脱脂奶 | -25kcal | — | A 级 |
 
 > **说明**：
@@ -109,7 +108,7 @@ Costa Coffee · Cortado · 可塔朵
 
 ```text
 🥤 DrinkZen 小程序搜「Costa Cortado」，看完整评估
-📍 A-B 级 · 咖啡爱好者的进阶之选
+📍 C 级（120ml + 全脂奶默认）· 换脱脂奶可降至 A 级
 ☕ 双份 Ristretto，风味浓郁
 💡 控糖友好：天然低糖
 ```

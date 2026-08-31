@@ -1,5 +1,5 @@
 ---
-title: "Costa 榛果拿铁 · C-D 级"
+title: "Costa 榛果拿铁 · D 级"
 description: "经典拿铁与榛果糖浆的坚果风味，风味拿铁的经典之选"
 date: 2026-08-25
 draft: true
@@ -11,7 +11,7 @@ tags:
   - "Costa"
   - "榛果拿铁"
   - "风味拿铁"
-summary: "Costa Hazelnut Latte：Nutri-Grade C-D 级，热量约 255-305kcal/杯，咖啡因约 75mg。"
+summary: "Costa Hazelnut Latte：Nutri-Grade D 级（中杯/标准甜/全脂奶默认配置），热量约 266kcal/杯。"
 ---
 
 > **饮品信息**
@@ -22,10 +22,9 @@ summary: "Costa Hazelnut Latte：Nutri-Grade C-D 级，热量约 255-305kcal/杯
 Costa Coffee · Hazelnut Latte · 榛果拿铁
 
 - **系列**：Flavored Lattes（风味拿铁系列）
-- **Nutri-Grade**：C-D 级（榛果糖浆含糖量高）
-- **热量**：约 255-305kcal/杯（中杯/标准甜/全脂奶）
-- **咖啡因**：约 75mg（双份浓缩）
-- **推荐点单**：可要求减糖浆 / 选脱脂奶降低等级
+- **Nutri-Grade（默认配置：中杯 360ml + 全脂奶 + 3泵榛果糖浆）**：D 级（非乳源性糖 7.0g/100ml 触发）
+- **热量**：约 266kcal/杯（中杯/标准甜/全脂奶）
+- **推荐点单**：微糖或减糖 / 不加糖可降至 C 级
 
 ## 制作方式调查
 
@@ -62,11 +61,11 @@ Costa Coffee · Hazelnut Latte · 榛果拿铁
 
 | 参数 | 配置 | 热量 | 非乳源性糖 | 评级 |
 | :--- | :--- | :--- | :--- | :--- |
-| 标准甜 | 3 泵糖浆/全脂奶 | 266kcal | 25.2g | C-D 级 |
+| 标准甜 | 3 泵糖浆/全脂奶 | 266kcal | 25.2g | D 级 |
 | 减糖 | 2 泵糖浆/全脂奶 | 233kcal | 16.8g | C 级 |
-| 微糖 | 1 泵糖浆/全脂奶 | 200kcal | 8.4g | B-C 级 |
-| 不加糖 | 0 泵糖浆/全脂奶 | 166kcal | 0.2g | B-C 级 |
-| 换脱脂奶 | 脱脂奶 | -65kcal | — | C 级 |
+| 微糖 | 1 泵糖浆/全脂奶 | 200kcal | 8.4g | C 级 |
+| 不加糖 | 0 泵糖浆/全脂奶 | 166kcal | 0.2g | C 级 |
+| 换脱脂奶 | 脱脂奶 | -65kcal | — | D 级 |
 
 > **说明**：
 >
@@ -114,8 +113,8 @@ Costa Coffee · Hazelnut Latte · 榛果拿铁
 
 ```text
 🥤 DrinkZen 小程序搜「Costa 榛果拿铁」，看完整评估
-📍 标准甜：C-D 级
-📍 微糖：B-C 级
+📍 标准甜：D 级
+📍 微糖：C 级
 💡 控糖推荐：不加糖或微糖
 ```
 

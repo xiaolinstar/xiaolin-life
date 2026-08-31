@@ -1,5 +1,5 @@
 ---
-title: "Costa Flat White · A-B 级"
+title: "Costa Flat White · C 级"
 description: "双份 Ristretto 与丝滑微奶泡的完美融合，咖啡爱好者的精致之选"
 date: 2026-08-25
 draft: true
@@ -11,7 +11,7 @@ tags:
   - "Costa"
   - "Flat White"
   - "经典咖啡"
-summary: "Costa Flat White：Nutri-Grade A-B 级，热量约 130-160kcal/杯，咖啡因约 130mg。"
+summary: "Costa Flat White：Nutri-Grade C 级（中杯/不加糖/全脂奶默认配置），热量约 201kcal/杯。"
 ---
 
 > **饮品信息**
@@ -22,10 +22,9 @@ summary: "Costa Flat White：Nutri-Grade A-B 级，热量约 130-160kcal/杯，�
 Costa Coffee · Flat White · 澳白
 
 - **系列**：Classic Coffee（经典咖啡系列）
-- **Nutri-Grade**：A-B 级（咖啡比例高，奶量相对少）
-- **热量**：约 130-160kcal/杯（中杯/不加糖/全脂奶）
-- **咖啡因**：约 130mg（双份 Ristretto）
-- **推荐点单**：不加糖 / 体验纯粹咖啡与牛奶的平衡
+- **Nutri-Grade（默认配置：中杯 360ml + 全脂奶 + 不加糖）**：C 级（饱和脂肪 2.06g/100ml 触发）
+- **热量**：约 201kcal/杯（中杯/不加糖/全脂奶）
+- **推荐点单**：不加糖 / 换脱脂奶可降至 A 级
 
 ## 制作方式调查
 
@@ -61,10 +60,10 @@ Costa Coffee · Flat White · 澳白
 
 | 参数 | 配置 | 热量 | 非乳源性糖 | 评级 |
 | :--- | :--- | :--- | :--- | :--- |
-| 默认 | 不加糖/全脂奶 | 145kcal | 0.1g | A-B 级 |
-| +1 泵糖浆 | 标准甜 | +25kcal | +6g | B-C 级 |
+| 默认 | 不加糖/全脂奶 | 201kcal | 0.1g | C 级 |
+| +1 泵糖浆 | 标准甜 | +25kcal | +6g | C 级 |
 | 换脱脂奶 | 脱脂奶 | -65kcal | — | A 级 |
-| 换燕麦奶 | 燕麦奶 | -15kcal | +2g | A-B 级 |
+| 换燕麦奶 | 燕麦奶 | -15kcal | +2g | A 级 |
 
 > **说明**：
 >
@@ -112,7 +111,7 @@ Costa Coffee · Flat White · 澳白
 
 ```text
 🥤 DrinkZen 小程序搜「Costa Flat White」，看完整评估
-📍 全脂奶：A-B 级
+📍 全脂奶：C 级
 📍 脱脂奶：A 级
 💡 咖啡爱好者的精致之选
 ☕ 双份 Ristretto，风味更浓郁
