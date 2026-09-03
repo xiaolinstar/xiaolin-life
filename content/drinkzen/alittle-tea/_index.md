@@ -161,7 +161,7 @@ summary: "一点点：源自台湾的手摇茶饮品牌，坚持现煮现做，�
 - [锦鲤红茶](/drinkzen/alittle-tea/jin-li-hong-cha/) · 纯茶首选 · 约 5kcal · 红茶醇厚
 - [蜂蜜绿](/drinkzen/alittle-tea/feng-mi-lv/) · 清甜解渴 · 约 150kcal · 绿茶 + 蜂蜜
 - [养乐多绿](/drinkzen/alittle-tea/yang-le-duo-lv/) · 酸甜开胃 · 约 200kcal · 绿茶 + 养乐多
-- [8冰绿](/drinkzen/alittle-tea/8-bing-lv/) · 清爽美味 · 约 120kcal · 绿茶 + 金桔 + 青梅
+- [8冰绿](/drinkzen/alittle-tea/ba-bing-lv/) · 清爽美味 · 约 120kcal · 绿茶 + 金桔 + 青梅
 
 **点奶茶系列**（经典奶茶）：
 
