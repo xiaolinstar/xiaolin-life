@@ -4,7 +4,7 @@ description: "瑞幸咖啡产品测评与热量记录"
 date: 2026-08-22
 draft: false
 showTableOfContents: false
-summary: "瑞幸咖啡：生椰拿铁、经典泰奶、泰奶鸳鸯拿铁等产品测评，含新加坡 25 款门店菜单及 Nutri-Grade 健康评级。"
+summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯拿铁等产品测评，含新加坡 25 款门店菜单及 Nutri-Grade 健康评级。"
 ---
 
 瑞幸咖啡是中国最大的连锁咖啡品牌之一，以高性价比和快速扩张著称。
@@ -177,6 +177,7 @@ summary: "瑞幸咖啡：生椰拿铁、经典泰奶、泰奶鸳鸯拿铁等产�
 
 ## 产品列表
 
+- [虎斑橘 · D 级](/drinkzen/luckincoffee/hu-ban-ju/) · 黄油丝绒奶盖 × 现刨橙皮 × 耶加雪菲（2026/08/29 新品）
 - [瑞幸生椰拿铁 · C 级预警](/drinkzen/luckincoffee/coconut-latte/) · Day 1 小红书推文样例
 - [咸法酪泰奶](/drinkzen/luckincoffee/xian-fa-lao-thai-nai/) · 咸芝士奶盖 × 经典泰式奶茶（2026/08/31 新品）
 - [泰奶鸳鸯拿铁 · C 级预警](/drinkzen/luckincoffee/thai-milk-tea-latte/) · 茶咖奶酪三重碰撞
