@@ -58,41 +58,29 @@ summary: "星巴克（Starbucks）产品测评，含拿铁、星冰乐等经典�
 
 ## 产品列表
 
-> ⚠️ 以下等级基于配方推算，非星巴克官方数据。产品详情页包含完整营养计算。
+### 经典咖啡
 
-### 经典咖啡系列
+- [美式咖啡 · **A 级**](/drinkzen/starbucks/americano/) · 纯咖啡，无糖无脂
+- [拿铁 · **B-C 级**](/drinkzen/starbucks/latte/) · 浓缩咖啡 + 蒸汽牛奶，取决于奶类型
+- [卡布奇诺 · **B-C 级**](/drinkzen/starbucks/cappuccino/) · 浓缩咖啡 + 蒸汽牛奶 + 绵密奶泡
+- [冷萃咖啡 · **A 级**](/drinkzen/starbucks/cold-brew/) · 低温慢萃 20 小时，顺滑醇厚
+- [红茶拿铁 · **B-C 级**](/drinkzen/starbucks/hong-cha-na-tie/) · 红茶底 + 蒸汽牛奶，无浓缩咖啡
 
-| 产品 | 英文名 | 等级 | 说明 |
-| :--- | :--- | :--- | :--- |
-| 美式咖啡 | Americano | **A** | 纯咖啡，无糖无脂 |
-| 拿铁 | Caffè Latte | **B-C** | 牛奶 + 浓缩咖啡，取决于奶类型 |
-| 卡布奇诺 | Cappuccino | **B-C** | 奶泡为主，脂肪适中 |
-| 摩卡 | Caffè Mocha | **C-D** | 巧克力酱含糖量高 |
-| 焦糖玛奇朵 | Caramel Macchiato | **C-D** | 香草糖浆 + 焦糖酱 |
-| Flat White | Flat White | **A-B** | 咖啡比例更高，脂肪略低于拿铁 |
+### 风味咖啡
 
-### 星冰乐系列
+- [焦糖玛奇朵 · **C-D 级**](/drinkzen/starbucks/caramel-macchiato/) · 香草糖浆 + 焦糖酱
+- [桃桃乌龙茶 · **A 级**](/drinkzen/starbucks/tao-tao-wu-long-cha/) · 蜜桃果香 + 清雅乌龙
 
-| 产品 | 英文名 | 等级 | 说明 |
-| :--- | :--- | :--- | :--- |
-| 摩卡星冰乐 | Mocha Frappuccino | **D** | 巧克力 + 奶油，含糖高 |
-| 焦糖星冰乐 | Caramel Frappuccino | **D** | 焦糖 + 奶油，含糖高 |
-| 抹茶星冰乐 | Green Tea Frappuccino | **C-D** | 抹茶粉 + 糖浆 |
-| 香草星冰乐 | Vanilla Frappuccino | **D** | 香草糖浆 + 奶油 |
+### 星冰乐
 
-### 茶瓦纳系列
+- [抹茶星冰乐 · **C-D 级**](/drinkzen/starbucks/mo-cha-xing-bing-le/) · 抹茶糖浆 + 搅打奶油冰沙
+- [香草星冰乐 · **D 级**](/drinkzen/starbucks/xiang-cao-xing-bing-le/) · 香草糖浆 + 搅打奶油冰沙
 
-| 产品 | 英文名 | 等级 | 说明 |
-| :--- | :--- | :--- | :--- |
-| 红茶拿铁 | Black Tea Latte | **B-C** | 红茶 + 牛奶 |
-| 抹茶拿铁 | Green Tea Latte | **B-C** | 抹茶 + 牛奶 |
+### 茶饮
 
-### 冷萃系列
+- [冰摇柠檬茶 · **A-B 级**](/drinkzen/starbucks/bing-yao-ning-meng-cha/) · 红茶底 + 柠檬糖浆，冰摇经典
 
-| 产品 | 英文名 | 等级 | 说明 |
-| :--- | :--- | :--- | :--- |
-| 冷萃咖啡 | Cold Brew | **A** | 纯咖啡，无糖无脂 |
-| 氮气冷萃 | Nitro Cold Brew | **A** | 纯咖啡，口感丝滑 |
+> ⚠️ 以上等级均为预估值
 
 ## 参考
 

@@ -63,31 +63,22 @@ McCafé（麦咖啡）1993 年在澳大利亚墨尔本创立，是麦当劳旗�
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| 美式咖啡 | Americano | **A** | 纯咖啡，无糖无脂 |
-| 拿铁 | Latte | **B-C** | 牛奶 + 浓缩咖啡，取决于奶类型 |
-| 卡布奇诺 | Cappuccino | **B-C** | 奶泡为主，脂肪适中 |
-| 摩卡 | Mocha | **C-D** | 巧克力酱含糖量高 |
+| [美式](/drinkzen/mccafe/mei-shi/) | Americano | **A** | 纯咖啡，无糖无脂 |
+| [拿铁](/drinkzen/mccafe/na-tie/) | Latte | **B-C** | 牛奶 + 浓缩咖啡，取决于奶类型 |
+| [卡布奇诺](/drinkzen/mccafe/ka-bu-qi-nuo/) | Cappuccino | **B-C** | 奶泡为主，脂肪适中 |
+| [摩卡](/drinkzen/mccafe/mocha/) | Mocha | **C-D** | 巧克力酱含糖量高 |
 
 ### 风味拿铁系列
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| 香草拿铁 | Vanilla Latte | **C-D** | 香草糖浆含糖 |
-| 焦糖拿铁 | Caramel Latte | **C-D** | 焦糖糖浆含糖 |
-
-### 冰咖啡系列
-
-| 产品 | 英文名 | 等级 | 说明 |
-| :--- | :--- | :--- | :--- |
-| 冰美式 | Iced Americano | **A** | 纯咖啡，无糖无脂 |
-| 冰拿铁 | Iced Latte | **B-C** | 牛奶 + 浓缩咖啡 + 冰 |
+| [巧克力风味拿铁](/drinkzen/mccafe/qiao-ke-li-feng-wei-na-tie/) | Chocolate Latte | **C** | 巧克力酱含糖，脂肪适中 |
 
 ### Frappé 系列
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| 摩卡 Frappé | Mocha Frappé | **D** | 巧克力 + 奶油，含糖高 |
-| 焦糖 Frappé | Caramel Frappé | **D** | 焦糖 + 奶油，含糖高 |
+| [焦糖 Frappé](/drinkzen/mccafe/caramel-frappe/) | Caramel Frappé | **D** | 焦糖 + 奶油，含糖高 |
 
 ## 参考
 

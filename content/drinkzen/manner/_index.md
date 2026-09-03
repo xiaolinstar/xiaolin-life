@@ -63,33 +63,23 @@ Manner 官方产品页**不公布**完整的健康评级数据（热量、糖分
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| 美式咖啡 | Americano | **A** | 纯咖啡，无糖无脂 |
-| 拿铁 | Latte | **B-C** | 牛奶 + 浓缩咖啡，取决于奶类型 |
-| 卡布奇诺 | Cappuccino | **B-C** | 奶泡为主，脂肪适中 |
-| 摩卡 | Mocha | **C-D** | 巧克力酱含糖量高 |
-| Flat White | Flat White | **A-B** | 咖啡比例更高，脂肪略低于拿铁 |
-
-### SOE 单品系列
-
-| 产品 | 英文名 | 等级 | 说明 |
-| :--- | :--- | :--- | :--- |
-| SOE 美式 | SOE Americano | **A** | 单一产地浓缩，无糖无脂 |
-| SOE 拿铁 | SOE Latte | **B-C** | 单一产地浓缩 + 牛奶 |
+| [美式](/drinkzen/manner/americano/) | Americano | **A** | 纯咖啡，无糖无脂 |
+| [燕麦拿铁](/drinkzen/manner/oat-latte/) | Oat Latte | **B-C** | 燕麦奶替代牛奶 |
+| [SOE 拿铁](/drinkzen/manner/soe-latte/) | SOE Latte | **B-C** | 单一产地浓缩 + 牛奶 |
 
 ### 风味拿铁系列
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| 香草拿铁 | Vanilla Latte | **C-D** | 香草糖浆含糖 |
-| 焦糖拿铁 | Caramel Latte | **C-D** | 焦糖糖浆含糖 |
-| 榛果拿铁 | Hazelnut Latte | **C-D** | 榛果糖浆含糖 |
+| [香草拿铁](/drinkzen/manner/xiang-cao-na-tie/) | Vanilla Latte | **C** | 香草糖浆 1 泵 |
+| [桂花乌龙拿铁](/drinkzen/manner/gui-hua-wu-long-na-tie/) | Osmanthus Oolong Latte | **B** | 桂花糖浆 1 泵 |
+| [冰葡拿铁](/drinkzen/manner/bing-pu-na-tie/) | Iced Grape Latte | **C** | 葡萄果汁 + 鲜奶 |
 
-### 创意特调系列
+### 手冲·单品系列
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| 橘皮拿铁 | Orange Peel Latte | **C-D** | 橘皮糖浆含糖 |
-| 生椰拿铁 | Coconut Latte | **C-D** | 椰浆替代牛奶，脂肪较高 |
+| [手冲·耶加雪菲](/drinkzen/manner/shou-chong-ye-jia-xue-fei/) | Pour Over Yirgacheffe | **A** | 单一产地手冲 |
 
 ## 参考
 
