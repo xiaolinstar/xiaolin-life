@@ -92,27 +92,25 @@ summary: "茶百道产品测评，含经典饮品的 Nutri-Grade 健康评级。
 
 ## 产品列表
 
-**杨枝甘露系列**：
-
-- 杨枝甘露 · C 级 ⚠️ · 芒果 + 椰奶 + 西米 + 西柚，招牌爆款
-- 杨枝甘露酸奶 · C 级 ⚠️ · 杨枝甘露 + 酸奶，口感更丰富
-
 **鲜果茶系列**：
 
-- 超级杯水果茶 · B 级 ⚠️ · 多种鲜果 + 茶底，大杯畅饮
-- 葡萄冻冻 · C 级 ⚠️ · 鲜葡萄 + 茶冻，清爽解腻
-- 草莓大福 · C 级 ⚠️ · 鲜草莓 + 奶茶底
+- [百香果绿茶](/drinkzen/chabaidao/bai-xiang-guo-lv-cha/) · B-C 级 ⚠️ · 百香果 + 绿茶，清爽果茶
+- [超杯葡萄](/drinkzen/chabaidao/chao-bei-pu-tao/) · B-C 级 ⚠️ · 巨峰葡萄 + 茉莉绿茶，超大杯量足
+- [生椰西瓜](/drinkzen/chabaidao/sheng-ye-xi-gua/) · B-C 级 ⚠️ · 西瓜 + 生椰浆 + 绿茶，夏日清爽
+- [西瓜啵啵](/drinkzen/chabaidao/xi-gua-bo-bo/) · B-C 级 ⚠️ · 西瓜 + 脆啵啵 + 绿茶，夏日解渴
+
+**轻乳茶系列**：
+
+- [轻乳茶·茉莉奶绿](/drinkzen/chabaidao/qing-ru-cha-mo-li-nai-lv/) · B 级 ⚠️ · 茉莉绿茶 + 轻盈鲜奶，茶香奶香平衡
 
 **奶茶系列**：
 
-- 招牌奶茶 · C 级 ⚠️ · 经典奶茶，口感醇厚
-- 珍珠奶茶 · C 级 ⚠️ · 奶茶 + 黑糖珍珠
-- 芋泥啵啵奶茶 · D 级 ⚠️ · 芋泥 + 珍珠 + 奶茶，口感丰富
+- [招牌奶茶](/drinkzen/chabaidao/zhao-pai-nai-cha/) · C-D 级 ⚠️ · 经典奶茶，口感醇厚
+- [豆花芋圆奶茶](/drinkzen/chabaidao/dou-hua-yu-yuan-nai-cha/) · C-D 级 ⚠️ · 豆花 + 芋圆 + 红茶 + 鲜奶，多重口感
 
-**纯茶系列**：
+**杨枝甘露系列**：
 
-- 茉莉奶绿 · B 级 ⚠️ · 茉莉绿茶 + 鲜奶
-- 四季春茶 · A 级 ⚠️ · 纯茶，清爽无负担
+- [杨枝甘露](/drinkzen/chabaidao/yang-zhi-gan-lu/) · C-D 级 ⚠️ · 芒果 + 椰奶 + 西米 + 西柚，招牌爆款
 
 > ⚠️ 以上等级均为预估值，基于同类产品 Nutri-Grade 评级规律推算，非官方数据。
 

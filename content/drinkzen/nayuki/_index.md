@@ -98,6 +98,9 @@ summary: "奈雪的茶产品测评，含经典饮品的 Nutri-Grade 健康评级
 - 霸气芝士草莓 · D 级 ⚠️ · 鲜草莓 + 芝士奶盖
 - 霸气玉油柑 · B 级 ⚠️ · 油柑鲜榨，回甘清爽
 - 霸气葡萄 · C 级 ⚠️ · 鲜葡萄 + 茶底
+- [霸气草莓](/drinkzen/nayuki/ba-qi-cao-mei/) · C 级 ⚠️ · 鲜草莓 + 茶底，清爽无奶盖
+- [霸气玉油柑](/drinkzen/nayuki/ba-qi-yu-you-gan/) · B 级 ⚠️ · 油柑鲜榨，回甘清爽
+- [霸气芝士葡萄](/drinkzen/nayuki/ba-qi-zhi-shi-pu-tao/) · C-D 级 ⚠️ · 鲜葡萄 + 茶底 + 芝士奶盖
 
 **纯茶系列**：
 
@@ -108,6 +111,11 @@ summary: "奈雪的茶产品测评，含经典饮品的 Nutri-Grade 健康评级
 
 - 宝藏鲜奶茶 · C 级 ⚠️ · 鲜牛奶 + 茶底 + 配料
 - 金色山脉宝藏茶 · C 级 ⚠️ · 红茶底 + 鲜奶 + 黑糖珍珠
+- [金色山脉珍珠奶茶](/drinkzen/nayuki/jin-se-shan-ma-zhen-zhu-nai-cha/) · C-D 级 ⚠️ · 红茶底 + 鲜奶 + 黑糖珍珠
+
+**芝士茶系列**：
+
+- [芝士金凤茶王](/drinkzen/nayuki/zhi-shi-jin-feng-cha-wang/) · C 级 ⚠️ · 乌龙茶底 + 芝士奶盖
 
 > ⚠️ 以上等级均为预估值，基于同类产品 Nutri-Grade 评级规律推算，非官方数据。
 

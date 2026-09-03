@@ -98,32 +98,23 @@ summary: "沪上阿姨产品测评，含经典饮品的 Nutri-Grade 健康评级
 
 ## 产品列表
 
-**五谷茶饮系列**：
+**厚乳系列**（沪上阿姨主打，浓奶挂杯）：
 
-- 血糯米奶茶 · C 级 ⚠️ · 血糯米 + 奶茶，招牌爆款
-- 五谷酸奶 · B 级 ⚠️ · 五谷 + 酸奶，健康美味
-- 红豆奶茶 · C 级 ⚠️ · 红豆 + 奶茶，口感丰富
+- [厚乳血糯米奶茶](/drinkzen/auntie-shanghai/hou-ru-xue-nuo-mi-nai-cha/) · C 级 ⚠️ · 厚乳浓奶 + 现煮血糯米，招牌爆款升级
 
-**鲜果茶系列**：
+**鲜果茶系列**（鲜果 + 茶底 / 椰乳，清爽解腻）：
 
-- 超级杯水果茶 · B 级 ⚠️ · 多种鲜果 + 茶底，大杯畅饮
-- 柠檬茶 · B 级 ⚠️ · 鲜柠檬 + 茶底，清爽解腻
-- 芒果酸奶 · C 级 ⚠️ · 芒果 + 酸奶，酸甜可口
+- [桃桃乌龙](/drinkzen/auntie-shanghai/tao-tao-wu-long/) · C 级 ⚠️ · 蜜桃果肉 + 乌龙茶底，清爽果香
+- [多肉葡萄](/drinkzen/auntie-shanghai/duo-rou-pu-tao/) · C 级 ⚠️ · 鲜葡萄果肉 + 茉莉绿茶，果香浓郁
+- [杨枝甘露](/drinkzen/auntie-shanghai/yang-zhi-gan-lu/) · C 级 ⚠️ · 芒果 + 西柚 + 西米，港式甜品
+- [超嗲草莓大福](/drinkzen/auntie-shanghai/chao-die-cao-mei-da-fu/) · C 级 ⚠️ · 鲜草莓 + 手作麻薯，季节限定
+- [芒椰西米露](/drinkzen/auntie-shanghai/mang-ye-xi-mi-lu/) · C-D 级 ⚠️ · 芒果 + 椰奶 + 西米，热带风味
 
-**奶茶系列**：
+**轻乳茶系列**（清淡茶感 / 纯茶）：
 
-- 招牌奶茶 · C 级 ⚠️ · 经典奶茶，口感醇厚
-- 珍珠奶茶 · C 级 ⚠️ · 奶茶 + 黑糖珍珠
-
-**纯茶系列**：
-
-- 茉莉绿茶 · A 级 ⚠️ · 纯茶，清爽无负担
-- 四季春茶 · A 级 ⚠️ · 纯茶，清香怡人
-
-**酸奶系列**：
-
-- 五谷酸奶 · B 级 ⚠️ · 五谷 + 酸奶，健康美味
-- 草莓酸奶 · B 级 ⚠️ · 草莓 + 酸奶，酸甜可口
+- [血糯米奶茶](/drinkzen/auntie-shanghai/xue-nuo-mi-nai-cha/) · C-D 级 ⚠️ · 血糯米 + 奶茶，招牌爆款
+- [桂花乌龙](/drinkzen/auntie-shanghai/gui-hua-wu-long/) · A-B 级 ⚠️ · 桂花 + 乌龙，香气馥郁
+- [手作芋泥波波](/drinkzen/auntie-shanghai/shou-zuo-yu-ni-bo-bo/) · C 级 ⚠️ · 现制芋泥 + 手作芋圆，双重芋香
 
 > ⚠️ 以上等级均为预估值，基于同类产品 Nutri-Grade 评级规律推算，非官方数据。
 
