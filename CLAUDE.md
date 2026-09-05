@@ -1,15 +1,14 @@
 ---
-description: 项目通用规则
+description: Claude Code 专有规则（Git 提交策略）
 globs:
 alwaysApply: true
 ---
 
-# 项目通用规则
+@AGENTS.md
 
-- 始终使用中文回复用户，但技术专有名词可保留英文（如 API、Python、DTO等）。
-- 使用项目既有风格，不引入新风格，包括代码、文档或交互，默认延用项目中已有的格式、缩进、命名习惯。
-- 尽可能少地输出内容，仅提供高信息密度回复，禁止无效寒暄、过度铺垫，只输出对当前任务有直接帮助的信息。
-- 遵守[《中文文案排版指北》](https://www.bookstack.cn/read/chinese-copywriting-guidelines/README.md)标准排版格式：中文与英文之间加空格，中文与数字之间加空格；全角标点与其他字符之间不加空格。全中文语境下必须使用全角标点。
+# Claude 专有规则
+
+> 中文输出与排版规范由 `.claude/rules/core.md` 自动加载（alwaysApply: true），不在此重复。
 
 ## Git 提交规则
 

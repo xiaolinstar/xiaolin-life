@@ -72,7 +72,7 @@ cd xiaolin-life
 # 已有仓库时初始化 submodule
 git submodule update --init --recursive
 
-# 安装依赖
+# 安装依赖（自动触发 husky prepare）
 pnpm install
 
 # 启动开发服务器（热更新）
@@ -81,6 +81,41 @@ pnpm run site:dev
 # 或直接使用 Hugo
 hugo server -D
 ```
+
+## 开发工具
+
+### Lint
+
+```bash
+pnpm run lint        # markdownlint-cli2（CI 必跑）
+pnpm run lint:fix    # 自动修复可修项
+```
+
+规则配置：[.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc)（默认禁用 MD013 行长、MD024 重复标题、MD033 内联 HTML、MD034 裸 URL、MD036 emphasis 作标题、MD041 首行必为标题、MD060 表格对齐）。
+
+### Git hooks（Husky + commitlint + lint-staged）
+
+`pnpm install` 自动触发 `prepare` 脚本初始化 Husky。
+
+```bash
+# 必须本机安装 gitleaks（commit 前阻断式 secret 扫描）
+brew install gitleaks  # macOS
+# Linux: https://github.com/gitleaks/gitleaks#installation
+```
+
+hook 行为：
+
+- **pre-commit**：gitleaks 暂存区扫描 + lint-staged（对 `*.md` 跑 `markdownlint-cli2 --fix`）
+- **commit-msg**：commitlint（Conventional Commits，subject ≤ 100 字符）
+
+绕过 hook 会在 CI 阶段被阻断——详见 [dev-standards CI 最低门槛](https://github.com/xiaolinstar/dev-standards/blob/main/playbook/ci-minimum-gate.md)。
+
+### CI / CD 门禁
+
+- `ci-ghcr.yml`：gitleaks → lint → Docker 构建推送（必选 4 项均覆盖）
+- `cd-ghcr.yml`：config-sync → deploy 两阶段（依赖 ci 成功后触发）
+- `pages.yml`：GitHub Pages 预览构建
+- `media-verify.yml`：内容变更触发 CDN URL 健康检查
 
 ## 目录结构
 

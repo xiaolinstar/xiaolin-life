@@ -17,16 +17,21 @@
     "themes/**",
     "volumes/**",
     ".claude/skills/drinkzen-admin/**",
-    ".tools/**"
+    ".tools/**",
+    "docs/superpowers/**",
+    "docs/research/**"
   ],
   "config": {
     "default": true,
     "MD013": false,
     "MD024": false,
     "MD028": false,
+    "MD029": false,
     "MD033": false,
+    "MD034": false,
     "MD036": false,
     "MD041": false,
+    "MD047": false,
     "MD060": false
   }
 }

@@ -27,9 +27,19 @@
     "prebuild:github": "pnpm run photos:generate && pnpm run featured:setup",
     "build": "pnpm run site:build",
     "build:github": "pnpm run site:build:github",
-    "sync:github-env": "node scripts/cd/sync-github-env.mjs"
+    "sync:github-env": "node scripts/cd/sync-github-env.mjs",
+    "lint": "markdownlint-cli2",
+    "lint:fix": "markdownlint-cli2 --fix",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.md": ["markdownlint-cli2 --fix"]
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
     "markdownlint-cli2": "^0.23.2"
   }
 }
