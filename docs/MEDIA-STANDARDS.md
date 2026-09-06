@@ -141,7 +141,7 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 ### 新文章
 
 1. 创建 `content/<分区>/<slug>/index.md`。
-2. 原图 / 原视频放入同目录 `gallery/`，按命名规范重命名。
+2. 从 `${RAW_MEDIA_ROOT}` 对应路径拷贝（或硬链）到 `content/<分区>/<slug>/gallery/`；D 盘原素材保持不动。
 3. 本地预览：`pnpm run site:dev`（写作期 shortcode 读本地 `gallery/`）。
 4. 上传 COS：
 
@@ -159,17 +159,39 @@ git commit -m "chore: 媒体迁出 Git，改由 COS 分发"
 2. `coscli sync` 覆盖上传（同键名即覆盖）。
 3. 若改名，同步更新 Markdown 中的 URL。
 
-### 备份建议
+### 作者原素材（D 盘 raw 流）
 
-除仓库与 COS 外，作者本机或 NAS 保留一份母本目录，例如：
+原素材的**起点**与**长期归档**，不是冷备份副本。
 
 ```text
-~/Archive/xiaolin-life-media/
-└── life/entertainment/gulou-riverfront/
-    └── ...
+${RAW_MEDIA_ROOT}\
+├── life\
+│   └── entertainment\gulou-riverfront\
+│       ├── 01-nanjing-marathon.jpg
+│       └── ...
+├── office\
+└── drinkzen\
 ```
 
-可与 `gallery/` 同步，或使用硬链 / rsync；**COS 不能替代个人冷备份**。
+**流程**：
+
+1. 原素材（手机 / 相机导出）按命名规范落地 D 盘，路径与 `content/` 对齐（含 `life/` / `office/` / `drinkzen/` 前缀）。
+2. 写文章时按需拷贝（或硬链）到 `content/<分区>/<slug>/gallery/`，本地预览用。
+3. `pnpm run media:publish` 上传 COS 后，`gallery/` 仅作上传源；D 盘原图**永不删除、不压缩、不转码**。
+
+**人工审查流程**（暂用人工，不用脚本）：
+
+每次 `git add` 之前：
+
+1. 确认 `${RAW_MEDIA_ROOT}` 对应路径下，原素材已落地、命名规范（小写 ASCII + 数字 + 连字符）。
+2. `git status` 看本次涉及哪些 `content/.../gallery/*` 新增 / 改动。
+3. 逐个核对每个 gallery 文件，都能在 D 盘对应路径找到原图（命名一致或可追溯改名）。
+4. 拷贝完成后上传 COS：`pnpm run media:publish -- content/<分区>/<slug>`。
+5. 改 Markdown 为 CDN URL，`git commit` 仅 `index.md`，push 后 CI 校验。
+
+> **为何暂不引入脚本**：触发粒度（提交瞬间 vs 全量盘点）与收益尚未达到阈值；后续若频繁漏拷，再考虑加 pre-commit hook 或全量 diff 脚本。
+
+**与 COS 的关系**：COS 是线上分发，D 盘是 raw 原素材；**两者互不替代**。
 
 ---
 
