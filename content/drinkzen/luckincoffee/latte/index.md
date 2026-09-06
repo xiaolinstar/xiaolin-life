@@ -1,8 +1,8 @@
 ---
 title: "瑞幸拿铁 · C 级"
 description: "Espresso 与香醇牛奶精妙融合，经典意式奶咖"
-date: 2026-08-24
-draft: true
+date: 2026-09-06
+draft: false
 showTableOfContents: false
 categories:
   - "饮品记录"
@@ -11,7 +11,7 @@ tags:
   - "瑞幸"
   - "拿铁"
   - "大师咖啡"
-summary: "瑞幸 Latte：Nutri-Grade C 级（全脂奶），热量约 208kcal/杯，咖啡因 98.6mg。"
+summary: "瑞幸 Latte：Nutri-Grade C 级（全脂奶），热量约 148kcal/大杯冰 / 243kcal/大杯热，咖啡因 98.6mg。可加奶油 / 加浓缩 / 换 OATLY 燕麦奶 / 换椰奶。"
 ---
 
 > **饮品信息**
