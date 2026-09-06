@@ -17,12 +17,25 @@ Costa Coffee（咖世家）1971 年由意大利兄弟 Sergio 和 Bruno Costa 在
 
 中国市场由华联集团运营，门店主要分布在一二线城市。
 
-**杯型容量**（中国市场）：
+**杯型容量**（中国市场 · 三层口径）：
 
-| 杯型 | 容量 |
-| :--- | :--- |
-| 中杯 | 360ml |
-| 大杯 | 480ml |
+Costa 中国门店的杯型容量存在**三层口径**，互不相同：
+
+| 杯型 | 杯身标注 | 小程序口径 | 实际装入 |
+| :--- | :--- | :--- | :--- |
+| 小杯 | **360ml** | 340ml | ~340ml |
+| 中杯 | **480ml** | 430ml | ~410ml |
+| 大杯 | **600ml** | 530ml | ~480-500ml |
+
+- **杯身标注** = 印在杯子上，是**官方容量**（物理杯的标定规格）
+- **小程序口径** = 顾客点单页看到的容量（用于详情页默认引用）
+- **实际装入** = 网友实测出杯量，普遍**少于**杯身标注（行业「升杯缩水」现象，正常运营操作）
+
+**drinkzen 详情页约定**：
+
+- 默认按**小程序口径**计算营养（与顾客所见一致）
+- 杯型字段括号注明杯身标注，避免热量虚高
+- 数据说明段独立列出三层口径差异
 
 **默认配置**：全脂牛奶 / 标准甜度
 
@@ -61,47 +74,49 @@ Costa 官方产品页**不公布**完整的健康评级数据（热量、糖分�
 
 ### 经典咖啡系列
 
+> ⚠️ 等级基于**默认配置**（全脂奶 / 标准甜度 / 大杯 530ml）推算。详情页会给出各配置的完整参数对比。
+
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
 | 美式咖啡 | Americano | **A** | 纯咖啡，无糖无脂 |
-| 拿铁 | Latte | **B-C** | 牛奶 + 浓缩咖啡，取决于奶类型 |
-| 卡布奇诺 | Cappuccino | **B-C** | 奶泡为主，脂肪适中 |
-| 摩卡 | Mocha | **C-D** | 巧克力酱含糖量高 |
-| Flat White | Flat White | **A-B** | 咖啡比例更高，脂肪略低于拿铁 |
-| Cortado | Cortado | **A-B** | 少量牛奶，咖啡味浓 |
+| 拿铁 | Latte | **C** | 牛奶 + 浓缩咖啡（饱和脂肪触发） |
+| 卡布奇诺 | Cappuccino | **C** | 奶泡为主，脂肪适中 |
+| 摩卡 | Mocha | **C** | 巧克力酱含糖 + 全脂奶基底 |
+| Flat White | Flat White | **C** | 咖啡比例更高，脂肪略低于拿铁 |
+| Cortado | Cortado | **C** | 少量牛奶，咖啡味浓 |
 
 ### 风味拿铁系列
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| 香草拿铁 | Vanilla Latte | **C-D** | 香草糖浆含糖 |
-| 焦糖拿铁 | Caramel Latte | **C-D** | 焦糖糖浆含糖 |
-| 榛果拿铁 | Hazelnut Latte | **C-D** | 榛果糖浆含糖 |
+| 香草拿铁 | Vanilla Latte | **D** | 香草糖浆 + 全脂奶基底 |
+| 焦糖拿铁 | Caramel Latte | **D** | 焦糖糖浆 + 全脂奶基底 |
+| 榛果拿铁 | Hazelnut Latte | **D** | 榛果糖浆 + 全脂奶基底 |
 
 ### 冰饮系列
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
 | 冷萃咖啡 | Cold Brew | **A** | 纯咖啡，无糖无脂 |
-| Frostino | Frostino | **C-D** | 冰沙系列，含糖较高 |
+| Frostino | Frostino | **C** | 冰沙系列含糖较高 |
 
 ## 产品详情页
 
 **Classic Coffee（经典咖啡系列）**
 
 - [美式咖啡 · A 级](/drinkzen/costa/americano/)
-- [拿铁 · B-C 级](/drinkzen/costa/latte/)
-- [卡布奇诺 · B-C 级](/drinkzen/costa/cappuccino/)
-- [摩卡 · C-D 级](/drinkzen/costa/mocha/)
-- [Flat White · A-B 级](/drinkzen/costa/flat-white/)
-- [Cortado · A-B 级](/drinkzen/costa/cortado/)
+- [拿铁 · C 级](/drinkzen/costa/latte/)
+- [卡布奇诺 · C 级](/drinkzen/costa/cappuccino/)
+- [摩卡 · C 级](/drinkzen/costa/mocha/)
+- [Flat White · C 级](/drinkzen/costa/flat-white/)
+- [Cortado · C 级](/drinkzen/costa/cortado/)
 - [意式浓缩 · A 级](/drinkzen/costa/espresso/)
 
 **Flavored Lattes（风味拿铁系列）**
 
-- [香草拿铁 · C-D 级](/drinkzen/costa/vanilla-latte/)
-- [焦糖拿铁 · C-D 级](/drinkzen/costa/caramel-latte/)
-- [榛果拿铁 · C-D 级](/drinkzen/costa/hazelnut-latte/)
+- [香草拿铁 · D 级](/drinkzen/costa/vanilla-latte/)
+- [焦糖拿铁 · D 级](/drinkzen/costa/caramel-latte/)
+- [榛果拿铁 · D 级](/drinkzen/costa/hazelnut-latte/)
 
 **Cold Drinks（冰饮系列）**
 
@@ -109,9 +124,9 @@ Costa 官方产品页**不公布**完整的健康评级数据（热量、糖分�
 
 **Non-Coffee（非咖啡系列）**
 
-- [热巧克力 · C-D 级](/drinkzen/costa/hot-chocolate/)
+- [热巧克力 · C 级](/drinkzen/costa/hot-chocolate/)
 
-> 💡 以上等级为基于同类产品的预估值，非 Costa 官方数据。实际等级需通过配方调查确认。
+> 💡 以上等级按**默认配置**（全脂奶 / 标准甜度）推算。详情页会给出各配置的完整参数对比。
 
 ## 参考
 

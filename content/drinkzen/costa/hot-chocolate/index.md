@@ -1,5 +1,5 @@
 ---
-title: "Costa 热巧克力 · C-D 级"
+title: "Costa 热巧克力 · C 级"
 description: "浓郁丝滑的热巧克力，冬日暖心之选"
 date: 2026-08-25
 draft: true
@@ -11,7 +11,7 @@ tags:
   - "Costa"
   - "热巧克力"
   - "非咖啡"
-summary: "Costa Hot Chocolate：Nutri-Grade C-D 级，热量约 300-400kcal/杯，无咖啡因。"
+summary: "Costa Hot Chocolate：Nutri-Grade C 级（中杯/标准甜/全脂奶默认配置），热量约 325kcal/杯。"
 ---
 
 > **饮品信息**
@@ -22,10 +22,9 @@ summary: "Costa Hot Chocolate：Nutri-Grade C-D 级，热量约 300-400kcal/杯�
 Costa Coffee · Hot Chocolate · 热巧克力
 
 - **系列**：Non-Coffee（非咖啡系列）
-- **Nutri-Grade**：C-D 级（巧克力粉含糖量高）
-- **热量**：约 300-400kcal/杯（中杯/标准甜/全脂奶）
-- **咖啡因**：无（可可含微量可可碱）
-- **推荐点单**：可要求减糖 / 可选脱脂奶
+- **Nutri-Grade（默认配置：中杯 360ml + 全脂奶 + 标准巧克力粉）**：C 级（饱和脂肪 2.61g/100ml 触发）
+- **热量**：约 325kcal/杯（中杯/标准甜/全脂奶）
+- **推荐点单**：可要求减糖 / 换脱脂奶可降至 B 级
 
 ## 制作方式调查
 
@@ -62,10 +61,10 @@ Costa Coffee · Hot Chocolate · 热巧克力
 | 参数 | 配置 | 热量 | 非乳源性糖 | 评级 |
 | :--- | :--- | :--- | :--- | :--- |
 | 标准甜 | 全脂奶 | 325kcal | 18.0g | C 级 |
-| +鲜奶油 | 加鲜奶油 | +150kcal | +1g | C-D 级 |
-| +棉花糖 | 加棉花糖 | +50kcal | +10g | C-D 级 |
-| 减糖 | 减巧克力粉 | 245kcal | 10g | B-C 级 |
-| 换脱脂奶 | 脱脂奶 | -100kcal | — | C 级 |
+| +鲜奶油 | 加鲜奶油 | +150kcal | +1g | C 级 |
+| +棉花糖 | 加棉花糖 | +50kcal | +10g | C 级 |
+| 减糖 | 减巧克力粉 | 245kcal | 10g | C 级 |
+| 换脱脂奶 | 脱脂奶 | -100kcal | — | B 级 |
 
 > **说明**：
 >
@@ -114,7 +113,7 @@ Costa Coffee · Hot Chocolate · 热巧克力
 ```text
 🥤 DrinkZen 小程序搜「Costa 热巧克力」，看完整评估
 📍 标准甜：C 级
-📍 加鲜奶油：C-D 级
+📍 加鲜奶油：C 级
 💡 冬日暖心之选，非咖啡饮品
 ```
 
