@@ -4,7 +4,7 @@ description: "瑞幸咖啡产品测评与热量记录"
 date: 2026-08-22
 draft: false
 showTableOfContents: false
-summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯拿铁等产品测评，含新加坡 25 款门店菜单及 Nutri-Grade 健康评级。"
+summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯拿铁等产品测评；2026 年中国市场新增绯色月光 / 可可维也纳 / 瑰夏冷萃系列 / 龙井 / 苦瓜轻体果蔬茶 / 缤纷 C 等 7 款新品；含新加坡 25 款门店菜单及 Nutri-Grade 健康评级。"
 ---
 
 瑞幸咖啡是中国最大的连锁咖啡品牌之一，以高性价比和快速扩张著称。
@@ -176,6 +176,30 @@ summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯�
 - D 级：生酪拿铁、香草生酪、小黄油拿铁
 
 ## 产品列表
+
+### 年度特调（2026/05 全国上新）
+
+- [绯色月光 · B 级](/drinkzen/luckincoffee/fei-se-yue-guang/) · 含 / 不含伦敦干金酒双版本，355ml 特调杯，13.9 元 / 15.9 元
+- [可可维也纳 · C 级](/drinkzen/luckincoffee/ke-ke-wei-ye-na/) · 现打动物奶油"雪山"造型 + 香草籽，355ml 特调杯，13.9 元
+
+### 精品冷萃（2026/07 全国上新）
+
+- [埃塞瑰夏冷萃 · A 级](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/) · IIAC 2026 铂金奖瑰夏，0 脂 0 卡
+- [瑰夏云朵冷萃 · B-C 级](/drinkzen/luckincoffee/gui-xia-yun-duo-leng-cui/) · 瑰夏 + 帕玛森芝士云顶，约 88-126kcal
+
+### 茶咖（春季回归）
+
+- [鲜萃轻轻龙井 · B 级](/drinkzen/luckincoffee/xian-cui-qing-qing-long-jing/) · 钱塘产区龙井春茶 + 鲜牛奶，约 100kcal
+
+### 健康系列
+
+- [苦瓜轻体果蔬茶 · A 级](/drinkzen/luckincoffee/ku-gua-qing-ti-guo-shu-cha/) · 苦瓜 + 24h 鲜榨羽衣甘蓝 + 8 种果蔬，200+ 项检测
+
+### 果咖（夏季）
+
+- [缤纷 C 美式 · B 级](/drinkzen/luckincoffee/bin-fen-c-mei-shi/) · 鲜切鲜橙片 + 现捣小青桔，约 100kcal
+
+### 既有产品
 
 - [虎斑橘 · D 级](/drinkzen/luckincoffee/hu-ban-ju/) · 黄油丝绒奶盖 × 现刨橙皮 × 耶加雪菲（2026/08/29 新品）
 - [瑞幸生椰拿铁 · C 级预警](/drinkzen/luckincoffee/coconut-latte/) · Day 1 小红书推文样例
