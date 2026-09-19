@@ -8,7 +8,7 @@ on:
       - completed
 
 concurrency:
-  group: cd-xiaolin-fun
+  group: cd-xiaolin-fun-121
   cancel-in-progress: true
 
 env:
@@ -31,7 +31,7 @@ jobs:
             set -euo pipefail
             cd ${{ env.SERVER_DIR }}
             git -c submodule.recurse=false pull --ff-only
-            mkdir -p volumes/website/logs
+            mkdir -p volumes/website/logs volumes/website/certs
 
   deploy:
     needs: config-sync
@@ -51,4 +51,7 @@ jobs:
             docker compose -f compose.yaml pull
             docker compose -f compose.yaml up -d
             docker image prune -f
+            sleep 5
+            docker compose -f compose.yaml ps
+            docker exec xiaolin-life-website wget -qO- http://127.0.0.1:8080/healthz && echo "healthz OK"
             echo "Deployment completed successfully!"

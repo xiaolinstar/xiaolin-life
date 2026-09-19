@@ -12,7 +12,7 @@
 | L2 CD | SSH 部署 | 仓库 **Secrets**：`SERVER_*`（无 CI Variables） |
 | L3 凭证 | SecretId / SecretKey | **`~/.cos.yaml`**（coscli） |
 | L3 本机 | 前缀、CDN、可选 bucket 覆盖 | 仓库根 `.env` |
-| L3 VPS | 无 | `compose.yaml` 仅 `TZ`，upstream **8081** |
+| L3 VPS | 无 | `compose.yaml` 仅 `TZ`，upstream **80/443**（容器内 nginx 终结 SSL） |
 | L3 备份 | 本机 `.env` 快照 | `~/.config/xiaolinstar/xiaolin-life/local.env` |
 | L2 备份 | GitHub 清单 | `~/.config/xiaolinstar/xiaolin-life/github-production.env` |
 
@@ -22,13 +22,12 @@
 
 ## 健康检查（/healthz）
 
-容器 nginx 提供 **`GET /healthz` → 204**（见 `volumes/website/default.conf`）。gateway [uptime.yml](https://github.com/xiaolinstar/xiaolin-gateway/blob/main/.github/workflows/uptime.yml) 探测：
+容器 nginx 提供 **`GET /healthz` → 204**（见 `volumes/website/default.conf`）。
 
-```text
-https://www.xiaolin.fun/healthz
-```
+- 容器内部：`http://127.0.0.1:8080/healthz`（CD 与 docker healthcheck 使用）
+- 外部 HTTPS：`https://www.xiaolin.fun/healthz`
 
-规范：[healthz-probe-standard.md](https://github.com/xiaolinstar/xiaolin-gateway/blob/main/docs/healthz-probe-standard.md)
+上游探测由 CDN / 外部 uptime 配置接管（原 xiaolin-gateway `uptime.yml` 不再适用，需另行接入）。
 
 ## 脚本加载顺序
 

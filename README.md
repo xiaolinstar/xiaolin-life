@@ -192,7 +192,7 @@ image: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:main
 docker compose pull && docker compose up -d
 ```
 
-网站容器暴露宿主机 `8081` 端口，由 `xiaolin-gateway` 反向代理；HTTPS 证书在网关维护。
+网站容器直接监听宿主机 `80/443`，容器内 nginx 终结 SSL（复用 101 的腾讯云免费证书，手动续期）。
 
 CD 默认服务器目录：`~/AgentProjects/xiaolin-life`
 

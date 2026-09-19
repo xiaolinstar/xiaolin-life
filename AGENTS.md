@@ -5,7 +5,7 @@
 
 ## 项目概述
 
-基于 **Hugo + Blowfish** 的个人生活静态站点（南京生活、轻松办公、城市探索、日常思考）。站点镜像通过 GHCR 部署到 `124.222.98.227:8081`，由 `xiaolin-gateway` 反向代理。
+基于 **Hugo + Blowfish** 的个人生活静态站点（南京生活、轻松办公、城市探索、日常思考）。站点镜像通过 GHCR 部署到阿里云 ECS（121 公网 IP），容器内 nginx 直接终结 SSL（80/443），证书复用 101 的腾讯云免费证书。
 
 **项目类型**：content 类静态站（详见 [dev-standards env-registry](https://github.com/xiaolinstar/dev-standards/blob/main/playbook/env-registry.yaml)）。
 

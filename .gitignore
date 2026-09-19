@@ -17,6 +17,8 @@ volumes/website/logs/
 volumes/website/geoip
 volumes/website/site/*
 !volumes/website/site/.gitkeep
+volumes/website/certs/
+!volumes/website/certs/.gitkeep
 .qoder/**/*.py
 .qoder/**/__pycache__/
 .qoder/**/*.pyc
