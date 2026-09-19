@@ -27,7 +27,7 @@
 - 容器内部：`http://127.0.0.1:8080/healthz`（CD 与 docker healthcheck 使用）
 - 外部 HTTPS：`https://www.xiaolin.fun/healthz`
 
-上游探测由 CDN / 外部 uptime 配置接管（原 xiaolin-gateway `uptime.yml` 不再适用，需另行接入）。
+外部每 15 分钟探测由 [`.github/workflows/uptime.yml`](../..//.github/workflows/uptime.yml) 负责（监控 `xiaolin.fun` + `www.xiaolin.fun` 两个端点，含 7 天证书过期预警）。规范：[healthz-probe-standard.md](https://github.com/xiaolinstar/xiaolin-gateway/blob/main/docs/healthz-probe-standard.md)。
 
 ## 脚本加载顺序
 
