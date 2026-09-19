@@ -51,7 +51,5 @@ jobs:
             docker compose -f compose.yaml pull
             docker compose -f compose.yaml up -d
             docker image prune -f
-            sleep 5
-            docker compose -f compose.yaml ps
-            docker exec xiaolin-life-website wget -qO- http://127.0.0.1:8080/healthz && echo "healthz OK"
+            bash scripts/wait-healthy.sh
             echo "Deployment completed successfully!"
