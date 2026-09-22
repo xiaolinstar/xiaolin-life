@@ -64,13 +64,21 @@ pnpm run media:cdn-check
 
 ## 第三步：HTTPS 证书
 
-1. CDN 控制台 → 域名 `media.xiaolin.fun` → **HTTPS 配置**
-2. 开启 **HTTPS 加速**
-3. 证书来源（任选其一）：
-   - **腾讯云托管证书**：免费 DV 证书，DNS 验证（域名在 DNSPod 时可一键）
-   - **上传已有证书**：与主站共用 wildcard `*.xiaolin.fun` 亦可
-4. 建议开启 **HTTP 自动跳转 HTTPS**
-5. TLS 版本：TLS 1.2+
+`media.xiaolin.fun` 走 **腾讯云 CDN 终结 SSL**，证书托管在腾讯云 CDN 控制台。
+
+- 首次部署：参考下方任一方案
+- **每 90 天续期**：按 [CERT-RENEWAL.md](CERT-RENEWAL.md) 走 6 步流程（申请 → DNS 验证 → CDN 部署 → 校验 → 告警）
+
+**首次部署二选一**：
+
+1. CDN 控制台 → 域名 `media.xiaolin.fun` → **HTTPS 配置** → 证书来源选 **腾讯云托管证书**（免费 DV，DNS 验证）
+2. 或上传已有证书（与主站共用 wildcard `*.xiaolin.fun`）
+
+推荐开启：
+
+- HTTP/2 ✅
+- **HTTP → HTTPS 自动跳转** ✅
+- TLS 1.2+ ✅
 
 证书部署完成后，浏览器访问应无 mixed content 警告。
 
