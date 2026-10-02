@@ -196,7 +196,7 @@ summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯�
 ### 秋季系列（2026/09 全国上新）
 
 - [秋桂米酿拿铁 · C 级](/drinkzen/luckincoffee/qiu-gui-mi-niang-na-tie/) · 咸宁金桂 + 浦城丹桂窨制乌龙 × 孝感米酿 × IIAC 金奖豆，约 197 kcal（计算）/ 官方 197.91 kcal / 博主实测 129 kcal，含 <0.5%vol 米酒
-- [抹茶奶酪拿铁 · C 级](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/) · 千目级纯抹茶 × 新西兰进口液体奶酪 × 鲜牛奶，约 292 kcal（计算）/ 博主拆解 292 kcal / 官方 FAQ 同系列 239 kcal，YOYO 联名
+- [抹茶奶酪拿铁 · C 级](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/) · 千目级纯抹茶 × 新西兰进口液体奶酪 × 鲜牛奶，约 290 kcal（计算）/ 官方 FAQ 同系列 239 kcal，YOYO 联名
 - [流心芝士拿铁 · D 级](/drinkzen/luckincoffee/liu-xin-zhi-shi-na-tie/) · 海盐芝士奶盖 × 新西兰进口液体奶酪 × 焦糖味扁桃仁碎 × 曼特宁浓缩，约 431 kcal（计算），咸甜脆三重口感
 
 ### 茶咖（春季回归）
