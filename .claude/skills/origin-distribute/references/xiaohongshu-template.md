@@ -2,7 +2,7 @@
 
 > 基于秋桂米酿拿铁复盘升级：新增「小红书 text 直接粘贴」铁律（无内部链接 / 无感叹号 / 无 markdown 列表符号）；字数收紧到 ≤ 800；删除【4】饮品特色；【5】改为一段活人感描述；进阶对比不带任何内部链接。
 >
-> 来源：`content/drinkzen/operation-plan/index.md` + `qiu-gui-mi-niang-na-tie/mo-cha-nai-lao-na-tie.md`（v2.3 样例）。
+> 来源：`content/drinkzen/operation-plan/index.md` + `autumn-osmanthus-fermented-rice-latte/mo-cha-nai-lao-na-tie.md`（v2.3 样例）。
 > 本文件是生成规则，**不是**生成结果本身。
 
 **v2.1 → v2.2 关键变化**（基于秋桂米酿拿铁复盘，2026-09-30）：
@@ -470,7 +470,7 @@ status: draft
 
 ## 已知 v2.3 样例
 
-- `content/social-publish/drafts/qiu-gui-mi-niang-na-tie.md` —— **v2.3 样例**（C 级季节限定 + 酒精警告 + 活人感口感体验 + 不带内部链接 + 连续编号【1】→【5】）
+- `content/social-publish/drafts/autumn-osmanthus-fermented-rice-latte.md` —— **v2.3 样例**（C 级季节限定 + 酒精警告 + 活人感口感体验 + 不带内部链接 + 连续编号【1】→【5】）
 - `content/social-publish/drafts/mo-cha-nai-lao-na-tie.md` —— **v2.3 样例**（C 级 + 抹茶单源 + 公式化克重数据 + 奶酪减半仍 C 级 + 连续编号【1】→【5】）
 - `content/social-publish/drafts/liu-xin-zhi-shi-na-tie.md` —— v2 样例，**待升级到 v2.3**（移除内部链接 + 改包文字 + 删除饮品特色段 + 改口感体验为活人感 + 编号重排）
 

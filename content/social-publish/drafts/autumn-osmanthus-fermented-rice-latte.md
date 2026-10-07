@@ -1,5 +1,5 @@
 ---
-origin: content/drinkzen/luckincoffee/qiu-gui-mi-niang-na-tie/index.md
+origin: content/drinkzen/luckincoffee/autumn-osmanthus-fermented-rice-latte/index.md
 platforms: [xiaohongshu]
 generated: 2026-09-30
 generator: origin-distribute v2.3
@@ -41,10 +41,10 @@ status: draft
 饱和脂肪 1.11g/100ml（B 级下限），非乳源糖 2.67g/100ml（C 级），取较差项 C 级。唯一降级是去 30g 米酿酱，但那就不是这杯。热版热量数据暂无，冰版为主
 
 【3】制作配方（六层）
-桂花乌龙茶汤 200ml（双丹桂窨制）→ 米酿酱 30g 杯底 → 茶汤冰块至 400ml → 纯牛奶 210ml → IIAC 金奖短萃 30ml 顶部 → 出杯搅拌（米酿沉底）
+米酿酱 30g 杯底（桂花窨制乌龙茶基底 + 孝感米酒）→ 冰块约 180ml → 纯牛奶 210ml → IIAC 金奖短萃 30ml 顶部 → 出杯搅拌（米酿沉底）
 
 【4】口感体验
-开盖桂花香混米酿清甜，窨制乌龙茶香打底。米酿沉底，第一口别急着喝，原味甜度过头。搅匀再大口喝，丝滑牛奶+柔和咖啡苦，桂米咖三层递进，比常规拿铁更圆润，咖啡味偏淡（短萃让位桂香），尾调是柔和的回甘。冰版桂米香突出、米粒 Q 弹
+开盖桂花香混米酿清甜，桂花窨制乌龙茶香作为调味酱基底柔顺打底。米酿沉底，第一口别急着喝，原味甜度过头。搅匀再大口喝，丝滑牛奶+柔和咖啡苦，桂米咖三层递进，比常规拿铁更圆润，咖啡味偏淡（短萃让位桂香），尾调是柔和的回甘。冰版桂米香突出、米粒 Q 弹
 
 【5】健康建议
 驾驶员、孕妇、未成年人、酒精过敏者禁点（<0.5%vol）。必须搅匀。最低微甜 9.5g 非乳源糖，无法降到 B 级
@@ -93,7 +93,7 @@ status: draft
 | 图 5 场景（选） | 桂花米酿层 + 米粒特写 | `gallery/05-scene.jpg` | ⚠️ 待补 |
 | 图 6 结尾（选） | CTA 引导 + 秋季氛围 | `gallery/06-ending.jpg` | ⚠️ 待补 |
 
-> ⚠️ origin `qiu-gui-mi-niang-na-tie/gallery/` 目录暂未填充图片。
+> ⚠️ origin `autumn-osmanthus-fermented-rice-latte/gallery/` 目录暂未填充图片。
 > 实际发布前需从 iPhone 实拍补齐 4-6 张图（重点：桂花金黄 + 米酿 + 米粒 Q 弹质感）。
 
 ## 📸 图片生成指引
@@ -174,7 +174,7 @@ python3 scripts/generate-rating-card.py \
 - [x] 咖啡因 135.9 mg（IIAC 金奖豆单源短萃浓缩）
 - [x] 工艺认证：IIAC 金奖豆 + 孝感米酒（国家地理标志）
 - [x] 原料 + 克重：完整 6 层
-- [x] 关键工艺说明：双丹桂窨制 / 短萃浓缩 / 热水萃取
+- [x] 关键工艺说明：双丹桂窨制（调味酱内含）/ 短萃浓缩
 - [x] 风味层次（活人感描述）：覆盖前调 / 中段 / 尾调 / 冰热对比
 - [x] 饮用方式：必须搅匀 + 三步（先尝原味 / 大力搅拌 / 大口喝）
 - [x] 控糖说明：最低微甜 9.5g 非乳源糖，无法降到 B 级
