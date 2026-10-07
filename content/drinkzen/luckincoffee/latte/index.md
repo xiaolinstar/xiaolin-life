@@ -42,7 +42,7 @@ summary: "瑞幸 Latte：Nutri-Grade B 级（中国大陆，全脂奶，sat fat 
 
 **制作方式**（大杯 450ml，**按品牌页冰饮标准**）：
 
-1. 浓缩咖啡液（Ristretto/Espresso）约 30ml
+1. 浓缩咖啡液（Ristretto/Espresso）30ml
 2. 冰全脂牛奶 约 **210ml**（冰标签线 / 液体基底标准线）
 3. 冰块 约 **210ml**（冰至 400ml 线后加浓缩，再补满冰块）
 
