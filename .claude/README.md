@@ -12,7 +12,6 @@
     ├── find-skills/
     ├── gh-cli/
     ├── git/
-    ├── markdown-formatter/
     └── nano-banana-2/
 ```
 
@@ -104,6 +103,5 @@ cp -r /path/to/skill .claude/skills/skill-name
 | --------- | ------ | ------ |
 | find-skills | GitHub | - |
 | gh-cli | GitHub | - |
-| markdown-formatter | GitHub | - |
 | nano-banana-2 | GitHub | - |
 | git | SkillHub | 1.0.8 |
