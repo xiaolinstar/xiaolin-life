@@ -16,7 +16,6 @@
     "resources/**",
     "themes/**",
     "volumes/**",
-    ".claude/skills/drinkzen-admin/**",
     ".tools/**",
     "docs/superpowers/**",
     "docs/research/**"
