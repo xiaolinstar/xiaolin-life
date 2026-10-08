@@ -189,7 +189,7 @@ Hermes：挂同一套 CLI 或 MCP。
 - [x] 清掉 / 迁入根目录 `life/` 错位草稿（已迁入 `content/life/entertainment/xiangzhiwei/`，`draft: true`）  
 - [x] 写一页「微信发一篇图文」人工剧本，验证现有脚本无缺口（**仅图片**）——本地 `media-publish.sh` 已验证：上传 COS + CDN `media.xiaolin.fun` 校验 200  
 - [x] 增强 `media-publish --rewrite` 覆盖 carousel → `carousel-cdn`（按 gallery 实际文件展开 CDN URL；不做 video）  
-- [x] 封装 Layer A Skill（`.claude/skills/article-publish/`：new-article / save-media / media-publish / commit-push 工具链，Cursor 可用，可原样搬 Hermes）  
+- [x] 封装 article-create Skill（`.claude/skills/article-create/`：new_article.py 智能归类 + front matter 模板 + draft 标记；commit/push 仍由用户手动）—— Cursor 可用，可原样搬 Hermes  
 - [ ] VPS 安装 Hermes + 仓 clone + coscli + **微信通道**  
 - [ ] 约定图片白名单与单文件上限；微信试传 3 张图端到端（push `main`）  
 - [ ] （可选）MCP Server；以后再考虑 OpenClaw / 视频  

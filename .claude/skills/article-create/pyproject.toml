@@ -1,0 +1,12 @@
+[project]
+name = "article-create"
+version = "0.1.0"
+description = "Hugo Page Bundle scaffolding for xiaolin-life"
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13.0",
+    "pyyaml>=6.0",
+]
+
+[tool.uv]
+package = false

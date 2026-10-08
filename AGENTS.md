@@ -60,7 +60,7 @@ pnpm run media:cdn-check       # CDN URL 校验
 pnpm run media:rewrite         # 本地路径 → CDN URL 改写
 
 # 文章
-pnpm run article:new           # 新建文章骨架
+pnpm run article:create        # 新建文章骨架（article-create skill）
 
 # Git hooks（首次克隆后）
 pnpm install                   # 自动触发 husky prepare
@@ -106,7 +106,7 @@ pnpm install                   # 自动触发 husky prepare
 
 ## Skills / Rules
 
-- 项目级 Skill：`/article-publish`、`/drinkzen`、`/media-publish`、`/origin-distribute` 等（见 `.claude/skills/`）
+- 项目级 Skill：`/article-create`、`/drinkzen`、`/media-publish`、`/origin-distribute` 等（见 `.claude/skills/`）
 - 项目级 Rule：`.claude/rules/core.md`（通用）+ `.claude/rules/framework/nodejs.md`（Node.js）
 - 外部 Skill 注册表：`skills-lock.json`
 

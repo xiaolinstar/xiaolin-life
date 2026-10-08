@@ -9,7 +9,7 @@
     "featured:setup": "python3 scripts/setup-featured-images.py",
     "photos:generate": "python3 scripts/generate-placeholder-photos.py",
     "images:compress": "python3 scripts/compress-images.py",
-    "article:new": "bash scripts/new-article.sh",
+    "article:create": "uv run --project .claude/skills/article-create python .claude/skills/article-create/scripts/new_article.py",
     "media:save": "bash scripts/save-media.sh",
     "media:inventory": "bash scripts/media-inventory.sh",
     "media:check": "bash scripts/cos-check.sh",

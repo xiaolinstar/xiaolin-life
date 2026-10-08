@@ -47,5 +47,5 @@
 
 - 内容分发: `.claude/skills/origin-distribute/SKILL.md`
 - 媒体上传: `.claude/skills/media-publish/SKILL.md`
-- 内容发布: `.claude/skills/article-publish/SKILL.md`
+- 内容发布: `.claude/skills/article-create/SKILL.md`
 - 草稿目录: `content/social-publish/drafts/`
