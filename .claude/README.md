@@ -13,8 +13,7 @@
     ├── gh-cli/
     ├── git/
     ├── markdown-formatter/
-    ├── nano-banana-2/
-    └── wechat-article-writer/
+    └── nano-banana-2/
 ```
 
 ## 技能来源
@@ -107,5 +106,4 @@ cp -r /path/to/skill .claude/skills/skill-name
 | gh-cli | GitHub | - |
 | markdown-formatter | GitHub | - |
 | nano-banana-2 | GitHub | - |
-| wechat-article-writer | GitHub | - |
 | git | SkillHub | 1.0.8 |

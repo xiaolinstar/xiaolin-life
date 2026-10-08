@@ -150,7 +150,7 @@ origin 与小红书**大量重叠**是正常的。SEO 视角下，origin 是 can
 
 - ❌ 微博模板（v2）
 - ❌ 大众点评模板（v2）
-- ❌ 公众号（已有独立 skill `wechat-article-writer`，不重复）
+- ❌ 公众号（v1 不分发；如未来要做，须新建 origin-distribute 平台模板，**禁止**重新引入通用公众号写作 skill）
 - ❌ 抖音脚本（origin 结构差异大，需新 skill）
 - ❌ 自动发布（平台封闭，无法 API）
 - ❌ 已发布追踪（manifest.json）—— v2 评估

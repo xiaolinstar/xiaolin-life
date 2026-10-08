@@ -21,11 +21,6 @@
       "sourceType": "github",
       "computedHash": "af61905de3e03307321a64988d36327dcb4af1171d3bbfd3c0e3c9f757f6a040"
     },
-    "wechat-article-writer": {
-      "source": "iamzhihuix/happy-claude-skills",
-      "sourceType": "github",
-      "computedHash": "8dc010602abc29f8c45fd0fa2ba5b2f46c5a058dc860a18f1f1a87a73cf96134"
-    },
     "git": {
       "name": "Git",
       "zip_url": "https://lightmake.site/api/v1/download?slug=git",
@@ -39,6 +34,29 @@
       "path": "packages/admin-cli",
       "version": "0.3.3",
       "install_command": "drinkzen-admin skill install"
+    }
+  },
+  "projectLocal": {
+    "article-publish": {
+      "path": ".claude/skills/article-publish",
+      "sourceType": "project-local"
+    },
+    "media-publish": {
+      "path": ".claude/skills/media-publish",
+      "sourceType": "project-local"
+    },
+    "drinkzen": {
+      "path": ".claude/skills/drinkzen",
+      "version": "1.1.0",
+      "sourceType": "project-local"
+    },
+    "drinkzen-admin": {
+      "path": ".claude/skills/drinkzen-admin",
+      "sourceType": "project-local"
+    },
+    "origin-distribute": {
+      "path": ".claude/skills/origin-distribute",
+      "sourceType": "project-local"
     }
   }
 }

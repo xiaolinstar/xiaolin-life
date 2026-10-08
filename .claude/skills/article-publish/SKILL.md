@@ -1,12 +1,13 @@
 ---
 name: article-publish
 description: >-
-  End-to-end article publishing workflow for xiaolin-life: scaffold a Page
-  Bundle draft, save images into gallery with whitelist and naming rules,
-  upload to Tencent COS, rewrite Markdown to CDN URLs, then commit and push
-  to main. Use when creating a new article, adding images to an article,
-  publishing an article, or when a mobile/agent channel (Hermes) delivers
-  images and text to publish. Images only — video is not supported yet.
+  Hugo Page Bundle workflow for xiaolin-life: scaffold a draft with
+  new-article.sh, ingest images via save-media.sh (whitelist + naming),
+  upload to Tencent COS and rewrite Markdown to CDN URLs via media-publish.sh.
+  Use when scaffolding a new article bundle, ingesting images into an
+  existing bundle, or when a mobile/agent channel (Hermes) delivers images
+  and text to publish. For one-off COS uploads without a bundle, use
+  media-publish instead. Images only — video is not supported yet.
 ---
 
 # 文章发布（Layer A 工具链）
