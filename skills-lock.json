@@ -11,24 +11,17 @@
       "sourceType": "github",
       "computedHash": "cbe644b0c6760ae2a1eaafa39133920d889331327065d92a131675a665273e56"
     },
-    "nano-banana-2": {
-      "source": "inferen-sh/skills",
-      "sourceType": "github",
-      "computedHash": "af61905de3e03307321a64988d36327dcb4af1171d3bbfd3c0e3c9f757f6a040"
-    },
     "git": {
       "name": "Git",
       "zip_url": "https://lightmake.site/api/v1/download?slug=git",
       "source": "skillhub",
       "version": "1.0.8"
     },
-    "drinkzen-admin-cli": {
-      "name": "DrinkZen Admin CLI",
-      "source": "xiaolinstar/drinkzen",
+    "nano-banana-2": {
+      "source": "inference-sh/skills",
       "sourceType": "github",
-      "path": "packages/admin-cli",
-      "version": "0.3.3",
-      "install_command": "drinkzen-admin skill install"
+      "skillPath": "tools/image/nano-banana-2/SKILL.md",
+      "computedHash": "3567fd25ac6142fb9b341b01c723d987e834fdf84a6c3bb697cc11021fc045dd"
     }
   },
   "projectLocal": {
@@ -44,6 +37,14 @@
       "path": ".claude/skills/drinkzen",
       "version": "1.2.0",
       "sourceType": "project-local"
+    },
+    "drinkzen-admin-cli": {
+      "name": "DrinkZen Admin CLI",
+      "source": "xiaolinstar/drinkzen",
+      "sourceType": "github",
+      "path": "packages/admin-cli",
+      "version": "0.3.3",
+      "install_command": "drinkzen-admin skill install"
     },
     "origin-distribute": {
       "path": ".claude/skills/origin-distribute",

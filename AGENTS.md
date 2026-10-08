@@ -109,3 +109,9 @@ pnpm install                   # 自动触发 husky prepare
 - 项目级 Skill：`/article-publish`、`/drinkzen`、`/media-publish`、`/origin-distribute` 等（见 `.claude/skills/`）
 - 项目级 Rule：`.claude/rules/core.md`（通用）+ `.claude/rules/framework/nodejs.md`（Node.js）
 - 外部 Skill 注册表：`skills-lock.json`
+
+**`skills-lock.json` 边界原则**（避免 `npx skills` 覆盖冲突）：
+
+- `skills` 段：仅放 `npx skills` 直接管理的 skill（带 `source: owner/repo` + `computedHash`；由 `npx skills add` 安装生成）
+- `projectLocal` 段：放**项目自有 / 上游不归 `npx skills` 管**的 skill（本地手写、CLI 工具如 `drinkzen-admin-cli`、skillhub 平台等）
+- **副作用**：`npx skills add / update / remove` 会完全重写 `skills-lock.json`，丢失 `projectLocal` 段。跑完后必须从 git 恢复（`git checkout skills-lock.json`），再重做改动
