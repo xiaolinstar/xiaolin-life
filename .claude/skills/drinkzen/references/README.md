@@ -11,7 +11,7 @@
 
 ## plog 模板
 
-见 [`../assets/plog-template.md`](../assets/plog-template.md)。
+见 [`../templates/plog-template.md`](../templates/plog-template.md)。
 
 模板含 plog 长版（小红书，≤800 字）+ plog 短版（大众点评，≤30 字）+ 通用铁律 + 警告触发条件。
 
@@ -47,28 +47,22 @@ platforms: [xiaohongshu]      # 实际覆盖哪些平台就填哪些
 ### 1. 新饮品创建后
 
 1. 完成 origin 内容（`## 产品速览` / `## Nutri-Grade 评级` / `## 制作方式调查` / `## 口感体验` / `## 饮用建议`）
-2. 读 `assets/plog-template.md`，按 Origin 抽取清单逐项取数据
+2. 读 `templates/plog-template.md`，按 Origin 抽取清单逐项取数据
 3. 在 origin 文章末尾追加 `## plog 分发版` 段（tabs 包裹）
 4. 更新 origin frontmatter 加 `platforms: [xiaohongshu, dianping]`
 5. 写完走 `pnpm run site:dev` 验证 tabs 渲染
 
-### 2. 发布到小红书
+### 2. 发布到小红书 / 大众点评（同一份 plog，两平台共用）
 
-1. 打开饮品页 → 展开"📕 plog 长版" tab
-2. 复制"小红书 text 代码块"整段 → 粘贴到小红书 APP
-3. 上传 4-6 张图（按 plog 模板的"图片清单"章节顺序）
+1. 打开饮品页 → 展开"📕 plog 正文" tab
+2. 复制"text 代码块"整段 → 粘贴到对应 APP
+3. **小红书**：上传 4-6 张图（按 plog 模板的"图片清单"章节顺序）
+   **大众点评**：上传 1 张主图（origin gallery 首图）
 4. 标题 → 按 title-formulas.md 公式
 5. 标签 → 按 plog 模板的"标签三档"
-6. 发布后立即置顶第一条评论（按 plog 模板的"评论区置顶"）
-7. 记录发布链接到 ai-todo（"小红书 11:30 发布《<产品>》"）
-
-### 3. 同步到大众点评
-
-1. 打开饮品页 → 展开"📍 plog 短版" tab
-2. 复制整段 → 粘贴到大众点评 APP
-3. 上传 1 张主图（origin gallery 首图）
-4. 标签 → 简化版（必带 2 + 城市/品牌 tag）
-5. 选 3-5 星评分
+6. **小红书**：发布后立即置顶第一条评论（按 plog 模板的"评论区置顶"）
+   **大众点评**：评论区置顶可选
+7. 记录发布链接到 ai-todo（"11:30 发布《<产品>》"）
 
 ## 图片生成指引
 
@@ -112,7 +106,7 @@ plog 分发是饮品对外的"宣传出口"，drinkzen admin 是饮品在 drinkz
 
 ## 关联文档
 
-- 主模板：`assets/plog-template.md`
+- 主模板：`templates/plog-template.md`
 - 标题公式：`references/title-formulas.md`
 - drinkzen admin：`references/admin.md`
 - drinkzen 创作：`references/content.md`
