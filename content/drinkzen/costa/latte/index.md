@@ -14,6 +14,7 @@ tags:
   - "脱脂奶"
   - "控糖"
 summary: "Costa Latte Grande · 热 · 脱脂奶 · 不加糖：Nutri-Grade A 级，热量约 144kcal/480ml，咖啡因约 225mg（按 UK 官方 Caffeine Guide 3 shots 推算）。"
+platforms: [xiaohongshu]
 ---
 
 > **饮品信息**
@@ -175,3 +176,59 @@ Costa Coffee · Latte · 拿铁 · Grande · 热 · 脱脂奶
 - **咖啡因**：⚠️ 基于 3 份 Espresso 估算（UK 官方 Caffeine Guide Large Latte = 325mg，中国市场未明示）
 - **糖浆数据**：每泵 6g 糖为行业标准值，待 Costa 官方确认
 - 正式发布前需在 DrinkZen 后台录入实测数据并通过 AUS-3（数据来源补齐）流程上线
+
+## plog 分发版
+
+<!-- generated from content/social-publish/drafts/costa-latte.md by migrate_drinkzen_plog.py on 2026-10-09 -->
+
+{{< tabs "plog" >}}
+{{< tab "📕 plog 长版（小红书 / 微博，≤800 字）" >}}
+
+📍 今日饮品：Costa·拿铁（大杯 530ml · 热 · 脱脂奶）
+🔖 [默认] 不加糖
+🔥 热量 170大卡
+🍬 糖 0.2g（非乳源，咖啡液自带）
+🥛 饱和脂肪 0.5g/杯（0.10g/100ml）
+💪 蛋白质 16.2g（脱脂奶 470ml 主力）
+✅ 奶茶仙人评级 A 级
+
+🥄 1 杯 = 双份浓缩 60ml（2 份 × 30ml）+ 蒸汽脱脂奶 470ml（含奶泡）
+🎯 A 级路径：糖 0.04g/100ml < 1g + 饱和脂肪 0.10g/100ml < 0.7g，双指标全踩 A 线
+
+脱脂奶把饱和脂肪压到 0.10g/100ml，远低于 A 级阈值 0.7g——
+健身控脂期拿铁的甜区，全脂奶版本直接升到 B-C 级。
+脱脂奶口感清爽，咖啡味更突出，不会盖过 Mocha Italia 拼配的坚果尾韵。
+
+推荐点单：大杯 / 热 / 脱脂奶 / 不加糖。
+
+### 标签
+
+```text
+#奶茶仙人 #DrinkZen
+#每日打卡 #饮品测评
+#Costa #拿铁 #控糖友好 #健身咖啡 #打工人续命
+```
+
+### 评论区置顶
+
+```text
+🥤 奶茶仙人小程序搜「Costa 拿铁」，看完整评估
+📍 门店：南京 XX 区 XX 路 Costa Coffee（待补）
+💡 推荐点单：Grande / 热 / 脱脂奶 / 不加糖
+```
+
+### 图片清单
+
+| 位 | 角色 | 平台 | 来源 | 状态 |
+| --- | --- | --- | --- | --- |
+| 图 1 封面 | 拿铁整杯 + 容量标识 | 小红书 | `gallery/01-cover.jpg` | ⚠️ 待补 |
+| 图 2 杯身 | Costa logo + 大杯 530ml 标识 | 小红书 | `gallery/02-cup.jpg` | ⚠️ 待补 |
+| 图 3 拉花 | 拿铁拉花特写（凸显热饮） | 小红书 | `gallery/03-latte-art.jpg` | ⚠️ 待补 |
+| 图 4 数据卡 | 170大卡 / A 级 / 16.2g 蛋白 数据卡 | 小红书 | `gallery/04-drinkzen-card.png` | ⚠️ 待生成 |
+| 图 5 门店外观 | 门头招牌 | 大众点评 | `gallery/05-store-front.jpg` | ⚠️ 待补 |
+| 图 6 室内氛围 | 座位区全景 + 暖光吊灯 | 大众点评 | `gallery/06-store-interior.jpg` | ⚠️ 待补 |
+
+共 6 张。小红书用 1-4（饮品向），大众点评用 5-6（门店向），**两平台图位完全不同**。
+
+{{< /tab >}}
+{{< /tabs >}}
