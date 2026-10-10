@@ -1,0 +1,17 @@
+title = "xiaolin-life gitleaks config"
+
+[extend]
+useDefault = true
+
+# 排除 Blowfish 主题的 exampleSite（submodule 内的官方文档，AIzaSy 为公开示例 key）
+# 排除 grafana.ini 默认示例 secret_key
+# 排除 .qoder/（临时 IDE 状态，不入 git）
+# 排除 .claude/settings.json（含本地 API key，由 .gitignore 排除）
+[allowlist]
+description = "Exclude submodules / example configs / local-only paths"
+paths = [
+  '''themes/blowfish/.*''',
+  '''volumes/grafana/grafana\.ini''',
+  '''\.qoder/.*''',
+  '''\.claude/.*''',
+]
