@@ -2,7 +2,7 @@
 title: "Manner 美式咖啡 · A 级"
 description: "双份浓缩与水的纯粹组合，低卡健康之选"
 date: 2026-10-09
-draft: true
+draft: false
 showTableOfContents: false
 categories:
   - "饮品记录"
@@ -148,7 +148,7 @@ Manner Coffee · Americano · 美式咖啡
 
 ### 标题
 
-`5大卡 A 级纯咖，冰爽提神零负担`
+`6大卡 A 级纯咖，冰爽提神零负担`
 
 ### 标签
 

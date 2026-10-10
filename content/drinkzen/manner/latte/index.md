@@ -2,7 +2,7 @@
 title: "Manner 拿铁 · C 级"
 description: "朝日唯品有机奶与双份浓缩的醇厚平衡，平价精品拿铁"
 date: 2026-10-09
-draft: true
+draft: false
 showTableOfContents: false
 categories:
   - "饮品记录"
@@ -152,7 +152,7 @@ Manner Coffee · Latte · 拿铁
 
 ### 标题
 
-`158大卡 C 级奶咖，奶香饱满带甘`
+`178大卡 C 级奶咖，奶香饱满带甘`
 
 ### 标签
 
