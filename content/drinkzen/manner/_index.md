@@ -83,7 +83,7 @@ Manner 官方产品页**不公布**完整的健康评级数据（热量、糖分
 
 | 产品 | 英文名 | 等级 | 说明 |
 | :--- | :--- | :--- | :--- |
-| [美式](/drinkzen/manner/americano/) | Americano | **A** | 纯咖啡，无糖无脂（SOP 不支持加奶） |
+| [冰美式](/drinkzen/manner/iced-americano/) | Iced Americano | **A** | 默认双份浓缩 + 过滤水，¥15 起；浓度档（默认/低/额外一份/额外两份）；菜单无糖无奶 |
 | [拿铁](/drinkzen/manner/latte/) | Latte | **C** | 双份浓缩 + 朝日唯品全脂奶 |
 | [燕麦拿铁](/drinkzen/manner/oat-latte/) | Oat Latte | **B-C** | 燕麦奶替代牛奶 |
 | [SOE 拿铁](/drinkzen/manner/soe-latte/) | SOE Latte | **B-C** | 单一产地浓缩 + 牛奶 |
