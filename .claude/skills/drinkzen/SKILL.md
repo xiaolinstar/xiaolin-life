@@ -427,6 +427,42 @@ content/drinkzen/manner/iced-latte/index.md: menu=已核实 product=已关联 xi
 
 ---
 
+## 后台维护（独立模块，待迭代）
+
+> **说明**：本节与主干流程（阶段 1-5）独立，按需调用。当前 drinkzen-admin 功能尚不成熟，后续会持续迭代。
+
+**适用场景**：
+
+- 批量关联饮品页与 drinkzen.cn 后台产品 ID
+- 同步 Hugo 页面的评级/营养数据到后台
+- 校验后台数据与 Hugo 页面的一致性
+- 批量更新品牌或饮品元信息
+
+**操作前检查**：
+
+1. 确认目标饮品页已完成阶段 1-2（菜单已核实、评级已计算）
+2. 读取 `data/drinkzen-operations.json` 查看当前关联状态
+3. 运行 `python3 scripts/drinkzen-operations.py status` 确认待处理项
+
+**核心动作**：
+
+| 动作 | 说明 | 命令示例 |
+| --- | --- | --- |
+| link | 关联后台产品 ID | `drinkzen-admin link --page <path> --product-id <id>` |
+| sync | 同步评级到后台 | `drinkzen-admin sync --brand <brand> --dry-run` |
+| verify | 校验数据一致性 | `drinkzen-admin verify --all` |
+| update | 批量更新元信息 | `drinkzen-admin update --brand <brand> --field <field>` |
+
+**安全约束**：
+
+- 所有写入操作先运行 `--dry-run --json`，确认无误再执行
+- 已有用户授权覆盖的变更可直接执行，否则需确认
+- 后台操作记录写入 `data/drinkzen-operations.json` 的 `admin_log` 字段
+
+**API 参考**：详见 [admin.md](references/admin.md)
+
+---
+
 ## 按任务读取
 
 | 任务 | 参考 |
