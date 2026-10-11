@@ -1,0 +1,40 @@
+{
+  "slug": "iced-americano",
+  "brand": "Manner Coffee",
+  "product": "冰美式 Iced Americano",
+  "source": "official-miniapp",
+  "collectedAt": "2026-10-11",
+  "screenshot": "gallery/menu-screenshot.png",
+  "options": [
+    {
+      "group": "杯型及温度",
+      "key": "size",
+      "selectionType": "single",
+      "values": [
+        {"label": "大冰杯 355ml", "default": true, "price": 0}
+      ]
+    },
+    {
+      "group": "冰",
+      "key": "ice",
+      "selectionType": "single",
+      "values": [
+        {"label": "正常冰", "default": true, "price": 0},
+        {"label": "少冰", "default": false, "price": 0},
+        {"label": "去冰", "default": false, "price": 0}
+      ]
+    },
+    {
+      "group": "咖啡浓度",
+      "key": "strength",
+      "selectionType": "single",
+      "values": [
+        {"label": "默认(推荐)", "default": true, "price": 0},
+        {"label": "低浓度", "default": false, "price": 0},
+        {"label": "额外一份浓缩", "default": false, "price": 5},
+        {"label": "额外两份浓缩", "default": false, "price": 5}
+      ]
+    }
+  ],
+  "defaultPrice": 15
+}

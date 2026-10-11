@@ -1,0 +1,40 @@
+{
+  "slug": "latte",
+  "brand": "Manner Coffee",
+  "product": "拿铁咖啡 Latte",
+  "source": "official-miniapp",
+  "collectedAt": "2026-10-11",
+  "screenshot": "gallery/menu-screenshot.png",
+  "options": [
+    {
+      "group": "规格",
+      "key": "size",
+      "selectionType": "single",
+      "values": [
+        {"label": "小热杯 237ml", "default": true, "price": 0},
+        {"label": "大热杯 355ml", "default": false, "price": 5}
+      ]
+    },
+    {
+      "group": "奶搭配",
+      "key": "milk",
+      "selectionType": "single",
+      "values": [
+        {"label": "牛奶", "default": true, "price": 0}
+      ]
+    },
+    {
+      "group": "咖啡浓度",
+      "key": "strength",
+      "selectionType": "single",
+      "values": [
+        {"label": "默认(推荐)", "default": true, "price": 0},
+        {"label": "小杯免费加浓", "default": false, "price": 0},
+        {"label": "大杯低浓度", "default": false, "price": 0},
+        {"label": "额外一份浓缩", "default": false, "price": 5},
+        {"label": "额外两份浓缩", "default": false, "price": 5}
+      ]
+    }
+  ],
+  "defaultPrice": 20
+}
