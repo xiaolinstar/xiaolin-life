@@ -14,7 +14,7 @@ tags:
   - "脱脂奶"
   - "控糖"
 summary: "Costa Latte Grande · 热 · 脱脂奶 · 不加糖：Nutri-Grade A 级，热量约 144kcal/480ml，咖啡因约 225mg（按 UK 官方 Caffeine Guide 3 shots 推算）。"
-platforms: [xiaohongshu]
+platforms: [xiaohongshu, dianping]
 ---
 
 > **饮品信息**
@@ -182,7 +182,7 @@ Costa Coffee · Latte · 拿铁 · Grande · 热 · 脱脂奶
 <!-- generated from content/social-publish/drafts/costa-latte.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
-{{< tab "📕 plog 长版（小红书 / 微博，≤800 字）" >}}
+{{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
 
 📍 今日饮品：Costa·拿铁（大杯 530ml · 热 · 脱脂奶）
 🔖 [默认] 不加糖

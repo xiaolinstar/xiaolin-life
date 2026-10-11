@@ -30,7 +30,8 @@
     "sync:github-env": "node scripts/cd/sync-github-env.mjs",
     "lint": "markdownlint-cli2",
     "lint:fix": "markdownlint-cli2 --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "drinkzen:status": "python3 scripts/drinkzen-operations.py status"
   },
   "lint-staged": {
     "**/*.md": ["markdownlint-cli2 --fix"]

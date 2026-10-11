@@ -1,11 +1,11 @@
 # DrinkZen 平台同步
 
-通过 `drinkzen-admin` CLI 把 Hugo 数据同步到 drinkzen.cn 后台，覆盖：品牌资料维护、菜单模板治理、Logo 核验、用户投稿审阅。
+通过 `drinkzen-admin` CLI 维护品牌资料、菜单模板、Logo 与投稿审核。当前命令不等同于完整的 Hugo 营养数据同步，产品与规格相关能力需在 DrinkZen 项目核实。
 
-> ⚠️ **核心安全铁律（Safety Principles）**：
+> **后台写入规则**：
 >
 > 1. **默认使用 `--dry-run`**：在执行任何修改性操作（`update`, `set-logo`, `apply`, `resolve`）之前，**必须先执行带 `--dry-run` 和 `--json` 的命令**。
-> 2. **人工确认防线 (Human-in-the-loop)**：Agent **不得在未获得用户显式确认前**真正执行写操作。Agent 应输出拟调用的 `drinkzen-admin` 命令及变更对比，等待用户审核批准。
+> 2. **人工确认防线 (Human-in-the-loop)**：先展示拟调用命令及变更对比；用户已有明确授权覆盖该具体变更时继续执行，否则取得确认。
 > 3. **命令区别**：`drinkzen-admin` 是管理员与运营专属 CLI；普通用户侧 CLI 保留为未来扩展，**当前项目不混用**。
 
 ---
@@ -69,8 +69,8 @@ drinkzen-admin brand list --json
    ```
 
 3. **查重与判重**：
-   使用 `drinkzen-admin brand show <brand_name> --json` 检查该品牌现有饮品库，判断：
-   - 若数据库中已存在同名且规格完整饮品 → 建议 `merge` 到现有饮品。
+   先看 `review show` 返回的产品候选和上下文；`brand show` 只确认品牌身份，不能假定它包含完整饮品库。缺少候选/规格时通过后台 UI 只读核对，再判断：
+   - 若同品牌、同菜单项且规格匹配 → 建议 `merge`，使用核实过的 `--target-product-id`；同名不足以判重。
    - 若数据库中已存在该饮品但缺少当前用户提交的新规格/热量 → 建议 `supplement` 补充规格。
    - 若为品牌新上架的真实饮品 → 建议 `create` 创建新饮品。
    - 若提交信息为测试乱码、虚假饮品或违反规定 → 建议 `reject` 驳回。
@@ -84,8 +84,8 @@ drinkzen-admin brand list --json
    - 任务详情与提交饮品名称。
    - 提案操作（如新建/合并）及推荐原因。
    - `dry_run` 返回的变更 JSON 结构。
-   - **请求用户确认是否真正执行**。
-5. **用户确认后真正执行**（去掉 `--dry-run`）：
+   - **核对已有授权；未覆盖该具体变更时请求确认**。
+5. **授权已覆盖具体变更后真正执行**（去掉 `--dry-run`）：
 
    ```bash
    drinkzen-admin review resolve <task_id> create --reason "经过官方菜单核实，该饮品为新增有效饮品" --json
@@ -109,6 +109,8 @@ drinkzen-admin brand list --json
    drinkzen-admin menu-template validate chagee_template.json --json
    ```
 
+   先按当前官方小程序逐单品核对选项。品牌通用模板不能证明某款饮品可换奶、加糖或换温度。
+
    _注意检查_：`optionGroups` 中每个组需具备 `key`, `label`, `values`, `selectionType` (`single` | `multiple`) 及合法 `defaultValues`。
 3. **Dry-Run 变更预览**：
 
@@ -116,7 +118,7 @@ drinkzen-admin brand list --json
    drinkzen-admin menu-template apply 霸王茶姬 chagee_template.json --dry-run --json
    ```
 
-4. **提交用户确认**：展示当前模板与新模板的 Diff，获得批准后再进行正式 `apply`。
+4. **核对授权**：展示当前模板与新模板的 Diff；已有授权覆盖具体变更时正式 `apply`，否则先取得确认。
 
 ---
 
@@ -131,24 +133,16 @@ drinkzen-admin brand list --json
    drinkzen-admin brand set-logo 霸王茶姬 ./chagee.png --source-name "霸王茶姬官方小程序" --source-url "https://chagee.com" --confidence verified --dry-run --json
    ```
 
-3. **提交用户确认后正式上传**。
+3. **展示变更并核对已有授权；授权覆盖时正式上传，否则先取得确认**。
 
 ---
 
-## 营养评级与数据置信度参考
+## 营养评级、来源与能力边界
 
-在协助用户评估数据准确性时，遵循 DrinkZen 的统一营养评级标准：
+统一采用 [核心评级标准](ratings.md)：默认新加坡，上海可选；不再维护按热量/总脂肪自定义的第三套 ABCD。
 
-| 评级        | 热量 (Calories) | 糖分 (Sugar) | 脂肪 (Fat) |
-| ----------- | --------------- | ------------ | ---------- |
-| **Grade A** | < 150 kcal      | < 5 g        | < 3 g      |
-| **Grade B** | < 250 kcal      | < 10 g       | < 5 g      |
-| **Grade C** | < 350 kcal      | < 20 g       | < 8 g      |
-| **Grade D** | ≥ 350 kcal      | ≥ 20 g       | ≥ 8 g      |
+来源按 [证据方案](search-guide.md) 逐字段记录，第三方检测不是品牌官方数据。CLI 的 confidence 枚举是接口标记，不代替来源与配置证据。
 
-数据来源置信度标注规则：
+review dry-run 生成本地提案，不保证服务端已验证全部字段。执行后读回任务状态；菜单/品牌写入后也要读回确认，不将 dry-run 或 HTTP 成功直接视为所有源已同步。
 
-- `verified`：品牌官方公开计算器、成分表或检验报告。
-- `high`：官方菜单明确标注、官方客服提供。
-- `medium`：知名第三方媒体、测评机构公开检测。
-- `low` / `pending`：用户自行预估或民间草案。
+产品关联、菜单证据、平台链接与待同步事项记录到 [运营台账](operations.md)。CLI 不支持的产品/营养写入明确列为待处理，通过后台 UI 人工维护或后续升级，不虚构命令。

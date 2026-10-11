@@ -17,7 +17,7 @@ tags:
   - "千目级抹茶"
   - "YOYO联名"
 summary: "瑞幸抹茶奶酪拿铁（当前在售）：C 级 ⚠️ 估算 / 基于配料和营养数据计算大杯冰不另外加糖约 290 kcal（官方 FAQ 同系列参考 239 kcal 作旁注） / 咖啡因约 30-50 mg（抹茶单源）。千目级纯抹茶 × 新西兰进口液体奶酪，液体奶酪减半可减 93-133 kcal；联名名创优品 YOYO。"
-platforms: [xiaohongshu]
+platforms: [xiaohongshu, dianping]
 ---
 
 > **饮品信息**
@@ -259,7 +259,7 @@ platforms: [xiaohongshu]
 <!-- generated from content/social-publish/drafts/mo-cha-nai-lao-na-tie.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
-{{< tab "📕 plog 长版（小红书 / 微博，≤800 字）" >}}
+{{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
 
 📍 今日饮品：瑞幸·抹茶奶酪拿铁（大杯 450ml / 超大杯 596ml）
 🔖 默认配置：冰 / 少少甜（社区最高赞组合）
@@ -284,7 +284,7 @@ platforms: [xiaohongshu]
 【4】口感体验
 到手先尝液体奶酪层（咸甜芝士）、再喝抹茶奶中段（微苦 + 醇正茶香）、最后吸抹茶液顶层。搅匀后变丝滑奶咖，茶感变浅但芝香放大，整体比抹茶丝绒拿铁更顺滑，尾韵清新不腻。冰化后抹茶味衰减，到手即饮最佳
 
-【5】健康建议
+【5】点单提示
 含乳（液体奶酪制品），过敏者禁点。乳糖不耐者慎点。抹茶过敏者禁点。不建议热饮，建议全冰去水
 
 ### 标签

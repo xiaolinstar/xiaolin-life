@@ -14,7 +14,7 @@ tags:
   - "小红书样例"
   - "南京"
 summary: "小红书推文样例 · Day 1：瑞幸生椰拿铁 C 级评估"
-platforms: [xiaohongshu]
+platforms: [xiaohongshu, dianping]
 ---
 
 > **小红书推文样例 · Day 1**
@@ -133,7 +133,7 @@ Nutri-Grade 评级基于**饱和脂肪**和**非乳源性糖**两个维度，取
 <!-- generated from content/social-publish/drafts/coconut-latte.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
-{{< tab "📕 plog 长版（小红书 / 微博，≤800 字）" >}}
+{{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
 
 📍 今日饮品：瑞幸·生椰拿铁（大杯 450ml）
 💰 价格：¥21

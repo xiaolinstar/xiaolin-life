@@ -2,6 +2,7 @@
   "slug": "iced-latte",
   "brand": "Manner Coffee",
   "product": "冰拿铁 Iced Latte",
+  "description": "牛奶与双份浓缩的碰撞",
   "source": "official-miniapp",
   "collectedAt": "2026-10-11",
   "screenshot": "gallery/menu-screenshot.png",
@@ -37,10 +38,10 @@
       "key": "strength",
       "selectionType": "single",
       "values": [
-        {"label": "默认(推荐)", "default": true, "price": 0},
-        {"label": "低浓度", "default": false, "price": 0},
-        {"label": "额外一份浓缩", "default": false, "price": 5},
-        {"label": "额外两份浓缩", "default": false, "price": 5}
+        {"label": "默认(推荐)", "default": true, "price": 0, "note": "2 份浓缩 60ml"},
+        {"label": "低浓度", "default": false, "price": 0, "note": "1 份浓缩 30ml"},
+        {"label": "额外一份浓缩", "default": false, "price": 5, "note": "3 份浓缩 90ml"},
+        {"label": "额外两份浓缩", "default": false, "price": 5, "note": "4 份浓缩 120ml"}
       ]
     }
   ],

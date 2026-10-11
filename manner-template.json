@@ -1,0 +1,69 @@
+{
+  "optionGroups": [
+    {
+      "key": "size",
+      "label": "杯型",
+      "values": [
+        "中杯",
+        "大杯"
+      ],
+      "selectionType": "single",
+      "defaultValues": [
+        "中杯"
+      ],
+      "required": false,
+      "verificationStatus": "pending",
+      "exclusions": []
+    },
+    {
+      "key": "sugar",
+      "label": "甜度",
+      "values": [
+        "正常糖",
+        "少糖",
+        "半糖",
+        "无糖"
+      ],
+      "selectionType": "single",
+      "defaultValues": [
+        "正常糖"
+      ],
+      "required": false,
+      "verificationStatus": "pending",
+      "exclusions": []
+    },
+    {
+      "key": "ice",
+      "label": "冰度",
+      "values": [
+        "正常冰",
+        "少冰",
+        "去冰",
+        "热"
+      ],
+      "selectionType": "single",
+      "defaultValues": [
+        "正常冰"
+      ],
+      "required": false,
+      "verificationStatus": "pending",
+      "exclusions": []
+    },
+    {
+      "key": "toppings",
+      "label": "加料",
+      "values": [
+        "加浓缩",
+        "换燕麦奶",
+        "换豆奶",
+        "加奶油"
+      ],
+      "selectionType": "multiple",
+      "defaultValues": [],
+      "required": false,
+      "verificationStatus": "pending",
+      "exclusions": []
+    }
+  ],
+  "removeGroupKeys": []
+}

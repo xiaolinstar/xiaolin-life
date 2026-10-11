@@ -36,7 +36,7 @@
     },
     "drinkzen": {
       "path": ".claude/skills/drinkzen",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "sourceType": "project-local"
     },
     "drinkzen-admin-cli": {
@@ -44,7 +44,7 @@
       "source": "xiaolinstar/drinkzen",
       "sourceType": "github",
       "path": "packages/admin-cli",
-      "version": "0.3.3",
+      "version": "0.4.0",
       "install_command": "drinkzen-admin skill install"
     },
     "origin-distribute": {

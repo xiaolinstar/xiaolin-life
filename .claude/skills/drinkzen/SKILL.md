@@ -266,6 +266,167 @@ DrinkZen 的评测价值在于计算模型的一致性和客观性。
 
 ---
 
+## 阶段 5：发布跟踪
+
+**目标**：记录真实发布事实，跟踪纠错与复盘，形成运营闭环。
+
+### 前提
+
+- 阶段 4 已完成（plog 已生成）
+- 用户已在小红书/大众点评实际发布，或已完成线上纠错
+- **不能**在仅生成文案时执行 `record`——必须有真实链接和时间
+
+### 具体动作
+
+#### 5.1 关联后台产品（link）
+
+登记 DrinkZen 后台产品 ID 和菜单证据，建立 origin 与后台的关联。
+
+```bash
+python3 scripts/drinkzen-operations.py link \
+  --article content/drinkzen/manner/iced-latte/index.md \
+  --product-id PRODUCT_ID \
+  --menu-evidence gallery/menu-screenshot.png \
+  --menu-checked-at 2026-10-11
+```
+
+- `--product-id`：DrinkZen 后台实际产品 ID（不明时留空）
+- `--menu-evidence`：菜单截图路径（与 menu.json 的 screenshot 一致）
+- `--menu-checked-at`：菜单核实日期
+
+#### 5.2 登记发布（record）
+
+实际发布后，登记平台链接和时间。每个平台各一条记录。
+
+```bash
+python3 scripts/drinkzen-operations.py record \
+  --article content/drinkzen/manner/iced-latte/index.md \
+  --platform xiaohongshu \
+  --url https://www.xiaohongshu.com/explore/ACTUAL_POST_ID \
+  --published-at 2026-10-11T14:30:00+08:00 \
+  --note 首次发布
+```
+
+- `--platform`：`xiaohongshu` 或 `dianping`
+- `--url`：实际发布链接（不能编造）
+- `--published-at`：ISO 8601 格式时间
+- `--note`：发布说明（首次发布 / 纠错 / 更新等）
+
+记录会自动保存 origin 和 plog 的 SHA-256 摘要，用于后续版本比对。
+
+#### 5.3 登记效果数据（metrics）
+
+发布后约 24 小时、7 天收集平台数据。
+
+```bash
+python3 scripts/drinkzen-operations.py metrics \
+  --article content/drinkzen/manner/iced-latte/index.md \
+  --platform xiaohongshu \
+  --observed-at 2026-10-12T14:30:00+08:00 \
+  --views 100 --likes 5 --saves 2 \
+  --note 24小时数据
+```
+
+- 未知值不填（不填为 null，不当作 0）
+- 可记录字段：`--views` `--likes` `--saves` `--comments` `--profile-visits` `--miniapp-visits` `--product-queries`
+- 小程序访问等归因数据需实际埋点证据，不能从笔记浏览量推算
+
+#### 5.4 登记跟进事项（note）
+
+外部菜单变化但正文尚未修正时，登记待办。
+
+```bash
+# 登记跟进事项
+python3 scripts/drinkzen-operations.py note \
+  --article content/drinkzen/manner/iced-latte/index.md \
+  --text "菜单已变更：新增换燕麦奶选项，待核对正文和后台"
+
+# 处理完成后标记解决
+python3 scripts/drinkzen-operations.py note \
+  --article content/drinkzen/manner/iced-latte/index.md \
+  --resolved
+```
+
+#### 5.5 查看状态（status）
+
+```bash
+python3 scripts/drinkzen-operations.py status
+```
+
+输出示例：
+
+```text
+content/drinkzen/manner/iced-latte/index.md: menu=已核实 product=已关联 xiaohongshu=已发布(2026-10-11) / dianping=未登记
+```
+
+状态含义：
+
+- `menu=未核实`：台账未登记菜单证据
+- `menu=已核实`：已登记菜单证据和核实日期
+- `product=待关联`：未登记后台产品 ID
+- `product=已关联`：已登记后台产品 ID
+- `xiaohongshu=未登记`：未发布
+- `xiaohongshu=已发布(日期)`：已登记发布链接
+- `xiaohongshu=待同步`：origin/plog 版本与记录不一致，需重新发布
+
+### 产出
+
+运营台账 `data/drinkzen-operations.json`，结构：
+
+```json
+{
+  "schema_version": 1,
+  "articles": {
+    "content/drinkzen/manner/iced-latte/index.md": {
+      "product_id": "abc123",
+      "menu_evidence": "gallery/menu-screenshot.png",
+      "menu_checked_at": "2026-10-11",
+      "followup": null,
+      "platforms": {
+        "xiaohongshu": {
+          "history": [
+            {
+              "url": "https://www.xiaohongshu.com/explore/xxx",
+              "published_at": "2026-10-11T14:30:00+08:00",
+              "origin_sha": "sha256:...",
+              "plog_sha": "sha256:...",
+              "note": "首次发布",
+              "metrics": [
+                {
+                  "observed_at": "2026-10-12T14:30:00+08:00",
+                  "views": 100,
+                  "likes": 5,
+                  "saves": 2,
+                  "note": "24小时数据"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+### 纠错流程
+
+1. 发现菜单/营养数据/评级需修正 → 更新 origin 和 plog
+2. `status` 检出 origin/plog 摘要变化 → 已发布平台显示"待同步"
+3. 在各平台完成线上修正
+4. 用 `record` 登记修正链接和时间（history 保留旧版本记录）
+5. `status` 恢复"已发布"
+
+### 易错点
+
+- **在仅生成文案时执行 record**：必须有真实链接和时间才能记录
+- **把 draft: false 当作已发布**：draft 状态不等于发布状态，必须以台账记录为准
+- **编造小程序归因数据**：小程序访问、搜索等需实际埋点，不能从笔记浏览量推算
+- **用观测时间 0 填充未知值**：未知值留空（null），不当作 0
+- **台账不提交 Git**：运营台账须与内容一起备份/提交
+
+---
+
 ## 按任务读取
 
 | 任务 | 参考 |

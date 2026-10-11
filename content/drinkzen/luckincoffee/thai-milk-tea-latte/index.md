@@ -12,7 +12,7 @@ tags:
   - "泰奶"
   - "鸳鸯拿铁"
 summary: "瑞幸泰奶鸳鸯拿铁：Nutri-Grade（新加坡）C 级 / 上海「营养选择」C 级，不另外加糖约 273kcal/450ml，非乳源性糖 10.39g，饱和脂肪约 1.93g/100ml，反式脂肪约 0.03g/100ml。"
-platforms: [xiaohongshu]
+platforms: [xiaohongshu, dianping]
 ---
 
 > **饮品信息**
@@ -222,7 +222,7 @@ platforms: [xiaohongshu]
 <!-- generated from content/social-publish/drafts/thai-milk-tea-latte.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
-{{< tab "📕 plog 长版（小红书 / 微博，≤800 字）" >}}
+{{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
 
 📍 今日饮品：瑞幸·泰奶鸳鸯拿铁（大杯 450ml）
 🔖 [默认] 冰 / 不另外加糖

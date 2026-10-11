@@ -158,6 +158,16 @@ pnpm run build
 
 产物输出到 `public/`，包含 Pagefind 搜索索引。
 
+## DrinkZen 运营
+
+饮品内容与两平台共用 plog 按 [DrinkZen Skill](.claude/skills/drinkzen/SKILL.md) 维护。数据缺失处理见 [证据方案](.claude/skills/drinkzen/references/search-guide.md)，发布、纠错与复盘见 [运营闭环](.claude/skills/drinkzen/references/operations.md)。
+
+```bash
+pnpm run drinkzen:status
+```
+
+本地台账位于 `data/drinkzen-operations.json`；未登记不等于未发布，需补核真实链接与后台产品 ID。该工具不执行线上发布或后台写入。
+
 ## 部署
 
 ### GitHub Actions

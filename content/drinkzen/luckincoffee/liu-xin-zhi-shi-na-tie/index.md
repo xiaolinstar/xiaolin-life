@@ -15,7 +15,7 @@ tags:
   - "海盐芝士"
   - "焦糖扁桃仁"
 summary: "瑞幸流心芝士拿铁（2026/09/28 全国上新）：D 级 ⚠️ 估算 / 基于配料和营养数据计算大杯冰不另外加糖约 431 kcal / 咖啡因约 50-70 mg。海盐芝士奶盖 × 液体奶酪 × 焦糖味扁桃仁碎 × 曼特宁浓缩，咸甜脆三重口感。"
-platforms: [xiaohongshu]
+platforms: [xiaohongshu, dianping]
 ---
 
 > **饮品信息**
@@ -242,7 +242,7 @@ platforms: [xiaohongshu]
 <!-- generated from content/social-publish/drafts/liu-xin-zhi-shi-na-tie.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
-{{< tab "📕 plog 长版（小红书 / 微博，≤800 字）" >}}
+{{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
 
 📍 瑞幸·流心芝士拿铁（大杯 450ml，超大杯 596ml）
 🔖 默认配置：冰 / 不另外加糖
@@ -273,7 +273,7 @@ platforms: [xiaohongshu]
 【4】口感体验
 先尝顶部芝士奶盖 + 焦糖扁桃仁碎（脆 + 咸甜），再搅拌喝奶酪 + 浓缩 —— 海盐「咸」+ 液体奶酪「浓」+ 焦糖「脆」三重口感清晰。冰版分层清楚；热版化成「浓汤感」，强烈建议冰饮。
 
-【5】健康建议（如何降级 / 减 kcal）
+【5】点单提示（如何降级 / 减 kcal）
 降 C 级：液体奶酪 + 海盐芝士奶盖同时减半（15g + 5g），431 → 约 300 kcal；需门店说明「液体奶酪少加 + 奶盖少放」
 严格控脂：再去芝士调味酱 + 海盐奶盖，再减约 50 kcal
 控糖：9.0 g 非乳源性糖，最低「微甜」也无法降到 B 级，建议控糖期避免

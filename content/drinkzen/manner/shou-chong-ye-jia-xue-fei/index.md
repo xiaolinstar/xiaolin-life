@@ -1,6 +1,6 @@
 ---
 title: "Manner 手冲·耶加雪菲 · A 级"
-description: "埃塞俄比亚耶加雪菲单一产地手冲，精品咖啡纯粹体验"
+description: "埃塞俄比亚耶加雪菲单一产地手冲，新加坡 A 级 / 上海 A 级，精品咖啡纯粹体验"
 date: 2026-09-03
 draft: true
 showTableOfContents: false
@@ -11,7 +11,7 @@ tags:
   - "Manner"
   - "手冲耶加雪菲"
   - "手冲咖啡"
-summary: "Manner 手冲·耶加雪菲：Nutri-Grade A 级，热量约 5-10kcal/杯，花香果酸经典。"
+summary: "Manner 手冲·耶加雪菲：新加坡 A 级 / 上海 A 级，热量约 7kcal/杯，花香果酸经典。"
 ---
 
 > **饮品信息**
@@ -22,8 +22,9 @@ summary: "Manner 手冲·耶加雪菲：Nutri-Grade A 级，热量约 5-10kcal/�
 Manner Coffee · Pour Over Yirgacheffe · 手冲·耶加雪菲
 
 - **系列**：Hand Drip（手冲精品系列）
-- **Nutri-Grade**：A 级
-- **热量**：约 5-10kcal/杯（中杯 360ml）
+- **新加坡 Nutri-Grade**：A 级
+- **上海 营养选择**：A 级
+- **热量**：约 7kcal/杯（中杯 360ml）
 - **咖啡因**：约 100-150mg
 - **推荐点单**：中杯、热饮、不加糖不加奶
 
@@ -120,14 +121,15 @@ Manner Coffee · Pour Over Yirgacheffe · 手冲·耶加雪菲
 
 ```text
 🥤 DrinkZen 小程序搜「Manner 手冲·耶加雪菲」，看完整评估
-📍 Nutri-Grade A 级
+📍 新加坡 Nutri-Grade A 级 / 上海营养选择 A 级
 📍 埃塞俄比亚 Yirgacheffe 单一产地
 💡 品鉴推荐：纯黑饮用，不加糖不加奶
 ```
 
 ## 数据说明
 
-- **Nutri-Grade 评级**：⚠️ 基于配方推算，非官方数据
+- **新加坡 Nutri-Grade**：⚠️ 基于配方推算，非官方数据
+- **上海 营养选择**：⚠️ 基于配方推算，非官方数据
 - **营养数据**：⚠️ 配方计算值，待实测验证
 - **咖啡因**：⚠️ 基于 22g 咖啡粉手冲萃取估算
 - 正式发布前需在 DrinkZen 后台录入实测数据并通过 AUS-3（数据来源补齐）流程上线
