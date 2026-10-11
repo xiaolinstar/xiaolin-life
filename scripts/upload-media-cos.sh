@@ -18,9 +18,6 @@ cos_load_dotenv "$ROOT"
 cos_load_config
 
 ALIAS="$COS_BUCKET_ALIAS"
-PREFIX="${COS_PREFIX}"
-PREFIX="${PREFIX#/}"
-PREFIX="${PREFIX%/}"
 
 if ! command -v coscli >/dev/null 2>&1; then
   echo "Error: coscli 未安装，见 https://cloud.tencent.com/document/product/436/63144" >&2
@@ -31,24 +28,6 @@ if [[ $# -lt 1 ]]; then
   echo "Usage: $0 <local-path> [local-path ...]" >&2
   exit 1
 fi
-
-cos_key_with_prefix() {
-  local key="$1"
-  key="${key#/}"
-  if [[ -z "$PREFIX" ]]; then
-    printf '%s' "$key"
-    return
-  fi
-  if [[ -n "$key" && ( "$key" == "$PREFIX" || "$key" == "$PREFIX/"* ) ]]; then
-    printf '%s' "$key"
-    return
-  fi
-  if [[ -z "$key" ]]; then
-    printf '%s' "$PREFIX"
-  else
-    printf '%s' "${PREFIX}/${key}"
-  fi
-}
 
 cos_dest() {
   local key="$1"

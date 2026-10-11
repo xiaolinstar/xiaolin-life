@@ -160,7 +160,7 @@ COS_PREFIX=life          # xiaolin-life
 | `static/assets/images/img-mac/…` | `life/img-mac/…`（需 `COS_PREFIX=life`） |
 | dcos `static/assets/images/img-ai-coding/…` | `docs/img-ai-coding/…`（需 `COS_PREFIX=docs`） |
 
-**Page Bundle**：键为 `content/` 之后、`gallery/` 之前的路径；life 站路径通常已以 `life/` 开头，与 `COS_PREFIX` 叠加时需注意避免 `life/life/…`（迁移脚本会处理）。
+**Page Bundle**：取 `content/` 之后、`gallery/` 之前的路径，再添加 `COS_PREFIX`，已有前缀时不重复添加。上传、校验与轮播 URL 改写共用此规则：`life/trip` → `life/trip/`，`drinkzen/manner/coffee` → `life/drinkzen/manner/coffee/`，`office/email` → `life/office/email/`。
 
 **static**：上传到 `{COS_PREFIX}/img-*`，不再落 Bucket 根目录。
 

@@ -4,52 +4,48 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows: ["CI Pipeline, Build and Push Image"]
+    branches: [main]
     types:
       - completed
-
-concurrency:
-  group: cd-xiaolin-fun-121
-  cancel-in-progress: true
 
 env:
   SERVER_DIR: ~/AgentProjects/xiaolin-life
 
 jobs:
-  config-sync:
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Sync repository on server
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          command_timeout: 5m
-          script: |
-            set -euo pipefail
-            cd ${{ env.SERVER_DIR }}
-            git -c submodule.recurse=false pull --ff-only
-            mkdir -p volumes/website/logs volumes/website/certs
-
   deploy:
-    needs: config-sync
+    if: >-
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
+    concurrency:
+      group: cd-xiaolin-fun-121
+      cancel-in-progress: false
+    env:
+      DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
 
     steps:
-      - name: Pull image and restart container
+      - name: Deploy matching configuration and image
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           command_timeout: 30m
+          envs: DEPLOY_SHA
           script: |
             set -euo pipefail
             cd ${{ env.SERVER_DIR }}
-            docker compose -f compose.yaml pull
+            [[ "$DEPLOY_SHA" =~ ^[0-9a-f]{40}$ ]]
+            export WEBSITE_IMAGE_TAG="sha-$DEPLOY_SHA"
+            # Confirm the image exists before changing the server configuration.
+            docker pull "ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:$WEBSITE_IMAGE_TAG"
+            git -c submodule.recurse=false fetch origin main
+            git -c submodule.recurse=false checkout --detach "$DEPLOY_SHA"
+            mkdir -p volumes/website/logs volumes/website/certs
             docker compose -f compose.yaml up -d
-            docker image prune -f
             bash scripts/wait-healthy.sh
-            echo "Deployment completed successfully!"
+            docker image prune -f
+            echo "Deployment completed successfully: $DEPLOY_SHA"

@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'content/**/*.md'
+      - '.github/workflows/media-verify.yml'
 
 permissions:
   contents: read
@@ -19,14 +20,14 @@ jobs:
       - name: Verify remote media URLs in content
         run: |
           set -euo pipefail
-          mapfile -t urls < <(rg -o 'https?://[^)\s"'"'"']+\.(jpg|jpeg|png|webp|gif|mp4|mov)' content --glob '*.md' -i || true)
+          mapfile -t urls < <(rg --no-filename -o 'https?://[^)\s"'"'"']+\.(jpg|jpeg|png|webp|gif|mp4|mov)' content --glob '*.md' -i | sort -u || true)
           if [[ ${#urls[@]} -eq 0 ]]; then
             echo "No remote media URLs in content (still using local gallery/* is OK)."
             exit 0
           fi
           failed=0
           for url in "${urls[@]}"; do
-            code=$(curl -s -o /dev/null -w '%{http_code}' -I "$url" || echo "000")
+            code=$(curl -s -o /dev/null -w '%{http_code}' --connect-timeout 10 --max-time 30 -I "$url" || echo "000")
             if [[ "$code" == "200" || "$code" == "206" ]]; then
               echo "✓ $code $url"
             else

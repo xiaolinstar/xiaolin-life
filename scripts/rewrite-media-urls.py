@@ -42,11 +42,11 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
 
 def rewrite_carousel(
-    text: str, md_path: Path, cdn_base: str
+    text: str, md_path: Path, cdn_base: str, prefix: str = DEFAULT_PREFIX
 ) -> tuple[str, int]:
     """把本地 gallery 轮播改写为 carousel-cdn（CDN URL 列表）。
 
-    对象键与 media-publish.sh 保持一致：文章路径去掉 content/ 前缀。
+    对象键与上传脚本保持一致：文章路径去掉 content/，添加项目命名空间。
     仅当 images 指向本地 gallery 且文件存在时改写。
     """
     article_dir = md_path.parent
@@ -54,7 +54,11 @@ def rewrite_carousel(
         rel = article_dir.relative_to(CONTENT)
     except ValueError:
         return text, 0
-    url_prefix = f"{cdn_base.rstrip('/')}/{rel.as_posix()}"
+    key = rel.as_posix()
+    pref = prefix.strip("/")
+    if pref and key != pref and not key.startswith(pref + "/"):
+        key = f"{pref}/{key}"
+    url_prefix = f"{cdn_base.rstrip('/')}/{key}"
     count = 0
 
     def repl(match: re.Match[str]) -> str:
@@ -151,7 +155,7 @@ def main() -> None:
     for path in targets:
         original = path.read_text(encoding="utf-8")
         updated, n = rewrite_text(original, args.cdn_base, args.prefix)
-        updated, n_carousel = rewrite_carousel(updated, path, args.cdn_base)
+        updated, n_carousel = rewrite_carousel(updated, path, args.cdn_base, args.prefix)
         n += n_carousel
         if n == 0:
             continue

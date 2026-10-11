@@ -65,7 +65,7 @@ for page in "${PATHS[@]}"; do
   echo "== 发布: $rel ($count 个文件) =="
   "$ROOT/scripts/upload-media-cos.sh" "$gallery"
 
-  cos_prefix="${rel#content/}"
+  cos_prefix="$(cos_key_with_prefix "${rel#content/}")"
   sample="$(find "$gallery" -type f ! -name '.gitkeep' | sort | head -1)"
   sample_name="$(basename "$sample")"
   sample_url="${MEDIA_BASE%/}/${cos_prefix}/${sample_name}"

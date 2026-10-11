@@ -98,7 +98,7 @@ pnpm install                   # 自动触发 husky prepare
 ## 部署
 
 - **CI**：`.github/workflows/ci-ghcr.yml`（gitleaks + lint + Docker 构建推送）
-- **CD**：`.github/workflows/cd-ghcr.yml`（config-sync → deploy 两阶段）
+- **CD**：`.github/workflows/cd-ghcr.yml`（配置与镜像按提交 SHA 同步部署）
 - **Pages**：`.github/workflows/pages.yml`（GitHub Pages 预览）
 - **媒体校验**：`.github/workflows/media-verify.yml`（内容变更触发 CDN URL 健康检查）
 

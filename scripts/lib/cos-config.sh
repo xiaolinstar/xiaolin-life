@@ -82,3 +82,25 @@ cos_load_config() {
 
   export COS_BUCKET_ALIAS COS_BUCKET_NAME COS_ENDPOINT COS_REGION COS_PUBLIC_BASE_URL COS_PREFIX
 }
+
+# 对象键统一添加项目命名空间，已有前缀时不重复添加。
+cos_key_with_prefix() {
+  local key="$1"
+  local prefix="${COS_PREFIX:-life}"
+  prefix="${prefix#/}"
+  prefix="${prefix%/}"
+  key="${key#/}"
+  if [[ -z "$prefix" ]]; then
+    printf '%s' "$key"
+    return
+  fi
+  if [[ -n "$key" && ( "$key" == "$prefix" || "$key" == "$prefix/"* ) ]]; then
+    printf '%s' "$key"
+    return
+  fi
+  if [[ -z "$key" ]]; then
+    printf '%s' "$prefix"
+  else
+    printf '%s' "${prefix}/${key}"
+  fi
+}

@@ -113,7 +113,7 @@ hook 行为：
 ### CI / CD 门禁
 
 - `ci-ghcr.yml`：gitleaks → lint → Docker 构建推送（必选 4 项均覆盖）
-- `cd-ghcr.yml`：config-sync → deploy 两阶段（依赖 ci 成功后触发）
+- `cd-ghcr.yml`：仅 main 推送 CI 成功后自动部署，配置与镜像绑定同一提交
 - `pages.yml`：GitHub Pages 预览构建
 - `media-verify.yml`：内容变更触发 CDN URL 健康检查
 
@@ -163,13 +163,16 @@ pnpm run build
 ### GitHub Actions
 
 - `.github/workflows/ci-ghcr.yml`：Docker 多阶段构建（Hugo → nginx 镜像）并推送到 GHCR
-- `.github/workflows/cd-ghcr.yml`：两阶段 CD（config-sync → deploy）
+- `.github/workflows/cd-ghcr.yml`：按提交 SHA 部署配置与镜像
 - `.github/workflows/pages.yml`：部署到 GitHub Pages
 
 CD 流程（容器化，无 scp）：
 
-1. **config-sync**：SSH `git pull`，同步 `compose.yaml`、nginx 配置等
-2. **deploy**：`docker compose pull && up -d`，从 `ghcr.nju.edu.cn` 拉取镜像并重启
+1. 只接受本仓库 `main` 推送的成功 CI；部署串行执行，不中断进行中的部署。
+2. 先拉取该提交的 `sha-<完整 SHA>` 镜像，成功后将服务器 Git 检出到同一 SHA（detached HEAD）。
+3. 设置 `WEBSITE_IMAGE_TAG=sha-<完整 SHA>`，执行 `docker compose up -d` 并等待健康检查通过。
+
+手动触发 CD 仅支持 `main`，对应提交须已完成 CI 镜像推送，否则在更新服务器配置前失败。服务器后续同步由 CD 的 fetch / checkout 完成，不再使用 `git pull`。
 
 CI 仍推送到官方 `ghcr.io`；服务器通过 [南大 GHCR 镜像](https://ghcr.nju.edu.cn) 加速拉取（见 `compose.yaml`）。
 

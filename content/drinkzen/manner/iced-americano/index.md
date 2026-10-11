@@ -3,6 +3,8 @@ title: "冰美式 Iced Americano · A 级"
 description: "默认双份浓缩与过滤水的纯粹组合，低卡健康之选"
 date: 2026-10-09
 draft: false
+aliases:
+  - /drinkzen/manner/americano/
 showTableOfContents: false
 categories:
   - "饮品记录"
