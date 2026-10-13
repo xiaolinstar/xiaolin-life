@@ -214,6 +214,7 @@ summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯�
 ### 大师咖啡系列（Barista Coffee）
 
 - [瑞幸拿铁 · B 级（中国）/ A 级（新加坡）](/drinkzen/luckincoffee/latte/) · Espresso × 全脂奶（中国，sat fat 1.07g/100ml 处于 B 级区间）/ 脱脂奶（新加坡），约 133kcal/大杯冰/全脂奶
+- [瑞幸埃塞金烘拿铁 · B 级](/drinkzen/luckincoffee/ehtiopia-latte/) · 埃塞俄比亚 IIAC 铂金奖豆 + 专属梯度升温浅中烘（花香可可 · 浓醇口感），¥17 大杯 / 超大杯限量联名杯 ¥20；与瑞幸拿铁同口径（133kcal / sat fat 1.07g/100ml），差异在豆基风味
 - [瑞幸卡布奇诺 · B 级（中国）/ A 级（新加坡）](/drinkzen/luckincoffee/cappuccino/) · 厚奶泡 × 浓缩咖啡（sat fat 1.07g/100ml，与拿铁同级），约 133kcal/大杯冰/全脂奶
 - [瑞幸焦糖玛奇朵 · C 级（中国 + 新加坡）](/drinkzen/luckincoffee/caramel-macchiato/) · 香草糖浆基底 + 焦糖淋顶（非乳源糖 5.69g/100ml 糖触发），约 235kcal/大杯冰/全脂奶
 - [瑞幸摩卡 · C 级（中国）/ B 级（新加坡）](/drinkzen/luckincoffee/cafe-mocha/) · 浓缩 × 巧克力糖浆 + 全脂奶（sat fat 1.30g/100ml 触发 C 级），约 222kcal/大杯冰/全脂奶

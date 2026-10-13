@@ -1,0 +1,94 @@
+{
+  "slug": "ehtiopia-latte",
+  "schema_version": 1,
+  "brand": "Luckin Coffee 瑞幸咖啡",
+  "product_cn": "埃塞金烘拿铁",
+  "brand_nickname": "瑞幸小棕杯 / 埃塞金烘系列",
+  "series": "埃塞金烘系列（2026-04 全国上新，主打「花香可可 · 浓醇口感」）",
+  "bean_base": {
+    "name": "埃塞金烘",
+    "origin": "埃塞俄比亚产区 100% 阿拉比卡（水洗 + 日晒双处理法）",
+    "roast_curve": "专属梯度升温烘焙工艺（瑞幸在深烘之外的第三种烘焙曲线，浅中烘向中烘过渡）",
+    "award": "IIAC 国际咖啡品鉴大赛最高奖项「铂金奖」",
+    "endorser": "WBC 2025 世界亚军、中国大陆首座银奖得主孙磊",
+    "positioning": "可对 25 款以上核心饮品免费换豆；新单品「埃塞金烘美式」「埃塞金烘拿铁」同步上线",
+    "source": "research-doc + 今日头条 7628121018117014056 + 新浪 5289717529576502"
+  },
+  "source": "official-miniapp",
+  "collectedAt": "2026-10-13",
+  "screenshot": "gallery/menu-screenshot.png",
+  "screenshot_status": "已截图核实（瑞幸官方小程序，2026-10-13）",
+  "subtitle_on_app": "100% 阿拉比卡",
+  "options": [
+    {
+      "group": "杯型",
+      "key": "size",
+      "selectionType": "single",
+      "values": [
+        {"label": "大杯 约 450ml", "default": true, "price": 17, "price_unit": "元"},
+        {"label": "超大杯 约 596ml（限量联名杯 · 用完即止）", "default": false, "price": 20, "price_unit": "元", "price_status": "+¥3 升杯费", "cup_note": "限量联名杯"}
+      ]
+    },
+    {
+      "group": "温度",
+      "key": "temperature",
+      "selectionType": "single",
+      "values": [
+        {"label": "冰", "default": true, "price": 0},
+        {"label": "热", "default": false, "price": 0}
+      ]
+    },
+    {
+      "group": "咖啡豆",
+      "key": "bean",
+      "selectionType": "single",
+      "values": [
+        {"label": "埃塞金烘", "default": true, "price": 0, "flavor_desc": "花香可可 · 浓醇口感"}
+      ],
+      "note": "本 SKU 专属豆基，无其它豆选项（其它 25+ 饮品的「免费换豆」入口不适用于本单品）"
+    },
+    {
+      "group": "咖啡浓度",
+      "key": "concentration",
+      "selectionType": "single",
+      "values": [
+        {"label": "默认浓度", "default": true, "price": 0},
+        {"label": "加单份浓缩", "default": false, "price": 3, "price_unit": "元"}
+      ]
+    },
+    {
+      "group": "糖度",
+      "key": "sweetness",
+      "selectionType": "single",
+      "values": [
+        {"label": "不另外加糖", "default": true, "price": 0, "sugar_g": 0, "note": "仅含牛奶乳糖"},
+        {"label": "微甜", "default": false, "price": 0, "pumps": 1, "sugar_g": 5},
+        {"label": "少少甜", "default": false, "price": 0, "pumps": 2, "sugar_g": 10},
+        {"label": "少甜", "default": false, "price": 0, "pumps": 3, "sugar_g": 15},
+        {"label": "标准甜", "default": false, "price": 0, "pumps": 4, "sugar_g": 20}
+      ],
+      "note": "泵数与含糖量沿用 latte/ 行业基准（每泵 ≈5g 糖）；瑞幸官方未公开埃塞金烘拿铁单品的糖浆克重"
+    },
+    {
+      "group": "奶基",
+      "key": "milk",
+      "selectionType": "single",
+      "values": [
+        {"label": "牛奶", "default": true, "price": 0, "note": "小程序价格分项显示「+牛奶 ¥0」"}
+      ],
+      "note": "小程序菜单（2026-10-13 截图）仅提供牛奶；未来若小程序新增奶基选项，需补抓图同步更新"
+    }
+  ],
+  "defaultPrice": 17,
+  "defaultConfig": {
+    "size": "大杯 450ml",
+    "size_selected_today": "超大杯 596ml（实饮，限量联名杯）+¥3",
+    "temperature": "冰",
+    "bean": "埃塞金烘",
+    "concentration": "默认浓度",
+    "sweetness": "不另外加糖",
+    "milk": "牛奶",
+    "total_price_today": "20 元（大杯 17 + 升杯 3）"
+  },
+  "notes": "本次实饮：超大杯 596ml / 冰 / 不另外加糖 / 全脂奶 / 默认浓度 / 埃塞金烘豆基；实付 20 元。埃塞金烘豆基不影响分级评级（sat fat / 糖与普通拿铁相同），差异在风味（花香可可 · 浓醇口感）以及「25 款+ 免费换豆」的客制化权益（不适用于本单品）。"
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "slug": "ehtiopia-latte",
+  "brand": "Luckin Coffee 瑞幸咖啡",
+  "product_cn": "埃塞金烘拿铁",
+  "default_config": {
+    "size": "大杯 450ml",
+    "temperature": "冰",
+    "sweetness": "不另外加糖",
+    "milk": "全脂牛奶",
+    "bean": "埃塞金烘",
+    "concentration": "默认浓度"
+  },
+  "ingredients": [
+    {
+      "name": "全脂牛奶",
+      "volume_ml": 210,
+      "kcal": 130.2,
+      "protein_g": 6.7,
+      "fat_g": 7.6,
+      "sat_fat_g": 4.8,
+      "total_sugar_g": 10.1,
+      "lactose_g": 10.1,
+      "non_milk_sugar_g": 0
+    },
+    {
+      "name": "埃塞金烘浓缩液",
+      "volume_ml": 30,
+      "kcal": 2.5,
+      "protein_g": 0.1,
+      "fat_g": 0.1,
+      "sat_fat_g": 0.02,
+      "total_sugar_g": 0.1,
+      "lactose_g": 0,
+      "non_milk_sugar_g": 0.1
+    },
+    {
+      "name": "冰块",
+      "volume_ml": 210,
+      "kcal": 0,
+      "protein_g": 0,
+      "fat_g": 0,
+      "sat_fat_g": 0,
+      "total_sugar_g": 0,
+      "lactose_g": 0,
+      "non_milk_sugar_g": 0
+    }
+  ],
+  "totals": {
+    "volume_ml": 450,
+    "kcal": 133,
+    "protein_g": 6.8,
+    "fat_g": 7.7,
+    "sat_fat_g": 4.82,
+    "total_sugar_g": 10.2,
+    "lactose_g": 10.1,
+    "non_milk_sugar_g": 0.1
+  },
+  "per_100ml": {
+    "kcal": 29.6,
+    "protein_g": 1.51,
+    "fat_g": 1.71,
+    "sat_fat_g": 1.07,
+    "total_sugar_g": 2.27,
+    "lactose_g": 2.24,
+    "non_milk_sugar_g": 0.02
+  },
+  "ratings": [
+    {
+      "system": "新加坡 Nutri-Grade",
+      "primary": true,
+      "method": "按同款中国大陆全脂奶参数代入新加坡 Nutri-Grade 阈值（非新加坡门店实测）",
+      "criteria": [
+        {
+          "name": "糖",
+          "value_per_100ml": 2.27,
+          "adjusted_per_100ml": 0.02,
+          "adjustment": "−2.24g 乳糖扣减",
+          "grade": "A"
+        },
+        {
+          "name": "饱和脂肪",
+          "value_per_100ml": 1.07,
+          "adjusted_per_100ml": 1.07,
+          "adjustment": null,
+          "grade": "B"
+        }
+      ],
+      "final_grade": "B",
+      "reason": "糖 A + 饱和脂肪 B → B"
+    },
+    {
+      "system": "上海「营养选择」",
+      "primary": false,
+      "method": "中国大陆官方适用（4 指标取最低）",
+      "criteria": [
+        {"name": "非乳源糖", "value_per_100ml": 0.02, "grade": "A"},
+        {"name": "饱和脂肪", "value_per_100ml": 1.07, "grade": "B"},
+        {"name": "反式脂肪", "value_per_100ml": 0, "grade": "A"},
+        {"name": "非糖甜味剂", "value_per_100ml": 0, "grade": "A"}
+      ],
+      "final_grade": "B",
+      "reason": "饱和脂肪 B 主导，其余 A"
+    }
+  ],
+  "configuration_variants": [
+    {"label": "冰 / 不另外加糖 / 牛奶", "kcal": 133, "sat_fat_per_100ml": 1.07, "non_milk_sugar_per_100ml": 0.02, "rating": "B"},
+    {"label": "冰 / 微甜 1 泵 / 牛奶", "kcal": 153, "sat_fat_per_100ml": 1.07, "non_milk_sugar_per_100ml": 1.13, "rating": "B"},
+    {"label": "冰 / 少少甜 2 泵 / 牛奶", "kcal": 173, "sat_fat_per_100ml": 1.07, "non_milk_sugar_per_100ml": 2.24, "rating": "B"},
+    {"label": "冰 / 少甜 3 泵 / 牛奶", "kcal": 193, "sat_fat_per_100ml": 1.07, "non_milk_sugar_per_100ml": 3.35, "rating": "B"},
+    {"label": "冰 / 标准甜 4 泵 / 牛奶", "kcal": 213, "sat_fat_per_100ml": 1.07, "non_milk_sugar_per_100ml": 4.46, "rating": "B"}
+  ],
+  "metadata": {
+    "caffeine_mg": 98.6,
+    "caffeine_source": "瑞幸拿铁官方（大杯 450ml 口径，超大杯无单独公示）",
+    "computed_at": "2026-10-13",
+    "calculation_assumption": {
+      "size_strategy": "默认大杯 450ml，按瑞幸冰标签线 210ml 液体基底",
+      "espresso_basis": "30ml（瑞幸拿铁官方单份，沿用 latte/ 口径）",
+      "milk_formula": "三元鲜牛奶，每 100ml：62 kcal / 3.2g 蛋白质 / 3.6g 脂肪 / 2.3g 饱和脂肪 / 4.8g 碳水（乳糖）",
+      "cup_size_strategy": "本次实饮为超大杯 596ml（限量联名杯）；瑞幸官方未公开升杯公式，营养以默认大杯 450ml 口径计算，评级结果对杯型不敏感"
+    },
+    "sources": [
+      {"fact": "埃塞金烘豆 + 浅中烘工艺 + 孙磊背书 + 小棕杯", "ref": "新浪 5289717529576502 + 中国经济新闻网 10335866 + 今日头条 7628121018117014056", "type": "官方发布稿 + 公开报道"},
+      {"fact": "菜单选项结构与价格", "ref": "gallery/menu-screenshot.png（瑞幸官方小程序，2026-10-13）", "type": "官方截图"},
+      {"fact": "单份 Espresso 30ml / 大杯 sat fat 1.07g 算法", "ref": "content/drinkzen/luckincoffee/latte/index.md", "type": "同品系列计算口径"},
+      {"fact": "三元鲜牛奶营养", "ref": "content/drinkzen/luckincoffee/_index.md §参考", "type": "公开营养成分表"},
+      {"fact": "分级阈值", "ref": "新加坡 Nutri-Grade 官方 + 上海疾控", "type": "公开标准"}
+    ]
+  }
+}
