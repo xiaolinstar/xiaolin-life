@@ -1,4 +1,12 @@
 {
   "schema_version": 1,
-  "articles": {}
+  "articles": {
+    "content/drinkzen/luckincoffee/salty-cheese-soy-latte/index.md": {
+      "product_id": null,
+      "menu_evidence": "gallery/menu-screenshot.png",
+      "menu_checked_at": "2026-10-13",
+      "followup": null,
+      "platforms": {}
+    }
+  }
 }

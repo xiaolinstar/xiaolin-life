@@ -1,0 +1,101 @@
+{
+  "slug": "salty-cheese-soy-latte",
+  "schema_version": 1,
+  "brand": "Luckin Coffee 瑞幸咖啡",
+  "product_cn": "咸芝士豆乳拿铁",
+  "brand_nickname": "瑞幸咸芝士豆乳拿铁 / Salty Cheese Soy Milk Latte",
+  "series": "咸芝士豆乳系列",
+  "source": "official-miniapp",
+  "collectedAt": "2026-10-13",
+  "screenshot": "gallery/menu-screenshot.png",
+  "screenshot_status": "用户截图待转存（原始截图见会话上下文，截图保存于 /tmp/ 临时目录，需用户后续存到 gallery/）",
+  "subtitle_on_app": "一口三重风味 ｜ 东北非转基因大豆 ｜ 细腻黄豆粉",
+  "options": [
+    {
+      "group": "杯型",
+      "key": "size",
+      "selectionType": "single",
+      "values": [
+        {"label": "大杯 450ml", "default": true, "price": 21, "price_unit": "元", "cup_capacity": "瑞幸官方小程序显示「约 450ml」"},
+        {"label": "超大杯 596ml（限量联名杯 · 用完即止）", "default": false, "price": 24, "price_unit": "元", "price_status": "+¥3 升杯费", "cup_note": "限量联名杯", "cup_capacity": "瑞幸官方小程序显示「约 596ml」"}
+      ]
+    },
+    {
+      "group": "温度",
+      "key": "temperature",
+      "selectionType": "single",
+      "values": [
+        {"label": "冰", "default": true, "price": 0},
+        {"label": "热", "default": false, "price": 0}
+      ]
+    },
+    {
+      "group": "咖啡豆",
+      "key": "bean",
+      "selectionType": "single",
+      "values": [
+        {"label": "意式拼配（IIAC 金奖）", "default": false, "price": 0, "flavor_desc": "坚果基调 · 香醇口感"},
+        {"label": "深烘拼配（咖啡更浓）", "default": true, "price": 0, "flavor_desc": "黑巧尾韵 · 浓郁口感"},
+        {"label": "埃塞金烘（IIAC 铂金）", "default": false, "price": 0, "flavor_desc": "花香可可 · 浓醇口感"}
+      ],
+      "note": "三款豆基可任选；默认深烘拼配（咖啡更浓），与品牌秋冬季豆乳/奶盖系列定位一致"
+    },
+    {
+      "group": "咖啡浓度",
+      "key": "concentration",
+      "selectionType": "single",
+      "values": [
+        {"label": "默认浓度", "default": true, "price": 0},
+        {"label": "加单份浓缩", "default": false, "price": 3, "price_unit": "元"}
+      ]
+    },
+    {
+      "group": "糖度",
+      "key": "sweetness",
+      "selectionType": "single",
+      "values": [
+        {"label": "标准甜", "default": false, "price": 0, "pumps": 4, "sugar_g": 20},
+        {"label": "少甜", "default": false, "price": 0, "pumps": 3, "sugar_g": 15},
+        {"label": "少少甜", "default": false, "price": 0, "pumps": 2, "sugar_g": 10},
+        {"label": "微甜", "default": true, "price": 0, "pumps": 1, "sugar_g": 5},
+        {"label": "不另外加糖", "default": false, "price": 0, "pumps": 0, "sugar_g": 0, "note": "基底豆乳 + 牛奶仍含天然糖分"}
+      ],
+      "note": "泵数与含糖量沿用品牌糖度基准（每泵 ≈5g 糖，瑞幸官方未公开咸芝士豆乳拿铁单品的糖浆克重）"
+    },
+    {
+      "group": "奶盖",
+      "key": "cheese_foam",
+      "selectionType": "single",
+      "values": [
+        {"label": "奶盖", "default": true, "price": 0, "note": "小程序（2026-10-13 截图）显示默认覆盖咸芝士奶盖"}
+      ],
+      "note": "截图仅展示奶盖为默认；小程序是否提供「去奶盖」选项待核实"
+    },
+    {
+      "group": "奶基",
+      "key": "milk",
+      "selectionType": "single",
+      "values": [
+        {"label": "牛奶", "default": true, "price": 0, "note": "小程序价格分项显示「+牛奶 ¥0」"}
+      ],
+      "note": "豆乳（豆浆）已内置于饮品名称，不作为可切换奶基；奶基列表仅提供牛奶；未来若小程序新增奶基选项（如纯豆乳），需补抓图同步更新"
+    }
+  ],
+  "defaultPrice": 21,
+  "defaultConfig": {
+    "size": "大杯 450ml",
+    "temperature": "冰",
+    "bean": "深烘拼配",
+    "concentration": "默认浓度",
+    "sweetness": "微甜",
+    "cheese_foam": "奶盖",
+    "milk": "牛奶",
+    "total_price": "21 元（默认配置，无升杯费 / 无加料 / 无额外浓缩）"
+  },
+  "addon_section_visible_in_screenshot": [
+    {"label": "黑巧贝果", "price": 3.9, "original_price": 6, "note": "限时低价"},
+    {"label": "小黄油葡萄干奶酪司康", "price": 5.9, "original_price": 9, "note": "—"},
+    {"label": "提拉米苏风味大福", "price": 3.9, "original_price": 6, "note": "限时低价"}
+  ],
+  "notes": "饮品名「咸芝士豆乳拿铁」的三重风味来自：① 顶部咸芝士奶盖（海盐 + 芝士）② 主体豆乳（东北非转基因大豆）+ 牛奶 ③ 浓缩咖啡（默认 30ml）+ 三款豆基任选。豆乳非独立奶基选项，已内置于饮品配方。"
+}
