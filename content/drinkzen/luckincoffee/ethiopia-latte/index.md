@@ -14,6 +14,7 @@ tags:
   - "IIAC铂金奖"
   - "新品"
 summary: "瑞幸埃塞金烘拿铁（Luckin Gold Roast Latte）：新加坡 Nutri-Grade B 级 / 上海 B 级，全脂奶 sat fat 1.07g/100ml。133大卡/默认大杯 450ml/冰/不另外加糖/全脂奶。埃塞俄比亚单一产区 100% 阿拉比卡 IIAC 铂金奖豆 + 专属梯度升温烘焙工艺；超大杯为限量联名杯。"
+aliases: [/drinkzen/luckincoffee/ehtiopia-latte/]
 ---
 
 > **饮品信息**

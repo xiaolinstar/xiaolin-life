@@ -18,6 +18,7 @@ tags:
   - "YOYO联名"
 summary: "瑞幸抹茶奶酪拿铁（当前在售）：C 级 ⚠️ 估算 / 基于配料和营养数据计算大杯冰不另外加糖约 290 kcal（官方 FAQ 同系列参考 239 kcal 作旁注） / 咖啡因约 30-50 mg（抹茶单源）。千目级纯抹茶 × 新西兰进口液体奶酪，液体奶酪减半可减 93-133 kcal；联名名创优品 YOYO。"
 platforms: [xiaohongshu, dianping]
+aliases: [/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/]
 ---
 
 > **饮品信息**
@@ -38,7 +39,7 @@ platforms: [xiaohongshu, dianping]
 - **特点**：香浓抹茶融合浓醇奶酪，芝香四溢浓而不腻，抹茶清新融入浓醇奶香，入口丝滑圆润，尾韵清新
 - **本质**：「抹茶版生酪拿铁，但芝香更内敛、茶感更明显」（按配方结构推算：液体奶酪 30 g 与生酪拿铁的厚奶油接近，但用预调液基底更清；茶感来自抹茶粉而非浓缩咖啡液）
 
-> **💡 一句话**：跟 [虎斑橘](/drinkzen/luckincoffee/hu-ban-ju/) 一样是「奶盖 / 奶酪 + 咖啡因」组合，但走的是抹茶路线，咸甜芝士 + 微苦抹茶是这一杯的核心味型。
+> **💡 一句话**：跟 [虎斑橘](/drinkzen/luckincoffee/tiger-tangerine/) 一样是「奶盖 / 奶酪 + 咖啡因」组合，但走的是抹茶路线，咸甜芝士 + 微苦抹茶是这一杯的核心味型。
 
 ## 制作方式调查
 
@@ -136,7 +137,7 @@ platforms: [xiaohongshu, dianping]
 > - **每档甜度 ≈ +20 kcal ≈ +5 g 糖**（瑞幸常规泵制，每泵 5 g 糖浆 / 20 kcal），加糖改不动 C 级 —— 饱和脂肪主导评级
 > - **液体奶酪减半（约减 52 kcal）仍停留在 C 级** —— 饱和脂肪从 2.34 → 1.77 g/100ml，未跨过 1.2 的 B 级门槛（鲜牛奶本身 1.20 g/100ml 已贴 B 级上限，抹茶奶酪拿铁结构上即 C 级）。需门店点单时主动说明「液体奶酪少加」
 > - **热超大杯 596ml 直接冲到 D 级** —— 这是「别给它叠热饮 buff」的量化证据，热 + 大杯的双重放大让饱和脂肪超过 2.8 g/100ml 的 D 级门槛
-> - 与同品牌其他奶酪产品对比：本品饱和脂肪 2.34 g/100ml，介于 [虎斑橘](/drinkzen/luckincoffee/hu-ban-ju/)（2.82 g/100ml，D 级）与 [瑰夏云朵冷萃](/drinkzen/luckincoffee/gui-xia-yun-duo-leng-cui/)（0.91-1.30 g/100ml，C 级）之间，因为液体奶酪用量（30 g）低于虎斑橘（约 50 g 厚奶油）、但鲜牛奶用量高于冷萃系列
+> - 与同品牌其他奶酪产品对比：本品饱和脂肪 2.34 g/100ml，介于 [虎斑橘](/drinkzen/luckincoffee/tiger-tangerine/)（2.82 g/100ml，D 级）与 [瑰夏云朵冷萃](/drinkzen/luckincoffee/geisha-cloud-cold-brew/)（0.91-1.30 g/100ml，C 级）之间，因为液体奶酪用量（30 g）低于虎斑橘（约 50 g 厚奶油）、但鲜牛奶用量高于冷萃系列
 
 **数据来源**：
 
@@ -144,7 +145,7 @@ platforms: [xiaohongshu, dianping]
 - **瑞幸官方微博/门店宣传** ✅：千目级纯抹茶、新西兰进口液体奶酪、芝香四溢浓而不腻、Boram Um 推荐、名创优品 YOYO 联名周边
 - **饮用方式提示（全冰去水 / 不建议热饮 / 抹茶冰化水感）**：通用建议（与同系列其他抹茶 / 奶酪饮品的饮法逻辑一致）
 - **官方 FAQ 239 kcal 参考** ⚠️：同系列抹茶饮品大杯冰不另外加糖参考值 —— 瑞幸官方 App / FAQ
-- **官方营养参考**（鲜牛奶 62 kcal/100ml、液体奶酪乳饮料 350 kcal/100g、抹茶固体饮料参数）：[瑞幸咖啡品牌页 · 核心原材料](/drinkzen/luckincoffee/#核心原材料) 与 [虎斑橘页淡奶油/厚奶油参数](/drinkzen/luckincoffee/hu-ban-ju/)
+- **官方营养参考**（鲜牛奶 62 kcal/100ml、液体奶酪乳饮料 350 kcal/100g、抹茶固体饮料参数）：[瑞幸咖啡品牌页 · 核心原材料](/drinkzen/luckincoffee/#核心原材料) 与 [虎斑橘页淡奶油/厚奶油参数](/drinkzen/luckincoffee/tiger-tangerine/)
 - **抹茶固体饮料参数** ⚠️：行业惯例推算（抹茶粉本身几乎零热量，但商业化「抹茶固体饮料」多为含糖载体，约 50 g 糖/100 g 粉）
 - **杯型与糖度基准**：[瑞幸咖啡品牌页 · 糖度制作方式](/drinkzen/luckincoffee/#糖度制作方式)
 - **联名周边信息**：名创优品官方公众号 / YOYO IP 周边发布
@@ -156,7 +157,7 @@ platforms: [xiaohongshu, dianping]
 2. **热量存在计算口径（约 290 kcal）、官方 FAQ 同系列参考 239 kcal 两个口径** ⚠️，差异约 18%，本页主页面取计算口径
 3. 抹茶茶固体饮料的具体克重与糖载体比例**为行业惯例推算** ⚠️，官方未公开
 4. 液体奶酪制品 30 g 与鲜牛奶 240 ml 按 450ml 大杯标准杯量与原料比例估算 ⚠️（具体克重 / 容量官方未公开）
-5. 冰块 138ml（占杯量约 31%），低于 [瑰夏云朵冷萃](/drinkzen/luckincoffee/gui-xia-yun-duo-leng-cui/)（50%），因为奶酪饮品本身需要更多液体承载芝香与茶感
+5. 冰块 138ml（占杯量约 31%），低于 [瑰夏云朵冷萃](/drinkzen/luckincoffee/geisha-cloud-cold-brew/)（50%），因为奶酪饮品本身需要更多液体承载芝香与茶感
 6. Nutri-Grade 评级为估算值，非官方实测
 7. 咖啡因 30-50 mg 为抹茶单源估算（官方原料表未列浓缩咖啡液，按瑞幸实际制作为抹茶单源）
 
@@ -178,7 +179,7 @@ platforms: [xiaohongshu, dianping]
 **工艺特点**：
 
 - **千目级 vs 常规抹茶**：千目级（颗粒约 1.5 μm）比常规抹茶（200-500 目，颗粒约 25-75 μm）细约 20-50 倍，溶解性更好、口感更细腻、不易出现「粉感颗粒」，这是这杯比抹茶丝绒拿铁「冰化水感」明显改善的关键 —— 千目级即使冰融化也更稳定
-- **液体奶酪 vs 厚奶油**：与 [虎斑橘](/drinkzen/luckincoffee/hu-ban-ju/) 的黄油丝绒奶盖（厚奶油为主）不同，本品用液体奶酪乳饮料，**咸香更内敛、饱和脂肪相对低**（2.34 g/100ml vs 虎斑橘 2.82 g/100ml），口感更「清」而非「厚」
+- **液体奶酪 vs 厚奶油**：与 [虎斑橘](/drinkzen/luckincoffee/tiger-tangerine/) 的黄油丝绒奶盖（厚奶油为主）不同，本品用液体奶酪乳饮料，**咸香更内敛、饱和脂肪相对低**（2.34 g/100ml vs 虎斑橘 2.82 g/100ml），口感更「清」而非「厚」
 - **抹茶单源**：咖名虽叫「拿铁」，咖啡因来自抹茶本身（约 30-50 mg），不依赖浓缩咖啡，比纯拿铁咖啡因略低
 
 **消费者评价关键词**：
@@ -212,9 +213,9 @@ platforms: [xiaohongshu, dianping]
   - 热饮爱好者 —— 奶酪咸香被高温压腻，抹茶苦感被放大，不推荐
 - **进阶对比**：
   - **要 0 卡 / A 级** → 不加抹茶 + 不加奶酪，理论上回到 [瑞幸拿铁](/drinkzen/luckincoffee/latte/)（约 133 kcal，B 级）
-  - **要更浓芝士** → [虎斑橘](/drinkzen/luckincoffee/hu-ban-ju/)（黄油丝绒奶盖 + 耶加雪菲，约 363 kcal，D 级）
+  - **要更浓芝士** → [虎斑橘](/drinkzen/luckincoffee/tiger-tangerine/)（黄油丝绒奶盖 + 耶加雪菲，约 363 kcal，D 级）
   - **要更纯抹茶** → 抹茶丝绒拿铁（无奶酪版本，千目级冰化稳定性更高）
-  - **要奶酪 + 冷萃** → [瑰夏云朵冷萃](/drinkzen/luckincoffee/gui-xia-yun-duo-leng-cui/)（帕玛森芝士云顶 + 瑰夏冷萃，C 级）
+  - **要奶酪 + 冷萃** → [瑰夏云朵冷萃](/drinkzen/luckincoffee/geisha-cloud-cold-brew/)（帕玛森芝士云顶 + 瑰夏冷萃，C 级）
 
 ---
 
@@ -256,7 +257,7 @@ platforms: [xiaohongshu, dianping]
 
 ## plog 分发版
 
-<!-- generated from content/social-publish/drafts/mo-cha-nai-lao-na-tie.md by migrate_drinkzen_plog.py on 2026-10-09 -->
+<!-- generated from content/social-publish/drafts/matcha-cheese-latte.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
 {{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
@@ -318,7 +319,7 @@ platforms: [xiaohongshu, dianping]
 | 图 5 场景（选） | 抹茶液体奶酪层特写 | `gallery/05-scene.jpg` | ⚠️ 待补 |
 | 图 6 结尾（选） | CTA 引导 + YOYO 周边 | `gallery/06-ending.jpg` | ⚠️ 待补 |
 
-> ⚠️ origin `mo-cha-nai-lao-na-tie/gallery/` 目录暂未填充图片。
+> ⚠️ origin `matcha-cheese-latte/gallery/` 目录暂未填充图片。
 > 实际发布前需从 iPhone 实拍补齐 4-6 张图（重点：千目抹茶的翠绿 + YOYO 周边）。
 
 {{< /tab >}}

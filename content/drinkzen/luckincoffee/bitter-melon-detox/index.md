@@ -12,6 +12,7 @@ tags:
   - "苦瓜轻体果蔬茶"
   - "轻体果蔬茶"
 summary: "2026 年 3 月「原产地 鲜活季」上新：超级植物苦瓜 + 24 小时鲜榨羽衣甘蓝，一杯集齐 8 种果蔬，200+ 项果蔬原料检测，0 脂肪、不另外加糖，Nutri-Grade 预估 A 级，健身人群友好。"
+aliases: [/drinkzen/luckincoffee/ku-gua-qing-ti-guo-shu-cha/]
 ---
 
 > **饮品信息**

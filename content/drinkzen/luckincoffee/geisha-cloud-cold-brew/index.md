@@ -14,6 +14,7 @@ tags:
   - "精品冷萃"
   - "单一产地"
 summary: "瑞幸瑰夏云朵冷萃（2026/07/06 全国上新）：B-C 级 / 官方约 88 kcal、博主实测约 126 kcal / 咖啡因约 148mg（大杯 / 冰 / 不另外加糖）。含帕玛森芝士的绵密云顶 × 埃塞瑰夏冷萃，饱和脂肪主导评级。"
+aliases: [/drinkzen/luckincoffee/gui-xia-yun-duo-leng-cui/]
 ---
 
 > **饮品信息**
@@ -35,7 +36,7 @@ summary: "瑞幸瑰夏云朵冷萃（2026/07/06 全国上新）：B-C 级 / 官�
 - **特点**：含帕玛森芝士的绵密云顶 × 冷萃清冽，一口绽放多重享受
 - **本质**：官方定位是精品冷萃，博主总结更直白 —— 「就是美式 + 奶盖」
 
-> **💡 一句话**：跟 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/) 「就差一个奶盖顶」，多花约 1 元、多喝约 88 kcal，换一层浓郁咸甜的帕玛森芝士云顶。
+> **💡 一句话**：跟 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/) 「就差一个奶盖顶」，多花约 1 元、多喝约 88 kcal，换一层浓郁咸甜的帕玛森芝士云顶。
 
 ## 制作方式调查
 
@@ -89,7 +90,7 @@ summary: "瑞幸瑰夏云朵冷萃（2026/07/06 全国上新）：B-C 级 / 官�
 
 | 产品 | 冷萃咖啡液用量（估算） | 咖啡因 | 反推浓度 |
 | :--- | :--- | :--- | :--- |
-| [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/) | 230ml | 205 mg | **89.1 mg/100ml** |
+| [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/) | 230ml | 205 mg | **89.1 mg/100ml** |
 | 瑰夏云朵冷萃 | 166ml | 148 mg | **89.2 mg/100ml** |
 
 > **💡 验证说明**：两款同系列产品共用同一批冷萃咖啡液。本页 166 ml 的用量不是拍脑袋，而是**由官方咖啡因 148 mg 除以同系列反推浓度得出**；反过来两款的浓度结果高度吻合（89.1 vs 89.2 mg/100ml），互相印证。剩余容量（450 − 57 − 166 = 227 ml）即为冰块，与博主吐槽的「这冰果然是不要钱」（冰占约一半杯量）一致。
@@ -136,8 +137,8 @@ summary: "瑞幸瑰夏云朵冷萃（2026/07/06 全国上新）：B-C 级 / 官�
 >
 > - **本系列每档甜度 ≈ +13 kcal ≈ +3.25 g 糖**（博主实测「每升一个甜度基础上多加 13 kcal」），明显低于瑞幸常规产品的每泵 5 g / 20 kcal
 > - **饱和脂肪主导评级，糖度改不动它** —— 奶盖是唯一的脂肪来源且不可调，即便点到标准甜也仍是 B 级；反之不加糖也降不到 A 级
-> - **唯一能降到 A 级的方式是不要奶盖**，那就等于直接点 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/)（0 kcal / A 级），还便宜约 1 元
-> - 与同品牌其他奶盖产品对比：本品饱和脂肪 0.91-1.30 g/100ml，显著低于 [咸法酪泰奶](/drinkzen/luckincoffee/xian-fa-lao-thai-nai/)（2.12 g/100ml，C 级）与 [虎斑橘](/drinkzen/luckincoffee/hu-ban-ju/)（2.82 g/100ml，D 级），因为本品基底是 0 卡冷萃而非厚奶
+> - **唯一能降到 A 级的方式是不要奶盖**，那就等于直接点 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/)（0 kcal / A 级），还便宜约 1 元
+> - 与同品牌其他奶盖产品对比：本品饱和脂肪 0.91-1.30 g/100ml，显著低于 [咸法酪泰奶](/drinkzen/luckincoffee/salty-cheese-thai-tea/)（2.12 g/100ml，C 级）与 [虎斑橘](/drinkzen/luckincoffee/tiger-tangerine/)（2.82 g/100ml，D 级），因为本品基底是 0 卡冷萃而非厚奶
 
 **数据来源**：
 
@@ -146,7 +147,7 @@ summary: "瑞幸瑰夏云朵冷萃（2026/07/06 全国上新）：B-C 级 / 官�
 - **博主实测热量 126 kcal + 每档甜度 +13 kcal + 配方拆解（糖 + 冷萃咖啡 + 奶盖）+ 少冰/即饮提示** ⚠️：[什么值得买 · 瑞幸新出的咸芝士冷萃值不值？花果香全靠想象？深度测评来了](https://post.smzdm.com/p/a5rk80n8)
 - **咖啡因 148 mg + 热量 88 kcal 复核** ⚠️：产品数据清单（疑似摘自官方 App 营养页）—— [今日头条 · 备考提神咖啡攻略](https://m.toutiao.com/article/7673784280945918483)、[今日头条 · 早餐咖啡推荐](https://www.toutiao.com/article/7673413568347390473/)
 - **消费者评价 + 价格 12.9 元** ⚠️：[手机新浪网 · 每日咖啡｜解锁瑞幸新品瑰夏云朵冷萃](https://www.sina.cn/news/detail/5318910152809531.html)、[什么值得买 · 瑰夏横评](https://post.smzdm.com/p/a267e542)
-- **牛乳乳饮料 / 淡奶油 / 冷萃咖啡液参数**：[瑞幸咖啡品牌页 · 参考](/drinkzen/luckincoffee/#参考) 与 [虎斑橘页淡奶油参数](/drinkzen/luckincoffee/hu-ban-ju/)
+- **牛乳乳饮料 / 淡奶油 / 冷萃咖啡液参数**：[瑞幸咖啡品牌页 · 参考](/drinkzen/luckincoffee/#参考) 与 [虎斑橘页淡奶油参数](/drinkzen/luckincoffee/tiger-tangerine/)
 - **帕玛森干酪参数**：USDA 食品数据库（Parmesan, grated）
 - **杯型与糖度基准**：[瑞幸咖啡品牌页](/drinkzen/luckincoffee/)
 - **评级标准**：[上海「营养选择」标准与新加坡 Nutri-Grade](/drinkzen/nutri-grade/)
@@ -178,7 +179,7 @@ summary: "瑞幸瑰夏云朵冷萃（2026/07/06 全国上新）：B-C 级 / 官�
 **工艺特点**：
 
 - **快速冷萃 vs 长时冷萃**：18 分钟快萃减少尾端苦感、保留花香，但萃取强度偏轻，咖啡味「真心不浓」
-- **瑰夏精品豆**：埃塞俄比亚单一产地，与 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/) 同批豆
+- **瑰夏精品豆**：埃塞俄比亚单一产地，与 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/) 同批豆
 - **帕玛森芝士云顶**：硬质干酪带来氨基酸鲜味与咸感，正好中和下层冷萃的苦味，把层次一下拉丰富 —— 这是本品口碑明显好于纯冷萃版的关键
 
 **消费者评价关键词**（口碑普遍好于纯冷萃版）：
@@ -205,11 +206,11 @@ summary: "瑞幸瑰夏云朵冷萃（2026/07/06 全国上新）：B-C 级 / 官�
 - **不建议**：
   - **对乳制品 / 芝士过敏者** —— 明确含帕玛森芝士，过敏原为乳及乳制品
   - 乳糖不耐受者 —— 建议控量
-  - 严格控脂期 —— 饱和脂肪 0.91-1.30 g/100ml，按 C 级对待更保险；此时直接点 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/)（0 kcal / A 级）
+  - 严格控脂期 —— 饱和脂肪 0.91-1.30 g/100ml，按 C 级对待更保险；此时直接点 [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/)（0 kcal / A 级）
   - 追求浓郁咖啡味者 —— 这杯咖啡味偏淡，冰美式或加浓美式更合适
   - 外卖 —— 云顶塌陷 + 冰融化双重打击，强烈建议自提
 - **进阶对比**：
-  - **要 0 卡 / A 级** → [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/)（0 kcal，便宜约 1 元）
+  - **要 0 卡 / A 级** → [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/)（0 kcal，便宜约 1 元）
   - **要奶香层次** → 本品（+88 kcal 换一层帕玛森芝士云顶）
   - **要花果香 + 更浓郁** → 瑰夏之梦（161 kcal / 咖啡因 78.75 mg，瑰夏冷萃 × 玫瑰荔枝 × 燕麦奶 × 椰浆）
 

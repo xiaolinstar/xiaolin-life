@@ -12,6 +12,7 @@ tags:
   - "鲜萃轻轻龙井"
   - "鲜萃轻轻·轻乳茶"
 summary: "2026 年 3 月「原产地 鲜活季」产季限定回归：浙江钱塘产区龙井春茶手采鲜叶、传统工艺炒制，100% 鲜萃现泡茶汤融入鲜牛乳，官方口径一杯约 100kcal、0 植脂末，Nutri-Grade 预估 B 级。"
+aliases: [/drinkzen/luckincoffee/xian-cui-qing-qing-long-jing/]
 ---
 
 > **饮品信息**

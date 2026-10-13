@@ -16,6 +16,7 @@ tags:
   - "焦糖扁桃仁"
 summary: "瑞幸流心芝士拿铁（2026/09/28 全国上新）：D 级 ⚠️ 估算 / 基于配料和营养数据计算大杯冰不另外加糖约 431 kcal / 咖啡因约 50-70 mg。海盐芝士奶盖 × 液体奶酪 × 焦糖味扁桃仁碎 × 曼特宁浓缩，咸甜脆三重口感。"
 platforms: [xiaohongshu, dianping]
+aliases: [/drinkzen/luckincoffee/liu-xin-zhi-shi-na-tie/]
 ---
 
 > **饮品信息**
@@ -35,13 +36,13 @@ platforms: [xiaohongshu, dianping]
 - **咖啡豆**：曼特宁（深度烘焙，苦味醇厚）
 - **工艺**：海盐芝士奶盖（牛乳乳饮料 + 海盐芝士奶盖风味固体饮料预制打发）+ 液体奶酪制品 + 焦糖味扁桃仁碎（脆脆颗粒感）+ IIAC 曼特宁浓缩
 - **特点**：咸甜脆三重口感 —— 海盐芝士的「咸」+ 液体奶酪的「浓」+ 焦糖扁桃仁碎的「脆」，芝香流心入口即化
-- **本质**：奶酪系列「液体奶酪 + 芝士奶盖」双源叠加，比 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/)（单液体奶酪）更厚、更咸甜
+- **本质**：奶酪系列「液体奶酪 + 芝士奶盖」双源叠加，比 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/)（单液体奶酪）更厚、更咸甜
 
-> **💡 一句话**：跟 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/) 同一奶酪系列但走「海盐 + 焦糖」路线，比抹茶那杯多一层顶部芝士奶盖 + 焦糖扁桃仁碎的脆感，咸甜配比更外放。
+> **💡 一句话**：跟 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/) 同一奶酪系列但走「海盐 + 焦糖」路线，比抹茶那杯多一层顶部芝士奶盖 + 焦糖扁桃仁碎的脆感，咸甜配比更外放。
 
 ## 制作方式调查
 
-**官方主要原料**（来源：[nckfhsm 流心芝士拿铁](http://www.nckfhsm.com/products/liu-xin-zhi-shi-na-tie) / [瑞幸在售菜单](https://www.nckfhsm.com/zh-tw/brands/rui-xing-ka-fei/menu/available)）：
+**官方主要原料**（来源：[nckfhsm 流心芝士拿铁](http://www.nckfhsm.com/products/molten-cheese-latte) / [瑞幸在售菜单](https://www.nckfhsm.com/zh-tw/brands/rui-xing-ka-fei/menu/available)）：
 
 - **牛乳芝士乳饮品**（预调制含乳饮料，奶酪基底）
 - **芝士调味酱**（咸甜口感的浓缩芝士酱）
@@ -59,7 +60,7 @@ platforms: [xiaohongshu, dianping]
 - **海盐芝士奶盖**：商用海盐奶盖粉行业惯例（粉液比 ~1:8），用牛乳乳饮料替代部分稀释水提升奶香，预冷后打发，冷藏备用，30 min 内用完
 - **牛乳芝士乳饮品**：预调制含乳饮料，奶酪基底，提供流心芝士的「液态浓香」
 - **芝士调味酱**：咸甜口感的浓缩芝士酱，提供浓稠感与咸甜平衡
-- **液体奶酪制品**：含新西兰进口奶酪的预调制奶酪乳饮料（与 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/) 同源）
+- **液体奶酪制品**：含新西兰进口奶酪的预调制奶酪乳饮料（与 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/) 同源）
 - **焦糖味扁桃仁碎**：坚果颗粒，提供脆感与焦糖甜香
 - **加碘海盐**：咸感点缀，强化「流心芝士」的咸甜对比
 - **曼特宁浓缩**：深度烘焙咖啡豆，苦味醇厚不抢芝香
@@ -114,7 +115,7 @@ platforms: [xiaohongshu, dianping]
 
 > **⚠️ 评级结论**：
 >
-> 按计算口径算，饱和脂肪直接跨入 D 级阈值（>2.8 g/100ml），来自**液体奶酪 + 海盐芝士奶盖 + 芝士调味酱**三层脂肪的叠加 —— 这是这杯比 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/)（饱和 2.34 g/100ml，C 级）高一档的核心原因。
+> 按计算口径算，饱和脂肪直接跨入 D 级阈值（>2.8 g/100ml），来自**液体奶酪 + 海盐芝士奶盖 + 芝士调味酱**三层脂肪的叠加 —— 这是这杯比 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/)（饱和 2.34 g/100ml，C 级）高一档的核心原因。
 >
 > 评级依据：[上海「营养选择」标准与新加坡 Nutri-Grade](/drinkzen/nutri-grade/) —— 饱和脂肪 ≤0.7 g/100ml 为 A、0.7-1.2 为 B、1.2-2.8 为 C、>2.8 为 D。
 
@@ -123,24 +124,24 @@ platforms: [xiaohongshu, dianping]
 > - **计算值波动**：本杯的「牛乳芝士乳饮品 50 g」「芝士调味酱 15 g」「海盐芝士奶盖 10 g」「液体奶酪 30 g」四个克重为行业惯例推算 ⚠️，实际克重差异 ±20% 就会让 kcal 在 350-450 区间浮动
 > - **唯一可能降到 C 级的方式**：液体奶酪 + 海盐芝士奶盖同时减半（克重降到 15g + 5g），可减约 100-130 kcal；但默认点单选项里没有这两个减半选项，需在门店主动说明「液体奶酪少加 + 奶盖少放」
 > - **热版比冰版更糟** —— 去掉冰块稀释后，每 100ml 饱和脂肪冲到 ~5.0 g/100ml（远高于 D 级阈值），强烈建议冰饮
-> - 与同品牌其他奶酪产品对比：本品饱和脂肪 3.78 g/100ml 高于 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/)（2.34 g/100ml，C 级），与 [虎斑橘](/drinkzen/luckincoffee/hu-ban-ju/)（2.82 g/100ml，D 级）同级 —— 因为液体奶酪用量（30 g）+ 海盐芝士奶盖（10 g）双重脂肪来源，但浓缩 + 鲜牛奶用量与抹茶相当
+> - 与同品牌其他奶酪产品对比：本品饱和脂肪 3.78 g/100ml 高于 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/)（2.34 g/100ml，C 级），与 [虎斑橘](/drinkzen/luckincoffee/tiger-tangerine/)（2.82 g/100ml，D 级）同级 —— 因为液体奶酪用量（30 g）+ 海盐芝士奶盖（10 g）双重脂肪来源，但浓缩 + 鲜牛奶用量与抹茶相当
 
 **数据来源**：
 
-- **nckfhsm 流心芝士拿铁** ✅：产品名、原料表、杯型、价格、咖啡豆品种、糖度选项 —— [流心芝士拿铁 · 瑞幸咖啡](http://www.nckfhsm.com/products/liu-xin-zhi-shi-na-tie)
+- **nckfhsm 流心芝士拿铁** ✅：产品名、原料表、杯型、价格、咖啡豆品种、糖度选项 —— [流心芝士拿铁 · 瑞幸咖啡](http://www.nckfhsm.com/products/molten-cheese-latte)
 - **瑞幸在售菜单** ✅：新品标识、价格、上市状态 —— [nckfhsm · 瑞幸咖啡在售饮品菜单](https://www.nckfhsm.com/zh-tw/brands/rui-xing-ka-fei/menu/available)
-- **官方营养参考**（鲜牛奶 62 kcal/100ml、液体奶酪乳饮料 350 kcal/100g、海盐芝士奶盖粉行业惯例 1:8）：[瑞幸咖啡品牌页 · 核心原材料](/drinkzen/luckincoffee/#核心原材料) 与 [抹茶奶酪拿铁页液体奶酪参数](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/)
+- **官方营养参考**（鲜牛奶 62 kcal/100ml、液体奶酪乳饮料 350 kcal/100g、海盐芝士奶盖粉行业惯例 1:8）：[瑞幸咖啡品牌页 · 核心原材料](/drinkzen/luckincoffee/#核心原材料) 与 [抹茶奶酪拿铁页液体奶酪参数](/drinkzen/luckincoffee/matcha-cheese-latte/)
 - **杯型与糖度基准**：[瑞幸咖啡品牌页 · 糖度制作方式](/drinkzen/luckincoffee/#糖度制作方式)
-- **海盐芝士奶盖预制**：商用海盐奶盖粉行业惯例（粉液比 ~1:8，牛乳乳饮料替代部分稀释水），参考 [咸法酪泰奶页海盐奶盖预制](/drinkzen/luckincoffee/xian-fa-lao-thai-nai/)
+- **海盐芝士奶盖预制**：商用海盐奶盖粉行业惯例（粉液比 ~1:8，牛乳乳饮料替代部分稀释水），参考 [咸法酪泰奶页海盐奶盖预制](/drinkzen/luckincoffee/salty-cheese-thai-tea/)
 - **评级标准**：[上海「营养选择」标准与新加坡 Nutri-Grade](/drinkzen/nutri-grade/)
 
 **数据说明**：
 
 1. 官方**仅公布原料表、杯型、价格** ✅，**未公布整杯热量、蛋白质、脂肪、糖分、咖啡因、液体奶酪克重**
 2. **热量为计算口径** ⚠️：本页面板热量 431 kcal 由配料克重（行业惯例推算）+ 标准营养参考计算得出，未与任何博主实测或官方 kcal 对照（官方未公布）
-3. **配料克重推算依据**：鲜牛奶 200 ml / 浓缩咖啡 30 ml 沿用 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/) 的冰标签线标准；牛乳芝士乳饮品 50 g / 芝士调味酱 15 g / 液体奶酪 30 g 按同系列奶酪产品克重区间推算；海盐芝士奶盖 10 g 按 [咸法酪泰奶](/drinkzen/luckincoffee/xian-fa-lao-thai-nai/) 顶部奶盖分装标准推算
+3. **配料克重推算依据**：鲜牛奶 200 ml / 浓缩咖啡 30 ml 沿用 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/) 的冰标签线标准；牛乳芝士乳饮品 50 g / 芝士调味酱 15 g / 液体奶酪 30 g 按同系列奶酪产品克重区间推算；海盐芝士奶盖 10 g 按 [咸法酪泰奶](/drinkzen/luckincoffee/salty-cheese-thai-tea/) 顶部奶盖分装标准推算
 4. **牛乳芝士乳饮品 + 芝士调味酱 + 海盐芝士奶盖**的具体营养参数（脂肪占比、碳水占比）为行业惯例推算 ⚠️，官方未公开完整成分表
-5. 冰块 110ml（占杯量约 24%），低于 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/)（31%），因为本杯顶部芝士奶盖占用更多杯容量
+5. 冰块 110ml（占杯量约 24%），低于 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/)（31%），因为本杯顶部芝士奶盖占用更多杯容量
 6. Nutri-Grade 评级为估算值，非官方实测
 
 ---
@@ -161,7 +162,7 @@ platforms: [xiaohongshu, dianping]
 
 **工艺特点**：
 
-- **海盐芝士奶盖 vs 抹茶奶酪**：与 [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/) 的单液体奶酪不同，本品额外覆盖**海盐芝士奶盖**（顶部 10 g），多一层「咸 + 浓」的口感维度
+- **海盐芝士奶盖 vs 抹茶奶酪**：与 [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/) 的单液体奶酪不同，本品额外覆盖**海盐芝士奶盖**（顶部 10 g），多一层「咸 + 浓」的口感维度
 - **焦糖扁桃仁碎的脆**：这是奶酪系列里**唯一一款带坚果颗粒的芝士饮品**（抹茶奶酪 / 生酪拿铁 / 虎斑橘均无），脆感是本杯差异化卖点
 - **曼特宁 vs 抹茶咖啡因**：曼特宁浓缩咖啡因约 40 mg，单源咖啡因；抹茶奶酪拿铁是「抹茶 + 浓缩」双源咖啡因（约 70-90 mg），所以本杯咖啡因总量更低
 - **八层叠加**：海盐芝士奶盖 + 牛乳芝士乳饮品 + 芝士调味酱 + 焦糖扁桃仁碎 + 鲜牛奶 + 液体奶酪 + 浓缩咖啡 + 加碘海盐 —— 是奶酪系列里配料最多的一款
@@ -197,9 +198,9 @@ platforms: [xiaohongshu, dianping]
   - 追求清淡口感者 —— 这杯「咸 + 浓 + 脆」三重叠加，口感偏厚重
 - **进阶对比**：
   - **要 0 卡 / A 级** → 美式 / 特浓美式（约 5-15 kcal，A 级）
-  - **要更清爽芝士** → [抹茶奶酪拿铁](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/)（单液体奶酪，C 级，抹茶清新）
-  - **要更浓郁芝士** → [虎斑橘](/drinkzen/luckincoffee/hu-ban-ju/)（黄油丝绒奶盖 + 耶加雪菲，D 级，但无焦糖脆碎）
-  - **要无咖啡的咸芝士** → [咸法酪泰奶](/drinkzen/luckincoffee/xian-fa-lao-thai-nai/)（C 级，茶底版）
+  - **要更清爽芝士** → [抹茶奶酪拿铁](/drinkzen/luckincoffee/matcha-cheese-latte/)（单液体奶酪，C 级，抹茶清新）
+  - **要更浓郁芝士** → [虎斑橘](/drinkzen/luckincoffee/tiger-tangerine/)（黄油丝绒奶盖 + 耶加雪菲，D 级，但无焦糖脆碎）
+  - **要无咖啡的咸芝士** → [咸法酪泰奶](/drinkzen/luckincoffee/salty-cheese-thai-tea/)（C 级，茶底版）
 
 ---
 
@@ -239,7 +240,7 @@ platforms: [xiaohongshu, dianping]
 
 ## plog 分发版
 
-<!-- generated from content/social-publish/drafts/liu-xin-zhi-shi-na-tie.md by migrate_drinkzen_plog.py on 2026-10-09 -->
+<!-- generated from content/social-publish/drafts/molten-cheese-latte.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
 {{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
@@ -311,7 +312,7 @@ platforms: [xiaohongshu, dianping]
 | 图 5 场景（选） | 海盐芝士奶盖顶部特写 | `gallery/05-scene.jpg` | 待补 |
 | 图 6 结尾（选） | CTA 引导 | `gallery/06-ending.jpg` | 待补 |
 
-> origin `liu-xin-zhi-shi-na-tie/gallery/` 目录暂未填充图片。
+> origin `molten-cheese-latte/gallery/` 目录暂未填充图片。
 > 实际发布前需从 iPhone 实拍补齐 4-6 张图（重点：顶部海盐芝士奶盖 + 焦糖扁桃仁碎 + 八层原料）。
 
 {{< /tab >}}

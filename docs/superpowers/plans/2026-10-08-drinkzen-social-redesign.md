@@ -1066,8 +1066,8 @@ Expected: `7/7 ok`，mode: `WRITE`
 
 ```bash
 for f in content/drinkzen/luckincoffee/autumn-osmanthus-fermented-rice-latte/index.md \
-         content/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/index.md \
-         content/drinkzen/luckincoffee/liu-xin-zhi-shi-na-tie/index.md; do
+         content/drinkzen/luckincoffee/matcha-cheese-latte/index.md \
+         content/drinkzen/luckincoffee/molten-cheese-latte/index.md; do
     echo "=== $f ==="
     grep -c "## plog 分发版" "$f"
     grep "platforms:" "$f" | head -1
@@ -1076,10 +1076,10 @@ done
 
 Expected: 每篇 `## plog 分发版` 出现 1 次，frontmatter 有 `platforms: [xiaohongshu]`
 
-> 对其他 4 篇（costa-latte / coconut-latte / fei-se-yue-guang / thai-milk-tea-latte），slug 按实际路径验证：
+> 对其他 4 篇（costa-latte / coconut-latte / rosy-moonlight / thai-milk-tea-latte），slug 按实际路径验证：
 
 ```bash
-grep -A 1 "^origin:" content/social-publish/drafts/costa-latte.md content/social-publish/drafts/coconut-latte.md content/social-publish/drafts/fei-se-yue-guang.md content/social-publish/drafts/thai-milk-tea-latte.md
+grep -A 1 "^origin:" content/social-publish/drafts/costa-latte.md content/social-publish/drafts/coconut-latte.md content/social-publish/drafts/rosy-moonlight.md content/social-publish/drafts/thai-milk-tea-latte.md
 ```
 
 - [ ] **Step 5: 跑单元测试确认未破坏**
@@ -1125,7 +1125,7 @@ tail -100 "$ORIGIN"
 - [ ] **Step 2: 抽检第 2 篇（mocha）**
 
 ```bash
-ORIGIN=$(grep "^origin:" content/social-publish/drafts/mo-cha-nai-lao-na-tie.md | awk '{print $2}')
+ORIGIN=$(grep "^origin:" content/social-publish/drafts/matcha-cheese-latte.md | awk '{print $2}')
 tail -100 "$ORIGIN"
 ```
 
@@ -1140,7 +1140,7 @@ tail -100 "$ORIGIN"
 - [ ] **Step 3: 抽检第 3 篇（liu-xin）**
 
 ```bash
-ORIGIN=$(grep "^origin:" content/social-publish/drafts/liu-xin-zhi-shi-na-tie.md | awk '{print $2}')
+ORIGIN=$(grep "^origin:" content/social-publish/drafts/molten-cheese-latte.md | awk '{print $2}')
 tail -100 "$ORIGIN"
 ```
 
@@ -1182,10 +1182,10 @@ tail -100 "$ORIGIN"
 - [ ] 标签段、评论区置顶段、图片清单段都已包含
 - [ ] frontmatter `platforms: [xiaohongshu]` 已添加
 
-- [ ] **Step 6: 抽检第 6 篇（fei-se-yue-guang）**
+- [ ] **Step 6: 抽检第 6 篇（rosy-moonlight）**
 
 ```bash
-ORIGIN=$(grep "^origin:" content/social-publish/drafts/fei-se-yue-guang.md | awk '{print $2}')
+ORIGIN=$(grep "^origin:" content/social-publish/drafts/rosy-moonlight.md | awk '{print $2}')
 tail -100 "$ORIGIN"
 ```
 

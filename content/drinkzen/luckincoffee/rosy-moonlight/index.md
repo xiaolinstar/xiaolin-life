@@ -14,6 +14,7 @@ tags:
   - "微醺"
 summary: "瑞幸 2026 年度特调之一：浅烘浓缩咖啡为基底，融合荔枝、葡萄与茉莉花茶，顶部樱花茉莉云顶撒树莓粉。无酒精版 13.9 元 / 含酒精版 15.9 元（加 15ml 伦敦干金酒，酒精度 >0.5% vol），仅堂食。"
 platforms: [xiaohongshu, dianping]
+aliases: [/drinkzen/luckincoffee/fei-se-yue-guang/]
 ---
 
 > **饮品信息**
@@ -115,7 +116,7 @@ platforms: [xiaohongshu, dianping]
 
 ## plog 分发版
 
-<!-- generated from content/social-publish/drafts/fei-se-yue-guang.md by migrate_drinkzen_plog.py on 2026-10-09 -->
+<!-- generated from content/social-publish/drafts/rosy-moonlight.md by migrate_drinkzen_plog.py on 2026-10-09 -->
 
 {{< tabs "plog" >}}
 {{< tab label="📕 plog 正文（小红书 / 大众点评）" >}}
@@ -176,7 +177,7 @@ platforms: [xiaohongshu, dianping]
 | 图 5 场景（选） | 限定款杯套 + 品鉴小卡 + 无杯盖 | `gallery/05-scene.jpg` | ⚠️ 待补 |
 | 图 6 结尾（选） | CTA 引导 + 「奶茶仙人小程序」水印 | `gallery/06-ending.jpg` | ⚠️ 待补 |
 
-> ⚠️ origin `fei-se-yue-guang/gallery/` 目录暂未填充图片。
+> ⚠️ origin `rosy-moonlight/gallery/` 目录暂未填充图片。
 > 实际发布前需从 iPhone 实拍补齐 4-6 张图（重点：粉紫分层 + 限定杯套 + 樱花云顶绵密度）。
 
 {{< /tab >}}

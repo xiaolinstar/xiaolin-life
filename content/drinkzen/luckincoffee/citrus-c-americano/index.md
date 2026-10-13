@@ -12,6 +12,7 @@ tags:
   - "缤纷 C 美式"
   - "果 C 美式系列"
 summary: "2026 年 6 月 22 日与鲜果版橙 C 美式升级同步上线：首次加入门店鲜切鲜橙片，叠加鲜切柠檬与现捣小青桔，配 HPP 缤纷果汁与 100% 真茶茉莉花茶汤，官方热量约 100kcal、咖啡因约 37.1mg，Nutri-Grade 预估 B 级。"
+aliases: [/drinkzen/luckincoffee/bin-fen-c-mei-shi/]
 ---
 
 > **饮品信息**

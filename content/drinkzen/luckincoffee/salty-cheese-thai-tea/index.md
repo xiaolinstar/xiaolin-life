@@ -12,6 +12,7 @@ tags:
   - "泰奶"
   - "咸法酪泰奶"
 summary: "瑞幸咸法酪泰奶（2026/08/31 上新）：咸芝士奶盖 × 经典泰式奶茶，C 级 / 约 320 kcal（估算值），热饮逼近 D 级阈值。"
+aliases: [/drinkzen/luckincoffee/xian-fa-lao-thai-nai/]
 ---
 
 > **饮品信息**

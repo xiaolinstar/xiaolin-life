@@ -4,7 +4,7 @@ description: "瑞幸咖啡产品测评与热量记录"
 date: 2026-08-22
 draft: false
 showTableOfContents: false
-summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯拿铁等产品测评；2026 年中国市场新增绯色月光 / 可可维也纳 / 瑰夏冷萃系列 / 龙井 / 苦瓜轻体果蔬茶 / 缤纷 C 等 7 款新品；2026 年 9 月新增秋桂米酿拿铁 / 抹茶奶酪拿铁 / 流心芝士拿铁 3 款秋季新品；含新加坡 25 款门店菜单及 Nutri-Grade 健康评级。"
+summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯拿铁等产品测评；2026 年中国市场新增绯色月光 / 可可维也纳 / 瑰夏冷萃系列 / 龙井 / 苦瓜轻体果蔬茶 / 缤纷 C 等 7 款新品；2026 年 9 月新增秋桂米酿拿铁 / 抹茶奶酪拿铁 / 流心芝士拿铁 3 款秋季新品；2026 年 10 月新增咸芝士豆乳拿铁 1 款豆乳新品（海盐芝士奶盖 × 东北非转基因大豆豆乳 × 三豆基任选）；含新加坡 25 款门店菜单及 Nutri-Grade 健康评级。"
 ---
 
 瑞幸咖啡是中国最大的连锁咖啡品牌之一，以高性价比和快速扩张著称。
@@ -185,36 +185,37 @@ summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯�
 
 ### 年度特调（2026/05 全国上新）
 
-- [绯色月光 · B 级](/drinkzen/luckincoffee/fei-se-yue-guang/) · 含 / 不含伦敦干金酒双版本，355ml 特调杯，13.9 元 / 15.9 元
-- [可可维也纳 · C 级](/drinkzen/luckincoffee/ke-ke-wei-ye-na/) · 现打动物奶油"雪山"造型 + 香草籽，355ml 特调杯，13.9 元
+- [绯色月光 · B 级](/drinkzen/luckincoffee/rosy-moonlight/) · 含 / 不含伦敦干金酒双版本，355ml 特调杯，13.9 元 / 15.9 元
+- [可可维也纳 · C 级](/drinkzen/luckincoffee/vienna-cocoa/) · 现打动物奶油"雪山"造型 + 香草籽，355ml 特调杯，13.9 元
 
 ### 精品冷萃（2026/07 全国上新）
 
-- [埃塞瑰夏冷萃 · A 级](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/) · IIAC 2026 铂金奖瑰夏，0 脂 0 卡
-- [瑰夏云朵冷萃 · C 级](/drinkzen/luckincoffee/gui-xia-yun-duo-leng-cui/) · 瑰夏 + 帕玛森芝士云顶，约 88-126kcal
+- [埃塞瑰夏冷萃 · A 级](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/) · IIAC 2026 铂金奖瑰夏，0 脂 0 卡
+- [瑰夏云朵冷萃 · C 级](/drinkzen/luckincoffee/geisha-cloud-cold-brew/) · 瑰夏 + 帕玛森芝士云顶，约 88-126kcal
 
 ### 秋季系列（2026/09 全国上新）
 
 - [秋桂米酿拿铁 · C 级](/drinkzen/luckincoffee/autumn-osmanthus-fermented-rice-latte/) · 咸宁金桂 + 浦城丹桂窨制乌龙 × 孝感米酿 × IIAC 金奖豆，约 197 kcal（计算）/ 官方 197.91 kcal / 博主实测 129 kcal，含 <0.5%vol 米酒
-- [抹茶奶酪拿铁 · C 级](/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/) · 千目级纯抹茶 × 新西兰进口液体奶酪 × 鲜牛奶，约 290 kcal（计算）/ 官方 FAQ 同系列 239 kcal，YOYO 联名
-- [流心芝士拿铁 · D 级](/drinkzen/luckincoffee/liu-xin-zhi-shi-na-tie/) · 海盐芝士奶盖 × 新西兰进口液体奶酪 × 焦糖味扁桃仁碎 × 曼特宁浓缩，约 431 kcal（计算），咸甜脆三重口感
+- [抹茶奶酪拿铁 · C 级](/drinkzen/luckincoffee/matcha-cheese-latte/) · 千目级纯抹茶 × 新西兰进口液体奶酪 × 鲜牛奶，约 290 kcal（计算）/ 官方 FAQ 同系列 239 kcal，YOYO 联名
+- [流心芝士拿铁 · D 级](/drinkzen/luckincoffee/molten-cheese-latte/) · 海盐芝士奶盖 × 新西兰进口液体奶酪 × 焦糖味扁桃仁碎 × 曼特宁浓缩，约 431 kcal（计算），咸甜脆三重口感
+- [咸芝士豆乳拿铁 · B 级](/drinkzen/luckincoffee/salty-cheese-soy-latte/) · 海盐芝士奶盖 × 东北非转基因大豆豆乳 × 鲜牛奶 × 三豆基任选（意式拼配 / 深烘拼配 / 埃塞金烘），一口三重风味，估算 164 kcal（豆乳天然糖 + 全脂奶双重糖源触发 B 级，与拿铁不另外加糖版 A 级不同）
 
 ### 茶咖（春季回归）
 
-- [鲜萃轻轻龙井 · B 级](/drinkzen/luckincoffee/xian-cui-qing-qing-long-jing/) · 钱塘产区龙井春茶 + 鲜牛奶，约 100kcal
+- [鲜萃轻轻龙井 · B 级](/drinkzen/luckincoffee/fresh-longjing/) · 钱塘产区龙井春茶 + 鲜牛奶，约 100kcal
 
 ### 健康系列
 
-- [苦瓜轻体果蔬茶 · A 级](/drinkzen/luckincoffee/ku-gua-qing-ti-guo-shu-cha/) · 苦瓜 + 24h 鲜榨羽衣甘蓝 + 8 种果蔬，200+ 项检测
+- [苦瓜轻体果蔬茶 · A 级](/drinkzen/luckincoffee/bitter-melon-detox/) · 苦瓜 + 24h 鲜榨羽衣甘蓝 + 8 种果蔬，200+ 项检测
 
 ### 果咖（夏季）
 
-- [缤纷 C 美式 · B 级](/drinkzen/luckincoffee/bin-fen-c-mei-shi/) · 鲜切鲜橙片 + 现捣小青桔，约 100kcal
+- [缤纷 C 美式 · B 级](/drinkzen/luckincoffee/citrus-c-americano/) · 鲜切鲜橙片 + 现捣小青桔，约 100kcal
 
 ### 大师咖啡系列（Barista Coffee）
 
 - [瑞幸拿铁 · B 级（中国）/ A 级（新加坡）](/drinkzen/luckincoffee/latte/) · Espresso × 全脂奶（中国，sat fat 1.07g/100ml 处于 B 级区间）/ 脱脂奶（新加坡），约 133kcal/大杯冰/全脂奶
-- [瑞幸埃塞金烘拿铁 · B 级](/drinkzen/luckincoffee/ehtiopia-latte/) · 埃塞俄比亚 IIAC 铂金奖豆 + 专属梯度升温浅中烘（花香可可 · 浓醇口感），¥17 大杯 / 超大杯限量联名杯 ¥20；与瑞幸拿铁同口径（133kcal / sat fat 1.07g/100ml），差异在豆基风味
+- [瑞幸埃塞金烘拿铁 · B 级](/drinkzen/luckincoffee/ethiopia-latte/) · 埃塞俄比亚 IIAC 铂金奖豆 + 专属梯度升温浅中烘（花香可可 · 浓醇口感），¥17 大杯 / 超大杯限量联名杯 ¥20；与瑞幸拿铁同口径（133kcal / sat fat 1.07g/100ml），差异在豆基风味
 - [瑞幸卡布奇诺 · B 级（中国）/ A 级（新加坡）](/drinkzen/luckincoffee/cappuccino/) · 厚奶泡 × 浓缩咖啡（sat fat 1.07g/100ml，与拿铁同级），约 133kcal/大杯冰/全脂奶
 - [瑞幸焦糖玛奇朵 · C 级（中国 + 新加坡）](/drinkzen/luckincoffee/caramel-macchiato/) · 香草糖浆基底 + 焦糖淋顶（非乳源糖 5.69g/100ml 糖触发），约 235kcal/大杯冰/全脂奶
 - [瑞幸摩卡 · C 级（中国）/ B 级（新加坡）](/drinkzen/luckincoffee/cafe-mocha/) · 浓缩 × 巧克力糖浆 + 全脂奶（sat fat 1.30g/100ml 触发 C 级），约 222kcal/大杯冰/全脂奶
@@ -224,9 +225,9 @@ summary: "瑞幸咖啡：虎斑橘、生椰拿铁、经典泰奶、泰奶鸳鸯�
 
 ### 既有产品
 
-- [虎斑橘 · D 级](/drinkzen/luckincoffee/hu-ban-ju/) · 黄油丝绒奶盖 × 现刨橙皮 × 耶加雪菲（2026/08/29 新品）
+- [虎斑橘 · D 级](/drinkzen/luckincoffee/tiger-tangerine/) · 黄油丝绒奶盖 × 现刨橙皮 × 耶加雪菲（2026/08/29 新品）
 - [瑞幸生椰拿铁 · C 级预警](/drinkzen/luckincoffee/coconut-latte/) · Day 1 小红书推文样例
-- [咸法酪泰奶](/drinkzen/luckincoffee/xian-fa-lao-thai-nai/) · 咸芝士奶盖 × 经典泰式奶茶（2026/08/31 新品）
+- [咸法酪泰奶](/drinkzen/luckincoffee/salty-cheese-thai-tea/) · 咸芝士奶盖 × 经典泰式奶茶（2026/08/31 新品）
 - [泰奶鸳鸯拿铁 · C 级预警](/drinkzen/luckincoffee/thai-milk-tea-latte/) · 茶咖奶酪三重碰撞
 
 ## 新加坡门店菜单

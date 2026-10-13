@@ -181,8 +181,8 @@ platforms: [xiaohongshu, dianping]
   - **追求浓郁咖啡味者** —— 这杯咖啡味偏淡，短萃浓缩是为了让位桂香
   - **外卖长时间配送** —— 米酿会进一步沉底，温度变化也会影响分层口感，强烈建议自提
 - **进阶对比**：
-  - **要 0 卡 / A 级** → [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ai-sai-gui-xia-leng-cui/)（0 kcal，A 级）
-  - **要更低糖 / 更轻盈** → [瑰夏云朵冷萃](/drinkzen/luckincoffee/gui-xia-yun-duo-leng-cui/)（88-126 kcal，评级待核实）
+  - **要 0 卡 / A 级** → [埃塞瑰夏冷萃](/drinkzen/luckincoffee/ethiopia-geisha-cold-brew/)（0 kcal，A 级）
+  - **要更低糖 / 更轻盈** → [瑰夏云朵冷萃](/drinkzen/luckincoffee/geisha-cloud-cold-brew/)（88-126 kcal，评级待核实）
 
 ---
 

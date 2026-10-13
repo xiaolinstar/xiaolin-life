@@ -153,11 +153,11 @@ platforms: [xiaohongshu]          # 实际覆盖哪些平台就填哪些；缺�
 | draft 文件 | 目标 origin | 迁入 tab | 状态 |
 | --- | --- | --- | --- |
 | `autumn-osmanthus-fermented-rice-latte.md` | `content/drinkzen/luckincoffee/autumn-osmanthus-fermented-rice-latte/index.md` | plog 长版 | slug 已确认 |
-| `mo-cha-nai-lao-na-tie.md` | `content/drinkzen/luckincoffee/mo-cha-nai-lao-na-tie/index.md` | plog 长版 | slug 已确认 |
-| `liu-xin-zhi-shi-na-tie.md` | `content/drinkzen/luckincoffee/liu-xin-zhi-shi-na-tie/index.md` | plog 长版 | slug 已确认 |
+| `matcha-cheese-latte.md` | `content/drinkzen/luckincoffee/matcha-cheese-latte/index.md` | plog 长版 | slug 已确认 |
+| `molten-cheese-latte.md` | `content/drinkzen/luckincoffee/molten-cheese-latte/index.md` | plog 长版 | slug 已确认 |
 | `costa-latte.md` | 实施时按 frontmatter `origin:` 字段精确取值 | plog 长版 | 实施时核对 |
 | `coconut-latte.md` | 实施时按 frontmatter `origin:` 字段精确取值 | plog 长版 | 实施时核对 |
-| `fei-se-yue-guang.md` | 实施时按 frontmatter `origin:` 字段精确取值 | plog 长版 | 实施时核对 |
+| `rosy-moonlight.md` | 实施时按 frontmatter `origin:` 字段精确取值 | plog 长版 | 实施时核对 |
 | `thai-milk-tea-latte.md` | 实施时按 frontmatter `origin:` 字段精确取值 | plog 长版 | 实施时核对 |
 
 > 7 个 draft 都是小红书长版，迁入后只填 plog 长版 tab。plog 短版（大众点评）将在日常运营中按需补充，不在本次迁移范围。
