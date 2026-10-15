@@ -3,216 +3,345 @@
   "slug": "salty-cheese-soy-latte",
   "brand": "Luckin Coffee 瑞幸咖啡",
   "product_cn": "咸芝士豆乳拿铁",
+  "first_launch_date": "2024-12",
+  "delist_date": "2025 冬",
+  "relaunch_date": "2026-09-14",
+  "relaunch_collab": "时光代理人（国漫 IP 联名）",
   "default_config": {
     "size": "大杯 450ml",
     "temperature": "冰",
     "bean": "深烘拼配",
     "concentration": "默认浓度",
-    "sweetness": "微甜（1 泵）",
-    "cheese_foam": "默认奶盖",
+    "sweetness": "不另外加糖",
+    "sweetness_note": "小程序界面预选「微甜 1 泵」；本页评估口径取「不另外加糖」（社区共识 + 实测锚点 274 kcal）",
+    "cheese_foam": "默认厚层牛乳奶盖",
     "milk": "牛奶"
   },
-  "ingredients": [
-    {
-      "name": "东北非转基因大豆豆乳（豆浆）",
-      "volume_ml": 100,
-      "kcal": 35,
-      "protein_g": 3.0,
-      "fat_g": 1.8,
-      "sat_fat_g": 0.3,
-      "total_sugar_g": 1.5,
-      "lactose_g": 0,
-      "non_milk_sugar_g": 1.5,
-      "source_note": "商用豆浆营养参考（每 100ml 约 35 kcal / 3g 蛋白 / 1.8g 脂肪），瑞幸官方未公开豆乳克重与营养成分表 ⚠️"
+  "measured_values": {
+    "label": "社区实测与聚合站数据（主页面热量取此口径）",
+    "community_series": {
+      "source": "smzdm 2026-09-21 回归文转述「1210 赞 / 385 评」全系列热量实测帖（按官方配料表逐项加总，不另外加糖口径）",
+      "ref": "https://post.smzdm.com/p/aqrmwzrp/",
+      "ice_grande_no_sugar_kcal": 274,
+      "ice_trenta_no_sugar_kcal": 373,
+      "hot_grande_no_sugar_kcal": 369,
+      "hot_trenta_no_sugar_kcal": 455,
+      "foam_layer_kcal": 89,
+      "soy_powder_layer_kcal": 9,
+      "per_sweetness_step_kcal": 11,
+      "no_ice_extra_kcal": 102,
+      "reliability": "系列实测帖高赞交叉核对，可信度高"
     },
-    {
-      "name": "全脂牛奶",
-      "volume_ml": 100,
-      "kcal": 62,
-      "protein_g": 3.2,
-      "fat_g": 3.6,
-      "sat_fat_g": 2.25,
-      "total_sugar_g": 4.8,
-      "lactose_g": 4.8,
-      "non_milk_sugar_g": 0,
-      "source_note": "三元鲜牛奶（同品牌其他饮品沿用营养参数）"
+    "aggregator": {
+      "source": "咖啡奶茶喝什么（nckfhsm.com）首屏",
+      "ref": "https://www.nckfhsm.com/products/xian-zhi-shi-dou-ru-na-tie-rui-xing-ka-fei",
+      "kcal": 324,
+      "note": "未注明配置口径，与 274+11n 序列及默认微甜推算 284 均不吻合，仅作参考"
     },
-    {
-      "name": "浓缩咖啡液",
-      "volume_ml": 30,
-      "kcal": 2.4,
-      "protein_g": 0.03,
-      "fat_g": 0,
-      "sat_fat_g": 0,
-      "total_sugar_g": 0.03,
-      "lactose_g": 0,
-      "non_milk_sugar_g": 0.03,
-      "source_note": "瑞幸拿铁官方单份 30ml"
-    },
-    {
-      "name": "调味糖浆（微甜 1 泵）",
-      "volume_g": 5,
-      "kcal": 15,
-      "protein_g": 0,
-      "fat_g": 0,
-      "sat_fat_g": 0,
-      "total_sugar_g": 5,
-      "lactose_g": 0,
-      "non_milk_sugar_g": 5,
-      "source_note": "沿用品牌糖度基准（每泵 ≈5g 糖），德馨食品原味糖浆参数"
-    },
-    {
-      "name": "咸芝士奶盖（预制）",
-      "volume_g": 30,
-      "kcal": 50,
-      "protein_g": 1.0,
-      "fat_g": 3.0,
-      "sat_fat_g": 1.5,
-      "total_sugar_g": 1.5,
-      "lactose_g": 0.5,
-      "non_milk_sugar_g": 1.0,
-      "source_note": "参考咸法酪泰奶页海盐奶盖参数 + 抹茶奶酪拿铁液体奶酪参数，瑞幸官方未公开本品奶盖克重与配方 ⚠️"
-    },
-    {
-      "name": "冰块",
-      "volume_ml": 185,
-      "kcal": 0,
-      "protein_g": 0,
-      "fat_g": 0,
-      "sat_fat_g": 0,
-      "total_sugar_g": 0,
-      "lactose_g": 0,
-      "non_milk_sugar_g": 0
+    "protein_g_note": "两个来源均无蛋白质数据；本页蛋白质为配料推算 ≈9.2g（旧版「实测 7.7g」无出处，已删除）",
+    "caffeine": {
+      "value_mg": 98.6,
+      "basis": "沿用瑞幸官网拿铁单份浓缩口径 98.6mg（官网 products/lattes/latte 页 2026-10-14 复核确认）。已查询官网产品 API + FAQ API + sitemap：本 SKU（2026-09-14 回归款）尚未收录进官网产品库，独立咖啡因数值待官网上新后核对",
+      "official_check": "2026-10-14 查询 lkcoffee.com：官网产品库最新仅到抹茶奶酪拿铁 / 迷你芝士拿铁，咸芝士豆乳系列（拿铁 / 鸳鸯 / 豆乳茶）均未收录"
     }
-  ],
-  "totals_micro_sweet": {
-    "label": "微甜（1 泵）",
-    "volume_ml": 450,
-    "kcal": 164,
-    "protein_g": 7.23,
-    "fat_g": 8.4,
-    "sat_fat_g": 4.05,
-    "total_sugar_g": 12.83,
-    "lactose_g": 5.3,
-    "non_milk_sugar_g": 7.53
   },
-  "totals_no_added_sugar": {
-    "label": "不另外加糖",
-    "volume_ml": 450,
-    "kcal": 149,
-    "protein_g": 7.23,
-    "fat_g": 8.4,
-    "sat_fat_g": 4.05,
-    "total_sugar_g": 7.83,
-    "lactose_g": 5.3,
-    "non_milk_sugar_g": 2.53
-  },
-  "per_100ml_micro_sweet": {
-    "kcal": 36.5,
-    "protein_g": 1.61,
-    "fat_g": 1.87,
-    "sat_fat_g": 0.9,
-    "total_sugar_g": 2.85,
-    "lactose_g": 1.18,
-    "non_milk_sugar_g": 1.67
-  },
-  "per_100ml_no_added_sugar": {
-    "kcal": 33.1,
-    "protein_g": 1.61,
-    "fat_g": 1.87,
-    "sat_fat_g": 0.9,
-    "total_sugar_g": 1.74,
-    "lactose_g": 1.18,
-    "non_milk_sugar_g": 0.56
+  "ingredients_calculated": {
+    "label": "配方推算（用于糖 / 饱和脂肪评级，已对齐社区实测锚点）",
+    "method": "按官方 7 项配料 + 门店实采 SOP（豆乳 70ml / 牛奶至刻度线 / 搅拌 / 浓缩 / 冰 / 牛乳奶盖 / 黄豆粉，2026-10-14）+ 社区实测锚点（奶盖层 89 kcal、黄豆粉 9 kcal、每档糖 +11 kcal）回推",
+    "ingredients": [
+      {
+        "name": "豆乳风味植物饮料（甜豆乳基底）",
+        "volume_ml": 70,
+        "kcal": 56.0,
+        "protein_g": 2.1,
+        "fat_g": 1.26,
+        "sat_fat_g": 0.14,
+        "total_sugar_g": 4.2,
+        "lactose_g": 0,
+        "non_milk_sugar_g": 4.2,
+        "source_note": "用量 70ml 为门店制作流程实采（2026-10-14）；甜豆乳基底（大豆+水+植物油+糖）按每 100ml 80 kcal / 3g 蛋白 / 1.8g 脂肪 / 6g 糖估算。「东北非转基因大豆」是原料产地标签"
+      },
+      {
+        "name": "纯牛奶（加至刻度线）",
+        "volume_ml": 165,
+        "kcal": 102.3,
+        "protein_g": 5.28,
+        "fat_g": 5.94,
+        "sat_fat_g": 3.8,
+        "total_sugar_g": 7.92,
+        "lactose_g": 7.92,
+        "non_milk_sugar_g": 0,
+        "source_note": "门店流程为「牛奶上线」（加至杯身刻度线）；165ml 按容量平衡推算（450 = 豆乳70 + 牛奶165 + 浓缩30 + 奶盖60 + 冰125）。三元鲜牛奶 62 kcal / 3.2g 蛋白 / 3.6g 脂肪 / 2.3g 饱和脂肪 / 4.8g 乳糖 每 100ml"
+      },
+      {
+        "name": "浓缩咖啡液（深烘拼配）",
+        "volume_ml": 30,
+        "kcal": 2.4,
+        "protein_g": 0.03,
+        "fat_g": 0,
+        "sat_fat_g": 0,
+        "total_sugar_g": 0.03,
+        "lactose_g": 0,
+        "non_milk_sugar_g": 0.03
+      },
+      {
+        "name": "预制牛乳奶盖（海盐芝士奶盖粉 + 牛乳乳饮料）",
+        "volume_ml": 60,
+        "kcal": 89.0,
+        "protein_g": 1.2,
+        "fat_g": 6.4,
+        "sat_fat_g": 4.0,
+        "total_sugar_g": 3.0,
+        "lactose_g": 1.5,
+        "non_milk_sugar_g": 1.5,
+        "source_note": "整层 89 kcal 为社区实测锚点；门店流程确认奶盖为牛乳系（牛乳乳饮料兑制奶盖粉），饱和脂肪按牛乳脂系奶油奶酪构成估算 ≈4.0g（脂肪 65% 热量、饱和占脂肪约 60%）"
+      },
+      {
+        "name": "黄豆粉谷物固体饮料（顶部撒粉）",
+        "volume_g": 2,
+        "kcal": 9.0,
+        "protein_g": 0.7,
+        "fat_g": 0.4,
+        "sat_fat_g": 0.06,
+        "total_sugar_g": 0.7,
+        "lactose_g": 0,
+        "non_milk_sugar_g": 0.7,
+        "source_note": "整层 9 kcal 为社区实测锚点（对应约 2g，440 kcal/100g）"
+      },
+      {
+        "name": "冰块",
+        "volume_ml": 125,
+        "kcal": 0,
+        "protein_g": 0,
+        "fat_g": 0,
+        "sat_fat_g": 0,
+        "total_sugar_g": 0,
+        "lactose_g": 0,
+        "non_milk_sugar_g": 0
+      }
+    ],
+    "totals": {
+      "volume_ml": 450,
+      "kcal": 258.7,
+      "protein_g": 9.31,
+      "fat_g": 14.0,
+      "sat_fat_g": 8.0,
+      "total_sugar_g": 15.85,
+      "lactose_g": 9.42,
+      "non_milk_sugar_g": 6.43
+    },
+    "totals_no_sugar_added": {
+      "note": "默认口径（不另外加糖，对照社区实测 274 kcal）",
+      "kcal": 258.7,
+      "total_sugar_g": 15.85,
+      "non_milk_sugar_g": 6.43
+    },
+    "per_100ml": {
+      "kcal": 57.5,
+      "protein_g": 2.07,
+      "fat_g": 3.11,
+      "sat_fat_g": 1.78,
+      "total_sugar_g": 3.52,
+      "lactose_g": 2.09,
+      "non_milk_sugar_g": 1.43
+    },
+    "reconciliation_note": "推算不加糖 259 kcal vs 社区实测 274 kcal，差 ≈15 kcal（5%），在配料密度估算误差范围内；差异可能来自牛奶实际略高于 165ml（刻度线位置）或豆乳密度略高。2026-10-14 门店实采 SOP 确认豆乳定量 70ml（替代昨日按热量表回推的 150ml），牛奶相应升至 ≈165ml。豆乳 70ml 最早出现在 10-13 初版（当时无出处被删），现经门店流程证实恢复采用。"
   },
   "ratings": [
     {
-      "system": "新加坡 Nutri-Grade（默认配置：微甜 1 泵）",
+      "system": "新加坡 Nutri-Grade（基于推算糖 / 饱和脂肪）",
       "primary": true,
-      "method": "按中国大陆参数代入新加坡 Nutri-Grade 阈值（非新加坡门店实测）",
+      "method": "按同款中国大陆参数代入新加坡 Nutri-Grade 阈值（非新加坡门店实测）；糖 / 饱和脂肪来自对齐门店 SOP 与社区实测的推算",
       "criteria": [
         {
           "name": "糖",
-          "value_per_100ml": 2.85,
-          "adjusted_per_100ml": 1.67,
-          "adjustment": "−1.18g 乳糖扣减（豆乳天然糖不属可扣减项）",
+          "value_per_100ml": 3.52,
+          "adjusted_per_100ml": 1.43,
+          "adjustment": "−2.09g 乳糖扣减（牛奶 7.92g + 奶盖 1.5g；豆乳糖 / 奶盖非乳糖不属可扣减项）",
           "grade": "B"
         },
         {
           "name": "饱和脂肪",
-          "value_per_100ml": 0.9,
-          "adjusted_per_100ml": 0.9,
+          "value_per_100ml": 1.78,
+          "adjusted_per_100ml": 1.78,
           "adjustment": null,
-          "grade": "B"
+          "grade": "C"
         }
       ],
-      "final_grade": "B",
-      "reason": "糖 B + 饱和脂肪 B → B"
+      "final_grade": "C",
+      "reason": "糖 B + 饱和脂肪 C → C；饱和脂肪由牛奶（3.8g）+ 牛乳奶盖（≈4.0g）双乳源贡献，不依赖奶盖粉是否植脂系的假设，C 级结论稳健",
+      "reliability": "糖 / 饱和脂肪基于推算；牛奶/奶盖用量为容量平衡推算 + 社区实测锚点"
     },
     {
-      "system": "上海「营养选择」（默认配置：微甜 1 泵）",
+      "system": "上海「营养选择」（基于推算糖 / 饱和脂肪）",
       "primary": true,
       "method": "中国大陆官方适用（4 指标取最低）",
       "criteria": [
-        {"name": "非乳源糖", "value_per_100ml": 1.67, "grade": "B"},
-        {"name": "饱和脂肪", "value_per_100ml": 0.9, "grade": "B"},
-        {"name": "反式脂肪", "value_per_100ml": 0, "grade": "A"},
-        {"name": "非糖甜味剂", "value_per_100ml": 0, "grade": "A"}
+        {
+          "name": "非乳源糖",
+          "value_per_100ml": 1.43,
+          "grade": "B"
+        },
+        {
+          "name": "饱和脂肪",
+          "value_per_100ml": 1.78,
+          "grade": "C"
+        },
+        {
+          "name": "反式脂肪",
+          "value_per_100ml": 0,
+          "grade": "A"
+        },
+        {
+          "name": "非糖甜味剂",
+          "value_per_100ml": 0,
+          "grade": "A"
+        }
       ],
-      "final_grade": "B",
-      "reason": "非乳源糖 B + 饱和脂肪 B + 反式脂肪 A + 非糖甜味剂 A → B"
-    },
-    {
-      "system": "上海「营养选择」（不另外加糖）",
-      "primary": false,
-      "method": "中国大陆官方适用（4 指标取最低）",
-      "criteria": [
-        {"name": "非乳源糖", "value_per_100ml": 0.56, "grade": "B", "note": "豆乳天然糖 0.33g/100ml 已触发 B 级阈值"},
-        {"name": "饱和脂肪", "value_per_100ml": 0.9, "grade": "B"},
-        {"name": "反式脂肪", "value_per_100ml": 0, "grade": "A"},
-        {"name": "非糖甜味剂", "value_per_100ml": 0, "grade": "A"}
-      ],
-      "final_grade": "B",
-      "reason": "豆乳天然糖使不另外加糖版仍落在 B 级（与瑞幸拿铁不另外加糖版 A 级不同）"
+      "final_grade": "C",
+      "reason": "非乳源糖 B + 饱和脂肪 C + 反式脂肪 A + 非糖甜味剂 A → C（4 指标取最低）",
+      "reliability": "糖 / 饱和脂肪基于推算，待实测校核"
     }
   ],
   "configuration_variants": [
-    {"label": "冰 / 不另外加糖 / 牛奶", "kcal": 149, "sat_fat_per_100ml": 0.9, "non_milk_sugar_per_100ml": 0.56, "rating": "B"},
-    {"label": "冰 / 微甜 1 泵 / 牛奶", "kcal": 164, "sat_fat_per_100ml": 0.9, "non_milk_sugar_per_100ml": 1.67, "rating": "B"},
-    {"label": "冰 / 少少甜 2 泵 / 牛奶", "kcal": 179, "sat_fat_per_100ml": 0.9, "non_milk_sugar_per_100ml": 2.78, "rating": "B"},
-    {"label": "冰 / 少甜 3 泵 / 牛奶", "kcal": 194, "sat_fat_per_100ml": 0.9, "non_milk_sugar_per_100ml": 3.89, "rating": "B"},
-    {"label": "冰 / 标准甜 4 泵 / 牛奶", "kcal": 209, "sat_fat_per_100ml": 0.9, "non_milk_sugar_per_100ml": 5.00, "rating": "B/C 边界"},
-    {"label": "冰 / 微甜 / 加单份浓缩 (+¥3)", "kcal": 166, "sat_fat_per_100ml": 0.9, "non_milk_sugar_per_100ml": 1.67, "rating": "B"},
-    {"label": "热 / 微甜 / 牛奶（无冰块稀释）", "kcal": 164, "sat_fat_per_100ml": 1.55, "non_milk_sugar_per_100ml": 2.85, "rating": "C", "note": "热饮去掉 185ml 冰块，每 100ml 浓度飙升"}
+    {
+      "label": "冰 / 不另外加糖 / 牛奶（本页默认口径 · 社区推荐）",
+      "kcal": 274,
+      "kcal_basis": "社区实测帖（推算 259，差 5%）",
+      "sat_fat_per_100ml": 1.78,
+      "non_milk_sugar_per_100ml": 1.43,
+      "rating": "C",
+      "note": "社区高频推荐配置"
+    },
+    {
+      "label": "冰 / 微甜 1 泵 / 牛奶（小程序界面预选）",
+      "kcal": 284,
+      "kcal_basis": "推算（274+11；配料推算 270）",
+      "sat_fat_per_100ml": 1.78,
+      "non_milk_sugar_per_100ml": 2.21,
+      "rating": "C"
+    },
+    {
+      "label": "冰 / 少少甜 2 泵 / 牛奶",
+      "kcal": 295,
+      "kcal_basis": "推算（274+22）",
+      "sat_fat_per_100ml": 1.78,
+      "non_milk_sugar_per_100ml": 2.99,
+      "rating": "C"
+    },
+    {
+      "label": "冰 / 少甜 3 泵 / 牛奶",
+      "kcal": 306,
+      "kcal_basis": "推算（274+33）",
+      "sat_fat_per_100ml": 1.78,
+      "non_milk_sugar_per_100ml": 3.77,
+      "rating": "C"
+    },
+    {
+      "label": "冰 / 标准甜 4 泵 / 牛奶",
+      "kcal": 318,
+      "kcal_basis": "推算（274+44）",
+      "sat_fat_per_100ml": 1.78,
+      "non_milk_sugar_per_100ml": 4.54,
+      "rating": "C"
+    },
+    {
+      "label": "冰超大杯 596ml / 不另外加糖",
+      "kcal": 373,
+      "kcal_basis": "社区实测帖",
+      "sat_fat_per_100ml": 1.83,
+      "non_milk_sugar_per_100ml": 1.47,
+      "rating": "C"
+    },
+    {
+      "label": "热大杯 / 不另外加糖",
+      "kcal": 369,
+      "kcal_basis": "社区实测帖",
+      "sat_fat_per_100ml": 2.4,
+      "non_milk_sugar_per_100ml": 2.2,
+      "rating": "C",
+      "note": "热饮无冰、牛奶补满，饱和脂肪 ≈2.4g/100ml（逼近 D 级 2.8 上限）"
+    },
+    {
+      "label": "热大杯 / 微甜 1 泵",
+      "kcal": 380,
+      "kcal_basis": "推算（369+11）",
+      "sat_fat_per_100ml": 2.4,
+      "non_milk_sugar_per_100ml": 3.0,
+      "rating": "C"
+    }
   ],
   "metadata": {
-    "caffeine_mg": 98.6,
-    "caffeine_source": "沿用瑞幸拿铁官方（大杯 450ml 30ml 浓缩口径）",
-    "computed_at": "2026-10-13",
+    "computed_at": "2026-10-14",
     "calculation_assumption": {
-      "size_strategy": "默认大杯 450ml，按冰标签线 210ml 液体基底 + 30g 咸芝士奶盖 + 30ml 浓缩 + 冰块 185ml",
-      "espresso_basis": "30ml（瑞幸拿铁官方单份，沿用 latte/ 口径）",
-      "soy_milk_formula": "商用豆浆（东北非转基因大豆）每 100ml：35 kcal / 3g 蛋白 / 1.8g 脂肪 / 1.5g 碳水（非乳源糖，大豆低聚糖为主）",
-      "milk_formula": "三元鲜牛奶，每 100ml：62 kcal / 3.2g 蛋白质 / 3.6g 脂肪 / 2.3g 饱和脂肪 / 4.8g 碳水（乳糖）",
-      "cheese_foam_formula": "30g 预制咸芝士奶盖（参考咸法酪泰奶页海盐奶盖参数 + 抹茶奶酪拿铁液体奶酪参数）",
-      "cup_size_strategy": "默认大杯 450ml；超大杯 596ml 升杯策略与同品牌奶咖一致（同步加奶 + 咖啡液，奶盖用量小增）"
+      "size_strategy": "默认大杯 450ml = 豆乳 70ml（门店实采）+ 牛奶至刻度线 ≈165ml + 浓缩 30ml + 牛乳奶盖 60ml + 冰 125ml；不加糖推算 259 kcal ≈ 社区实测 274 kcal（差 5%）",
+      "espresso_basis": "30ml（瑞幸拿铁官方单份，咖啡因沿用官网拿铁 98.6mg 口径）",
+      "soy_milk_formula": "甜豆乳基底（大豆+水+植物油+糖）每 100ml：80 kcal / 3g 蛋白 / 1.8g 脂肪 / 6g 糖；用量 70ml 为门店制作流程实采（2026-10-14）",
+      "milk_formula": "三元鲜牛奶，每 100ml：62 kcal / 3.2g 蛋白 / 3.6g 脂肪 / 2.3g 饱和脂肪 / 4.8g 乳糖",
+      "cheese_foam_formula": "厚层预制牛乳奶盖 ≈60ml（海盐芝士奶盖粉 + 牛乳乳饮料，门店流程确认为牛乳系），整层 89 kcal（社区实测锚点），饱和脂肪 ≈4.0g（牛乳脂系构成）",
+      "sweetener_basis": "每档糖浆 ≈3.5g 糖 / ≈11 kcal（社区实测口径，与品牌「每泵≈5g 糖」粗略基准不吻合）",
+      "cup_size_strategy": "超大杯 596ml 按同步加料放大（社区实测不加糖 373 kcal）；热大杯不加糖 369 kcal（社区实测）",
+      "production_sop": "豆乳 70ml → 牛奶至刻度线 → 搅拌 → 浓缩 30ml → 冰 → 牛乳奶盖 → 黄豆粉（门店实采 2026-10-14）"
     },
     "uncertainty_notes": [
-      "⚠️ 豆乳（豆浆）克重 / 用量 / 品牌未公开，本页按 100ml 估算",
-      "⚠️ 咸芝士奶盖克重 / 配方未公开，本页按 30g 估算（参考同品牌其他奶盖饮品）",
-      "⚠️ 豆乳中大豆低聚糖是否计入「非乳源糖」存在口径差异，本页从严按非乳源糖计入",
-      "⚠️ 上海「营养选择」对「非乳源糖」定义严格，豆乳天然糖立即触发 B 级阈值（>0.5g/100ml）",
-      "⚠️ 微甜 1 泵为默认配置（截图核实），与同品牌常规拿铁默认「不另外加糖」不同"
+      "⚠️ 豆乳 70ml 与制作顺序为门店实采（2026-10-14）；牛奶「至刻度线」毫升数（≈165ml）为容量平衡推算",
+      "⚠️ 推算不加糖 259 kcal vs 社区实测 274 kcal（差 5%），差异可能来自刻度线位置 / 豆乳密度",
+      "⚠️ 奶盖 89 kcal / 黄豆粉 9 kcal / 每档糖 +11 kcal 为社区实测锚点（smzdm 转述帖）",
+      "⚠️ 热大杯牛奶补满后饱和脂肪 ≈2.4g/100ml，逼近上海 D 级阈值 2.8",
+      "⚠️ 首发日期 2024-12 为社区口径，精确日期待核实",
+      "⚠️ 咖啡因沿用官网拿铁 98.6mg，本 SKU 未收录官网产品库（2026-10-14 已查）"
     ],
     "sources": [
-      {"fact": "菜单选项结构与价格", "ref": "瑞幸官方小程序截图（用户上传，2026-10-13）", "type": "官方截图"},
-      {"fact": "东北非转基因大豆 + 一口三重风味 + 细腻黄豆粉", "ref": "瑞幸官方小程序饮品顶部说明", "type": "官方文案"},
-      {"fact": "豆乳营养参数", "ref": "商用豆浆行业营养参考（同成分产品品牌 100ml 35 kcal 估算）", "type": "行业惯例推算 ⚠️"},
-      {"fact": "咸芝士奶盖参数", "ref": "content/drinkzen/luckincoffee/salty-cheese-thai-tea/ + content/drinkzen/luckincoffee/matcha-cheese-latte/", "type": "同品牌同工艺饮品参数复用 ⚠️"},
-      {"fact": "全脂牛奶营养", "ref": "content/drinkzen/luckincoffee/_index.md §参考", "type": "公开营养成分表"},
-      {"fact": "浓缩咖啡参数", "ref": "瑞幸拿铁官方公示（98.6mg 咖啡因 / 30ml 单份）", "type": "官方数据"},
-      {"fact": "糖度泵数", "ref": "content/drinkzen/luckincoffee/_index.md §糖度制作方式", "type": "同品牌糖度基准"},
-      {"fact": "分级阈值", "ref": "新加坡 Nutri-Grade 官方 + 上海疾控", "type": "公开标准"}
+      {
+        "fact": "门店制作 SOP：豆乳 70ml 定量 / 牛奶至刻度线 / 搅拌 / 浓缩 / 冰 / 牛乳奶盖 / 黄豆粉",
+        "ref": "用户门店实采（2026-10-14）",
+        "type": "门店制作流程实采"
+      },
+      {
+        "fact": "菜单选项结构 + 价格（¥21/¥24）+ 默认配置 + 顶部说明",
+        "ref": "瑞幸官方小程序截图（用户上传 2026-10-13，2026-10-14 已转存 gallery/menu-screenshot.png + menu-screenshot-2.png）",
+        "type": "官方截图"
+      },
+      {
+        "fact": "热量序列 274/373/369/455 kcal + 奶盖层 89 kcal + 黄豆粉 9 kcal + 每档糖 +11 kcal + 去冰 +102 kcal",
+        "ref": "smzdm 2026-09-21 回归文转述 1210 赞实测帖（post.smzdm.com/p/aqrmwzrp）",
+        "type": "社区实测（转述）"
+      },
+      {
+        "fact": "聚合站首屏 324 kcal（口径不明）+ 配料 7 项列表 + 用户评论（微甜偏甜 / 不另外加糖推荐）",
+        "ref": "咖啡奶茶喝什么 nckfhsm.com 咸芝士·豆乳拿铁页",
+        "type": "聚合站"
+      },
+      {
+        "fact": "回归 2026-09-14 / 2025 冬下架 / 「土豆拿铁」首发梗 / 非标改单（豆乳减半、去奶盖）大概率被拒",
+        "ref": "smzdm 2026-09-21 回归文",
+        "type": "公开测评"
+      },
+      {
+        "fact": "官方 7 项配料表 + 东北非转基因大豆 + 一口三重风味 + 细腻黄豆粉",
+        "ref": "瑞幸官方配料公示 / 小程序顶部说明",
+        "type": "官方配料 + 官方文案"
+      },
+      {
+        "fact": "咖啡因 98.6mg（拿铁单份浓缩口径沿用）",
+        "ref": "瑞幸官网（content/drinkzen/luckincoffee/latte/ 已核对）",
+        "type": "官方数据 + 沿用推算"
+      },
+      {
+        "fact": "全脂牛奶 / 蔗糖糖浆 / 奶盖粉参数",
+        "ref": "content/drinkzen/luckincoffee/_index.md §原料参数 / §糖度制作方式",
+        "type": "品牌基准 + 公开营养成分表"
+      },
+      {
+        "fact": "分级阈值",
+        "ref": "新加坡 Nutri-Grade 官方 + 上海疾控",
+        "type": "公开标准"
+      },
+      {
+        "fact": "咖啡因 98.6mg 复核 + 本 SKU 未收录官网确认",
+        "ref": "lkcoffee.com/products/lattes/latte + 产品/FAQ API + sitemap（2026-10-14 查询）",
+        "type": "官方数据 + 查询记录"
+      }
     ]
   }
 }
