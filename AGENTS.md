@@ -13,7 +13,7 @@
 
 | 类别 | 技术 |
 |------|------|
-| 静态站点 | Hugo 0.158+ extended |
+| 静态站点 | Hugo Extended（版本见 `.hugo-version`） |
 | 主题 | Blowfish（`themes/blowfish/`，git submodule，跟踪 `main`） |
 | 包管理 | pnpm 9.15 |
 | 媒体 | 腾讯云 COS + CDN（凭证在 `~/.cos.yaml`，不进仓库） |

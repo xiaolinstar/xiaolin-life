@@ -1,51 +1,26 @@
 #!/usr/bin/env bash
-# bin/hugo — 项目本地 Hugo 包装器
-#
-# 优先调用 ./.tools/hugo158（兼容 blowfish v2.104.0 声明的 max="0.163.3"）。
-# 缺失则降级系统 hugo，并在版本越界（>0.163.3）时打印警告。
-#
-# 用法：直接替代 `hugo`，例如
-#   bin/hugo server -D
-#   bin/hugo --minify --gc
-
-set -e
+# 使用 .hugo-version 锁定的 Hugo；优先使用项目本地安装。
+set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-LOCAL_BIN="$ROOT/.tools/hugo158"
-
-# 优先使用本地兼容版本
-if [ -x "$LOCAL_BIN" ]; then
-  exec "$LOCAL_BIN" "$@"
+VERSION="$(tr -d '[:space:]' < "${ROOT}/.hugo-version")"
+LOCAL_BIN="${ROOT}/.tools/hugo-${VERSION}"
+HUGO_BIN="${LOCAL_BIN}"
+if [[ ! -x "${HUGO_BIN}" ]]; then
+  HUGO_BIN="$(command -v hugo || true)"
 fi
-
-# 降级到系统 hugo
-SYS_HUGO="$(command -v hugo || true)"
-if [ -z "$SYS_HUGO" ]; then
-  cat >&2 <<EOF
-❌ 未找到 Hugo
-
-请运行一键安装脚本：
-  ./bin/install-hugo.sh
-
-或手动下载到 ./.tools/hugo158：
-  https://github.com/gohugoio/hugo/releases/tag/v0.163.3
-EOF
+if [[ -z "${HUGO_BIN}" ]]; then
+  echo "未找到 Hugo，请运行 bash bin/install-hugo.sh" >&2
   exit 1
 fi
-
-VER="$("$SYS_HUGO" version 2>/dev/null | grep -oE 'v?[0-9]+\.[0-9]+\.[0-9]+' | head -1 || echo unknown)"
-echo "⚠️  未找到 ./.tools/hugo158，临时使用系统 hugo ($VER)"
-echo "    建议运行 ./bin/install-hugo.sh 安装项目锁定的 v0.163.3（兼容 blowfish）"
-
-# 越界检测（>0.163.3 警告 carousel 等可能失效）
-MAJOR=$(echo "$VER" | sed -E 's/^v//' | cut -d. -f1)
-MINOR=$(echo "$VER" | sed -E 's/^v//' | cut -d. -f2)
-PATCH=$(echo "$VER" | sed -E 's/^v//' | cut -d. -f3)
-if [ "${MAJOR:-0}" -gt 0 ] \
-  || { [ "${MAJOR:-0}" -eq 0 ] && { [ "${MINOR:-0}" -gt 163 ] || { [ "${MINOR:-0}" -eq 163 ] && [ "${PATCH:-0}" -gt 3 ]; }; }; }; then
-  echo "❌ 系统 hugo $VER 越界 blowfish 声明的 max=0.163.3"
-  echo "   影响：carousel / timeline 短代码的 tw-elements 与 carousel.css 可能不加载"
-  echo "   解决：./bin/install-hugo.sh"
+ACTUAL="$("${HUGO_BIN}" version)"
+if [[ "${ACTUAL}" != "hugo v${VERSION}-"* && "${ACTUAL}" != "hugo v${VERSION}+"* && "${ACTUAL}" != "hugo v${VERSION} "* ]]; then
+  echo "Hugo 版本不匹配：项目要求 ${VERSION}，实际为 ${ACTUAL}" >&2
+  echo "请运行 bash bin/install-hugo.sh 安装项目指定版本。" >&2
+  exit 1
 fi
-
-exec "$SYS_HUGO" "$@"
+if [[ "${ACTUAL}" != *"+extended"* ]]; then
+  echo "项目需要 Hugo Extended，请运行 bash bin/install-hugo.sh" >&2
+  exit 1
+fi
+exec "${HUGO_BIN}" "$@"

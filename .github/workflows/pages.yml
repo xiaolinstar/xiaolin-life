@@ -23,10 +23,14 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Read Hugo version
+        id: hugo-version
+        run: echo "version=$(cat .hugo-version)" >> "$GITHUB_OUTPUT"
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.163.3"
+          hugo-version: ${{ steps.hugo-version.outputs.version }}
           extended: true
 
       - name: Enable pnpm via corepack

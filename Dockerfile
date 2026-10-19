@@ -1,11 +1,20 @@
 FROM node:24-bookworm-slim AS build-stage
-ARG HUGO_VERSION=0.164.0
+ARG TARGETARCH
 WORKDIR /app
+COPY .hugo-version ./
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl ca-certificates bash git tzdata python3 python3-pip \
-  && curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
-    | tar xz -C /usr/local/bin hugo \
+  && HUGO_VERSION="$(cat .hugo-version)" \
+  && HUGO_ASSET="hugo_extended_${HUGO_VERSION}_linux-${TARGETARCH}.tar.gz" \
+  && HUGO_BASE="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}" \
+  && curl -fsSL "$HUGO_BASE/$HUGO_ASSET" -o /tmp/hugo.tar.gz \
+  && curl -fsSL "$HUGO_BASE/hugo_${HUGO_VERSION}_checksums.txt" -o /tmp/hugo-checksums.txt \
+  && HUGO_SHA="$(awk -v asset="$HUGO_ASSET" '$2 == asset {print $1}' /tmp/hugo-checksums.txt)" \
+  && test -n "$HUGO_SHA" \
+  && printf '%s  /tmp/hugo.tar.gz\n' "$HUGO_SHA" | sha256sum -c - \
+  && tar xzf /tmp/hugo.tar.gz -C /usr/local/bin hugo \
+  && rm /tmp/hugo.tar.gz /tmp/hugo-checksums.txt \
   && npm install -g pnpm@9.15.0 \
   && pip install --break-system-packages pillow \
   && apt-get clean && rm -rf /var/lib/apt/lists/*

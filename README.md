@@ -14,7 +14,7 @@
 [![Pages Deploy](https://img.shields.io/github/actions/workflow/status/xiaolinstar/xiaolin-life/pages.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=Pages)](https://github.com/xiaolinstar/xiaolin-life/actions/workflows/pages.yml)
 [![CD](https://img.shields.io/github/actions/workflow/status/xiaolinstar/xiaolin-life/cd-ghcr.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=CD)](https://github.com/xiaolinstar/xiaolin-life/actions/workflows/cd-ghcr.yml)
 
-[![Hugo](https://img.shields.io/badge/Hugo-0.158%2B%20extended-FF4088?style=for-the-badge&logo=hugo&logoColor=white)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-0.168.0%20extended-FF4088?style=for-the-badge&logo=hugo&logoColor=white)](https://gohugo.io/)
 [![Blowfish](https://img.shields.io/badge/Theme-Blowfish-0891B2?style=for-the-badge)](https://blowfish.page/zh-cn/)
 [![pnpm](https://img.shields.io/badge/pnpm-9.15+-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
@@ -47,14 +47,14 @@
 
 ## 技术栈
 
-[![Hugo](https://img.shields.io/badge/Hugo-0.158%2B%20extended-FF4088?style=flat-square&logo=hugo&logoColor=white)](https://gohugo.io/)
-[![Blowfish](https://img.shields.io/badge/Blowfish-v2.103+-0891B2?style=flat-square)](https://blowfish.page/zh-cn/)
+[![Hugo](https://img.shields.io/badge/Hugo-0.168.0%20extended-FF4088?style=flat-square&logo=hugo&logoColor=white)](https://gohugo.io/)
+[![Blowfish](https://img.shields.io/badge/Blowfish-v3.9.0-0891B2?style=flat-square)](https://blowfish.page/zh-cn/)
 [![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?style=flat-square&logo=nginx&logoColor=white)](https://nginx.org/)
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/xiaolinstar/xiaolin-life/actions)
 
 | 类别 | 说明 |
 | --- | --- |
-| 静态站点 | Hugo 0.158+（extended） |
+| 静态站点 | Hugo 0.168.0（Extended，版本见 `.hugo-version`） |
 | 主题 | [Blowfish](https://blowfish.page/zh-cn/)（git submodule） |
 | 搜索 | 项目定制检索 + Fuse.js 英文容错 |
 | LLM | 构建时自动生成 `llms.txt` / `llms-full.txt` |
@@ -62,7 +62,7 @@
 
 ## 本地开发
 
-需要 Hugo **0.158+ extended** 和 Node.js 20+、pnpm 9+。
+需要 Hugo Extended（版本由 `.hugo-version` 锁定）和 Node.js 20+、pnpm 9+。首次运行 `bash bin/install-hugo.sh` 安装项目本地 Hugo，再运行 `pnpm run site:dev`。
 
 ```bash
 # 克隆（含 Blowfish 主题 submodule）
