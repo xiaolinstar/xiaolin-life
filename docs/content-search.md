@@ -65,3 +65,7 @@ SEARCH_INDEX=public/index.json node --test scripts/test-search.cjs
 目录页标题采用 H1 → 结果区 H2 → 文章卡片 H3，卡片标题仅在本目录模板中调整。目录页通过 `article-link/card.html` 复用 Blowfish 原生卡片，有明确封面的文章沿用封面，其他文章用栏目图标封面，避免把通用风景图误当成饮品或景点实拍。样式沿用主题配色并适配深色模式。未整体更换主题或修改文章地址。
 
 搜索改动使用项目覆盖文件，不直接编辑 `themes/blowfish/`。主题升级时核对搜索按钮 ID、入口模板和主脚本加载方式，保留键盘和移动端检查。
+
+## GitHub Pages 子路径兼容
+
+Pages 部署在 `/xiaolin-life/`。备案图标用 `relURL`，首页按钮用 `pageRef`，正文 Markdown 链接沿用主题的页面解析逻辑，未解析的根路径再补部署前缀。正式域名下地址与页脚样式不变；外部链接与备案查询地址不改写。草稿链接即使补齐路径也不会因此发布。
