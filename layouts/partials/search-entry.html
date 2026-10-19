@@ -1,0 +1,25 @@
+{{- $section := site.GetPage .Section -}}
+{{- $sectionTitle := $section.Title -}}
+{{- if not .Section -}}{{- $sectionTitle = "独立页面" -}}{{- end -}}
+{{- $trail := slice -}}
+{{- range .Ancestors.Reverse -}}
+  {{- if not .IsHome -}}{{- $trail = $trail | append .Title -}}{{- end -}}
+{{- end -}}
+{{- if not $trail -}}{{- $trail = slice $sectionTitle -}}{{- end -}}
+{{- $keywords := .Params.searchkeywords | default slice -}}
+{{- $keywords = $keywords | union (.Params.tags | default slice) | union (.Params.categories | default slice) -}}
+{{- $path := .File.Path -}}
+{{- range hugo.Data.search.aliases -}}
+  {{- if eq .path $path -}}{{- $keywords = $keywords | union .terms -}}{{- end -}}
+{{- end -}}
+{{- return (dict
+  "title" .Title
+  "section" $sectionTitle
+  "sectionId" (.Section | default "pages")
+  "breadcrumb" (delimit $trail " / ")
+  "keywords" $keywords
+  "summary" (.Summary | plainify | htmlUnescape)
+  "content" .Plain
+  "permalink" .RelPermalink
+  "date" (.Date.Format "2006-01-02")
+) -}}

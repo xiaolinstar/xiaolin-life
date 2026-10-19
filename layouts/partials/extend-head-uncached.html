@@ -31,3 +31,8 @@
     src="{{ $carouselClick.RelPermalink }}"
     integrity="{{ $carouselClick.Data.Integrity }}"></script>
 {{ end }}
+
+{{ if .Params.showSectionTree }}
+  {{ $treeJS := resources.Get "js/section-tree.js" | resources.Minify | resources.Fingerprint }}
+  <script defer src="{{ $treeJS.RelPermalink }}" integrity="{{ $treeJS.Data.Integrity }}"></script>
+{{ end }}

@@ -1,0 +1,2 @@
+{{- $pages := where site.RegularPages "Draft" "ne" true -}}
+{{- return (where $pages "Params.excludeFromSearch" "ne" true) -}}

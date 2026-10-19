@@ -1,0 +1,12 @@
+{{ $section := site.GetPage (.Get "section") }}
+{{ with $section }}
+  <ul class="section-directory">
+    {{ range .Sections.ByTitle }}
+      {{ $pages := where .RegularPagesRecursive "Draft" "ne" true }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span>{{ len $pages }} 篇公开文章</span>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

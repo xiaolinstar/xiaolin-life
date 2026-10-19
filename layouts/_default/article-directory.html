@@ -1,0 +1,94 @@
+{{ define "main" }}
+  {{ $pages := where (partial "search-pages.html" .) "Section" "in" (slice "life" "office" "drinkzen" "movies") }}
+  {{ $channels := slice
+    (dict "id" "life" "icon" "globe" "description" "城市漫游与生活片刻")
+    (dict "id" "office" "icon" "code" "description" "工具、方法与工作日常")
+    (dict "id" "drinkzen" "icon" "heart" "description" "咖啡、茶与每一杯记录")
+    (dict "id" "movies" "icon" "star" "description" "银幕内外的故事")
+  }}
+  <div id="article-directory" class="journal-directory" data-index-url="{{ "index.json" | relLangURL }}">
+    <header class="directory-intro">
+      <p class="directory-eyebrow">好好生活 / 文章目录</p>
+      <h1>文章目录</h1>
+      <p class="directory-description">生活记录、轻松办公与每一杯饮品。按栏目翻阅，也可以直接搜索。</p>
+    </header>
+
+    <div class="directory-layout">
+      <aside class="directory-navigation" aria-label="栏目与主题">
+        <p class="directory-nav-label">栏目与主题</p>
+        <nav class="directory-channels" aria-label="筛选文章">
+          <button type="button" class="directory-channel" data-section-filter="" aria-pressed="true">全部文章 <span>{{ len $pages }}</span></button>
+          {{ range $channels }}
+            {{ $id := .id }}
+            {{ $section := site.GetPage $id }}
+            {{ $items := where $pages "Section" $id }}
+            <div class="directory-channel-group">
+              <button type="button" class="directory-channel" data-section-filter="{{ $id }}" aria-pressed="false" {{ if not $items }}disabled{{ end }}>{{ $section.Title }} <span>{{ if $items }}{{ len $items }}{{ else }}待更新{{ end }}</span></button>
+              <div class="directory-topics" data-topics-section="{{ $id }}" hidden>
+                {{ $parents := slice }}
+                {{ range $items.ByTitle }}{{ if not (in $parents .Parent.RelPermalink) }}{{ $parents = $parents | append .Parent.RelPermalink }}{{ end }}{{ end }}
+                {{ range $parents }}
+                  {{ $siblings := where $items "Parent.RelPermalink" . }}
+                  {{ $parent := (index $siblings 0).Parent }}
+                  <button type="button" class="directory-topic" data-topic-filter="{{ $parent.RelPermalink }}" data-section="{{ $id }}" aria-pressed="false">{{ $parent.Title }} <span>{{ len $siblings }}</span></button>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </nav>
+      </aside>
+    <section id="directory-library" class="directory-library" aria-labelledby="directory-heading">
+      <form class="directory-toolbar" role="search">
+        <div class="directory-search-field">
+          <span aria-hidden="true">{{ partial "icon.html" "search" }}</span>
+          <label for="directory-query" class="sr-only">查找文章</label>
+          <input id="directory-query" type="search" placeholder="搜索标题、品牌或关键词…" autocomplete="off">
+        </div>
+      </form>
+      <div class="directory-library-heading">
+        <h2 id="directory-heading">全部文章</h2>
+        <button type="button" id="directory-clear" class="directory-clear" hidden>清空筛选</button>
+      </div>
+      <p id="directory-status" class="directory-status" role="status" aria-live="polite">{{ len $pages }} 篇内容，按发布时间排列</p>
+      <button id="directory-retry" type="button" class="search-retry" hidden>重新加载搜索</button>
+      <noscript><p>可直接浏览全部文章；启用 JavaScript 后支持筛选和分批展示。</p></noscript>
+      <div class="directory-grid">
+        {{ range $pages.ByDate.Reverse }}
+          {{ $cover := false }}
+          {{ $page := . }}
+          {{ with .Params.featureimage }}
+            {{ if or (hasPrefix . "https://") (hasPrefix . "http://") }}
+              {{ $cover = true }}
+            {{ else }}
+              {{ with $page.Resources.Get . }}{{ $cover = true }}{{ end }}
+            {{ end }}
+          {{ end }}
+          {{ $icon := "globe" }}
+          {{ range $channels }}{{ if eq .id $page.Section }}{{ $icon = .icon }}{{ end }}{{ end }}
+          <div class="directory-item" data-article-url="{{ .RelPermalink }}" data-section="{{ .Section | default "pages" }}" data-topic="{{ .Parent.RelPermalink }}" data-original-cover="{{ $cover }}">
+            <p class="directory-item-path">{{ (partial "search-entry.html" .).breadcrumb }}</p>
+            <div class="directory-card-shell">
+              {{ if not $cover }}
+                <a href="{{ .RelPermalink }}" class="directory-card-placeholder" aria-hidden="true" tabindex="-1">
+                  <span>{{ partial "icon.html" $icon }}</span>
+                  <span>{{ .Parent.Title }}</span>
+                </a>
+              {{ end }}
+              {{ partial "article-link/card.html" . | replaceRE "<h2>" "<h3>" | replaceRE "</h2>" "</h3>" | safeHTML }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <div id="directory-empty" class="directory-empty" hidden>
+        <span aria-hidden="true">{{ partial "icon.html" "search" }}</span>
+        <h3>换个关键词，再找找。</h3>
+        <p>试试饮品名、品牌或文章标题，也可以重新浏览全部内容。</p>
+        <button type="button" id="directory-reset">清空筛选</button>
+      </div>
+      <div class="directory-more-wrap"><button type="button" id="directory-more" class="directory-more" hidden>继续翻阅 <span aria-hidden="true">↓</span></button></div>
+    </section>
+    </div>
+  </div>
+  {{ $js := resources.Get "js/article-directory.js" | resources.Minify | resources.Fingerprint }}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}

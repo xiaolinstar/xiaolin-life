@@ -10,6 +10,9 @@ showTableOfContents: false
 记录南京的风景、美食、桌游与日常。
 {{< /lead >}}
 
+{{< button href="/articles/" >}}
+{{< icon "search" >}} 文章目录
+{{< /button >}}
 {{< button href="/life/" >}}
 {{< icon "globe" >}} 生活记录
 {{< /button >}}

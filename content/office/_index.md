@@ -7,12 +7,4 @@ showTableOfContents: false
 summary: "提升效率的工具、方法与学习路线。"
 ---
 
-提升工作效率，让办公更轻松。以下是办公相关的教程与经验。
-
-## 文章列表
-
-- [Thunderbird 解放收件箱](/office/email/)
-- [Markdown 文本编辑](/office/markdown/)
-- [Mac 办公体验](/office/mac/)
-- [Linux 学习路线](/office/linux/)
-- [媒体模板示例](/office/media-templates/)
+提升工作效率，让办公更轻松。这里记录邮件管理、写作工具与系统使用经验。

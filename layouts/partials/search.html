@@ -1,0 +1,27 @@
+<div id="search-wrapper" class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="{{ "" | relLangURL }}" aria-hidden="true">
+  <div id="search-modal" class="search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <div class="search-dialog-heading"><h2 id="search-title">找一篇想读的文章</h2><button id="close-search-button" type="button" aria-label="关闭搜索">{{ partial "icon.html" "xmark" }}</button></div>
+    <header class="search-input-row">
+      <span aria-hidden="true">{{ partial "icon.html" "search" }}</span>
+      <label for="search-query" class="sr-only">标题、关键词或正文</label>
+      <input type="search" id="search-query" placeholder="搜索标题、品牌，或你记得的几个词…" autocomplete="off">
+    </header>
+    <div class="search-tools">
+      <label for="search-section" class="sr-only">栏目</label>
+      <select id="search-section">
+        <option value="">全部栏目</option>
+        {{ range site.Params.mainSections }}{{ with site.GetPage . }}<option value="{{ .Section }}">{{ .Title }}</option>{{ end }}{{ end }}
+      </select>
+      <a href="{{ "articles/" | relLangURL }}">浏览文章目录 <span aria-hidden="true">↗</span></a>
+    </div>
+    <div id="search-suggestions" class="search-suggestions">
+      <p>从一个关键词开始</p>
+      <div>{{ range slice "南京" "雷鸟" "Manner 拿铁" "掼蛋" }}<button type="button" data-search-suggestion="{{ . }}">{{ . }}</button>{{ end }}</div>
+    </div>
+    <p id="search-status" class="search-status" role="status" aria-live="polite">输入关键词；多个关键词用空格分开。</p>
+    <button id="search-retry" type="button" class="search-retry" hidden>重新加载搜索</button>
+    <section class="search-results-body"><ul id="search-results" aria-label="搜索结果"></ul></section>
+    <footer class="search-dialog-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> 选择 <kbd>Enter</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></footer>
+  </div>
+</div>

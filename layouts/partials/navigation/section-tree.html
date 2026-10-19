@@ -1,0 +1,12 @@
+<aside class="section-tree" aria-label="栏目目录">
+  <p class="section-tree-label">栏目目录</p>
+  <nav aria-label="浏览当前栏目">{{ partial "navigation/tree-links.html" . }}</nav>
+</aside>
+<button class="section-tree-trigger" type="button" aria-haspopup="dialog" aria-controls="section-tree-dialog">{{ partial "icon.html" "bars" }}<span>浏览栏目</span></button>
+<dialog id="section-tree-dialog" class="section-tree-dialog" aria-labelledby="section-tree-dialog-title">
+  <div class="section-tree-dialog-header">
+    <h2 id="section-tree-dialog-title">浏览栏目</h2>
+    <button type="button" data-close-section-tree aria-label="关闭栏目目录">{{ partial "icon.html" "xmark" }}</button>
+  </div>
+  <nav aria-label="浏览当前栏目">{{ partial "navigation/tree-links.html" . }}</nav>
+</dialog>

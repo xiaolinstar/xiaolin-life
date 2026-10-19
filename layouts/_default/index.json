@@ -1,0 +1,5 @@
+{{- $index := slice -}}
+{{- range partial "search-pages.html" . -}}
+  {{- $index = $index | append (partial "search-entry.html" .) -}}
+{{- end -}}
+{{- $index | jsonify -}}

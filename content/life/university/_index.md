@@ -6,8 +6,3 @@ draft: false
 showTableOfContents: false
 summary: "漫步南京高校校园，感受学术与城市交融的气质。"
 ---
-
-## 高校列表
-
-- [南京大学](/life/university/nju/)
-- [南京师范大学](/life/university/nnu/)

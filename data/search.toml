@@ -1,0 +1,24 @@
+# 搜索别称只用于匹配，不改变文章标题、目录或 URL。
+[[aliases]]
+path = "office/email/index.md"
+terms = ["雷鸟", "雷鸟邮箱", "邮件客户端", "邮箱管理"]
+
+[[aliases]]
+path = "office/mac/index.md"
+terms = ["macOS", "苹果电脑", "Mac 办公"]
+
+[[aliases]]
+path = "office/markdown/index.md"
+terms = ["md", "Markdown 语法", "文本排版"]
+
+[[aliases]]
+path = "life/table-game/guandan/index.md"
+terms = ["掼蛋规则", "惯蛋", "牌局"]
+
+[[aliases]]
+path = "life/university/nju/index.md"
+terms = ["南大", "NJU"]
+
+[[aliases]]
+path = "life/university/nnu/index.md"
+terms = ["南师大", "南京师大", "NNU"]

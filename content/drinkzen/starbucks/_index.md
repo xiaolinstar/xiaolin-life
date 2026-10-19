@@ -4,6 +4,7 @@ description: "星巴克产品测评与热量记录"
 date: 2026-08-26
 draft: false
 showTableOfContents: false
+showSectionTree: true
 summary: "星巴克（Starbucks）产品测评，含拿铁、星冰乐等经典饮品的 Nutri-Grade 健康评级。"
 ---
 

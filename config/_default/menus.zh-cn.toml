@@ -1,9 +1,4 @@
 [[main]]
-  name = "首页"
-  pageRef = "/"
-  weight = 10
-
-[[main]]
   name = "生活"
   pageRef = "life"
   weight = 20
@@ -12,11 +7,6 @@
   name = "奶茶仙人"
   pageRef = "drinkzen"
   weight = 25
-
-[[main]]
-  name = "电影人生"
-  pageRef = "movies"
-  weight = 28
 
 [[main]]
   name = "办公"
@@ -28,4 +18,5 @@
   pageRef = "about"
   weight = 40
 
-# 页脚不放导航链接，入口统一收敛到顶部 nav
+# 顶部只保留内容栏目与关于；首页通过 Logo 返回。
+# 文章目录入口保留在首页与搜索弹窗；电影人生有公开影评后再加入菜单。

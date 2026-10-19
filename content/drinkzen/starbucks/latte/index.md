@@ -4,6 +4,7 @@ description: "经典拿铁，浓缩咖啡与丝滑牛奶的完美融合"
 date: 2026-08-26
 draft: true
 showTableOfContents: false
+showSectionTree: true
 categories:
   - "饮品记录"
   - "奶茶仙人"

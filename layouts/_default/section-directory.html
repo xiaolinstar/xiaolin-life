@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <header>
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+  <section class="prose max-w-prose dark:prose-invert mt-4 mb-10">{{ .Content }}</section>
+  <section class="section-topic-grid" aria-label="生活主题">
+    {{ range .Sections.ByTitle }}
+      {{ $pages := where .RegularPagesRecursive "Draft" "ne" true }}
+      <div class="section-topic-card min-w-0">
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">{{ len $pages }} 篇公开文章</p>
+        {{ partial "article-link/card.html" . }}
+      </div>
+    {{ end }}
+  </section>
+{{ end }}

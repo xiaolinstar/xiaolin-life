@@ -1,0 +1,26 @@
+{{ $current := . }}
+{{ $root := site.GetPage .Section }}
+{{ $nodes := $root.Sections.ByTitle }}
+{{ if not $nodes }}{{ $nodes = where $root.RegularPages.ByTitle "Draft" "ne" true }}{{ end }}
+<a class="section-tree-root" href="{{ $root.RelPermalink }}">{{ $root.Title }}</a>
+<ul class="section-tree-list">
+  {{ range $nodes }}
+    {{ $active := or (eq .RelPermalink $current.RelPermalink) (.IsAncestor $current) }}
+    <li>
+      <a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $current.RelPermalink }}aria-current="page"{{ end }} class="{{ if $active }}section-tree-branch{{ end }}">{{ .Title }}</a>
+      {{ if and $active .IsSection }}
+        <ul class="section-tree-children">
+          {{ $children := where .RegularPages.ByTitle "Draft" "ne" true }}
+          {{ range $children }}
+            <li><a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $current.RelPermalink }}aria-current="page"{{ end }}>{{ .Title }}</a></li>
+          {{ end }}
+          {{ if and $current.IsPage $current.Draft }}
+            <li><a href="{{ $current.RelPermalink }}" aria-current="page">{{ $current.Title }} <small>草稿预览</small></a></li>
+          {{ else if not $children }}
+            <li class="section-tree-empty">暂无公开饮品</li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

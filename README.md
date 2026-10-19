@@ -56,7 +56,7 @@
 | --- | --- |
 | 静态站点 | Hugo 0.158+（extended） |
 | 主题 | [Blowfish](https://blowfish.page/zh-cn/)（git submodule） |
-| 搜索 | Fuse.js（主题内置） |
+| 搜索 | 项目定制检索 + Fuse.js 英文容错 |
 | LLM | 构建时自动生成 `llms.txt` / `llms-full.txt` |
 | 部署 | GitHub Actions · rsync · Docker Compose（nginx） |
 
@@ -156,7 +156,7 @@ docs/             MEDIA-OSS.md（COS 部署）、MEDIA-STANDARDS.md（作者规�
 pnpm run build
 ```
 
-产物输出到 `public/`，包含 Pagefind 搜索索引。
+产物输出到 `public/`。搜索使用 Hugo 生成的 `index.json` 和浏览器端检索，Fuse.js 用于英文拼写容错；不使用 Pagefind。文章目录位于 `/articles/`，搜索与内容组织说明见 [查找文章](docs/content-search.md)。
 
 ## DrinkZen 运营
 
