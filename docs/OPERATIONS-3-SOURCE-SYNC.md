@@ -1,5 +1,7 @@
 # DrinkZen 三源同步
 
+`drinkzen-site` 将作为 DrinkZen 产品运营站点；本站保留并继续独立运营，饮品资料复制到目标仓库后按产品模块再加工。定位见 [产品方案](DRINKZEN-SITE-PRODUCT-BRIEF.md)，步骤见 [内容复制计划](DRINKZEN-SITE-MIGRATION-PLAN.md)。不执行旧站退役、URL 重定向或自动双向覆盖。以下为本站现有创作流程。
+
 当前工作流维护在 [DrinkZen 运营闭环](../.claude/skills/drinkzen/references/operations.md)，证据规则见 [数据方案](../.claude/skills/drinkzen/references/search-guide.md)。
 
 | 来源 | 职责 | 关联依据 |
@@ -11,4 +13,4 @@
 
 不再维护独立社媒草稿目录或用 ai-todo 作为发布事实来源。台账保存在 `data/drinkzen-operations.json`，历史链接不明时保持未登记。菜单或正文变化后核对后台、共用 plog、配图和两个平台，实际修正完成后再更新台账。
 
-现有 CLI 未支持的产品与营养写入在后台人工处理，后续是否升级单独评估。Hugo draft 默认值和自动发布门禁待定。
+DrinkZen 源码 CLI 0.6.0 已含产品与规格操作，使用前核对实际环境与参数。Hugo draft 默认值和自动发布门禁待定；本站 draft 不决定目标站的公开状态。
