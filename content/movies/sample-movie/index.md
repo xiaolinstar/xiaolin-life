@@ -2,7 +2,7 @@
 title: "盗梦空间 · 2010"
 description: "梦境与现实的边界，在意识的迷宫中寻找救赎"
 date: 2026-08-26
-draft: true
+draft: false
 showTableOfContents: false
 categories:
   - "电影人生"

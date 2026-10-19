@@ -14,9 +14,14 @@
   weight = 30
 
 [[main]]
+  name = "电影人生"
+  pageRef = "movies"
+  weight = 35
+
+[[main]]
   name = "关于"
   pageRef = "about"
   weight = 40
 
 # 顶部只保留内容栏目与关于；首页通过 Logo 返回。
-# 文章目录入口保留在首页与搜索弹窗；电影人生有公开影评后再加入菜单。
+# 文章目录入口保留在首页与搜索弹窗。
