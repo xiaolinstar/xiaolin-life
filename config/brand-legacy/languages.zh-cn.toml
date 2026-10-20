@@ -1,0 +1,5 @@
+[params]
+  logo = "img/avatar.png"
+
+[params.author]
+  image = "img/avatar.png"

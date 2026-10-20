@@ -1,0 +1,4 @@
+defaultSocialImage = "img/photos/cityscape.jpg"
+
+[branding]
+  useCat = false

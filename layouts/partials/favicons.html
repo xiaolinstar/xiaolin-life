@@ -1,0 +1,23 @@
+{{- $base := "" -}}
+{{- $themeColor := "#ffffff" -}}
+{{- $background := "#ffffff" -}}
+{{- $faviconVersion := "" -}}
+{{- if .Params.branding.useCat -}}
+  {{- $base = "brand/orange-tabby/" -}}
+  {{- $faviconVersion = printf "?v=%s" (substr (readFile "static/brand/orange-tabby/favicon.svg" | sha256) 0 12) -}}
+  {{- $themeColor = "#C66A36" -}}
+  {{- $background = "#FFF0D8" -}}
+  <link rel="icon" type="image/svg+xml" sizes="any" href="{{ printf "%s%s" (printf "%sfavicon.svg" $base | relURL) $faviconVersion }}">
+{{- end -}}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ printf "%s%s" (printf "%sfavicon-32x32.png" $base | relURL) $faviconVersion }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ printf "%s%s" (printf "%sfavicon-16x16.png" $base | relURL) $faviconVersion }}">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="{{ printf "%s%s" (printf "%sfavicon.ico" $base | relURL) $faviconVersion }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ printf "%sapple-touch-icon.png" $base | relURL }}">
+{{- $icons := slice -}}
+{{- range slice 192 512 -}}
+  {{- $icons = $icons | append (dict "src" (printf "%sandroid-chrome-%dx%d.png" $base . . | relURL) "sizes" (printf "%dx%d" . .) "type" "image/png" "purpose" "any") -}}
+{{- end -}}
+{{- $manifest := dict "name" .Title "short_name" .Title "id" ("" | relURL) "start_url" ("" | relURL) "scope" ("" | relURL) "icons" $icons "theme_color" $themeColor "background_color" $background "display" "standalone" -}}
+{{- $file := resources.FromString "brand/site.webmanifest" ($manifest | jsonify) -}}
+<link rel="manifest" href="{{ $file.RelPermalink }}">
+<meta name="theme-color" content="{{ $themeColor }}">

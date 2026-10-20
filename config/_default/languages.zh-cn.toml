@@ -11,12 +11,12 @@ title = "好好生活"
   dateFormat = "2006年1月2日"
   description = "南京生活、轻松办公、城市探索，记录生活中的美好与成长。"
   copyright = "© { year } xiaolinstar. All rights reserved."
-  logo = "img/avatar.png"
+  logo = "img/mascot/orange-tabby.svg"
 
 [params.author]
   name = "xiaolinstar"
   email = "xing.xiaolin@foxmail.com"
-  image = "img/avatar.png"
+  image = "img/mascot/orange-tabby.svg"
   imageQuality = 96
   headline = "南京生活 · 轻松办公 · 城市探索"
   bio = "记录风景、美食、桌游与日常。"

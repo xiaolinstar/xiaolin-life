@@ -13,7 +13,7 @@ disableImageOptimizationMD = false
 
 defaultFeaturedImage = "img/photos/article-default.jpg"
 defaultBackgroundImage = "img/photos/home-hero.jpg"
-defaultSocialImage = "img/photos/cityscape.jpg"
+defaultSocialImage = "img/mascot/social-card.png"
 hotlinkFeatureImage = true
 
 fingerprintAlgorithm = "sha512"
@@ -97,3 +97,6 @@ mainSections = ["life", "office", "drinkzen", "movies"]
   icpUrl = "https://beian.miit.gov.cn/"
   gonganNumber = "苏公网安备32010602012446号"
   gonganUrl = "https://beian.mps.gov.cn/#/query/webSearch?code=32010602012446"
+
+[branding]
+  useCat = true

@@ -23,16 +23,16 @@
           {{ $squareImage = $authorImage.Crop (printf "%dx%d" $shortSide $shortSide ) }}
         {{ end }}
         <img
-          class="mb-2 h-36 w-36 rounded-full"
+          class="mb-2 h-36 w-36 {{ if $.Site.Params.branding.useCat }}home-mascot{{ else }}rounded-full{{ end }}"
           width="144"
           height="144"
-          alt="{{ $.Site.Params.Author.name | default `Author` }}"
+          alt="{{ if $.Site.Params.branding.useCat }}{{ $.Site.Title }}的橘猫吉祥物{{ else }}{{ $.Site.Params.Author.name | default `Author` }}{{ end }}"
           src="{{ $final.RelPermalink }}"
           data-zoom-src="{{ $squareImage.RelPermalink }}">
       {{ end }}
     {{ end }}
     <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-neutral-200">
-      {{ .Site.Params.Author.name | default .Site.Title }}
+      {{ if .Site.Params.branding.useCat }}{{ .Site.Title }}{{ else }}{{ .Site.Params.Author.name | default .Site.Title }}{{ end }}
     </h1>
     {{ with .Site.Params.Author.headline }}
       <h2 class="mt-0 mb-0 text-xl text-neutral-800 dark:text-neutral-300">

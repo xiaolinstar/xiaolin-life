@@ -4,6 +4,7 @@ description: "南京生活、轻松办公、城市探索"
 date: 2025-05-21
 draft: false
 showTableOfContents: false
+images: ["img/mascot/social-card.png"]
 ---
 
 {{< lead >}}
