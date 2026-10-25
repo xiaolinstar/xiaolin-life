@@ -144,25 +144,32 @@ def setup_gallery(page_dir: Path, rel: str) -> None:
     print(f"  gallery: {dest.relative_to(ROOT)}")
 
 
-def has_remote_featureimage(index_file: Path) -> bool:
+def get_featureimage(index_file: Path) -> str:
     text = index_file.read_text(encoding="utf-8")
     if not text.startswith("---"):
-        return False
+        return ""
     end = text.find("\n---", 3)
     if end == -1:
-        return False
+        return ""
     fm = text[3:end]
     for line in fm.splitlines():
-        if line.strip().startswith("featureimage:") and "http" in line:
-            return True
-    return False
+        if line.startswith("featureimage:"):
+            return line.split(":", 1)[1].strip().strip("\"'")
+    return ""
 
 
 def setup_page(page_dir: Path, index_file: Path) -> None:
     rel = rel_from_content(page_dir)
-    if has_remote_featureimage(index_file):
+    featureimage = get_featureimage(index_file)
+    if featureimage.startswith(("http://", "https://")):
         clear_featured(page_dir)
         print(f"  skip featured (COS featureimage): {page_dir.relative_to(ROOT)}")
+    elif featureimage and any(
+        path.is_file()
+        for path in (page_dir / featureimage, ROOT / "assets" / featureimage)
+    ):
+        # 本地封面由 Hugo 直接读取，不能被默认占位图覆盖或删除。
+        print(f"  skip featured (local featureimage): {page_dir.relative_to(ROOT)}")
     else:
         source = resolve_featured_source(rel, index_file)
         copy_featured(page_dir, source)
