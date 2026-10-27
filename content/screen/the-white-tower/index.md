@@ -4,11 +4,13 @@ description: "从财前与里见的不同道路，看体制、医学理想与个
 date: 2026-10-25
 draft: false
 showTableOfContents: false
+aliases:
+  - "/movies/the-white-tower/"
 featureimage: "featured.png"
 imagePosition: "50% 35%"
 imagePositionFeature: "50% 35%"
 categories:
-  - "电影人生"
+  - "光影人生"
 tags:
   - "日剧"
   - "剧评"

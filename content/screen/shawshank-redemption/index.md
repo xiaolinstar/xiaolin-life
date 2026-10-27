@@ -4,8 +4,10 @@ description: "希望是美好的，也许是人间至善，而美好的事物永
 date: 2026-10-25
 draft: false
 showTableOfContents: false
+aliases:
+  - "/movies/shawshank-redemption/"
 categories:
-  - "电影人生"
+  - "光影人生"
 tags:
   - "剧情"
   - "体制化"

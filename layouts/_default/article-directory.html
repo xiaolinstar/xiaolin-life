@@ -1,16 +1,16 @@
 {{ define "main" }}
-  {{ $pages := where (partial "search-pages.html" .) "Section" "in" (slice "life" "office" "drinkzen" "movies") }}
+  {{ $pages := where (partial "search-pages.html" .) "Section" "in" (slice "life" "office" "drinkzen" "screen") }}
   {{ $channels := slice
     (dict "id" "life" "icon" "globe" "description" "城市漫游与生活片刻")
     (dict "id" "office" "icon" "code" "description" "工具、方法与工作日常")
     (dict "id" "drinkzen" "icon" "heart" "description" "咖啡、茶与每一杯记录")
-    (dict "id" "movies" "icon" "star" "description" "银幕内外的故事")
+    (dict "id" "screen" "icon" "star" "description" "电影与剧集中的故事")
   }}
   <div id="article-directory" class="journal-directory" data-index-url="{{ "index.json" | relLangURL }}">
     <header class="directory-intro">
       <p class="directory-eyebrow">好好生活 / 文章目录</p>
       <h1>文章目录</h1>
-      <p class="directory-description">生活记录、轻松办公与每一杯饮品。按栏目翻阅，也可以直接搜索。</p>
+      <p class="directory-description">生活记录、轻松办公、饮品与光影故事。按栏目翻阅，也可以直接搜索。</p>
     </header>
 
     <div class="directory-layout">

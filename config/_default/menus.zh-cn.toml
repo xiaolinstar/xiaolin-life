@@ -14,8 +14,8 @@
   weight = 30
 
 [[main]]
-  name = "电影人生"
-  pageRef = "movies"
+  name = "光影人生"
+  pageRef = "screen"
   weight = 35
 
 [[main]]
