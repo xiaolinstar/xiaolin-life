@@ -4,6 +4,8 @@ description: "每一口饮品，都有迹可循。聚合全网品牌数据，参
 date: 2026-08-20
 draft: false
 showTableOfContents: false
+featureimage: "https://media.xiaolin.fun/life/drinkzen/topic-background.jpg"
+imagePosition: "50% 44%"
 summary: "每一口饮品，都有迹可循。全网品牌数据，A-D 级科学分级。"
 ---
 

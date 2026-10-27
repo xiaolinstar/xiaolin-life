@@ -4,6 +4,8 @@ description: "记录电影与剧集，从人物和故事中理解生活与选择
 date: 2026-08-26
 draft: false
 showTableOfContents: false
+featureimage: "https://media.xiaolin.fun/life/screen/topic-background.jpg"
+imagePosition: "50% 48%"
 summary: "记录触动自己的电影与剧集，从具体剧情、人物关系与视听表达出发，分享对作品的理解，以及故事留给生活的思考。"
 aliases:
   - "/movies/"

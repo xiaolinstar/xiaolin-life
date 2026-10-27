@@ -4,6 +4,8 @@ description: "Thunderbird 邮件管理、Markdown 语法、Mac 与 Linux 办公�
 date: 2025-05-21
 draft: false
 showTableOfContents: false
+featureimage: "https://media.xiaolin.fun/life/office/topic-background.jpg"
+imagePosition: "50% 40%"
 summary: "提升效率的工具、方法与学习路线。"
 ---
 
