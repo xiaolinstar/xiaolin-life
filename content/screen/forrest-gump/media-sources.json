@@ -1,6 +1,6 @@
 {
   "checked_date": "2026-10-28",
-  "status": "local-preview-only",
+  "status": "published-to-cdn",
   "notes": "保留来源画面与既有中文字幕，未改写字幕、未裁切水印、未放大。毕业招兵图原始宽640，字幕可读，作为本地候选供作者预览；其余三张1280×720。教学大字覆盖版本及其余低清片段未采用。",
   "images": [
     {
@@ -9,7 +9,8 @@
       "source_clip_seconds": null,
       "resolution": "640×361",
       "subtitle": "你有没有考虑过你的未来？",
-      "sha256": "9964b14059b50838359d6584cc343832a181caa100752f97a50af5a6b4eb7a7b"
+      "sha256": "9964b14059b50838359d6584cc343832a181caa100752f97a50af5a6b4eb7a7b",
+      "cdn_url": "https://media.xiaolin.fun/life/screen/forrest-gump/01-graduation-recruitment.jpg"
     },
     {
       "file": "gallery/02-army-finding-a-place.png",
@@ -17,7 +18,8 @@
       "source_clip_seconds": 126,
       "resolution": "1280×720",
       "subtitle": "不知什么原因 我很适合当兵",
-      "sha256": "34204ba705c1a3e12ee83730cdcb93de3b28f84e35dd6ec56632fe87ed617315"
+      "sha256": "34204ba705c1a3e12ee83730cdcb93de3b28f84e35dd6ec56632fe87ed617315",
+      "cdn_url": "https://media.xiaolin.fun/life/screen/forrest-gump/02-army-finding-a-place.png"
     },
     {
       "file": "gallery/03-following-instructions.png",
@@ -25,7 +27,8 @@
       "source_clip_seconds": 164,
       "resolution": "1280×720",
       "subtitle": "你叫我这么做的 教官",
-      "sha256": "f28725fdbf7f4cc0db837d806b96ab3a356b3be23ce145158b383703c2ad7d70"
+      "sha256": "f28725fdbf7f4cc0db837d806b96ab3a356b3be23ce145158b383703c2ad7d70",
+      "cdn_url": "https://media.xiaolin.fun/life/screen/forrest-gump/03-following-instructions.png"
     },
     {
       "file": "gallery/04-everyday-routine.png",
@@ -33,7 +36,8 @@
       "source_clip_seconds": 130,
       "resolution": "1280×720",
       "subtitle": "你只需把你的床铺好",
-      "sha256": "73d8df5b28e70e2727245d8a57e193425a1e0a0062b606271136abd83b3bb474"
+      "sha256": "73d8df5b28e70e2727245d8a57e193425a1e0a0062b606271136abd83b3bb474",
+      "cdn_url": "https://media.xiaolin.fun/life/screen/forrest-gump/04-everyday-routine.png"
     },
     {
       "file": "featured.jpg",
@@ -42,7 +46,9 @@
       "image_url": "https://www.cheatsheet.com/wp-content/uploads/2021/04/Tom-Hanks-and-Sally-Field-meet-a-military-recruiter.jpg?h=806&quality=89&strip=all&w=1200",
       "resolution": "2000×1344",
       "notes": "毕业后母亲、阿甘与招兵人员的剧照。保留下载原图，无字幕、无放大；仅配置页面裁切位置。",
-      "sha256": "f808c6f94b1a65237dc6e68cfc352805048028b84205ba948f364937ed3d1af9"
+      "sha256": "f808c6f94b1a65237dc6e68cfc352805048028b84205ba948f364937ed3d1af9",
+      "cdn_url": "https://media.xiaolin.fun/life/screen/forrest-gump/featured.jpg"
     }
-  ]
+  ],
+  "verified_date": "2026-10-28"
 }
