@@ -1,26 +1,31 @@
 [[main]]
   name = "生活"
   pageRef = "life"
+  pre = "nav-life"
   weight = 20
 
 [[main]]
   name = "奶茶仙人"
   pageRef = "drinkzen"
+  pre = "nav-drink"
   weight = 25
 
 [[main]]
   name = "办公"
   pageRef = "office"
+  pre = "nav-office"
   weight = 30
 
 [[main]]
   name = "光影人生"
   pageRef = "screen"
+  pre = "nav-screen"
   weight = 35
 
 [[main]]
   name = "关于"
   pageRef = "about"
+  pre = "nav-about"
   weight = 40
 
 # 顶部只保留内容栏目与关于；首页通过 Logo 返回。
