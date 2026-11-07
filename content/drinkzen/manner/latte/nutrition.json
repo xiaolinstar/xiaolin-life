@@ -1,0 +1,125 @@
+{
+  "name": "拿铁咖啡 Latte",
+  "english_name": "Latte",
+  "brand": "MannerCoffee",
+  "drink_type": "咖啡",
+  "category": "经典咖啡",
+  "nutrition_available": true,
+  "energy_kcal_per_100ml": 67.9,
+  "total_sugar_g_per_100ml": 4.54,
+  "lactose_galactose_g_per_100ml": 4.54,
+  "free_sugar_g_per_100ml": 0,
+  "non_milk_sugar_g_per_100ml": 0,
+  "fat_g_per_100ml": 4.01,
+  "saturated_fat_g_per_100ml": 2.53,
+  "trans_fat_g_per_100ml": 0,
+  "protein_g_per_100ml": 3.36,
+  "carbohydrate_g_per_100ml": 4.54,
+  "contains_non_sugar_sweetener": false,
+  "rating_scheme": "sg_nutri_grade",
+  "ratings": [
+    {
+      "scheme": "sg_nutri_grade",
+      "grade": "C",
+      "sugarGrade": "A",
+      "saturatedFatGrade": "C",
+      "nonSugarSweetenerGrade": "A",
+      "status": "calculated",
+      "note": "糖全为乳糖，扣减后计入0g；饱和脂肪2.53g/100ml"
+    },
+    {
+      "scheme": "sh_nutrition_choice",
+      "grade": "C",
+      "nonMilkSugarGrade": "A",
+      "saturatedFatGrade": "C",
+      "transFatGrade": "A",
+      "nonSugarSweetenerGrade": "A",
+      "status": "calculated",
+      "note": "小杯237ml默认；大杯355ml为B级（饱和脂肪稀释至2.41g）"
+    }
+  ],
+  "source_type": "brand_menu",
+  "source_name": "朝日唯品有机牛乳配方计算",
+  "source_url": null,
+  "confidence": "high",
+  "verification_status": "verified",
+  "source_note": "牛奶：朝日唯品有机牛乳（Manner官方使用奶源）。小杯237ml=浓缩30ml+牛奶207ml；大杯355ml=浓缩60ml+牛奶295ml。饱和脂肪按总脂肪63%估算（中国标签不强制标示）。糖全为牛奶天然乳糖（5.2g/100ml），无添加糖。",
+  "variants": [
+    {
+      "size_label": "小热杯",
+      "size_ml": 237,
+      "is_default": true,
+      "calories": 161,
+      "energy_kcal_per_100ml": 67.9,
+      "total_sugar_g_per_100ml": 4.54,
+      "lactose_galactose_g_per_100ml": 4.54,
+      "free_sugar_g_per_100ml": 0,
+      "non_milk_sugar_g_per_100ml": 0,
+      "fat_g_per_100ml": 4.01,
+      "saturated_fat_g_per_100ml": 2.53,
+      "trans_fat_g_per_100ml": 0,
+      "protein_g_per_100ml": 3.36,
+      "carbohydrate_g_per_100ml": 4.54,
+      "contains_non_sugar_sweetener": false,
+      "ratings": [
+        {
+          "scheme": "sg_nutri_grade",
+          "grade": "C",
+          "sugarGrade": "A",
+          "saturatedFatGrade": "C",
+          "nonSugarSweetenerGrade": "A",
+          "status": "calculated",
+          "note": "糖全为乳糖，扣减后计入0g；饱和脂肪2.53g/100ml"
+        },
+        {
+          "scheme": "sh_nutrition_choice",
+          "grade": "C",
+          "nonMilkSugarGrade": "A",
+          "saturatedFatGrade": "C",
+          "transFatGrade": "A",
+          "nonSugarSweetenerGrade": "A",
+          "status": "calculated",
+          "note": "饱和脂肪2.53g/100ml，>1.2且≤2.8"
+        }
+      ]
+    },
+    {
+      "size_label": "大热杯",
+      "size_ml": 355,
+      "is_default": false,
+      "calories": 230,
+      "energy_kcal_per_100ml": 64.8,
+      "total_sugar_g_per_100ml": 4.32,
+      "lactose_galactose_g_per_100ml": 4.32,
+      "free_sugar_g_per_100ml": 0,
+      "non_milk_sugar_g_per_100ml": 0,
+      "fat_g_per_100ml": 3.82,
+      "saturated_fat_g_per_100ml": 2.41,
+      "trans_fat_g_per_100ml": 0,
+      "protein_g_per_100ml": 3.21,
+      "carbohydrate_g_per_100ml": 4.32,
+      "contains_non_sugar_sweetener": false,
+      "ratings": [
+        {
+          "scheme": "sg_nutri_grade",
+          "grade": "C",
+          "sugarGrade": "A",
+          "saturatedFatGrade": "C",
+          "nonSugarSweetenerGrade": "A",
+          "status": "calculated",
+          "note": "糖全为乳糖，扣减后计入0g；饱和脂肪2.41g/100ml"
+        },
+        {
+          "scheme": "sh_nutrition_choice",
+          "grade": "B",
+          "nonMilkSugarGrade": "A",
+          "saturatedFatGrade": "B",
+          "transFatGrade": "A",
+          "nonSugarSweetenerGrade": "A",
+          "status": "calculated",
+          "note": "饱和脂肪稀释至2.41g/100ml，评级优于小杯"
+        }
+      ]
+    }
+  ]
+}
