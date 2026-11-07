@@ -16,6 +16,12 @@
     integrity="{{ $twelementsLib.Data.Integrity }}"></script>
 {{ end }}
 
+{{ if and .IsPage (eq .Section "screen") }}
+  <script id="screen-toc-labels" type="application/json">{{ hugo.Data.screen_toc | jsonify | safeJS }}</script>
+  {{ $tocJS := resources.Get "js/screen-toc.js" | resources.Minify | resources.Fingerprint }}
+  <script defer src="{{ $tocJS.RelPermalink }}" integrity="{{ $tocJS.Data.Integrity }}"></script>
+{{ end }}
+
 {{ if .Params.showSectionTree }}
   {{ $treeJS := resources.Get "js/section-tree.js" | resources.Minify | resources.Fingerprint }}
   <script defer src="{{ $treeJS.RelPermalink }}" integrity="{{ $treeJS.Data.Integrity }}"></script>

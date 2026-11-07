@@ -3,7 +3,7 @@ title: "肖申克的救赎 · 1994"
 description: "希望是美好的，也许是人间至善，而美好的事物永不消逝"
 date: 2026-10-25
 draft: false
-showTableOfContents: false
+showTableOfContents: true
 aliases:
   - "/movies/shawshank-redemption/"
 categories:

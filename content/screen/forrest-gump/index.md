@@ -3,7 +3,7 @@ title: "阿甘正传 · 1994"
 description: "从阿甘的人生际遇，思考社会体制与时代秩序如何为普通人提供非特异性的关怀。"
 date: 2026-10-27
 draft: false
-showTableOfContents: false
+showTableOfContents: true
 featureimage: "https://media.xiaolin.fun/life/screen/forrest-gump/featured.jpg"
 imagePosition: "50% 32%"
 imagePositionFeature: "50% 32%"

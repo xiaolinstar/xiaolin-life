@@ -3,7 +3,7 @@ title: "白色巨塔 · 2003"
 description: "从财前与里见的不同道路，看体制、医学理想与个人选择。"
 date: 2026-10-25
 draft: false
-showTableOfContents: false
+showTableOfContents: true
 aliases:
   - "/movies/the-white-tower/"
 featureimage: "featured.png"

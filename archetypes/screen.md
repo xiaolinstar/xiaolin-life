@@ -3,7 +3,7 @@ title: "作品名 · 年份"
 description: "一句话说明这部作品最值得讨论的地方。"
 date: {{ .Date }}
 draft: true
-showTableOfContents: false
+showTableOfContents: true
 categories:
   - "光影人生"
 tags: []

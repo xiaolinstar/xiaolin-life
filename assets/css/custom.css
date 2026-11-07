@@ -282,6 +282,19 @@ main article .prose figure:has(> img) + p:has(> em:only-child) {
   text-align: center;
 }
 
+/* 影评目录：正文保留完整标题，侧栏只展开当前章节。 */
+.screen-toc > ul > li > a {
+  font-weight: 600;
+}
+
+.toc-right .screen-toc > ul > li > ul {
+  display: none;
+}
+
+.toc-right .screen-toc > ul > li.is-current > ul {
+  display: block;
+}
+
 /* ========== CTA buttons ========== */
 main article .prose a[role="button"] {
   margin-inline-end: 0.5rem;
