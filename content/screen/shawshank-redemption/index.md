@@ -62,6 +62,8 @@ featureimage: "featured.jpg"
 
 ![老布出狱后回到房间](https://media.xiaolin.fun/life/movies/shawshank-redemption/brooks-room.jpg)
 
+*老布离开熟悉的监狱后，独自面对陌生的生活。高墙之外的自由，首先带给他的是不安。*
+
 外面的世界日新月异，陌生的街道、无人约束的自由，对他而言不是馈赠，而是无边的恐慌。他在超市工作时被经理训斥就小便失禁，那个在监狱里德高望重的老人，在外面成了一个没人需要的废物。
 
 他给狱友们写信，说夜里常常失眠，怀念肖申克的一切。他终于明白，自己已经被"体制化"了——监狱的高墙起初是束缚，但年深日久，它却成了依赖。
@@ -71,6 +73,8 @@ featureimage: "featured.jpg"
 最终，他在房梁上刻下"老布到此一游"（Brooks was here），用一根绳子结束了这种无处不在的恐惧。那是他来过这个世界的唯一证明，也是体制化最残酷的注脚。
 
 ![老布在房间上吊自杀](https://media.xiaolin.fun/life/movies/shawshank-redemption/brooks-suicide.jpg)
+
+*老布的结局，让依赖高墙生活的代价变得具体而残酷。*
 
 老布是完全体制化的人，失去了自我，精神上无法独立。适应了体制，脱离了体制反而无法生活。他的悲剧让所有囚犯看到了自己的影子，也让我忍不住想：如果是我们，会不会也一样？
 
@@ -85,6 +89,8 @@ featureimage: "featured.jpg"
 但安迪的存在让他开始思考：没有希望的生活，真的是生活吗？
 
 ![瑞德和安迪在监狱院子](https://media.xiaolin.fun/life/movies/shawshank-redemption/red-andy-yard.jpg)
+
+*安迪与瑞德谈论希望。一个始终为未来保留可能，一个担心期待终将带来失望。*
 
 瑞德的三次假释听证会浓缩了他的整个弧线：
 
@@ -108,19 +114,27 @@ featureimage: "featured.jpg"
 
 ![安迪和瑞德夜晚在监狱院子谈话](https://media.xiaolin.fun/life/movies/shawshank-redemption/andy-red-night.jpg)
 
+*安迪与瑞德的交谈，让漫长的囚禁生活里仍有理解与陪伴。*
+
 **争取屋顶啤酒**：自己不喝啤酒，却冒着被打的风险争取让狱友们在房顶喝啤酒。那是 1949 年的春天，他们正在修缮监狱的屋顶。安迪听到狱警队长海德利在抱怨遗产税的问题，他冒着被推下屋顶的风险，走上前去提供财务建议。作为回报，他为狱友们争取到了每人三瓶啤酒。
 
 ![安迪在屋顶上微笑](https://media.xiaolin.fun/life/movies/shawshank-redemption/andy-rooftop.jpg)
 
+*安迪坐在屋顶微笑。他为狱友们争取到的啤酒，让日常劳作短暂地有了自由生活的滋味。*
+
 这是全片最舒服、最津津乐道的画面之一。瑞德回忆那一刻："我们坐在屋顶，阳光洒在肩头，冰镇的啤酒拿在手里。那一刻，我们好像在打扫自家的房顶一样，仿佛自由人。"
 
 ![瑞德在屋顶上](https://media.xiaolin.fun/life/movies/shawshank-redemption/red-rooftop.jpg)
+
+*屋顶上的瑞德。阳光与啤酒，让高墙中的人短暂感受到自己仍是生活的主人。*
 
 每次看到这个场景，我都觉得特别温暖。瑞德的内心世界在这一刻被触动了。他第一次感受到，即使身在监狱，也可以有那么一瞬间觉得自己是自由的。这不是身体的自由，而是心灵的自由。
 
 安迪自己不喝啤酒，他只是坐在一旁，看着狱友们喝酒，脸上带着微笑。他享受的不是啤酒，而是那一刻的自由感——他用自己的方式，让所有人都感受到了自由。
 
 ![安迪在广播室放《费加罗的婚礼》，所有囚犯抬头聆听](https://media.xiaolin.fun/life/movies/shawshank-redemption/andy-broadcast.jpg)
+
+*音乐通过广播传入监狱。安迪用一次冒险，让狱友们听见高墙之外的美好。*
 
 **冒险放歌曲**：冒着被严惩的后果，也要在广播里放莫扎特的《费加罗的婚礼》，让音乐穿透整个监狱。那一刻，所有囚犯都屏住了呼吸，仿佛时间静止。
 
@@ -133,6 +147,8 @@ featureimage: "featured.jpg"
 **鼓励瑞德吹口风琴**：送给瑞德口风琴，种下希望的种子。虽然瑞德没有立刻吹，但那份心意已经传达。
 
 ![瑞德在牢房里吹口琴](https://media.xiaolin.fun/life/movies/shawshank-redemption/red-harmonica.jpg)
+
+*口琴承载着安迪的心意，也寄托着他希望瑞德保留的感知与希望。*
 
 口风琴是一个意象，代表着对希望的态度。安迪希望瑞德不要放弃对美好的感知，不要像老布一样完全被体制化。而瑞德一开始是拒绝的，他认为在监狱里谈希望是奢侈的、是危险的。
 
@@ -150,7 +166,11 @@ featureimage: "featured.jpg"
 
 ![瑞德来到 Buxton 的橡树下，寻找安迪留下的信](https://media.xiaolin.fun/life/movies/shawshank-redemption/red-buxton.jpg)
 
+*瑞德来到橡树下寻找安迪留下的信。他开始把希望变成自己的行动。*
+
 ![安迪爬过污水管道，越狱成功](https://media.xiaolin.fun/life/movies/shawshank-redemption/andy-sewage.jpg)
+
+*安迪穿过污水管道。对自由的向往，最终依靠漫长的准备与行动实现。*
 
 **坚持挖地道**：十九年如一日，用小锤子挖出逃生通道。那张丽塔·海华丝的海报后面，藏着的不仅是一条隧道，更是对自由的渴望。这是自由的能力——随时可以离开。
 
@@ -231,6 +251,8 @@ featureimage: "featured.jpg"
 写完这些，我再次想起电影的最后：安迪和瑞德在墨西哥海滩重逢，碧蓝的海水，洁白的沙滩，两个老朋友相视而笑。
 
 ![安迪和瑞德在墨西哥海滩重逢](https://media.xiaolin.fun/life/movies/shawshank-redemption/andy-red-beach.jpg)
+
+*安迪与瑞德在海边重逢，曾经关于未来的约定终于成为现实。*
 
 那一刻，所有的苦难都值得了。
 
