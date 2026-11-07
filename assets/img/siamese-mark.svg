@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">好好生活 · 暹罗猫标志初稿</title>
+  <desc id="desc">奶油色猫头，深棕色耳朵与面罩，蓝色眼睛和轻轻上扬的嘴角。</desc>
+  <path fill="#F2E5D0" d="M48 108 43 38q-1-13 11-7l53 34q21-5 42 0l53-34q12-6 11 7l-5 70q19 25 19 53c0 45-42 72-99 72s-99-27-99-72q0-28 19-53Z"/>
+  <path fill="#493A36" d="m56 47 6 56 33-28Zm144 0-39 28 33 28Z"/>
+  <path fill="#B98D7A" d="m64 62 4 27 16-13Zm128 0-20 14 16 13Z"/>
+  <path fill="#493A36" d="M78 91c15-10 32-13 50-8 18-5 35-2 50 8 8 22 24 33 29 57 9 42-29 66-79 66s-88-24-79-66c5-24 21-35 29-57Z"/>
+  <path fill="#60BEE1" d="M69 135c12-17 31-18 47-3-10 20-31 22-47 3Zm71-3c16-15 35-14 47 3-16 19-37 17-47-3Z"/>
+  <path fill="#263D49" d="M91 123c-5 4-5 17 0 21 6-5 6-16 0-21Zm74 0c-6 5-6 16 0 21 5-4 5-17 0-21Z"/>
+  <circle cx="86" cy="129" r="3" fill="#F9F6EF"/>
+  <circle cx="160" cy="129" r="3" fill="#F9F6EF"/>
+  <path fill="#E8D3B9" d="M99 170c7-9 20-9 29-3 9-6 22-6 29 3 9 14-4 28-29 28s-38-14-29-28Z"/>
+  <path fill="#493A36" d="M120 167q8-4 16 0l-8 8Z"/>
+  <path d="M128 175v6m0 0q-8 7-15 0m15 0q9 8 18-2" fill="none" stroke="#493A36" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="m53 163 25 4m-23 12 23-5m125-11-25 4m23 12-23-5" fill="none" stroke="#E8D3B9" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
