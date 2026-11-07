@@ -1,0 +1,105 @@
+{
+  "note": "本地预览，未上传 CDN。已撤下两张仅带英文字幕的 Kinolab 图。当前图注为作者分析，不等于电影对白。",
+  "images": [
+    {
+      "file": "gallery/04-bathing-conversation.jpg",
+      "source_page": "https://www.kinolab.org/FilmClip.php?id=4322",
+      "source_image": "https://www.kinolab.org/files/thumbnail/1786061698_03.jpg?0",
+      "width": 716,
+      "height": 348,
+      "subtitle": "保留原图；后两张自带英文字幕，未添加或翻译图片内文字"
+    },
+    {
+      "file": "gallery/07-farewell-to-shige.png",
+      "source_page": "https://www.bilibili.com/video/BV1dAf3Y2E9W/",
+      "source_type": "公开解说片段中保留原片对白的画面；未采用解说字幕画面",
+      "clip_second": 385,
+      "width": 1280,
+      "height": 640,
+      "scene": "小豆子离开时回望师哥，交代枕席下的钱",
+      "subtitle": "保留来源自带中英双语字幕；顶部水印区域已裁除，未另加字幕",
+      "crop": {
+        "left": 0,
+        "top": 80,
+        "right": 1280,
+        "bottom": 720,
+        "reason": "按作者要求裁掉顶部水印区域，保留人物与全部字幕"
+      },
+      "original_backup": "/tmp/concubine-original-stills/07-farewell-to-shige.png"
+    },
+    {
+      "file": "gallery/08-shitou-farewell.png",
+      "source_page": "https://www.bilibili.com/video/BV1dAf3Y2E9W/",
+      "source_type": "公开解说片段中保留原片对白的画面；未采用解说字幕画面",
+      "clip_second": 390,
+      "width": 1280,
+      "height": 640,
+      "scene": "小石头含泪让小豆子离开",
+      "subtitle": "保留来源自带中英双语字幕；顶部水印区域已裁除，未另加字幕",
+      "crop": {
+        "left": 0,
+        "top": 80,
+        "right": 1280,
+        "bottom": 720,
+        "reason": "按作者要求裁掉顶部水印区域，保留人物与全部字幕"
+      },
+      "original_backup": "/tmp/concubine-original-stills/08-shitou-farewell.png"
+    },
+    {
+      "file": "gallery/09-douzi-watching-opera.png",
+      "source_page": "https://www.duitang.com/blog/?id=775387290",
+      "source_image": "https://a-ho-img.dtstatic.com/uploads/item/201706/29/20170629131849_xsyUF.png",
+      "subtitle": "原图原样保存，未另加字幕；小癞子的三帧组图为来源已拼接的电影截图"
+    },
+    {
+      "file": "gallery/10-longing-to-be-a-star.png",
+      "source_page": "https://www.duitang.com/blog/?id=911534172",
+      "source_image": "https://a-ho-img.dtstatic.com/uploads/item/201804/11/20180411121336_jkcS8.png",
+      "subtitle": "原图原样保存，未另加字幕；小癞子的三帧组图为来源已拼接的电影截图"
+    },
+    {
+      "file": "gallery/03-window-concern.png",
+      "source_page": "https://www.duitang.com/blog/?id=775386653",
+      "source_image": "https://a-ho-img.dtstatic.com/uploads/item/201706/29/20170629131731_8cNVS.png",
+      "subtitle": "原图原样保存，未另加字幕；小癞子的三帧组图为来源已拼接的电影截图"
+    }
+  ],
+  "retired_candidates": [
+    {
+      "file": "gallery/01-mother-and-child.jpeg",
+      "source_page": "https://www.sohu.com/a/485019085_121044055",
+      "source_image": "https://p1.itc.cn/images01/20210822/753e362f452745689b90e33d0e3166c8.jpeg",
+      "scene": "母亲带小豆子到戏班求师傅收留"
+    },
+    {
+      "file": "gallery/02-childhood-companionship.jpg",
+      "source_page": "https://artemperor.tw/focus/4421?page=1",
+      "source_image": "https://d3d9mb8xdsbq52.cloudfront.net/s3/211027/115350nuf.jpg",
+      "scene": "原网站并列的小豆子初入戏班与师兄弟相拥截图"
+    },
+    {
+      "file": "gallery/03-window-concern.jpg",
+      "source_page": "https://www.kinolab.org/FilmClip.php?id=4321",
+      "source_image": "https://www.kinolab.org/files/thumbnail/1786061634_02.jpg?0",
+      "width": 716,
+      "height": 348,
+      "subtitle": "保留原图；后两张自带英文字幕，未添加或翻译图片内文字"
+    },
+    {
+      "file": "gallery/05-after-recitation.jpg",
+      "source_page": "https://www.kinolab.org/FilmClip.php?id=4323",
+      "source_image": "https://www.kinolab.org/files/thumbnail/1786061763_04.jpg?0",
+      "width": 716,
+      "height": 348,
+      "subtitle": "保留原图；后两张自带英文字幕，未添加或翻译图片内文字"
+    },
+    {
+      "file": "gallery/06-young-stage-partners.jpg",
+      "source_page": "https://www.kinolab.org/FilmClip.php?id=4324",
+      "source_image": "https://www.kinolab.org/files/thumbnail/1786061816_05.jpg?0",
+      "width": 716,
+      "height": 348,
+      "subtitle": "保留原图；后两张自带英文字幕，未添加或翻译图片内文字"
+    }
+  ]
+}
