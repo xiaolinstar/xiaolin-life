@@ -11,12 +11,9 @@ images: ["img/mascot/social-card.png"]
 记录南京的风景、美食、桌游与日常。
 {{< /lead >}}
 
-{{< button pageRef="articles" >}}
-{{< icon "search" >}} 文章目录
-{{< /button >}}
 {{< button pageRef="life" >}}
 {{< icon "globe" >}} 生活记录
 {{< /button >}}
-{{< button pageRef="office" >}}
-{{< icon "code" >}} 轻松办公
+{{< button pageRef="screen" >}}
+{{< icon "nav-screen" >}} 光影人生
 {{< /button >}}
