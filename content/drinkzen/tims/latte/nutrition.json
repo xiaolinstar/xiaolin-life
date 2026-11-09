@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "slug": "latte",
+  "brand": "Tim Hortons Tims 咖啡",
+  "product_cn": "拿铁",
+  "default_config": {
+    "size": "大杯 473ml",
+    "temperature": "标准冰",
+    "concentration": "标准",
+    "note": "本页评估口径（作者指定）；菜单默认仍为中杯 335ml（小程序预选）。官方 163 kcal 只对应中杯口径",
+    "espresso_shots": 1,
+    "espresso_note": "浓缩份数不随杯型变化：中杯、大杯均为标准 1 份"
+  },
+  "official_values": {
+    "label": "Tims 官方公布值（对照口径，非本站计算）",
+    "kcal_per_cup": 163,
+    "spec": "中杯 335ml / 标准冰",
+    "per_100ml": 48.7,
+    "per_100ml_note": "163 ÷ 335 × 100",
+    "data_origin": "根据 Tims 训练指引手册的标准出品，能量等营养成分信息由国家认可的实验室测定及估算；数据更新日期 2024 年 6 月",
+    "calculation_standard": "GB 28050《预包装食品营养标签通则》",
+    "reference_food": "《中国食物成分表(第 6 版)》，可食用部分以一个梨约 400g 计",
+    "ingredients_disclosed": [
+      "牛乳",
+      "咖啡"
+    ],
+    "note": "品牌商品图标注为「热量估算」；脚注中的「不添加糖奶选项」指菜单本身无糖度、无加奶选项的标准出品，不是额外去糖档位。官方未公布大杯热量",
+    "source": "Tims 官方小程序商品图 gallery/calorie-card.png（2026-10-20）",
+    "source_ref": "https://www.nckfhsm.com/products/na-tie-33680 （第三方站点转录 Tims 中国官方商品页脚注，2026-10-20 抓取）"
+  },
+  "calculation_model": {
+    "label": "配料推导（主口径）",
+    "method": "原料用量 × 每 100ml 营养值 = 该原料贡献 → 各原料相加 = 每杯总值 → 每杯总值 ÷ 有效体积 × 100 = 每 100ml 浓度",
+    "principle": "不使用官方热量反推原料用量；官方 163 kcal 仅作对照，两者差异并列记录",
+    "ratio_assumption": "中杯 335ml = 浓缩 30ml + 牛乳 220ml + 冰 85ml；冰量按官方商品图冰层高度估算 ≈1/4 杯容，牛乳为杯容余量；大杯按「牛乳 : 冰 = 220 : 85」等比放大至 473ml（牛乳 319.5ml + 浓缩 30ml + 冰 123.5ml）",
+    "reliability": "推算值，置信度中：冰杯刻度（三线 / 出餐标准处）对应毫升数未公开",
+    "reconciliation_note": "中杯配料推导 138.9 kcal vs 官方 163 kcal，差 15%。可能来源：① 冰量目测偏大（若奶量约 259ml、冰约 46ml，推算正好回到 163 kcal）；② 品牌「牛乳」能量密度高于国标全脂标签 62 kcal/100ml；③「覆以微量奶泡」若由额外乳脂打发未计入。差异不影响评级结论"
+  },
+  "ingredients_calculated": {
+    "label": "配方推算（大杯 473ml / 标准冰 / 标准浓度 · 主口径）",
+    "ingredients": [
+      {
+        "name": "浓缩咖啡液（标准 = 1 份）",
+        "volume_ml": 30,
+        "kcal": 2.5,
+        "protein_g": 0.15,
+        "fat_g": 0.05,
+        "sat_fat_g": 0,
+        "total_sugar_g": 0.2,
+        "lactose_g": 0,
+        "non_milk_sugar_g": 0.2,
+        "source_note": "菜单「标准浓度」= 1 份、「加一份标准浓度」= 2 份；份数依据品牌内部饮品配方培训材料（2024-07 公开考核题）「拿铁、加倍拿铁、水牛乳拿铁都是先萃取 1 份浓缩」，并与消保委 2026 实测 79mg（单份区间）一致；每份 ml 未公开，按行业通用 30ml/份推算；每 30ml 参考 2-3 kcal / 蛋白 0.1-0.2g / 碳水 0.1-0.3g（品牌总览 §浓缩咖啡营养参考）"
+      },
+      {
+        "name": "牛乳（全脂，含微量奶泡）",
+        "volume_ml": 319.5,
+        "kcal": 198.1,
+        "protein_g": 10.22,
+        "fat_g": 11.5,
+        "sat_fat_g": 7.25,
+        "total_sugar_g": 15.34,
+        "lactose_g": 15.34,
+        "non_milk_sugar_g": 0,
+        "source_note": "官方原料表为「牛乳、咖啡」；按国标全脂牛乳 GB 25190 每 100ml：62 kcal / 蛋白 3.2g / 脂肪 3.6g / 碳水 4.8g（乳糖）；饱和脂肪按总脂肪 3.6g × 63% = 2.268g/100ml；用量 319.5ml 为中杯配比 220:85 等比放大所得"
+      },
+      {
+        "name": "冰块",
+        "volume_ml": 123.5,
+        "kcal": 0,
+        "protein_g": 0,
+        "fat_g": 0,
+        "sat_fat_g": 0,
+        "total_sugar_g": 0,
+        "lactose_g": 0,
+        "non_milk_sugar_g": 0,
+        "source_note": "冰量未公开；按官方商品图冰层高度估算 ≈1/4 杯容并等比放大"
+      }
+    ],
+    "totals": {
+      "volume_ml": 473,
+      "kcal": 200.6,
+      "protein_g": 10.37,
+      "fat_g": 11.55,
+      "sat_fat_g": 7.25,
+      "total_sugar_g": 15.54,
+      "lactose_g": 15.34,
+      "non_milk_sugar_g": 0.2
+    },
+    "per_100ml": {
+      "kcal": 42.4,
+      "protein_g": 2.19,
+      "fat_g": 2.44,
+      "sat_fat_g": 1.53,
+      "total_sugar_g": 3.28,
+      "lactose_g": 3.24,
+      "non_milk_sugar_g": 0.04
+    },
+    "mid_cup_reference": {
+      "note": "中杯 335ml 同配比（对照官方 163 kcal）",
+      "recipe": "浓缩 30ml + 牛乳 220ml + 冰 85ml",
+      "totals": {
+        "volume_ml": 335,
+        "kcal": 138.9,
+        "protein_g": 7.19,
+        "fat_g": 7.97,
+        "sat_fat_g": 4.99,
+        "total_sugar_g": 10.76,
+        "lactose_g": 10.56,
+        "non_milk_sugar_g": 0.2
+      },
+      "per_100ml": {
+        "kcal": 41.5,
+        "protein_g": 2.15,
+        "fat_g": 2.38,
+        "sat_fat_g": 1.49,
+        "total_sugar_g": 3.21,
+        "lactose_g": 3.15,
+        "non_milk_sugar_g": 0.06
+      },
+      "official_kcal": 163,
+      "difference": "配料推导 138.9 vs 官方 163，差 15%"
+    }
+  },
+  "ratings": [
+    {
+      "system": "新加坡 Nutri-Grade（基于配料推算糖 / 饱和脂肪）",
+      "primary": true,
+      "method": "按中国大陆门店参数代入新加坡 Nutri-Grade 阈值（非新加坡门店实测）；官方未公布糖与脂肪数据",
+      "config": "大杯 473ml / 标准冰 / 标准浓度",
+      "criteria": [
+        {
+          "name": "糖",
+          "value_per_100ml": 3.28,
+          "adjusted_per_100ml": 0.04,
+          "adjustment": "−3.24g 乳糖扣减（牛奶碳水全为乳糖，GB 25190 口径）；浓缩咖啡 0.04g 非乳源糖不扣减",
+          "grade": "A"
+        },
+        {
+          "name": "饱和脂肪",
+          "value_per_100ml": 1.53,
+          "adjusted_per_100ml": 1.53,
+          "adjustment": null,
+          "grade": "C"
+        }
+      ],
+      "final_grade": "C",
+      "reason": "糖 A（乳糖扣减后 0.04g/100ml）+ 饱和脂肪 C（1.53g/100ml，>1.2 且 ≤2.8）→ C；无甜味剂，不触发甜味剂规则",
+      "reliability": "糖 / 饱和脂肪基于配料推算（官方未公布），非检测值"
+    },
+    {
+      "system": "上海「营养选择」（基于配料推算糖 / 饱和脂肪）",
+      "primary": true,
+      "method": "中国大陆适用（4 指标取最低）",
+      "config": "大杯 473ml / 标准冰 / 标准浓度",
+      "criteria": [
+        {
+          "name": "非乳源糖",
+          "value_per_100ml": 0.04,
+          "grade": "A"
+        },
+        {
+          "name": "饱和脂肪",
+          "value_per_100ml": 1.53,
+          "grade": "B"
+        },
+        {
+          "name": "反式脂肪",
+          "value_per_100ml": 0,
+          "grade": "A"
+        },
+        {
+          "name": "非糖甜味剂",
+          "value_per_100ml": 0,
+          "grade": "A"
+        }
+      ],
+      "final_grade": "B",
+      "reason": "非乳源糖 A + 饱和脂肪 B + 反式脂肪 A + 非糖甜味剂 A → B（4 指标取最低）",
+      "reliability": "糖 / 饱和脂肪基于配料推算，待实测校核"
+    }
+  ],
+  "configuration_variants": [
+    {
+      "label": "大杯 473ml / 标准冰 / 标准（本页默认口径）",
+      "kcal": 201,
+      "kcal_basis": "配料推算（浓缩 30ml / 牛乳 319.5ml / 冰 123.5ml）",
+      "sat_fat_per_100ml": 1.53,
+      "non_milk_sugar_per_100ml": 0.04,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    },
+    {
+      "label": "大杯 473ml / 标准冰 / 加一份标准浓度（升杯 +¥3、浓缩 +¥4）",
+      "kcal": 190,
+      "kcal_basis": "配料推算（浓缩 60ml / 牛乳 297.9ml / 冰 115.1ml）",
+      "sat_fat_per_100ml": 1.43,
+      "non_milk_sugar_per_100ml": 0.08,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    },
+    {
+      "label": "大杯 473ml / 少冰",
+      "kcal": 239,
+      "kcal_basis": "配料推算（冰量减半 61.7ml / 牛乳 381.3ml）",
+      "sat_fat_per_100ml": 1.83,
+      "non_milk_sugar_per_100ml": 0.04,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    },
+    {
+      "label": "大杯 473ml / 去冰 / 热",
+      "kcal": 277,
+      "kcal_basis": "配料推算（无冰 / 牛乳 443ml）",
+      "sat_fat_per_100ml": 2.12,
+      "non_milk_sugar_per_100ml": 0.04,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    },
+    {
+      "label": "中杯 335ml / 标准冰 / 标准（菜单默认）",
+      "kcal": 139,
+      "kcal_basis": "配料推算；官方标注 163 kcal 作对照（差 15%）",
+      "sat_fat_per_100ml": 1.49,
+      "non_milk_sugar_per_100ml": 0.06,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    },
+    {
+      "label": "中杯 335ml / 标准冰 / 加一份标准浓度（+¥4）",
+      "kcal": 128,
+      "kcal_basis": "配料推算（浓缩 60ml / 牛乳 198.4ml / 冰 76.6ml）",
+      "sat_fat_per_100ml": 1.34,
+      "non_milk_sugar_per_100ml": 0.12,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    },
+    {
+      "label": "中杯 335ml / 少冰",
+      "kcal": 165,
+      "kcal_basis": "配料推算（冰量减半 42.5ml / 牛乳 262.5ml）",
+      "sat_fat_per_100ml": 1.78,
+      "non_milk_sugar_per_100ml": 0.06,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    },
+    {
+      "label": "中杯 335ml / 去冰 / 热",
+      "kcal": 192,
+      "kcal_basis": "配料推算（无冰 / 牛乳 305ml）",
+      "sat_fat_per_100ml": 2.06,
+      "non_milk_sugar_per_100ml": 0.06,
+      "rating_singapore": "C",
+      "rating_shanghai": "B"
+    }
+  ],
+  "sensitivity": {
+    "note": "评级结论对配比假设的敏感度",
+    "items": [
+      "配料推算（1.53g/100ml）与官方值反推配方（奶 ≈259ml / 冰 ≈46ml，1.75g/100ml）评级完全一致，均为新加坡 C / 上海 B。",
+      "新加坡 C 级成立前提是奶量充足：大杯 ≥250ml、中杯 ≥177ml（饱和脂肪 ≥1.20g/100ml）；若实际冰量超过约杯容 38%，中杯饱和脂肪跌破 1.2g/100ml，新加坡降为 B 级。",
+      "热饮 / 去冰（无冰、奶补满）大杯饱和脂肪升至 2.12g/100ml，仍低于上海 B 级上限 2.5 与新加坡 C 级上限 2.8。",
+      "乳糖扣减依据：牛奶碳水全部为乳糖（GB 25190），扣减后计入评级的糖为 0.04g/100ml（浓缩咖啡带入的微量糖），远低于 A 级上限 1g/100ml。",
+      "浓缩份数不随杯型变化（中杯、大杯均 1 份），若「大杯 = 2 份」被证伪，每杯热量变动不足 3 kcal、评级不变，但咖啡因会翻倍。"
+    ]
+  },
+  "caffeine": {
+    "value_mg": 79,
+    "value_source": "深圳消保委 2026 年 24 款连锁咖啡实测：Tim's 拿铁 79mg（同批 Tim's 冰美式 119mg；肯德基 58、星巴克 99、瑞幸 134、库迪 172、Manner 186）",
+    "calculated_mg": 70,
+    "calculated_basis": "按 1 份 30ml 浓缩、每 30ml 咖啡因 63-75mg 推算（品牌总览 §浓缩咖啡营养参考）",
+    "extra_shot_mg": 145,
+    "extra_shot_note": "加一份标准浓度 = 2 份，外推约 140-150mg",
+    "reliability": "实测 79mg 置信度较高（检测机构实测，杯型 / 浓度口径未注明）；本站推算 70mg 与之量级一致",
+    "conflicting_claim": "smzdm 2026-02「在家复刻 Tims 同款拿铁」称 Tims 为「标志性的双份浓缩基底（约 60ml）」，属博主自制方案，与品牌内部培训材料（拿铁 1 份浓缩）及消保委实测（79mg 落在单份浓缩 60-90mg 区间）矛盾，仅并列记录、不作依据"
+  },
+  "metadata": {
+    "computed_at": "2026-10-20",
+    "calculation_assumption": {
+      "cup_size_strategy": "中杯 335ml = 浓缩 30ml + 牛乳 220ml + 冰 85ml；大杯 473ml 按「牛乳 : 冰 = 220 : 85」等比放大（牛乳 319.5ml + 浓缩 30ml + 冰 123.5ml）",
+      "espresso_basis": "标准浓度 = 1 份 30ml（份数依品牌内部培训材料，浓缩不随杯型变；每份 ml 未公开，按行业通用推算）",
+      "milk_formula": "国标全脂牛乳 GB 25190，每 100ml：62 kcal / 蛋白 3.2g / 脂肪 3.6g / 碳水 4.8g（乳糖）",
+      "sat_fat_basis": "牛奶总脂肪 3.6g/100ml × 63% = 2.268g/100ml（乳制品脂肪酸组成研究，置信度中）",
+      "ice_ratio_basis": "冰量按官方商品图冰层高度估算 ≈1/4 杯容；冰杯刻度（三线 / 出餐标准处）对应毫升数未公开",
+      "size_scaling": "浓缩份数不随杯型变化；加一份浓度时奶量按杯容平衡相应减少",
+      "sweetness_basis": "菜单无糖度选项，无添加糖；糖全部来自牛奶乳糖"
+    },
+    "uncertainty_notes": [
+      "官方 163 kcal 只对应中杯 / 标准冰，大杯无官方热量；本页大杯数值为配料推算",
+      "冰量（≈1/4 杯容）与牛乳用量为目测 + 杯容余量推算，置信度中",
+      "配料推算中杯 138.9 kcal 比官方 163 kcal 低 15%，差异原因未完全解释（见 calculation_model.reconciliation_note）",
+      "官方 163 kcal 为品牌「热量估算」（实验室测定及估算，2024-06），官方未公布糖、饱和脂肪、蛋白质数据",
+      "「标准浓度」的每份毫升数未公开，按 1 份 30ml 推算，咖啡因数值随之浮动（份数 1 份已由内部培训材料 + 消保委实测交叉确认）",
+      "「覆以微量奶泡」是否含额外乳脂未核实，本页未计入",
+      "第三方测评（2023-08）给出中杯拿铁 120 kcal，口径未注明，与官方数据无法对齐，仅并列记录"
+    ],
+    "sources": [
+      {
+        "fact": "菜单选项结构（杯型 335/473ml、温度 4 档、浓缩 2 档）、加价（+¥3 / +¥4）、价格 ¥23.9（划线 ¥26）、默认配置、官方描述文案",
+        "ref": "Tims 官方小程序商品页截图 gallery/menu-screenshot.png（2026-10-20）",
+        "type": "官方截图"
+      },
+      {
+        "fact": "热量 163 kcal 商品图标注",
+        "ref": "Tims 官方商品图 gallery/calorie-card.png（2026-10-20）",
+        "type": "官方标注"
+      },
+      {
+        "fact": "163 kcal 的出品规格与测定口径：Tims 训练指引手册标准出品、国家认可实验室测定及估算、2024-06 更新、GB 28050、《中国食物成分表(第 6 版)》、梨约 400g、原料牛乳+咖啡",
+        "ref": "https://www.nckfhsm.com/products/na-tie-33680 （第三方站点转录官方商品页脚注，2026-10-20 抓取）",
+        "type": "官方商品页脚注（第三方转录）"
+      },
+      {
+        "fact": "拿铁标准萃取 1 份浓缩；经典拿铁派制作顺序（全脂牛奶 → 浓缩 → 加奶至冰杯三线 → 最后加冰至出餐标准处）",
+        "ref": "https://www.wjx.cn/vm/OtPovQR.aspx （Tims 饮品配方培训考核题，2024-07，第三方公开页转录，2026-10-20 抓取）",
+        "type": "品牌内部培训材料"
+      },
+      {
+        "fact": "拿铁咖啡因 79mg、冰美式 119mg",
+        "ref": "深圳消保委 2026 年 24 款连锁咖啡实测（https://www.toutiao.com/a7682129289865396777 转述，2026-10-20 抓取）",
+        "type": "检测机构实测（第三方转述）"
+      },
+      {
+        "fact": "「Tims 双份浓缩基底（60ml）」说法",
+        "ref": "https://post.smzdm.com/p/akov7pr4/ （2026-02 博主复刻方案，与培训材料及实测矛盾，仅并列记录）",
+        "type": "博主自制方案"
+      },
+      {
+        "fact": "中杯拿铁 120 kcal（口径未注明）",
+        "ref": "https://health.baidu.com/m/detail/ar_6142990711330594839 （2023-08）",
+        "type": "第三方测评"
+      },
+      {
+        "fact": "全脂牛奶营养成分、浓缩咖啡每 30ml 参考值与咖啡因 63-75mg",
+        "ref": "content/drinkzen/tims/_index.md §参考 + 国标 GB 25190",
+        "type": "品牌基准 + 国家标准"
+      },
+      {
+        "fact": "牛奶饱和脂肪占总脂肪约 63%",
+        "ref": "乳制品脂肪酸组成研究（见正文参考资料）",
+        "type": "推算值，置信度中"
+      },
+      {
+        "fact": "分级阈值（糖 / 饱和脂肪 / 非乳源糖 / 反式脂肪 / 甜味剂）",
+        "ref": "content/drinkzen/nutri-grade/index.md（新加坡 HPB 指引 + 上海 T/CNSS 045-2025，核对日期 2026-10-11）",
+        "type": "公开标准"
+      }
+    ]
+  }
+}

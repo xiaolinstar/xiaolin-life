@@ -1,0 +1,154 @@
+{
+  "slug": "latte",
+  "schema_version": 1,
+  "brand": "Tim Hortons Tims 咖啡",
+  "product_cn": "拿铁",
+  "product_en": "Latte",
+  "series": "Classic Coffee（经典咖啡系列）",
+  "source": "official-miniapp",
+  "collectedAt": "2026-10-20",
+  "screenshot": "gallery/menu-screenshot.png",
+  "screenshot_status": "已转存（2026-10-20 用户提供小程序商品页截图 + 官方热量卡两张）",
+  "screenshot_calorie_card": "gallery/calorie-card.png",
+  "subtitle_on_app": "中杯/标准冰",
+  "description_on_app": "经典的意式咖啡之选，新鲜萃取的浓缩咖啡与蒸煮牛奶精心调和，覆以微量奶泡。",
+  "options": [
+    {
+      "group": "杯型",
+      "key": "size",
+      "selectionType": "single",
+      "values": [
+        {
+          "label": "中杯 335ml",
+          "default": true,
+          "price": 0,
+          "cup_capacity": "小程序标注 335ml"
+        },
+        {
+          "label": "大杯 473ml",
+          "default": false,
+          "price": 3,
+          "price_unit": "元",
+          "cup_capacity": "小程序标注 473ml"
+        }
+      ]
+    },
+    {
+      "group": "温度",
+      "key": "temperature",
+      "selectionType": "single",
+      "values": [
+        {
+          "label": "热",
+          "default": false,
+          "price": 0
+        },
+        {
+          "label": "标准冰",
+          "default": true,
+          "price": 0
+        },
+        {
+          "label": "少冰",
+          "default": false,
+          "price": 0
+        },
+        {
+          "label": "去冰",
+          "default": false,
+          "price": 0
+        }
+      ]
+    },
+    {
+      "group": "浓缩咖啡",
+      "key": "concentration",
+      "selectionType": "single",
+      "values": [
+        {
+          "label": "标准",
+          "default": true,
+          "price": 0,
+          "note": "对应 1 份浓缩。依据：品牌内部饮品配方培训材料（2024-07 公开考核题）载明「拿铁、加倍拿铁、水牛乳拿铁都是先萃取 1 份浓缩」；深圳消保委 2026 实测 Tim's 拿铁咖啡因 79mg，落在单份浓缩区间。每份具体 ml 未公开，按行业 30ml/份推算"
+        },
+        {
+          "label": "加一份标准浓度",
+          "default": false,
+          "price": 4,
+          "price_unit": "元",
+          "note": "= 2 份浓缩，咖啡因约 140-150mg"
+        }
+      ]
+    }
+  ],
+  "options_absent": [
+    "糖度（无甜度调节选项）",
+    "奶源（固定为牛乳，无切换选项）",
+    "风味糖浆",
+    "小料"
+  ],
+  "defaultPrice": 23.9,
+  "listPrice": 26,
+  "price_note": "按小程序菜单：结算栏现价 ¥23.9、划线价 ¥26；大杯升杯 +¥3，浓缩加一份 +¥4。按页面说明，划线价是不参与优惠活动时该产品在门店销售的常规价格，截图时点存在立减 / 折扣活动，常规价 ¥26、活动价 ¥23.9",
+  "defaultConfig": {
+    "size": "中杯 335ml",
+    "temperature": "标准冰",
+    "concentration": "标准",
+    "total_price": "23.9 元（活动价；划线常规价 26 元）"
+  },
+  "official_kcal": {
+    "value": 163,
+    "unit": "kcal",
+    "display": "每杯热量 ≈ 163kcal",
+    "spec_basis": "中杯、标准冰（脚注：上述产品按中杯、标准冰标准出品）",
+    "data_origin": "根据 Tims 训练指引手册的标准出品，能量等营养成分信息由国家认可的实验室测定及估算；数据更新日期 2024 年 6 月",
+    "calculation_standard": "GB 28050《预包装食品营养标签通则》",
+    "reference_food": "《中国食物成分表(第 6 版)》，可食用部分以一个梨约 400g 计",
+    "ingredients_disclosed": [
+      "牛乳",
+      "咖啡"
+    ],
+    "note": "品牌商品图标注为「热量估算」；脚注中的「不添加糖奶选项」指菜单本身无糖度、无加奶选项的标准出品",
+    "screenshot": "gallery/calorie-card.png",
+    "marketing_line": "小于一个梨的热量！",
+    "source_ref": "https://www.nckfhsm.com/products/na-tie-33680 （第三方站点转录 Tims 中国官方商品页脚注，2026-10-20 抓取）"
+  },
+  "page_evaluation_config": {
+    "size": "大杯 473ml",
+    "temperature": "标准冰",
+    "concentration": "标准",
+    "note": "菜单默认是中杯 335ml（小程序预选）；本页评估口径按作者要求改为大杯 473ml。官方 163 kcal 只对应中杯口径，大杯数值为配料推算（201 kcal）"
+  },
+  "third_party_conflicts": [
+    {
+      "item": "中杯拿铁热量",
+      "value": 120,
+      "unit": "kcal",
+      "source": "百度健康 · Tims 咖啡热量测评（2023-08）",
+      "ref": "https://health.baidu.com/m/detail/ar_6142990711330594839",
+      "note": "未注明冰量、奶量与奶泡口径，与官方 2024-06 数据无法对齐，仅并列记录，不作推算依据"
+    }
+  ],
+  "promo_badge": "商品缩略图右上角红色「1」角标，具体含义未核实",
+  "production_sop": {
+    "source": "品牌内部饮品配方培训材料（2024-07 公开考核题）+ 官方商品描述",
+    "status": "步骤有出处，用量未公开",
+    "steps": [
+      "1. 杯中先加全脂牛奶",
+      "2. 注入浓缩咖啡液 1 份",
+      "3. 继续加奶至冰杯三线处",
+      "4. 最后加冰至冰杯出餐标准处"
+    ],
+    "style": "经典拿铁派（另有「现代拿铁派」：先奶 → 加冰至杯口 → 最后加入咖啡液；拿铁走经典派）",
+    "unknown": "冰杯刻度（三线 / 出餐标准处）对应毫升数、奶泡用量均未公开"
+  },
+  "notes": "拿铁菜单项未提供糖度、奶源、小料、风味糖浆选项，奶源固定为牛乳。浓缩份数不随杯型变化：中杯、大杯均为标准 1 份（品牌内部培训材料 + 消保委咖啡因实测交叉确认）。品牌总览页杯型容量表已按小程序菜单核实改为中杯 335ml / 大杯 473ml。",
+  "data_conflicts": [
+    {
+      "item": "杯型容量",
+      "source_a": "Tims 品牌总览 content/drinkzen/tims/_index.md（旧表小杯 240 / 中杯 360 / 大杯 480 / 超大杯 600ml）",
+      "source_b": "Tims 小程序拿铁菜单（中杯 335ml / 大杯 473ml）",
+      "resolution": "以单品菜单截图为准；品牌总览容量表已于 2026-10-20 改正"
+    }
+  ]
+}

@@ -7,6 +7,13 @@
       "menu_checked_at": "2026-10-13",
       "followup": null,
       "platforms": {}
+    },
+    "content/drinkzen/tims/latte/index.md": {
+      "product_id": null,
+      "menu_evidence": "gallery/menu-screenshot.png",
+      "menu_checked_at": "2026-10-20",
+      "followup": null,
+      "platforms": {}
     }
   }
 }
