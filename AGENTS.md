@@ -93,6 +93,7 @@ pnpm install                   # 自动触发 husky prepare
 | 环境变量 | [docs/env/README.md](docs/env/README.md) |
 | 主题问题 | [docs/BLOWFISH-TW-ELEMENTS-ISSUES.md](docs/BLOWFISH-TW-ELEMENTS-ISSUES.md) |
 | 首页动效设计 | [docs/DESIGN-ANIMATED-BACKGROUND.md](docs/DESIGN-ANIMATED-BACKGROUND.md) |
+| 影评 → 公众号 | [docs/WECHAT-SCREEN-REVIEW.md](docs/WECHAT-SCREEN-REVIEW.md) |
 | 移动端 Hermes | [docs/DRAFT-OPENCLAW-HERMES-MOBILE.md](docs/DRAFT-OPENCLAW-HERMES-MOBILE.md) |
 
 ## 部署
@@ -106,7 +107,7 @@ pnpm install                   # 自动触发 husky prepare
 
 ## Skills / Rules
 
-- 项目级 Skill：`/article-create`、`/drinkzen`、`/media-publish`、`/origin-distribute` 等（见 `.claude/skills/`）
+- 项目级 Skill：`/article-create`、`/drinkzen`、`/media-publish`、`/origin-distribute`、`/wechat-screen-review` 等（见 `.claude/skills/`）
 - 项目级 Rule：`.claude/rules/core.md`（通用）+ `.claude/rules/framework/nodejs.md`（Node.js）
 - 外部 Skill 注册表：`skills-lock.json`
 

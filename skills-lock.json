@@ -50,6 +50,11 @@
     "origin-distribute": {
       "path": ".claude/skills/origin-distribute",
       "sourceType": "project-local"
+    },
+    "wechat-screen-review": {
+      "path": ".claude/skills/wechat-screen-review",
+      "version": "0.1.0",
+      "sourceType": "project-local"
     }
   }
 }

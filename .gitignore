@@ -65,3 +65,8 @@ static/assets/images/**
 
 # Markdown 协作工具临时目录（不应进仓库）
 .markdown-collab/
+
+# 公众号导出产物（由 scripts/wechat_screen_review.py 从 MD 重生成，勿入库）
+docs/wechat/*
+!docs/wechat/screen-review-template.html
+!docs/wechat/.gitkeep

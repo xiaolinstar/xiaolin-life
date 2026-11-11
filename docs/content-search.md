@@ -31,6 +31,8 @@ bin/hugo new content --kind screen screen/work-title/index.md
 
 将命令中的 `work-title` 替换为小写英文与连字符组成的 slug。模板与光影人生首页的写法一致：作品信息后前置评分，正文按观点展开，台词和截图融入对应段落，个人思考收在结尾。摘要建议 40～60 字。
 
+站内定稿后同步微信公众号的字段拆分、版式与导出命令见 [WECHAT-SCREEN-REVIEW.md](WECHAT-SCREEN-REVIEW.md)。
+
 ## 搜索实现
 
 Hugo 构建时通过 `layouts/_default/index.json` 生成 `index.json`，浏览器首次输入关键词时下载并缓存。项目级 `assets/js/search.js` 覆盖主题搜索脚本，保留主题入口；Fuse.js 作为无直接结果时的英文拼写容错。无需搜索服务器，也不使用 Pagefind。

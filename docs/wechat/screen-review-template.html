@@ -1,0 +1,27 @@
+<!--
+  光影人生 · 公众号影评发布约定（纸页留白）
+
+  字段拆分（微信后台各自粘贴）：
+  1. 封面 COVER  — 优先用站点 featured.jpg（导出脚本会复制到同目录 *-cover.jpg）
+  2. 标题 TITLE  — 观点向标题（不等于片名）
+  3. 摘要 DIGEST — 用 front matter 的 summary（建议 54–120 字）
+  4. 正文 BODY   — 栏目 + 《片名》+ 信息 + 评分 + 影评；不再重复公众号标题/摘要
+
+  生成命令：
+  python3 scripts/wechat_screen_review.py content/screen/<slug>/index.md --title "你的公众号标题"
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>光影人生影评模板说明</title>
+</head>
+<body style="margin:0;padding:24px;font-family:-apple-system,'PingFang SC',sans-serif;color:#222;line-height:1.7;max-width:720px;">
+  <h1 style="font-family:'Songti SC',serif;">发布字段怎么分</h1>
+  <p><strong>标题</strong>：观点句，例如「体制之恶，对个人主义的抹杀」。</p>
+  <p><strong>摘要</strong>：一句话钩子，来自文章 summary，列表/转发可见。</p>
+  <p><strong>正文</strong>：只放影评内容；文首用「光影人生」+《片名》识别作品。</p>
+  <p><strong>封面</strong>：直接用站点 <code>featured.jpg</code>（常见 1280×720）。CDN 未必有这张图，以后台本地上传为准。</p>
+  <p>实际可点复制的发布包，请用脚本生成后的 <code>docs/wechat/&lt;slug&gt;.html</code>。</p>
+</body>
+</html>
