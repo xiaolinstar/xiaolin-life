@@ -1,0 +1,33 @@
+# Standalone compose for 121 when TLS is terminated by xiaolin-gateway.
+# Do NOT merge with compose.yaml (ports would append and keep publishing 443).
+#
+# CD: workflow_dispatch backend_mode=behind-gateway
+# Manual: docker compose -f compose.behind-gateway.yaml up -d
+
+networks:
+  tiny-sparrow-network:
+    external: false
+
+services:
+  xiaolin-life-website:
+    image: ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:${WEBSITE_IMAGE_TAG:-main}
+    container_name: xiaolin-life-website
+    volumes:
+      - ./volumes/website/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./volumes/website/default.behind-gateway.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./volumes/website/nginx-stub-status.conf:/etc/nginx/conf.d/nginx-stub-status.conf:ro
+      - ./volumes/website/logs:/var/log/nginx
+    networks:
+      - tiny-sparrow-network
+    ports:
+      # Host loopback only — gateway reaches via host.docker.internal:8080
+      - "127.0.0.1:8080:80"
+    environment:
+      TZ: Asia/Shanghai
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/healthz >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

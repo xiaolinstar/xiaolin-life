@@ -2,6 +2,19 @@ name: CD Pipeline, Deploy to Target Server
 
 on:
   workflow_dispatch:
+    inputs:
+      backend_mode:
+        description: "direct-tls = container owns 80/443 (current). behind-gateway = host 127.0.0.1:8080 only (after gateway cutover)."
+        required: true
+        type: choice
+        options:
+          - direct-tls
+          - behind-gateway
+        default: direct-tls
+      deploy_sha:
+        description: "Optional 40-char SHA (default: workflow_run head or this commit)"
+        required: false
+        type: string
   workflow_run:
     workflows: ["CI Pipeline, Build and Push Image"]
     branches: [main]
@@ -24,7 +37,9 @@ jobs:
       group: cd-xiaolin-fun-121
       cancel-in-progress: false
     env:
-      DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      # Auto CD from CI always keeps direct-tls until cutover is intentional.
+      BACKEND_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.backend_mode || 'direct-tls' }}
+      DEPLOY_SHA: ${{ inputs.deploy_sha || github.event.workflow_run.head_sha || github.sha }}
 
     steps:
       - name: Deploy matching configuration and image
@@ -34,18 +49,34 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           command_timeout: 30m
-          envs: DEPLOY_SHA
+          envs: DEPLOY_SHA,BACKEND_MODE
           script: |
             set -euo pipefail
             cd ${{ env.SERVER_DIR }}
             [[ "$DEPLOY_SHA" =~ ^[0-9a-f]{40}$ ]]
             export WEBSITE_IMAGE_TAG="sha-$DEPLOY_SHA"
-            # Confirm the image exists before changing the server configuration.
             docker pull "ghcr.nju.edu.cn/xiaolinstar/xiaolin-life:$WEBSITE_IMAGE_TAG"
             git -c submodule.recurse=false fetch origin main
             git -c submodule.recurse=false checkout --detach "$DEPLOY_SHA"
             mkdir -p volumes/website/logs volumes/website/certs
-            docker compose -f compose.yaml up -d
+
+            case "$BACKEND_MODE" in
+              direct-tls)
+                echo "Deploy mode: direct-tls (compose.yaml, host 80/443)"
+                docker compose -f compose.yaml up -d
+                ;;
+              behind-gateway)
+                echo "Deploy mode: behind-gateway (compose.behind-gateway.yaml, 127.0.0.1:8080)"
+                # Tear down previous publish of 80/443 if switching modes.
+                docker compose -f compose.yaml stop xiaolin-life-website 2>/dev/null || true
+                docker compose -f compose.behind-gateway.yaml up -d
+                ;;
+              *)
+                echo "Unknown BACKEND_MODE=$BACKEND_MODE" >&2
+                exit 1
+                ;;
+            esac
+
             bash scripts/wait-healthy.sh
             docker image prune -f
-            echo "Deployment completed successfully: $DEPLOY_SHA"
+            echo "Deployment completed successfully: $DEPLOY_SHA mode=$BACKEND_MODE"

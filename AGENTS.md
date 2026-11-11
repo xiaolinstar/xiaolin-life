@@ -94,6 +94,7 @@ pnpm install                   # 自动触发 husky prepare
 | 主题问题 | [docs/BLOWFISH-TW-ELEMENTS-ISSUES.md](docs/BLOWFISH-TW-ELEMENTS-ISSUES.md) |
 | 首页动效设计 | [docs/DESIGN-ANIMATED-BACKGROUND.md](docs/DESIGN-ANIMATED-BACKGROUND.md) |
 | 影评 → 公众号 | [docs/WECHAT-SCREEN-REVIEW.md](docs/WECHAT-SCREEN-REVIEW.md) |
+| 121 Gateway 同机 | [docs/GATEWAY-121-COLOCATE-CHECKLIST.md](docs/GATEWAY-121-COLOCATE-CHECKLIST.md) |
 | 移动端 Hermes | [docs/DRAFT-OPENCLAW-HERMES-MOBILE.md](docs/DRAFT-OPENCLAW-HERMES-MOBILE.md) |
 
 ## 部署
