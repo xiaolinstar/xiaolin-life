@@ -20,8 +20,10 @@ services:
     networks:
       - tiny-sparrow-network
     ports:
-      # Host loopback only — gateway reaches via host.docker.internal:8080
-      - "127.0.0.1:8080:80"
+      # Must NOT bind 127.0.0.1 only: gateway uses host.docker.internal
+      # (docker bridge gateway IP), which cannot reach a loopback-only publish.
+      # Keep 8080 closed in the cloud security group (public 80/443 only).
+      - "8080:80"
     environment:
       TZ: Asia/Shanghai
     restart: unless-stopped

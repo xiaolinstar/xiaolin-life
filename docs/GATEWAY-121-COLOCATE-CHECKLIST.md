@@ -12,7 +12,10 @@ Internet → nginx-gateway :80/:443
               └─ xingxiaolin.cn   → host.docker.internal:8082  (ai-todo)
 ```
 
-同机反代必须用 `host.docker.internal`（见 gateway `extra_hosts`），**不要**在容器里写 `127.0.0.1` 当上游。
+同机反代用 `host.docker.internal`（gateway `extra_hosts: host-gateway`），对应宿主机上的 **`0.0.0.0:8080` / `:8082` 发布**，不是容器内的 `127.0.0.1`。
+
+**不要**写成 `"127.0.0.1:8080:80"`：只监听回环时，从网桥 IP 进来的 gateway 流量到不了。  
+**要**写成 `"8080:80"`，并在阿里云安全组**不要对公网放行 8080/8082**（仅 80/443 对外）。
 
 ---
 
@@ -32,7 +35,7 @@ Internet → nginx-gateway :80/:443
 | 产物 | 作用 |
 |------|------|
 | `compose.yaml` | **默认**：直绑宿主机 80/443（现网，自动 CD 仍用这个） |
-| `compose.behind-gateway.yaml` | 仅 `127.0.0.1:8080:80`，无容器 TLS |
+| `compose.behind-gateway.yaml` | `8080:80`（供 gateway 经 host.docker.internal 访问），无容器 TLS |
 | `volumes/website/default.behind-gateway.conf` | 对 gateway 提供 HTTP |
 | CD `workflow_dispatch` → `backend_mode` | `direct-tls`（默认自动）/ `behind-gateway`（切流时手动触发） |
 
@@ -59,17 +62,15 @@ Internet → nginx-gateway :80/:443
 
 按顺序；标了「CD」的用 Actions，其余 SSH/控制台。
 
-### B0. 备份（121）
+### B0. 回退靠什么（一般不必再「整包备份」）
 
-```bash
-ssh ecs-user@121.199.175.147
-mkdir -p ~/backup/pre-gateway-$(date +%F)
-cp -a ~/AgentProjects/xiaolin-life/compose.yaml ~/backup/pre-gateway-$(date +%F)/
-cp -a ~/AgentProjects/xiaolin-life/volumes/website/default.conf ~/backup/pre-gateway-$(date +%F)/
-cp -a ~/AgentProjects/xiaolin-life/volumes/website/certs ~/backup/pre-gateway-$(date +%F)/certs
-```
+| 内容 | 是否要额外备份 | 说明 |
+|------|----------------|------|
+| `compose.yaml` / nginx conf / 镜像 tag | **否** | Git 已管；回退用 tag `deploy/121-direct-tls-pre-gateway` + CD `direct-tls` |
+| `volumes/website/certs/` | **仅当**还没拷进 gateway 时建议留一份 | 证书不进 Git；拷到 `xiaolin-gateway/app/xiaolin-life/cert/` 后，回退可从该目录再拷回 |
+| 服务器 `.env` / 密钥 | 按需 | 与本次 life 静态站无关则跳过 |
 
-- [ ] B0 完成  
+结论：**配置与静态站点内容不需要再做 121 本地备份**；B1 把真证书放进 gateway 仓路径即可。
 
 ### B1. 121 准备 gateway 仓与真实证书
 
@@ -110,11 +111,13 @@ GitHub → `xiaolin-life` → Actions → **CD Pipeline** → Run workflow：
 验收：
 
 ```bash
-curl -fsS -o /dev/null -w '%{http_code}\n' http://127.0.0.1:8080/healthz   # 204
-ss -ltnp | grep -E ':80 |:443 |:8080'   # 80/443 应已释放给即将启动的 gateway
+curl -fsS -o /dev/null -w '%{http_code}\n' http://127.0.0.1:8080/healthz   # 204（宿主机访问）
+# 从 gateway 网络视角也应通（可选）：
+docker exec nginx-gateway wget -qO- http://host.docker.internal:8080/healthz || true
+ss -ltnp | grep -E ':80 |:443 |:8080'   # life 占 8080；80/443 留给 gateway
 ```
 
-- [ ] B3.1 life 仅 8080  
+- [ ] B3.1 life 发布为 `0.0.0.0:8080`（不是 127.0.0.1-only）  
 
 **3.2 手动：启动 / 切换 gateway 占 443**
 
@@ -184,7 +187,7 @@ bash scripts/wait-healthy.sh
 
 ```text
 1) 合入两仓（A）→ CI 绿
-2) 你做 B0–B1（备份 + 证书）
+2) 你做 B1（121 上 gateway + 真证书；配置回退靠 Git tag）
 3) 切流日：B3.1 CD behind-gateway → B3.2 起 gateway → B3.3 ai-todo/DNS
 4) B4 视情况改 Secrets / 下线 101
 ```

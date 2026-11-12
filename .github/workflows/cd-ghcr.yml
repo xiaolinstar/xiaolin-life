@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       backend_mode:
-        description: "direct-tls = container owns 80/443 (current). behind-gateway = host 127.0.0.1:8080 only (after gateway cutover)."
+        description: "direct-tls = container owns 80/443 (current). behind-gateway = host :8080 for gateway (after cutover; do not open 8080 publicly)."
         required: true
         type: choice
         options:
@@ -66,7 +66,7 @@ jobs:
                 docker compose -f compose.yaml up -d
                 ;;
               behind-gateway)
-                echo "Deploy mode: behind-gateway (compose.behind-gateway.yaml, 127.0.0.1:8080)"
+                echo "Deploy mode: behind-gateway (compose.behind-gateway.yaml, host :8080)"
                 # Tear down previous publish of 80/443 if switching modes.
                 docker compose -f compose.yaml stop xiaolin-life-website 2>/dev/null || true
                 docker compose -f compose.behind-gateway.yaml up -d
