@@ -34,12 +34,12 @@ Internet → nginx-gateway :80/:443
 
 | 产物 | 作用 |
 |------|------|
-| `compose.yaml` | **默认**：直绑宿主机 80/443（现网，自动 CD 仍用这个） |
-| `compose.behind-gateway.yaml` | `8080:80`（供 gateway 经 host.docker.internal 访问），无容器 TLS |
+| `compose.yaml` | 回退用：直绑宿主机 80/443（须先停 gateway） |
+| `compose.behind-gateway.yaml` | **现网默认**：`8080:80`（供 gateway 经 host.docker.internal 访问），无容器 TLS |
 | `volumes/website/default.behind-gateway.conf` | 对 gateway 提供 HTTP |
-| CD `workflow_dispatch` → `backend_mode` | `direct-tls`（默认自动）/ `behind-gateway`（切流时手动触发） |
+| CD `backend_mode` | 自动 CD + 手动默认均为 **`behind-gateway`**；`direct-tls` 仅作回退 |
 
-自动 CD（push main）**永远** `direct-tls`，避免 gateway 未就绪时误摘 443。
+切流完成后勿再把自动 CD 设回 `direct-tls`，否则会与 gateway 抢 80/443 并部署失败/留下旧容器。
 
 ### A2. xiaolin-gateway
 

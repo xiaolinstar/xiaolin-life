@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       backend_mode:
-        description: "direct-tls = container owns 80/443 (current). behind-gateway = host :8080 for gateway (after cutover; do not open 8080 publicly)."
+        description: "behind-gateway = host :8080 (121 production). direct-tls = container owns 80/443 (rollback only; stop gateway first)."
         required: true
         type: choice
         options:
-          - direct-tls
           - behind-gateway
-        default: direct-tls
+          - direct-tls
+        default: behind-gateway
       deploy_sha:
         description: "Optional 40-char SHA (default: workflow_run head or this commit)"
         required: false
@@ -37,8 +37,8 @@ jobs:
       group: cd-xiaolin-fun-121
       cancel-in-progress: false
     env:
-      # Auto CD from CI always keeps direct-tls until cutover is intentional.
-      BACKEND_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.backend_mode || 'direct-tls' }}
+      # 121 production sits behind xiaolin-gateway; auto CD must not grab 80/443.
+      BACKEND_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.backend_mode || 'behind-gateway' }}
       DEPLOY_SHA: ${{ inputs.deploy_sha || github.event.workflow_run.head_sha || github.sha }}
 
     steps:
@@ -61,15 +61,17 @@ jobs:
             mkdir -p volumes/website/logs volumes/website/certs
 
             case "$BACKEND_MODE" in
-              direct-tls)
-                echo "Deploy mode: direct-tls (compose.yaml, host 80/443)"
-                docker compose -f compose.yaml up -d
-                ;;
               behind-gateway)
                 echo "Deploy mode: behind-gateway (compose.behind-gateway.yaml, host :8080)"
-                # Tear down previous publish of 80/443 if switching modes.
+                # Drop any previous direct-tls publish of 80/443.
                 docker compose -f compose.yaml stop xiaolin-life-website 2>/dev/null || true
-                docker compose -f compose.behind-gateway.yaml up -d
+                docker compose -f compose.behind-gateway.yaml up -d --force-recreate
+                ;;
+              direct-tls)
+                echo "Deploy mode: direct-tls (compose.yaml, host 80/443) — rollback only"
+                echo "Ensure xiaolin-gateway is stopped first, or bind will fail."
+                docker compose -f compose.behind-gateway.yaml stop xiaolin-life-website 2>/dev/null || true
+                docker compose -f compose.yaml up -d --force-recreate
                 ;;
               *)
                 echo "Unknown BACKEND_MODE=$BACKEND_MODE" >&2

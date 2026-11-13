@@ -207,7 +207,7 @@ docker compose pull && docker compose up -d
 
 **现网默认**：网站容器监听宿主机 `80/443`，容器内 nginx 终结 SSL（`compose.yaml`）。
 
-**121 + gateway 同机（切流后）**：改用 `compose.behind-gateway.yaml`，发布宿主机 `8080:80`（供 gateway 经 `host.docker.internal` 访问；安全组勿对公网开放 8080），TLS 由 [xiaolin-gateway](https://github.com/xiaolinstar/xiaolin-gateway) 终结。CD 手动触发时选 `backend_mode=behind-gateway`；自动 CD 仍为 `direct-tls`，避免误切。清单见 [docs/GATEWAY-121-COLOCATE-CHECKLIST.md](docs/GATEWAY-121-COLOCATE-CHECKLIST.md)。
+**121 + gateway 同机（现网）**：`compose.behind-gateway.yaml` 发布宿主机 `8080:80`（供 gateway 经 `host.docker.internal` 访问；安全组勿对公网开放 8080），TLS 由 [xiaolin-gateway](https://github.com/xiaolinstar/xiaolin-gateway) 终结。自动 CD 与手动 CD 默认均为 `behind-gateway`；仅回退时选手动 `direct-tls`（须先停 gateway）。清单见 [docs/GATEWAY-121-COLOCATE-CHECKLIST.md](docs/GATEWAY-121-COLOCATE-CHECKLIST.md)。
 
 CD 默认服务器目录：`~/AgentProjects/xiaolin-life`
 
